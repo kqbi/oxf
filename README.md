@@ -9,6 +9,6 @@ linux：
  却换到Share/LangCPP下使用 make -f linuxbuild.mak
  
 c11：
-  切换c11分支，使用CMakeLists.txt并依赖boost
+  切换c11分支，使用CMakeLists.txt并依赖boost，附带简单例子，供参考
   
 golang版：https://github.com/kqbi/go-oxf.git
