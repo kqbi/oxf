@@ -1,0 +1,2356 @@
+I-Logix-RPY-Archive version 8.8.0 C++ 6106822
+{ ISubsystem 
+	- _cmheader = "$Id: Guards.sbs 1.19 2007/04/06 07:09:32 ilgiga Exp $
+$Revision: 1.19 $
+$Locker: $
+
+";
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "Design.sbs";
+		- _subsystem = "Design::oxf";
+		- _class = "";
+		- _name = "Services";
+		- _id = GUID dc406d75-b5f5-477e-b7ec-93a579033180;
+	}
+	- _id = GUID 53951946-08d8-4da0-a722-4d095ea41b8c;
+	- _myState = 8192;
+	- _properties = { IPropertyContainer 
+		- Subjects = { IRPYRawContainer 
+			- size = 1;
+			- value = 
+			{ IPropertySubject 
+				- _Name = "CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Package";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "GeneratePackageCode";
+								- _Value = "Never";
+								- _Type = Enum;
+								- _ExtraTypeInfo = "Always ,Never ,Smart";
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	- _name = "Guards";
+	- _modifiedTimeWeak = 6.18.2013::13:51:25;
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Generic guard classes\\f1\\rtlch\\par
+}";
+	}
+	- _lastID = 5;
+	- Declaratives = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ ISubsystem 
+			- fileName = "DllGuards";
+			- _id = GUID 2d481766-79eb-419e-b6f6-615e58fdd0a3;
+		}
+	}
+	- weakCGTime = 6.18.2013::13:51:25;
+	- strongCGTime = 5.6.2010::15:40:13;
+	- _defaultComposite = GUID 0b577ae3-ef32-4e9a-95a6-3f128bc7b161;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 5;
+		- value = 
+		{ IClass 
+			- _id = GUID 0b577ae3-ef32-4e9a-95a6-3f128bc7b161;
+			- _myState = 40960;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "DeclarationModifier";
+										- _Value = "";
+										- _Type = String;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 1.12.2011::15:32:35;
+			- weakCGTime = 1.12.2011::15:32:35;
+			- strongCGTime = 5.6.2010::15:40:13;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 035f8372-e86e-457b-a4fb-b26c94dee821;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 4;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Attribute";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Inline";
+										- _Value = "in_declaration";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "DeclarationModifier";
+										- _Value = "";
+										- _Type = String;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Operation";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Inline";
+										- _Value = "in_declaration";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Relation";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Inline";
+										- _Value = "in_declaration";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMUResourceGuard";
+			- Dependencies = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IDependency 
+					- _id = GUID c61b7cdf-0778-4543-b871-4b23d9a0e7b2;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "BasicTypes";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 1.20.2009::13:59:32;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "ISubsystem";
+						- _filename = "Design.sbs";
+						- _subsystem = "Design::oxf::Services::Types";
+						- _class = "";
+						- _name = "BasicTypes";
+						- _id = GUID 0d1d4186-d8c6-4c2c-8e3b-83732820041b;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 26613e9b-5a2d-4ed5-824b-4efbe886fad8;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 4;
+											- value = 
+											{ IProperty 
+												- _Name = "IncludeStyle";
+												- _Value = "AngleBrackets";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Default,Quotes,AngleBrackets";
+											}
+											{ IProperty 
+												- _Name = "MarkPrologEpilogInAnnotations";
+												- _Value = "Ignore";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "None, Ignore, Auto";
+											}
+											{ IProperty 
+												- _Name = "SpecificationEpilog";
+												- _Value = "#endif //_OMINSTRUMENT";
+												- _Type = MultiLine;
+											}
+											{ IProperty 
+												- _Name = "SpecificationProlog";
+												- _Value = "#ifdef _OMINSTRUMENT";
+												- _Type = MultiLine;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "AnimServices";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 1.20.2009::13:59:32;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "Design.sbs";
+						- _subsystem = "Design::aom";
+						- _class = "";
+						- _name = "AnimServices";
+						- _id = GUID ae3b5a32-ffe4-4141-aeb4-552b9ffbbcae;
+					}
+				}
+			}
+			- _modifiedTimeWeak = 1.20.2009::13:59:32;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Enter-Exit object for definition of a critical section lock/unlock (the lock is done on the constructor and the unlock on the destructor)\\f1\\rtlch\\par
+}
+";
+			}
+			- _lastID = 1;
+			- weakCGTime = 1.20.2009::13:59:32;
+			- strongCGTime = 1.20.2009::13:59:32;
+			- Operations = { IRPYRawContainer 
+				- size = 4;
+				- value = 
+				{ IDestructor 
+					- _id = GUID 308bf26f-1dc0-44a8-9671-5e7f2b1477f2;
+					- _modifiedTimeWeak = 1.20.2009::13:59:32;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Cleanup\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "guard.unlock();";
+					}
+				}
+				{ IConstructor 
+					- _id = GUID 7f7f70fd-1329-4600-b21f-46e2bc8f7eac;
+					- _modifiedTimeWeak = 1.20.2009::13:59:32;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 create a resource guard with the specified guard\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID e7c73659-1b72-496f-bd38-d36377369f68;
+							- _name = "theGuard";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 the guard object\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _id = GUID d4af100a-72c5-49ca-8b47-0d18952ecf8e;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID 6e759d9a-89ed-44a1-997c-0a041e5d6049;
+							- _name = "aomArg";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Instrumentation support - when true notify about status changes\\f1\\rtlch\\par
+}
+";
+							}
+							- ValueSpecifications = { IRPYRawContainer 
+								- size = 1;
+								- value = 
+								{ ILiteralSpecification 
+									- _id = GUID 2f289ef4-8834-47ff-ab06-405f1cfa66f7;
+									- _modifiedTimeWeak = 1.1.1970::2:0:0;
+									- _value = "true";
+								}
+							}
+							- myTypeOf = { IType 
+								- _id = GUID 3be31f42-b13d-4f11-9f36-0ea18163bb6c;
+								- _myState = 8192;
+								- _modifiedTimeWeak = 1.1.1970::2:0:0;
+								- _declaration = "bool %s(instrument)";
+								- _kind = Language;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "#ifdef _OMINSTRUMENT
+if (instrument == true) {
+	AnimServices::notifyMutexLock(false);
+}
+#endif
+
+// lock
+guard.lock();
+
+#ifdef _OMINSTRUMENT
+if (instrument == true) {
+	AnimServices::notifyMutexLock(true);
+}
+#endif";
+					}
+					- _initializer = "guard(theGuard)";
+				}
+				{ IConstructor 
+					- _id = GUID 27ca6d6f-5fa5-423d-88ba-5ae4821026b7;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "in_declaration";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _modifiedTimeWeak = 1.20.2009::13:59:32;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 explicitly disable copy CTOR\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 84b589a8-7860-450c-9783-c224c74eb8fa;
+							- _name = "other";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The resource guard to copy\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- myTypeOf = { IType 
+								- _id = GUID 5ae81015-c24f-474e-90b4-d63cbbdd7c32;
+								- _myState = 8192;
+								- _modifiedTimeWeak = 1.1.1970::2:0:0;
+								- _declaration = "const OMUResourceGuard&";
+								- _kind = Language;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPrivate;
+					- _static = 0;
+					- _constant = 0;
+					- _initializer = "guard(other.guard) ";
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 26a20e5e-fedf-4685-8315-161f0144c8f7;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "in_declaration";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator=";
+					- _modifiedTimeWeak = 1.20.2009::13:59:32;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 disable assignment operator\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 9d84d452-9d60-4e48-9ced-44cad4755eb5;
+							- _name = "/**/";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The resource guard to copy\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- myTypeOf = { IType 
+								- _id = GUID e89edcf1-95dc-4032-aa80-6e34aa9772a4;
+								- _myState = 8192;
+								- _modifiedTimeWeak = 1.1.1970::2:0:0;
+								- _declaration = "const OMUResourceGuard&";
+								- _kind = Language;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- myReturnType = { IType 
+						- _id = GUID 2dadff4c-1ca0-477f-88e2-e618b09c6c18;
+						- _myState = 8192;
+						- _modifiedTimeWeak = 1.1.1970::2:0:0;
+						- _declaration = "OMUResourceGuard&";
+						- _kind = Language;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPrivate;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "return *this;";
+					}
+				}
+			}
+			- Attrs = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IAttribute 
+					- _id = GUID 3c131ff5-099c-4dd5-831b-6a0b84308c29;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Attribute";
+										- Properties = { IRPYRawContainer 
+											- size = 3;
+											- value = 
+											{ IProperty 
+												- _Name = "AccessorGenerate";
+												- _Value = "False";
+												- _Type = Bool;
+											}
+											{ IProperty 
+												- _Name = "MutatorGenerate";
+												- _Value = "Never";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Smart, Always, Never";
+											}
+											{ IProperty 
+												- _Name = "ReferenceImplementationPattern";
+												- _Value = "&";
+												- _Type = String;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "guard";
+					- _modifiedTimeWeak = 1.20.2009::13:59:32;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 The guard object\\par
+Note that the guard lock() & unlock() must be const\\f1\\rtlch\\par
+}
+";
+					}
+					- _typeOf = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID d4af100a-72c5-49ca-8b47-0d18952ecf8e;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 1;
+					- _isConstant = 1;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID d4af100a-72c5-49ca-8b47-0d18952ecf8e;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "InitCleanUpRelations";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "Embeddable";
+										- _Value = "True";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "SpecificationEpilog";
+										- _Value = "
+#ifdef OM_NO_TEMPLATES_USAGE
+#include \"OMUResourceGuard.h\"
+#endif  //OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Framework";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "ReactiveBaseUsage";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMProtected";
+			- Dependencies = { IRPYRawContainer 
+				- size = 3;
+				- value = 
+				{ IDependency 
+					- _id = GUID 7a577907-ca7f-4bbb-88b5-d104052b2b79;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "BasicTypes";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 1.12.2011::15:33:11;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "ISubsystem";
+						- _filename = "Design.sbs";
+						- _subsystem = "Design::oxf::Services::Types";
+						- _class = "";
+						- _name = "BasicTypes";
+						- _id = GUID 0d1d4186-d8c6-4c2c-8e3b-83732820041b;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 6c6812fc-1b9d-4985-b9fb-6f5cda39119a;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "GuardMacros";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 1.12.2011::15:33:11;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "ISubsystem";
+						- _filename = "Design.sbs";
+						- _subsystem = "Design::oxf::Services::Macros";
+						- _class = "";
+						- _name = "GuardMacros";
+						- _id = GUID 215a579b-d2b6-4491-88be-922af0a816b0;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 4eaead2c-ebee-47ba-8573-574a3a8b2e96;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Implementation";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 6;
+											- value = 
+											{ IProperty 
+												- _Name = "ImplementationEpilog";
+												- _Value = "#endif //_OMINSTRUMENT";
+												- _Type = MultiLine;
+											}
+											{ IProperty 
+												- _Name = "ImplementationProlog";
+												- _Value = "#ifdef _OMINSTRUMENT
+";
+												- _Type = MultiLine;
+											}
+											{ IProperty 
+												- _Name = "IncludeStyle";
+												- _Value = "AngleBrackets";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Default,Quotes,AngleBrackets";
+											}
+											{ IProperty 
+												- _Name = "MarkPrologEpilogInAnnotations";
+												- _Value = "None";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "None, Ignore, Auto";
+											}
+											{ IProperty 
+												- _Name = "SpecificationEpilog";
+												- _Value = "#endif //_OMINSTRUMENT";
+												- _Type = MultiLine;
+											}
+											{ IProperty 
+												- _Name = "SpecificationProlog";
+												- _Value = "#ifdef _OMINSTRUMENT
+";
+												- _Type = MultiLine;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "AnimServices";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 1.12.2011::15:33:11;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "Design.sbs";
+						- _subsystem = "Design::aom";
+						- _class = "";
+						- _name = "AnimServices";
+						- _id = GUID ae3b5a32-ffe4-4141-aeb4-552b9ffbbcae;
+					}
+				}
+			}
+			- _modifiedTimeWeak = 6.18.2013::13:51:25;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+{\\colortbl ;\\red0\\green0\\blue255;}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\f0\\fs17 A monitor class that uses \\cf1\\ul\\protect OMOSMutex\\cf0\\ulnone\\protect0  as the internal mutex object\\lang1037\\f1\\rtlch\\par
+}
+";
+				- Hyperlinks = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IInternalHyperlink 
+						- _name = "OMOSMutex";
+						- _textType = "NAME";
+						- _target = { IHandle 
+							- _m2Class = "IClass";
+							- _filename = "Design.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSMutex";
+							- _id = GUID a0560700-2e35-4371-87dc-7fc2af9c1de1;
+						}
+					}
+				}
+			}
+			- _lastID = 1;
+			- weakCGTime = 6.18.2013::13:51:25;
+			- strongCGTime = 1.20.2009::14:7:29;
+			- Operations = { IRPYRawContainer 
+				- size = 10;
+				- value = 
+				{ IDestructor 
+					- _id = GUID a5a6c636-963c-4dbe-be6f-d6d8c16e32fe;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "in_declaration";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _modifiedTimeWeak = 1.12.2011::15:33:11;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Cleanup\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "cleanupMutex();";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 5d23ed45-8e69-42f6-bd34-d7257de6cc9a;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Class";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "ReturnType";
+												- _Value = "const $type&";
+												- _Type = String;
+											}
+										}
+									}
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "getGuard";
+					- _modifiedTimeWeak = 6.18.2013::13:51:25;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 get the guard object - to allow embedding of OMProtected in OMThread\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID d4af100a-72c5-49ca-8b47-0d18952ecf8e;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "return (*this);";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 26264c99-5d6b-483a-b923-04cc32a67c4c;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "initializeMutex";
+					- _modifiedTimeWeak = 1.12.2011::15:33:11;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Initialize the RTOS mutex\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if (theMutex == NULL) {
+	theMutex = OMOSFactory::instance()->createOMOSMutex();
+}";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 43a5f194-26e9-4f80-a293-26074a958844;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "lock";
+					- _modifiedTimeWeak = 1.12.2011::15:33:11;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Lock the protected object mutex.\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "if (theMutex != NULL) {
+	theMutex->lock();
+}";
+					}
+				}
+				{ IConstructor 
+					- _id = GUID df3a8b61-d5ee-4d0d-a325-6a658bbb8ed8;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "in_declaration";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _modifiedTimeWeak = 1.12.2011::15:33:11;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Initialize the object with control over the initialization of the RTOS mutex\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID c3d47c79-c596-42fd-8ff3-5571efc0bbe0;
+							- _name = "createMutex";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 When true - initialize the RTOS mutex\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "bool";
+								- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if (createMutex == true) {
+	initializeMutex();
+}";
+					}
+					- _initializer = "theMutex(NULL)";
+				}
+				{ IConstructor 
+					- _id = GUID 030314fd-9339-45b5-a7da-31b48e0f82e6;
+					- _modifiedTimeWeak = 1.12.2011::15:33:11;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Initialize the object and the RTOS mutex\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "initializeMutex();";
+					}
+					- _initializer = "theMutex(NULL)";
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID af25b788-eb6e-4366-8052-1800bc7d222f;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "unlock";
+					- _modifiedTimeWeak = 1.12.2011::15:33:11;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Unlock the mutex\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "if (theMutex != NULL) {
+	theMutex->unlock();
+}";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 73bc6e70-0f66-4ca7-a44c-191e6e6936ea;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "cleanupMutex";
+					- _modifiedTimeWeak = 1.12.2011::15:33:11;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Destroy the RTOS mutex\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if (theMutex != NULL) { 
+/* This is a framework that can be configured so that dynamic */
+/* memory allocation is just done during the initialisation phase */
+/*LDRA_INSPECTED 44 S */
+	delete theMutex;
+	theMutex = NULL;
+}";
+					}
+				}
+				{ IConstructor 
+					- _id = GUID c72f45f9-1c9a-4143-b9bb-5192d1386e44;
+					- _modifiedTimeWeak = 1.12.2011::15:33:11;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 118ce16e-5d58-4615-b622-dd6da2d0535b;
+							- _name = "omProtected";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- myTypeOf = { IType 
+								- _id = GUID 97e3af50-7ad4-43a2-90f2-7d4e471f7ae3;
+								- _myState = 8192;
+								- _modifiedTimeWeak = 1.1.1970::2:0:0;
+								- _declaration = "const OMProtected& %s";
+								- _kind = Language;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "*this = omProtected;";
+					}
+					- _initializer = "";
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 6bab3c74-ae8b-4c18-865c-c1db64ada095;
+					- _name = "operator=";
+					- _modifiedTimeWeak = 1.12.2011::15:33:11;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 65e5e33a-2c43-4756-9b98-9c9f2162c6ec;
+							- _name = "omProtected";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- myTypeOf = { IType 
+								- _id = GUID 46d56a03-36f8-485e-9c4e-b8ad7b9f0171;
+								- _myState = 8192;
+								- _modifiedTimeWeak = 1.1.1970::2:0:0;
+								- _declaration = "const OMProtected& %s";
+								- _kind = Language;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- myReturnType = { IType 
+						- _id = GUID 15983f78-147d-4fca-a1cc-d3559e693ee8;
+						- _myState = 8192;
+						- _modifiedTimeWeak = 1.1.1970::2:0:0;
+						- _declaration = "OMProtected&";
+						- _kind = Language;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "theMutex = NULL;
+if (omProtected.theMutex!= NULL) {
+	initializeMutex();
+}
+return *this;";
+					}
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID 4441b3c6-dbd9-47c7-82e9-dd2fae4dd6f6;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Relation";
+										- Properties = { IRPYRawContainer 
+											- size = 3;
+											- value = 
+											{ IProperty 
+												- _Name = "FilledDiamondScheme";
+												- _Value = "Aggregation";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Aggregation, Composition";
+											}
+											{ IProperty 
+												- _Name = "GetGenerate";
+												- _Value = "False";
+												- _Type = Bool;
+											}
+											{ IProperty 
+												- _Name = "SetGenerate";
+												- _Value = "False";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Relation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "DataMemberVisibility";
+												- _Value = "Private";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Public,Protected,Private";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "theMutex";
+					- _modifiedTimeWeak = 1.12.2011::15:33:11;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The RTOS mutex\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "Design.sbs";
+						- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+						- _class = "";
+						- _name = "OMOSMutex";
+						- _id = GUID a0560700-2e35-4371-87dc-7fc2af9c1de1;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "";
+					- _linkType = Composition;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 69fae9cb-009c-4359-aa5b-318d2be2f90a;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "SpecificationEpilog";
+										- _Value = "#else
+typedef OMUResourceGuard OMGuard;
+#endif //  OM_NO_TEMPLATES_USAGE";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationProlog";
+										- _Value = "#ifndef OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMGuard";
+			- Dependencies = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IDependency 
+					- _id = GUID 52e25861-36af-46ba-ac20-e4d2d6092100;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "OMProtected";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 1.12.2011::15:33:11;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID d4af100a-72c5-49ca-8b47-0d18952ecf8e;
+					}
+				}
+			}
+			- _ti = { ITemplateInst 
+				- _id = GUID f7aabe9c-97e8-4e0f-b3bc-b8bb9eeec749;
+				- _modifiedTimeWeak = 1.12.2011::15:33:11;
+				- TemplateInstParams = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ ITemplateInstParam 
+						- _id = GUID 93a759ac-662f-40fb-b584-b9ca8bcfa979;
+						- _name = "GUARD_TYPE";
+						- _modifiedTimeWeak = 1.1.1970::2:0:0;
+						- _value = { IHandle 
+							- _m2Class = "";
+						}
+						- _argValue = "OMProtected";
+						- _onTheFlyValue = NULL;
+					}
+				}
+				- _ofTemplate = { IHandle 
+					- _m2Class = "IClass";
+					- _id = GUID a2c79c6b-47bd-4038-a1fa-0ef2e7228531;
+				}
+			}
+			- _modifiedTimeWeak = 1.12.2011::15:33:11;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+{\\colortbl ;\\red0\\green0\\blue255;}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Enter-exit guard on \\cf1\\ul\\protect OMProtected\\cf0\\ulnone\\protect0  classes\\par
+}";
+				- Hyperlinks = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IInternalHyperlink 
+						- _name = "OMProtected";
+						- _textType = "NAME";
+						- _target = { IHandle 
+							- _m2Class = "IClass";
+							- _id = GUID d4af100a-72c5-49ca-8b47-0d18952ecf8e;
+						}
+					}
+				}
+			}
+			- weakCGTime = 1.12.2011::15:33:11;
+			- strongCGTime = 1.12.2011::15:32:35;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID a2c79c6b-47bd-4038-a1fa-0ef2e7228531;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 4;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Attribute";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Inline";
+										- _Value = "in_declaration";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 3;
+									- value = 
+									{ IProperty 
+										- _Name = "DeclarationModifier";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "SpecificationEpilog";
+										- _Value = "
+#endif // OM_NO_TEMPLATES_USAGE";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationProlog";
+										- _Value = "#ifndef OM_NO_TEMPLATES_USAGE
+
+";
+										- _Type = MultiLine;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Operation";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Inline";
+										- _Value = "in_declaration";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Relation";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Inline";
+										- _Value = "in_declaration";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMResourceGuard";
+			- Dependencies = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IDependency 
+					- _id = GUID e6b778f5-49f3-487e-9024-85422ee19722;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "BasicTypes";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 1.20.2009::13:59:15;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "ISubsystem";
+						- _filename = "Design.sbs";
+						- _subsystem = "Design::oxf::Services::Types";
+						- _class = "";
+						- _name = "BasicTypes";
+						- _id = GUID 0d1d4186-d8c6-4c2c-8e3b-83732820041b;
+					}
+				}
+				{ IDependency 
+					- _id = GUID fa89111c-e324-4651-9973-a218a6f128d9;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 4;
+											- value = 
+											{ IProperty 
+												- _Name = "IncludeStyle";
+												- _Value = "AngleBrackets";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Default,Quotes,AngleBrackets";
+											}
+											{ IProperty 
+												- _Name = "MarkPrologEpilogInAnnotations";
+												- _Value = "Ignore";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "None, Ignore, Auto";
+											}
+											{ IProperty 
+												- _Name = "SpecificationEpilog";
+												- _Value = "#endif //_OMINSTRUMENT";
+												- _Type = MultiLine;
+											}
+											{ IProperty 
+												- _Name = "SpecificationProlog";
+												- _Value = "#ifdef _OMINSTRUMENT";
+												- _Type = MultiLine;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "AnimServices";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 1.20.2009::13:59:15;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "Design.sbs";
+						- _subsystem = "Design::aom";
+						- _class = "";
+						- _name = "AnimServices";
+						- _id = GUID ae3b5a32-ffe4-4141-aeb4-552b9ffbbcae;
+					}
+				}
+			}
+			- TemplateParameters = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ITemplateParameter 
+					- _id = GUID 144335e4-b92b-4c53-be82-abc04bfafacf;
+					- _name = "GUARD_TYPE";
+					- _modifiedTimeWeak = 1.20.2009::13:59:15;
+					- myTypeOf = { IType 
+						- _id = GUID 7bfa9150-1780-46de-8156-b1b50bd7e941;
+						- _myState = 8192;
+						- _modifiedTimeWeak = 1.1.1970::2:0:0;
+						- _declaration = "class";
+						- _kind = Language;
+					}
+					- _isOrdered = 0;
+				}
+			}
+			- _modifiedTimeWeak = 1.20.2009::13:59:15;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Enter-Exit object for definition of a critical section lock/unlock (the lock is done on the constructor and the unlock on the destructor)\\f1\\rtlch\\par
+}";
+			}
+			- _lastID = 1;
+			- weakCGTime = 1.20.2009::13:59:15;
+			- strongCGTime = 1.20.2009::13:59:15;
+			- Operations = { IRPYRawContainer 
+				- size = 4;
+				- value = 
+				{ IDestructor 
+					- _id = GUID c9eba353-bdda-4519-ac2a-7b2ba47a8526;
+					- _modifiedTimeWeak = 1.20.2009::13:59:15;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Cleanup\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "guard.unlock();";
+					}
+				}
+				{ IConstructor 
+					- _id = GUID 57f64d31-b730-4e45-80a7-69c34b1d6bb8;
+					- _modifiedTimeWeak = 1.20.2009::13:59:15;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 create a resource guard with the specified guard\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID f86a44e2-980d-4226-81b4-37faf3c3ddf1;
+							- _name = "theGuard";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 the guard object\\f1\\rtlch\\par
+}
+";
+							}
+							- myTypeOf = { IType 
+								- _id = GUID 9d2e80ec-c5b6-4d4f-8c4f-1efa608fb8c3;
+								- _myState = 8192;
+								- _modifiedTimeWeak = 1.1.1970::2:0:0;
+								- _declaration = "const GUARD_TYPE&";
+								- _kind = Language;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID b81ba370-c6b1-478f-bcaa-5bdc2ac5a044;
+							- _name = "aomArg";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Instrumentation support - when true notify about status changes\\f1\\rtlch\\par
+}
+";
+							}
+							- ValueSpecifications = { IRPYRawContainer 
+								- size = 1;
+								- value = 
+								{ ILiteralSpecification 
+									- _id = GUID 1a44590e-f1af-4cdd-9a52-ae0131ea7e4c;
+									- _modifiedTimeWeak = 1.1.1970::2:0:0;
+									- _value = "true";
+								}
+							}
+							- myTypeOf = { IType 
+								- _id = GUID fa2d7aac-f6b3-4d7f-8de7-d7e626fc7390;
+								- _myState = 8192;
+								- _modifiedTimeWeak = 1.1.1970::2:0:0;
+								- _declaration = "bool %s(instrument)";
+								- _kind = Language;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "#ifdef _OMINSTRUMENT
+if (instrument == true) {
+	AnimServices::notifyMutexLock(false);
+}
+#endif
+
+// lock
+guard.lock();
+
+#ifdef _OMINSTRUMENT
+if (instrument == true) {
+	AnimServices::notifyMutexLock(true);
+}
+#endif";
+					}
+					- _initializer = "guard(theGuard)";
+				}
+				{ IConstructor 
+					- _id = GUID 5049a9b3-168e-4608-8833-c3cece52760b;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "in_declaration";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _modifiedTimeWeak = 1.20.2009::13:59:15;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 explicitly disable copy CTOR\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 68f805a4-a6d2-41cb-b5d3-5ecf28954f78;
+							- _name = "other";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The resource guard to copy\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- myTypeOf = { IType 
+								- _id = GUID f535c208-adce-424c-95cb-71f7d1068da0;
+								- _myState = 8192;
+								- _modifiedTimeWeak = 1.1.1970::2:0:0;
+								- _declaration = "const OMResourceGuard<GUARD_TYPE>&";
+								- _kind = Language;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPrivate;
+					- _static = 0;
+					- _constant = 0;
+					- _initializer = "guard(other.guard) ";
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 64df2dad-6097-4ef3-942d-481fe5807c2f;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "in_declaration";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator=";
+					- _modifiedTimeWeak = 1.20.2009::13:59:15;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 disable assignment operator\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID fe7252ea-d52d-4482-a471-2cf85dd00dfb;
+							- _name = "/**/";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The resource guard to copy\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- myTypeOf = { IType 
+								- _id = GUID 01efc68b-3579-4172-8f06-f2b85ec4d261;
+								- _myState = 8192;
+								- _modifiedTimeWeak = 1.1.1970::2:0:0;
+								- _declaration = "const OMResourceGuard<GUARD_TYPE>&";
+								- _kind = Language;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- myReturnType = { IType 
+						- _id = GUID dd67d458-0ed9-4bf5-a9e6-462dd8ab5e80;
+						- _myState = 8192;
+						- _modifiedTimeWeak = 1.1.1970::2:0:0;
+						- _declaration = "OMResourceGuard<GUARD_TYPE>&";
+						- _kind = Language;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPrivate;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "return *this;";
+					}
+				}
+			}
+			- Attrs = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IAttribute 
+					- _id = GUID f13fea3e-a552-455a-a40c-7c4ba8b3e274;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Attribute";
+										- Properties = { IRPYRawContainer 
+											- size = 3;
+											- value = 
+											{ IProperty 
+												- _Name = "AccessorGenerate";
+												- _Value = "False";
+												- _Type = Bool;
+											}
+											{ IProperty 
+												- _Name = "MutatorGenerate";
+												- _Value = "Never";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Smart, Always, Never";
+											}
+											{ IProperty 
+												- _Name = "ReferenceImplementationPattern";
+												- _Value = "&";
+												- _Type = String;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "guard";
+					- _modifiedTimeWeak = 1.20.2009::13:59:15;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 The guard object\\par
+Note that the guard lock() & unlock() must be const\\f1\\rtlch\\par
+}
+";
+					}
+					- myTypeOf = { IType 
+						- _id = GUID fb2028ec-d7e7-4219-840c-2e2e27605ef9;
+						- _myState = 8192;
+						- _modifiedTimeWeak = 1.1.1970::2:0:0;
+						- _declaration = "const GUARD_TYPE&";
+						- _kind = Language;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 1;
+					- _isConstant = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- Types = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IType 
+			- _id = GUID b4937877-f293-4183-8f11-aae750ea650a;
+			- _myState = 8192;
+			- _name = "OMGuard";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _typedefBaseType = { IClassifierHandle 
+				- _m2Class = "IClass";
+				- _id = GUID 035f8372-e86e-457b-a4fb-b26c94dee821;
+			}
+			- _typedefMultiplicity = "1";
+			- _typedefIsOrdered = 0;
+			- _typedefIsReference = 0;
+			- _typedefIsConstant = 0;
+			- _kind = Typedef;
+		}
+	}
+	- _configurationRelatedTime = 7.29.2008::15:8:49;
+}
+

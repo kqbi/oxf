@@ -1,0 +1,235 @@
+I-Logix-RPY-Archive version 8.5.2 C++ 2005928
+{ ISubsystem 
+	- _cmheader = "$Id: StatechartMacros.sbs 1.14 2007/04/06 07:09:49 ilgiga Exp $
+$Revision: 1.14 $
+$Locker: $
+
+";
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "Macros.sbs";
+		- _subsystem = "Design::oxf::Services";
+		- _class = "";
+		- _name = "Macros";
+		- _id = GUID c697f445-962f-4ebe-bf72-ed6fff848cb6;
+	}
+	- _id = GUID ac1ee47c-34e1-4b45-ba75-9364f09a4185;
+	- _myState = 8192;
+	- _name = "StatechartMacros";
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Statechart helper macros to support reusable and flat statechart implementation\\f1\\rtlch\\par
+}
+";
+	}
+	- weakCGTime = 7.19.2010::11:53:27;
+	- strongCGTime = 1.15.2009::14:32:20;
+	- _defaultComposite = GUID 00163ef5-d2eb-4630-b577-0b171027aadd;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID 00163ef5-d2eb-4630-b577-0b171027aadd;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 7.19.2010::11:51:59;
+			- strongCGTime = 1.15.2009::14:32:20;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- Types = { IRPYRawContainer 
+		- size = 8;
+		- value = 
+		{ IType 
+			- _id = GUID 97f92dcd-31c0-484e-9c02-540a94588606;
+			- _myState = 8192;
+			- _name = "IS_COMPLETED";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fswiss\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Check if the specified state reached completion.\\par
+\\lang1033\\f1 A macro is used to support both flat and reusable statechart implementation.\\lang1037\\f0\\par
+}
+";
+			}
+			- _declaration = "#ifndef OM_REUSABLE_STATECHART_IMPLEMENTATION
+#define %s(state) state##_isCompleted()
+#else
+#define %s(state) state->isCompleted()
+#endif // OM_REUSABLE_STATECHART_IMPLEMENTATION";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 2aa9b737-c954-40e5-b388-13b913f0b137;
+			- _myState = 8192;
+			- _name = "IS_EVENT_TYPE_OF";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fswiss\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Test if the current event is of the type of the given id.\\par
+\\lang1033\\f1 A macro is used to support both flat and reusable statechart implementation.\\lang1037\\f0\\par
+}
+";
+			}
+			- _declaration = "#ifndef OM_REUSABLE_STATECHART_IMPLEMENTATION
+#define %s(id) ((getCurrentEvent() != NULL) ? getCurrentEvent()->isTypeOf((id)) : false)
+#else
+#define %s(id) (((concept != NULL) && ((concept->getCurrentEvent()) != NULL)) ? (concept->getCurrentEvent())->isTypeOf((id)) : false)
+#endif // OM_REUSABLE_STATECHART_IMPLEMENTATION";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID bbe3b2fa-65ba-4fe6-be8a-8e8371279380;
+			- _myState = 8192;
+			- _name = "IS_IN";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fswiss\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Check if the given state is active.\\par
+\\lang1033\\f1 A macro is used to support both flat and reusable statechart implementation.\\lang1037\\f0\\par
+}
+";
+			}
+			- _declaration = "#ifndef OM_REUSABLE_STATECHART_IMPLEMENTATION
+#define %s(state) state##_IN()
+#else
+#define %s(state) state->in()
+#endif // OM_REUSABLE_STATECHART_IMPLEMENTATION";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 00e847fe-fe4b-4bb0-a5d8-f7c250222762;
+			- _myState = 8192;
+			- _name = "OMREPLY";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fswiss\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Set a triggered operation return value.\\par
+\\lang1033\\f1 A macro is used to support both flat and reusable statechart implementation.\\lang1037\\f0\\par
+}
+";
+			}
+			- _declaration = "#define %s(retVal)		(params->om_reply = retVal)";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 667b3ab1-9815-4955-bf35-1a78694548d9;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Type";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "SpecificationEpilog";
+										- _Value = "
+//lint -restore";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationProlog";
+										- _Value = "//lint -save -e773  Expression-like macro not parenthesized
+";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMSETPARAMS";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fswiss\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Set a local variable  called params of the specific event type to enable access to the current event data.\\par
+\\lang1033\\f1 A macro is used to support both flat and reusable statechart implementation.\\lang1037\\f0\\par
+}
+";
+			}
+			- _declaration = "#define %s(type) type* params = static_cast<type*>(getCurrentEvent())";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 7267b685-60fa-4fb5-b687-add42682b329;
+			- _myState = 8192;
+			- _name = "reply";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}}
+{\\colortbl ;\\red0\\green0\\blue255;}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Shorted name for \\cf1\\ul\\protect OMREPLY\\cf0\\ulnone\\protect0\\par
+}
+";
+				- Hyperlinks = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IInternalHyperlink 
+						- _name = "OMREPLY";
+						- _textType = "NAME";
+						- _target = { IHandle 
+							- _m2Class = "IType";
+							- _id = GUID 00e847fe-fe4b-4bb0-a5d8-f7c250222762;
+						}
+					}
+				}
+			}
+			- _declaration = "#define %s(retVal)	OMREPLY(retVal)";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 89977643-5707-4ce0-b8d5-be636f265a2b;
+			- _myState = 8192;
+			- _name = "SETPARAMS";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}}
+{\\colortbl ;\\red0\\green0\\blue255;}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Shorted name for \\cf1\\ul\\protect OMSETPARAMS\\cf0\\ulnone\\protect0\\par
+}
+";
+				- Hyperlinks = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IInternalHyperlink 
+						- _name = "OMSETPARAMS";
+						- _textType = "NAME";
+						- _target = { IHandle 
+							- _m2Class = "IType";
+							- _id = GUID 667b3ab1-9815-4955-bf35-1a78694548d9;
+						}
+					}
+				}
+			}
+			- _declaration = "#define %s(type) OMSETPARAMS(type)";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID c44b48fa-d935-43ed-bb5a-b1f9f0d7fe22;
+			- _myState = 8192;
+			- _name = "OM_CURRENT_EVENT_ID";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\f0\\fs17 Get the current event id.\\par
+A macro is used to support both flat and reusable statechart implementation.\\lang1037\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#ifndef OM_REUSABLE_STATECHART_IMPLEMENTATION
+#define %s ((getCurrentEvent() != NULL) ? getCurrentEvent()->getId() : 0)
+#else
+#define %s (((concept != NULL) && ((concept->getCurrentEvent()) != NULL)) ? (concept->getCurrentEvent())->getId() : 0)
+#endif // OM_REUSABLE_STATECHART_IMPLEMENTATION";
+			- _kind = Language;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

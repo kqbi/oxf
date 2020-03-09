@@ -1,0 +1,3696 @@
+I-Logix-RPY-Archive version 8.8.0 C++ 6097016
+{ ISubsystem 
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "Design.sbs";
+		- _subsystem = "Design::oxf";
+		- _class = "";
+		- _name = "Services";
+		- _id = GUID dc406d75-b5f5-477e-b7ec-93a579033180;
+	}
+	- _id = GUID 9e7ca901-80d6-4ddf-acf2-7b09b6c505d1;
+	- _name = "String";
+	- _modifiedTimeWeak = 4.22.2013::13:57:0;
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 String support\\par
+}
+";
+	}
+	- _lastID = 1;
+	- Declaratives = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ ISubsystem 
+			- fileName = "StringFunctions";
+			- _id = GUID 39af422a-9631-420f-8f1f-8fd4475c8b55;
+		}
+	}
+	- weakCGTime = 4.22.2013::13:57:0;
+	- strongCGTime = 3.14.2009::15:2:57;
+	- _defaultComposite = GUID b0faba2f-cee4-41f1-b762-12b9db67e458;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ IClass 
+			- _id = GUID b0faba2f-cee4-41f1-b762-12b9db67e458;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 4.22.2013::12:20:41;
+			- weakCGTime = 4.22.2013::12:20:41;
+			- strongCGTime = 3.14.2009::15:2:57;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "ReturnType";
+										- _Value = "const $type&";
+										- _Type = String;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Operation";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "GenerateExplicitConstructor";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMString";
+			- Dependencies = { IRPYRawContainer 
+				- size = 5;
+				- value = 
+				{ IDependency 
+					- _id = GUID efe6bc74-d5df-428e-bcaa-c171b8414740;
+					- _myState = 2048;
+					- _name = "Manager";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "ISubsystem";
+						- _filename = "Design.sbs";
+						- _subsystem = "Design::oxf::Services::MemoryManagement";
+						- _class = "";
+						- _name = "Manager";
+						- _id = GUID b3adb5b6-d7b7-4746-851c-e9c1bb48e837;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 456d95de-faaa-41f5-be92-341792d757e8;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "DllMacros";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "ISubsystem";
+						- _filename = "Design.sbs";
+						- _subsystem = "Design::oxf::Services::Macros";
+						- _class = "";
+						- _name = "DllMacros";
+						- _id = GUID 81617f52-3248-4d5f-a488-8577e383c7a8;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 524f2aa0-f6a5-4a85-89ed-9f62ebd3bf12;
+					- _myState = 2048;
+					- _name = "Unicode";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "ISubsystem";
+						- _filename = "Design.sbs";
+						- _subsystem = "Design::oxf::Services";
+						- _class = "";
+						- _name = "Unicode";
+						- _id = GUID eab055b8-9330-44ed-b529-05ad7e852ed0;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 2f1ada45-1253-4d14-b822-329f65045150;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "omiotypes";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "ISubsystem";
+						- _filename = "Design.sbs";
+						- _subsystem = "Design::oxf::Services::Types";
+						- _class = "";
+						- _name = "omiotypes";
+						- _id = GUID 6ca24829-4eef-4342-9f44-b568cb2eb35d;
+					}
+				}
+				{ IDependency 
+					- _id = GUID c0d672f0-b22d-4047-bce5-73f9d3fa8a12;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 2;
+											- value = 
+											{ IProperty 
+												- _Name = "MarkPrologEpilogInAnnotations";
+												- _Value = "Ignore";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "None, Ignore, Auto";
+											}
+											{ IProperty 
+												- _Name = "SpecificationProlog";
+												- _Value = "#ifdef ANIM_USE_IOSTREAM
+#ifndef OM_ENABLE_STRING_SERIALIZATION
+#define OM_ENABLE_STRING_SERIALIZATION
+#endif // OM_ENABLE_STRING_SERIALIZATION
+#endif // ANIM_USE_IOSTREAM
+
+#ifdef OM_ENABLE_STRING_SERIALIZATION
+#ifndef OM_FORCE_IOSTREAM
+#define OM_FORCE_IOSTREAM
+#endif // !OM_FORCE_IOSTREAM
+#endif // OM_ENABLE_STRING_SERIALIZATION";
+												- _Type = MultiLine;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "SelectiveInclude";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "ISubsystem";
+						- _filename = "Design.sbs";
+						- _subsystem = "Design::oxf::Services";
+						- _class = "";
+						- _name = "SelectiveInclude";
+						- _id = GUID dfcabfd9-a13c-4763-b105-66b56e5aab2e;
+					}
+				}
+			}
+			- _modifiedTimeWeak = 4.22.2013::13:57:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 A string class, supports the same API as CString.\\par
+}
+";
+			}
+			- weakCGTime = 4.22.2013::13:57:0;
+			- strongCGTime = 3.14.2009::15:2:57;
+			- Operations = { IRPYRawContainer 
+				- size = 37;
+				- value = 
+				{ IDestructor 
+					- _id = GUID efdd7f14-9811-4b95-94f2-010cc0eb96a9;
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Cleanup\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if (size > 0) {
+	OMDELETE(str, size);
+}
+str = NULL;
+size = 0;
+count = 0;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID b38d9dc3-fe87-4ed4-9df7-415632f75629;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "CompareNoCase";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 No case compare\\f1\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 7f17e9bc-4c0d-4f05-ac44-11eeb53c866b;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type const";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "s2";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The string to compare with\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char*";
+								- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "int";
+						- _id = GUID 6024c6ab-fe9e-402e-954f-27aca6d3b5e4;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "return CompareNoCase_(str,s2);";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 0f7b5842-a57a-4790-9424-cac898fc91e7;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "CompareNoCase";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 No case compare\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 4bcab508-da1d-4423-8436-314e300d42f8;
+							- _name = "s2";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The string to compare with\\lang1037\\f1\\rtlch\\fs17\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "int";
+						- _id = GUID 6024c6ab-fe9e-402e-954f-27aca6d3b5e4;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "return CompareNoCase_(str, s2.str);";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 5d7698a1-ab05-4948-a958-29d58991cf11;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "Empty";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 empty the string\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if (count > 0)
+{
+	count = 0;
+	// lint fails to identify the correlation between count and str
+	str[count]='\\0';  //lint !e613
+}";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID fef1d324-60ec-480f-b8b3-61b5eae3a067;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "GetBuffer";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 get the string buffer\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 4a443ec3-85aa-400d-95ab-168b9db04d14;
+							- _name = "/**/";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 dummy\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "int";
+								- _id = GUID 6024c6ab-fe9e-402e-954f-27aca6d3b5e4;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "char*";
+						- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "return str;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 0bdf380b-ffb3-4614-be19-146413e46abc;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "IsEmpty";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset178 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 check if string is empty\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "return count == 0; ";
+					}
+				}
+				{ IConstructor 
+					- _id = GUID ff8885dc-1c63-45b6-bd7e-34131cedd76d;
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Initialize a string based on another string\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID c96d4a13-1f63-46e5-a687-8581bab4bf4c;
+							- _name = "s1";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The source string\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "//lint -save -e668 -e613 (lint fail to identify the memory allocation by setSize())
+count = s1.count;
+setSize(count + 1);
+if (count > 0) { 
+	memcpy(str, s1.str,(unsigned int)count + 1);
+} 
+else { 
+	str[count] = '\\0'; 
+}
+// lint -restore";
+					}
+					- _initializer = "";
+				}
+				{ IConstructor 
+					- _id = GUID dc7c9221-f83c-42c4-9364-c5e15bfa7a2f;
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Initialize a string based on a single character\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 72dc812a-1276-45d7-a3c8-b1dbab2b9dfc;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "ch";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The character\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char";
+								- _id = GUID 717461b3-278b-47c8-9526-c62c7be55b14;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "count = 1;
+setSize(count + 1);
+//lint -save -e613 (lint fail to identify the memory allocation by setSize())
+str[0] = ch;
+str[count] = '\\0';
+//lint -restore";
+					}
+					- _initializer = "";
+				}
+				{ IConstructor 
+					- _id = GUID dfa5994a-2444-4c93-99ac-ba3caecaf2ea;
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Initialize a string based on another string (C style)\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID cc720612-24dc-4b08-a412-5cd68f49c83b;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "st";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The C string\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char*";
+								- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "//lint -save  -e668 -e613 (lint fails to identify the memory allocation by setSize())
+if (st != 0) {
+	count = static_cast<int>(strlen(st));
+	setSize(count + 1);
+	if (count > 0) { 
+		memcpy(str, st, strlen(st) + 1);
+	} 
+	else { 
+		str[count] = '\\0'; 
+	} 
+}
+else{
+	setSize(count + 1);
+	str[count]='\\0';
+}
+//lint -restore";
+					}
+					- _initializer = "";
+				}
+				{ IConstructor 
+					- _id = GUID 8988f078-781d-4eb6-b417-d74d7753cce9;
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Initialize an empty string\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "setSize(1);
+//lint -save -e613 (lint fail to identify the memory allocation by setSize())
+str[0] = '\\0';
+// lint -restore";
+					}
+					- _initializer = "";
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 479eca84-5e11-4468-81f7-f30f19a787d6;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 3;
+											- value = 
+											{ IProperty 
+												- _Name = "ImplementationEpilog";
+												- _Value = "
+//lint -restore";
+												- _Type = MultiLine;
+											}
+											{ IProperty 
+												- _Name = "ImplementationProlog";
+												- _Value = "// the operation is not const to comply with MFC CString
+//lint -save -e1762";
+												- _Type = MultiLine;
+											}
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+									{ IPropertyMetaclass 
+										- _Name = "Type";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "ReturnType";
+												- _Value = "const $type";
+												- _Type = String;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator const char*";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 cast operator\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- myReturnType = { IType 
+						- _id = GUID e27aa332-9697-40ca-8bf9-af81d8ffb92f;
+						- _myState = 8192;
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- _declaration = " ";
+						- _kind = Language;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "return str;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID d20096e7-3f60-4006-b662-c28ed728638a;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator!=";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 not equal test with a C string\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 8420073c-eaeb-4786-8616-5ed0343a2cd3;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "c2";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The C string\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char*";
+								- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "return (strcmp(str, c2) != 0);  //lint !e668 (OMString::str is never NULL)";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 656c257f-4167-40a9-8fc6-8a5aa3a3500d;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator!=";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 not equal test with a string\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 1ff369cc-304f-4c89-81c6-eaf4421a01a2;
+							- _name = "s2";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The string\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "return (strcmp(str, s2.str) != 0); //lint !e668 (OMString::str is never NULL)";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 86be3d5f-4f76-4cc1-8bf0-f29437f945c5;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator[]";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 return the character at the given position\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 6f76ddc6-b033-43c2-b166-4fd3ca8d0001;
+							- _name = "ind";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The index\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "int";
+								- _id = GUID 6024c6ab-fe9e-402e-954f-27aca6d3b5e4;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "char";
+						- _id = GUID 717461b3-278b-47c8-9526-c62c7be55b14;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "return str[ind];";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 10748e11-ee3e-4bda-aaec-308b7a8c9441;
+					- _name = "operator+=";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Add a C style string to the end of this string\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID ac65410c-70ee-455f-8daf-4ada69ecffea;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "st";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The string\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char*";
+								- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if(st){
+	int newCount = count + static_cast<int>(strlen(st));
+	resetSize(newCount + 1);
+	if(str){
+		memcpy(str + count, st, strlen(st) + 1);
+		count = newCount;
+	}
+}
+return *this;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 8648e54e-f64b-437f-ac53-ad99657d3f9a;
+					- _name = "operator+=";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Add a character to the end of this string\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID f8d32fe4-6d73-457d-a5e3-5ee41b81b24d;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "ch";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The character\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char";
+								- _id = GUID 717461b3-278b-47c8-9526-c62c7be55b14;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "++count;
+resetSize(count + 1);
+if(str) {
+	str[count-1] = ch;
+	str[count] = '\\0';
+}
+return *this;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID e6a9fce6-40d1-4491-98df-e306ea6cf8c1;
+					- _name = "operator+=";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Add a string to the end of this string\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 601d27d4-5cb4-4d43-a61c-f016a934a3e1;
+							- _name = "st";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The string\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "int newCount = count + st.count;
+resetSize(newCount + 1);
+if (str) {
+	memcpy(str + count, st.str, (unsigned int) st.count + 1);
+	count = newCount;
+}
+return *this;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID fcf6eb7c-53df-4ec7-9d50-2b3427aebbab;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator<";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Less than test\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID b5518cea-b6f4-420e-9484-8f6115d68394;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "c2";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The context string\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char*";
+								- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "bool smaller = false;
+if (c2 != 0) {
+	smaller = (strcmp(str,c2) < 0); //lint !e668 (str is never NULL)
+}
+return smaller;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID f466d15f-06b0-4ee6-a082-d35738d720e8;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator<";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Less than test\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 7c222406-5d58-4fa6-93e9-192fb55d4b4f;
+							- _name = "s2";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The context\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "return (strcmp(str, s2.str) < 0); //lint !e668 (OMString::str is never NULL)";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID b44214b9-4bc6-474c-b680-e59a70ef9c7e;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator<=";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Less than or equal to test\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 7c3b4315-5e00-4dcf-9d13-ca2189a8bd90;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "c2";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The context\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char*";
+								- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "bool res = false;
+if (c2 != 0) {
+	res = (strcmp(str, c2) <= 0); //lint !e668 (str is never NULL)
+}
+return res;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID ce4010f8-67af-44d8-af3e-60d19c528fe6;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator<=";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Less than or equal to test\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 2ed2ead3-fb0a-4fd0-b481-11e7d2bbc1bc;
+							- _name = "s2";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The context\\lang1037\\f1\\rtlch\\fs17\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "return (strcmp(str, s2.str) <= 0);	//lint !e668 (OMString::str is never NULL)";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID c6e5943c-9fc8-4d36-9c54-6f366bc4c34f;
+					- _name = "operator=";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Assign the specified string as the value of this string\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 8807703f-16e0-46dd-9cce-9063026781a0;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "st";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The context\\lang1037\\f1\\rtlch\\fs17\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char*";
+								- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if (st) {
+	count = static_cast<int>(strlen(st));
+	resetSize(count + 1);
+	if (str) {
+		memcpy(str, st, strlen(st) + 1);
+	}
+}
+return *this;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 3f763e7c-115e-4488-b010-f691452cfbd1;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 2;
+											- value = 
+											{ IProperty 
+												- _Name = "ImplementationEpilog";
+												- _Value = "
+//lint -restore";
+												- _Type = MultiLine;
+											}
+											{ IProperty 
+												- _Name = "ImplementationProlog";
+												- _Value = "//lint -save -e1539 (the size doesn't change only the data)
+";
+												- _Type = MultiLine;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator=";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Assign the specified character as the value of this string\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 50688601-abff-4a76-a585-56bda828c1d1;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "ch";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The context\\lang1037\\f1\\rtlch\\fs17\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char";
+								- _id = GUID 717461b3-278b-47c8-9526-c62c7be55b14;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "count = 1;
+if (str) {
+	str[0] = ch;
+	str[count] = '\\0';
+}
+return *this;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID ff26760a-4dd3-42b7-b996-93b21ac73ef9;
+					- _name = "operator=";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Assign the specified string as the value of this string\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID a05af03a-221f-4be3-9930-cabbc0669be6;
+							- _name = "st";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The context\\lang1037\\f1\\rtlch\\fs17\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if(str != st.str) {
+	count = st.count;
+	resetSize(count + 1);
+	if (str) {
+		memcpy(str, st.str, static_cast<unsigned int>(count) + 1);
+	}
+}
+return *this;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID f4e4a79b-8029-411a-a1bd-e78e590a3f09;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator==";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Compare this string with the specified string\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 2e7d5547-3e5c-4f76-9eb2-69ce597d92df;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "c2";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The context\\lang1037\\f1\\rtlch\\fs17\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char*";
+								- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "bool res = false;
+if (c2 != 0) {
+	res = (strcmp(str, c2) == 0); //lint !e668 (str is never NULL)
+}
+return res;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 04fcd729-d526-4ca4-b12a-3606d0a2149a;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator==";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Compare this string with the specified string\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID cf0bb9de-28e2-4456-959e-887e76388da5;
+							- _name = "s2";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The context\\lang1037\\f1\\rtlch\\fs17\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "return (strcmp(str, s2.str) == 0); //lint !e668 (str is never NULL)";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 84ce0509-a2ca-4406-9009-aafb52367adb;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator>";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Greater than test\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID d56880dd-4a8f-44dd-bb37-296202a5d2c6;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "c2";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The context\\lang1037\\f1\\rtlch\\fs17\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char*";
+								- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "bool res = true;
+if (c2 != 0) {
+	res = (strcmp(str, c2) > 0); //lint !e668 (str is never NULL)
+}
+return res;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID e3441df2-8c43-4f74-8a6a-c4aa2f4e201e;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator>";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Greater than test\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 680b4e5e-925b-4eef-95ae-c623f1f242a2;
+							- _name = "s2";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The context\\lang1037\\f1\\rtlch\\fs17\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "return (strcmp(str, s2.str) > 0);	//lint !e668 (str is never NULL)";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID f292cae8-01a2-4057-9e86-07ffb50f3520;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator>=";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Greater than or equal to test\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 75a673ef-6f33-4d56-bfa8-ed3cdadd075a;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "c2";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The context\\lang1037\\f1\\rtlch\\fs17\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char*";
+								- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "bool res = true;
+if (c2 != 0) {
+	res = (strcmp(str, c2) >= 0);	//lint !e668 (str is never NULL)
+}
+return res;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID ee7a0152-0061-4753-a6d1-f91ec761b25e;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "operator>=";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Greater than or equal to test\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID c26180bb-9b03-4ea0-9493-5d0d7e57c45b;
+							- _name = "s2";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The context\\lang1037\\f1\\rtlch\\fs17\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "return (strcmp(str, s2.str) >= 0);	//lint !e668 (str is never NULL)";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 16f9e3ba-dc72-4081-bc44-f91c634426bc;
+					- _name = "resetSize";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 give string a new larger size\\par
+and copy contents to it.\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 80dfef0a-1936-4b17-94b3-dc02eb5fe542;
+							- _name = "newSize";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The new buffer minimal size\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "int";
+								- _id = GUID 6024c6ab-fe9e-402e-954f-27aca6d3b5e4;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "// Do we need to allocate new memory
+if (size < newSize) {
+	// retain a pointer to the actual data
+	char* oldStr = str;
+	// allocate the new memory
+	int oldSize = size;
+	setSize(newSize);
+	// copy the actual data to the new location
+	if (str && oldStr) {
+		memcpy(str,oldStr, (unsigned int)oldSize);
+	}
+	// free memory used by the old location
+	OMDELETE(oldStr, oldSize);
+}";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 2701b83e-3396-4696-ae62-cd6f9ea2ffd3;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "SetAt";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 set a character at a given position\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 0e1fa868-375e-4ef8-83ff-9ef80b67d9e5;
+							- _name = "ind";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The index\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "int";
+								- _id = GUID 6024c6ab-fe9e-402e-954f-27aca6d3b5e4;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID ab7ec8c0-a186-4be5-a9fa-da5382512555;
+							- _name = "ch";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The character\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char";
+								- _id = GUID 717461b3-278b-47c8-9526-c62c7be55b14;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if (ind < count)
+{
+	// lint fails to identify the correlation between count and str
+	str[ind] = ch;	//lint !e613
+}";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID a5afc97a-ad89-4132-b285-f1eb0e9c95f3;
+					- _name = "setSize";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 allocate the string buffer\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 408187fc-177d-41f0-ac5b-7cf53db522ab;
+							- _name = "newSize";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The new buffer minimal size\\lang1037\\f1\\rtlch\\fs17\\par
+}
+";
+							}
+							- ValueSpecifications = { IRPYRawContainer 
+								- size = 1;
+								- value = 
+								{ ILiteralSpecification 
+									- _id = GUID 01d4f74d-32c3-4215-8c8a-ae058edff0db;
+									- _modifiedTimeWeak = 1.2.1990::0:0:0;
+									- _value = "defaultBlock";
+								}
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "int";
+								- _id = GUID 6024c6ab-fe9e-402e-954f-27aca6d3b5e4;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPrivate;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "
+// Round size up to the nearest stringBlock
+size = (newSize / defaultBlock) * defaultBlock;
+if (newSize > size) {
+	size += defaultBlock;
+}
+// Actually allocate the memory
+//lint -save -e119 (lint fail to find the replacement operator new[] )
+str = OMNEW(char, size);
+//lint -restore";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID b6dc3b39-84ad-41cd-bec6-adadcec3f994;
+					- _name = "CompareNoCase_";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 No case compare\\f1\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID d0a354dd-3214-4bdc-84db-38f523d50800;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type const";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "s1";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The source string\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char*";
+								- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID 99bf3afe-65df-409c-b224-de7757844f4f;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type const";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "s2";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The string to compare with\\lang1037\\f1\\rtlch\\fs17\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char*";
+								- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "int";
+						- _id = GUID 6024c6ab-fe9e-402e-954f-27aca6d3b5e4;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPrivate;
+					- _static = 1;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "// res = 3 - unknown
+int res = 3;
+if ((s1 != 0) && (s2 != 0)) {
+	for (int i = 0; res == 3; i++) {
+#ifndef _OM_UNICODE_ONLY
+		char d1 = (char)toupper(s1[i]);
+		char d2 = (char)toupper(s2[i]);
+#else
+		char d1 = (char)OMtoupper(s1[i]);
+		char d2 = (char)OMtoupper(s2[i]);
+#endif // _OM_UNICODE_ONLY
+		if (d1 < d2) {
+			res = -1;
+		}
+		else if (d1 > d2) {
+			res = 1;
+		}
+		else if (d1 == '\\0') {
+			res = 0;
+		}
+	}
+}
+return res;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 3c8c2fca-b658-4d14-a7d3-6ac74126b6d9;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 2;
+											- value = 
+											{ IProperty 
+												- _Name = "ImplementationName";
+												- _Value = "GetBuffer";
+												- _Type = String;
+											}
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "GetBuffer_";
+					- _modifiedTimeWeak = 4.22.2013::13:57:0;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 get the string buffer\\lang1033 , readjusting its size.\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID c6aaeb25-7f5a-4069-8f46-48cbe3d0913d;
+							- _name = "newBufferSize";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The new buffer minimal size\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "int";
+								- _id = GUID 6024c6ab-fe9e-402e-954f-27aca6d3b5e4;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "char*";
+						- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "resetSize(newBufferSize);
+return str;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID e2d5eaab-28d7-4b5a-aeab-9be1a42464d4;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "GetAt";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 get a character at a given position\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID a925466d-face-4f43-8967-9d084d025966;
+							- _name = "ind";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The index\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "int";
+								- _id = GUID 6024c6ab-fe9e-402e-954f-27aca6d3b5e4;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "char";
+						- _id = GUID 717461b3-278b-47c8-9526-c62c7be55b14;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "char retVal = '\\0';
+if (ind > -1 && ind < count)
+{
+	retVal = str[ind];
+}           
+return retVal;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID b498afd6-58e2-4ceb-ba4a-c7e7f7c6c030;
+					- _name = "ReleaseBuffer";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Release buffer sets the count value. It must be called before any use of string, if GetBuffer was used for direct change\\lang1033 .\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 77fa3605-0e38-4ada-90da-7e92470c9780;
+							- _myState = 8192;
+							- _name = "nNewLength";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The new string count. It can be called without argument, if buffer string ends with null character.\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- ValueSpecifications = { IRPYRawContainer 
+								- size = 1;
+								- value = 
+								{ ILiteralSpecification 
+									- _id = GUID 32d7de3a-1d50-410c-b8ef-c30e1796bb39;
+									- _modifiedTimeWeak = 1.2.1990::0:0:0;
+									- _value = "-1";
+								}
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "int";
+								- _id = GUID 6024c6ab-fe9e-402e-954f-27aca6d3b5e4;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if (nNewLength == -1)
+{
+	count = static_cast<int>(strlen(str));
+}
+else
+{
+	if (nNewLength <= size)
+	{
+		count = nNewLength;
+		if (count < size)
+		{
+			str[count] = '\\0';
+		}
+	}
+}";
+					}
+				}
+			}
+			- Attrs = { IRPYRawContainer 
+				- size = 4;
+				- value = 
+				{ IAttribute 
+					- _id = GUID c8465e54-4610-4c23-94c7-35d11115f416;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Attribute";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Accessor";
+												- _Value = "GetLength";
+												- _Type = String;
+											}
+										}
+									}
+								}
+							}
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Attribute";
+										- Properties = { IRPYRawContainer 
+											- size = 2;
+											- value = 
+											{ IProperty 
+												- _Name = "AccessorGenerate";
+												- _Value = "True";
+												- _Type = Bool;
+											}
+											{ IProperty 
+												- _Name = "MutatorGenerate";
+												- _Value = "Never";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Smart, Always, Never";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "count";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "CustomizableFramework.sbs";
+							- _subsystem = "CustomizableFramework";
+							- _class = "";
+							- _name = "Calculated";
+							- _id = GUID f99a85dd-667e-4617-b86a-51171ac8f8ae;
+						}
+					}
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset178 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 How many chars we currently have (without the '\\\\0')\\f1\\rtlch\\par
+}
+";
+					}
+					- ValueSpecifications = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ ILiteralSpecification 
+							- _id = GUID 371ab417-6ca0-4bdf-9e07-85d524a1b95b;
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _value = "0";
+						}
+					}
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "int";
+						- _id = GUID 6024c6ab-fe9e-402e-954f-27aca6d3b5e4;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID 7647cdf6-667a-4011-8dfa-740c1c72618e;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Attribute";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "InitializationStyle";
+												- _Value = "ByAssignment";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "ByInitializer, ByAssignment";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "defaultBlock";
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset178 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 the string default size\\par
+need to be declared before used (in this file) to avoid compilation issues in some compilers\\f1\\rtlch\\par
+}
+";
+					}
+					- ValueSpecifications = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ ILiteralSpecification 
+							- _id = GUID d2b6320e-259a-49fc-a2cf-3fd71b65445c;
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _value = "256";
+						}
+					}
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "int";
+						- _id = GUID 6024c6ab-fe9e-402e-954f-27aca6d3b5e4;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 1;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID bdeea1ef-7e5c-46a9-9433-618228915fde;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Attribute";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Visibility";
+												- _Value = "fromAttribute";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "private,protected,public,fromAttribute";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "size";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "CustomizableFramework.sbs";
+							- _subsystem = "CustomizableFramework";
+							- _class = "";
+							- _name = "Calculated";
+							- _id = GUID f99a85dd-667e-4617-b86a-51171ac8f8ae;
+						}
+					}
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset178 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 The current allocated memory\\f1\\rtlch\\par
+}
+";
+					}
+					- ValueSpecifications = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ ILiteralSpecification 
+							- _id = GUID d606f71c-61ed-483d-9b01-a08e4f16c39e;
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _value = "0";
+						}
+					}
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "int";
+						- _id = GUID 6024c6ab-fe9e-402e-954f-27aca6d3b5e4;
+					}
+					- _isOrdered = 0;
+					- _protection = iPrivate;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID a7d30eb2-3418-491b-b013-63603a94a41a;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Attribute";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Visibility";
+												- _Value = "fromAttribute";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "private,protected,public,fromAttribute";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "str";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "CustomizableFramework.sbs";
+							- _subsystem = "CustomizableFramework";
+							- _class = "";
+							- _name = "Calculated";
+							- _id = GUID f99a85dd-667e-4617-b86a-51171ac8f8ae;
+						}
+					}
+					- _modifiedTimeWeak = 4.22.2013::12:22:54;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset178 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Pointer to actual string\\f1\\rtlch\\par
+}
+";
+					}
+					- ValueSpecifications = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ ILiteralSpecification 
+							- _id = GUID 19f72317-b153-4e91-b5be-cd4ec00acd3c;
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _value = "0";
+						}
+					}
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "char*";
+						- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+					}
+					- _isOrdered = 0;
+					- _protection = iPrivate;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

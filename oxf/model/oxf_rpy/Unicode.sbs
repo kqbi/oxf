@@ -1,0 +1,681 @@
+I-Logix-RPY-Archive version 8.5.2 C++ 1146010
+{ ISubsystem 
+	- _cmheader = "$Id: Unicode.sbs 1.15 2007/04/06 07:10:01 ilgiga Exp $
+$Revision: 1.15 $
+$Locker: $
+
+";
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "Services.sbs";
+		- _subsystem = "Design::oxf";
+		- _class = "";
+		- _name = "Services";
+		- _id = GUID dc406d75-b5f5-477e-b7ec-93a579033180;
+	}
+	- _id = GUID eab055b8-9330-44ed-b529-05ad7e852ed0;
+	- _myState = 8192;
+	- _properties = { IPropertyContainer 
+		- Subjects = { IRPYRawContainer 
+			- size = 2;
+			- value = 
+			{ IPropertySubject 
+				- _Name = "CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Package";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "FileName";
+								- _Value = "omunicode";
+								- _Type = String;
+							}
+						}
+					}
+				}
+			}
+			{ IPropertySubject 
+				- _Name = "CPP_CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Package";
+						- Properties = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IProperty 
+								- _Name = "SpecificationEpilog";
+								- _Value = "
+#endif // _OM_UNICODE_ONLY";
+								- _Type = MultiLine;
+							}
+							{ IProperty 
+								- _Name = "SpecificationProlog";
+								- _Value = "#ifdef _OM_UNICODE_ONLY
+";
+								- _Type = MultiLine;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	- _name = "Unicode";
+	- Dependencies = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IDependency 
+			- _id = GUID 7b86aa03-ab25-4208-b724-78686b50a4f6;
+			- _myState = 2048;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UsageType";
+										- _Value = "Specification";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Specification,Implementation,Existence";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMUnicodeHelper";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypes.sbs";
+					- _subsystem = "PredefinedTypes";
+					- _class = "";
+					- _name = "Usage";
+					- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+				}
+			}
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "IClass";
+				- _id = GUID ed9cfc8f-6577-468a-be89-e008e4f11484;
+			}
+		}
+	}
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Unicode support\\f1\\rtlch\\par
+}
+";
+	}
+	- _lastID = 1;
+	- weakCGTime = 2.4.2009::14:59:38;
+	- strongCGTime = 1.15.2009::14:32:20;
+	- _defaultComposite = GUID aa4d0417-b230-4830-be85-ca3d6b06be5b;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ IClass 
+			- _id = GUID aa4d0417-b230-4830-be85-ca3d6b06be5b;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 2.4.2009::14:59:38;
+			- strongCGTime = 1.15.2009::14:32:20;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID ed9cfc8f-6577-468a-be89-e008e4f11484;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 4;
+									- value = 
+									{ IProperty 
+										- _Name = "ImplementationEpilog";
+										- _Value = "
+#endif // _OM_UNICODE_ONLY";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "ImplementationProlog";
+										- _Value = "#ifdef _OM_UNICODE_ONLY
+";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationEpilog";
+										- _Value = "
+#endif // _OM_UNICODE_ONLY";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationProlog";
+										- _Value = "#ifdef _OM_UNICODE_ONLY
+";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMUnicodeHelper";
+			- Dependencies = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IDependency 
+					- _id = GUID 6c682ca5-2f5b-4aea-bfb3-5ecc1c54036d;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "DllMacros";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "ISubsystem";
+						- _filename = "DllMacros.sbs";
+						- _subsystem = "Design::oxf::Services::Macros";
+						- _class = "";
+						- _name = "DllMacros";
+						- _id = GUID 81617f52-3248-4d5f-a488-8577e383c7a8;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 51043fa3-ad49-4f1c-818d-f1691f1ddad3;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "MISRA_Cpp_Types";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "ISubsystem";
+						- _filename = "MISRA_Cpp_Types.sbs";
+						- _subsystem = "Design::oxf::Services::Types";
+						- _class = "";
+						- _name = "MISRA_Cpp_Types";
+						- _id = GUID 16499c59-efc6-4efb-b702-0d3cb569f9ee;
+					}
+				}
+			}
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "CustomizableFramework.sbs";
+					- _subsystem = "CustomizableFramework";
+					- _class = "";
+					- _name = "utility";
+					- _id = GUID 5be5d8fa-96ae-42d1-87c7-53b13f183a55;
+				}
+			}
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 A utility class for unicode resolution\\f1\\rtlch\\par
+}
+";
+			}
+			- _lastID = 3;
+			- weakCGTime = 2.4.2009::15:1:24;
+			- strongCGTime = 2.4.2009::15:1:24;
+			- Operations = { IRPYRawContainer 
+				- size = 3;
+				- value = 
+				{ IPrimitiveOperation 
+					- _id = GUID 7809bc7a-a4ec-4023-ac23-1e061a6454b4;
+					- _name = "toupper";
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset178 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Returns the c character, converted to upper case\\par
+If the c is already uppercased, it returns the same value\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 67140e9a-eb37-49bc-b9f3-afe1ada2e6c3;
+							- _name = "aCharacter";
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 A character\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "MISRA_Cpp_Types.sbs";
+								- _subsystem = "Design::oxf::Services::Types::MISRA_Cpp_Types";
+								- _class = "";
+								- _name = "Rhp_int32_t";
+								- _id = GUID 55012af4-7758-4935-bf1e-dc3777a3b025;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "MISRA_Cpp_Types.sbs";
+						- _subsystem = "Design::oxf::Services::Types::MISRA_Cpp_Types";
+						- _class = "";
+						- _name = "Rhp_int32_t";
+						- _id = GUID 55012af4-7758-4935-bf1e-dc3777a3b025;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 1;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "Rhp_int32_t res = aCharacter;
+if ((aCharacter >= 97) && (aCharacter <= 122)) {
+	res = (aCharacter - 32);
+}
+return res;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 713fe1e5-9834-4577-a736-5fbf1e9826a2;
+					- _name = "wtoc";
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 converts the wcstr wide character string to char* string\\par
+returns size of cstr\\par
+\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 3;
+						- value = 
+						{ IArgument 
+							- _id = GUID 12faa481-801e-4a15-b4c3-e677da47b8c3;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "Out";
+														- _Value = "$type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "cstr";
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 the output string\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char*";
+								- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = Out;
+						}
+						{ IArgument 
+							- _id = GUID c84a5992-391c-4cb2-996b-a1e872ff18c6;
+							- _name = "wcstr";
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 wide character string\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "StandardTypes.sbs";
+								- _subsystem = "StandardTypes";
+								- _class = "";
+								- _name = "wchar_t";
+								- _id = GUID d292f986-f98c-4764-927f-2e1d1b0cd6ef;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID 12ea8606-5578-4418-8cb5-cabd85bbb8cf;
+							- _name = "count";
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 length of wcstr\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "StandardTypes.sbs";
+								- _subsystem = "StandardTypes";
+								- _class = "";
+								- _name = "size_t";
+								- _id = GUID bffb3277-b114-47c1-b860-facf21b69a4d;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "StandardTypes.sbs";
+						- _subsystem = "StandardTypes";
+						- _class = "";
+						- _name = "size_t";
+						- _id = GUID bffb3277-b114-47c1-b860-facf21b69a4d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 1;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "for (size_t pos = 0; pos < count; pos++) {
+	cstr[pos] = static_cast<Rhp_char_t>(wcstr[pos]);
+}
+return count;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID b935614b-b3b0-4ead-825a-6c5efd933888;
+					- _name = "ctow";
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 converts the char* string to the wide character string\\par
+returns size of the wide character string\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 3;
+						- value = 
+						{ IArgument 
+							- _id = GUID 04850707-03d7-401e-b9fb-561e27b14b1f;
+							- _name = "wcstr";
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 the output wide character string\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "StandardTypes.sbs";
+								- _subsystem = "StandardTypes";
+								- _class = "";
+								- _name = "wchar_t";
+								- _id = GUID d292f986-f98c-4764-927f-2e1d1b0cd6ef;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = Out;
+						}
+						{ IArgument 
+							- _id = GUID 5adfdc66-8162-4584-943c-3dd1fa2d5150;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "cstr";
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 the input string\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "char*";
+								- _id = GUID a1f818e6-c022-42d5-bbc0-075bf073b055;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID 4625019b-fcd4-44e1-af8f-b84b744b955e;
+							- _name = "count";
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 length of cstr\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "StandardTypes.sbs";
+								- _subsystem = "StandardTypes";
+								- _class = "";
+								- _name = "size_t";
+								- _id = GUID bffb3277-b114-47c1-b860-facf21b69a4d;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "StandardTypes.sbs";
+						- _subsystem = "StandardTypes";
+						- _class = "";
+						- _name = "size_t";
+						- _id = GUID bffb3277-b114-47c1-b860-facf21b69a4d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 1;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "for (size_t pos = 0; pos < count; pos++) {
+	wcstr[pos] = cstr[pos];
+}
+return count;";
+					}
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- Types = { IRPYRawContainer 
+		- size = 3;
+		- value = 
+		{ IType 
+			- _id = GUID df164495-f94d-4aa6-8d60-fb0139706092;
+			- _myState = 8192;
+			- _name = "OMctow";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 OMUnicodeHelper::ctow()\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s OMUnicodeHelper::ctow
+//";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID f78ffac2-f76d-4fb2-8c9e-ba012c79c10b;
+			- _myState = 8192;
+			- _name = "OMtoupper";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 OMUnicodeHelper::toupper()\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s OMUnicodeHelper::toupper
+//";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID c94fb2f3-bf50-4100-b289-61184b06cac3;
+			- _myState = 8192;
+			- _name = "OMwtoc";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 OMUnicodeHelper::wtoc()\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s OMUnicodeHelper::wtoc
+//";
+			- _kind = Language;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

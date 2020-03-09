@@ -1,0 +1,368 @@
+I-Logix-RPY-Archive version 8.13.0 C++ 9747218
+{ ISubsystem 
+	- _id = GUID 16499c59-efc6-4efb-b702-0d3cb569f9ee;
+	- _myState = 8192;
+	- _properties = { IPropertyContainer 
+		- Subjects = { IRPYRawContainer 
+			- size = 1;
+			- value = 
+			{ IPropertySubject 
+				- _Name = "CPP_CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Framework";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "IncludeHeaderFile";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Type";
+						- Properties = { IRPYRawContainer 
+							- size = 4;
+							- value = 
+							{ IProperty 
+								- _Name = "In";
+								- _Value = "const $type";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "InOut";
+								- _Value = "$type*";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "Out";
+								- _Value = "$type&";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "ReturnType";
+								- _Value = "$type";
+								- _Type = String;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	- _name = "MISRA_Cpp_Types";
+	- _modifiedTimeWeak = 5.8.2016::12:2:42;
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 MISRA C++ 2008 Types for a 32 bit machine\\par
+There is no need for these types to be in a namespace\\par
+They are all prepended with Rhp_ to avoid any conflict with \\par
+types with similar nmaes that might be used by existing software.\\f1\\rtlch\\par
+}
+";
+	}
+	- _lastID = 1;
+	- weakCGTime = 5.8.2016::12:2:42;
+	- strongCGTime = 1.15.2009::16:24:15;
+	- _defaultComposite = GUID b26c264c-62a2-4e14-988a-3b19a2af6c98;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID b26c264c-62a2-4e14-988a-3b19a2af6c98;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 7.8.2009::14:32:38;
+			- _lastID = 1;
+			- weakCGTime = 7.8.2009::14:32:38;
+			- strongCGTime = 1.15.2009::16:24:15;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- Types = { IRPYRawContainer 
+		- size = 14;
+		- value = 
+		{ IType 
+			- _id = GUID 6ce49386-07e9-4629-831a-d15fb8d693b4;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Type";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "DescriptionTemplate";
+										- _Value = "";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "Rhp_char_t";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 plain 8 bit character\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "typedef char %s;";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 48a8a812-b352-449b-811f-9ec0c5da376b;
+			- _myState = 8192;
+			- _name = "Rhp_int8_t";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 signed 8 bit integer\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "typedef signed char %s;";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID f5e4a680-cbfd-41d3-b061-4ecdf2091078;
+			- _myState = 8192;
+			- _name = "Rhp_int16_t";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 signed 16 bit integer\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "typedef signed short %s;";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 55012af4-7758-4935-bf1e-dc3777a3b025;
+			- _myState = 8192;
+			- _name = "Rhp_int32_t";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 signed 32 bit integer\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "typedef signed int %s;";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 45e314db-0b8c-4d0c-a0cb-f575e12f6af1;
+			- _myState = 8192;
+			- _name = "Rhp_int64_t";
+			- _modifiedTimeWeak = 5.8.2016::12:2:36;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 signed 64 bit integer\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "typedef signed long long %s;";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID ab5f8fbd-4271-4470-8edb-5da147df7775;
+			- _myState = 8192;
+			- _name = "Rhp_uint8_t";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 unsigned 8 bit integer\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "typedef unsigned char %s;";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID f7a029b4-03e0-4187-837b-3eb4c764e967;
+			- _myState = 8192;
+			- _name = "Rhp_uint16_t";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 unsigned 16 bit integer\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "typedef unsigned short %s;";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 0c2ec2f1-71b8-421f-a5a4-3d7dbe1aba28;
+			- _myState = 8192;
+			- _name = "Rhp_uint32_t";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 unsigned 32 bit integer\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "typedef unsigned int %s;";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID ed0ee0ca-0921-4ce1-af56-af6f2935bd98;
+			- _myState = 8192;
+			- _name = "Rhp_uint64_t";
+			- _modifiedTimeWeak = 5.8.2016::12:2:42;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 unsigned 64 bit integer\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "typedef unsigned long long %s;";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 21564905-43cb-4b2f-99a8-a5bf23c47b74;
+			- _myState = 8192;
+			- _name = "Rhp_float32_t";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 32 bit floating point\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "typedef float %s;";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID be0e3a6f-fce0-4281-adb0-c58cca2c6bd6;
+			- _myState = 8192;
+			- _name = "Rhp_float64_t";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 64 bit floating point\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "typedef double %s;";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID bc1fa3f5-0f1e-48d1-a39d-0f0b7e9af14d;
+			- _myState = 8192;
+			- _name = "Rhp_float128_t";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 128 bit floating point\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "typedef long double %s;";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID c303d99f-530f-4ae8-bb95-5c927a156f83;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Type";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "DescriptionTemplate";
+										- _Value = "";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "Rhp_char_pt";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 plain pointer to an 8 bit character\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "typedef char* %s;";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID dfb9ef4b-670b-4d4c-8b80-070e67852742;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Type";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "DescriptionTemplate";
+										- _Value = "";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "Rhp_const_char_pt";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 plain pointer to an 8 bit character\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "typedef const char* %s;";
+			- _kind = Language;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

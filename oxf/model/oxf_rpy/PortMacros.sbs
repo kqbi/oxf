@@ -1,0 +1,294 @@
+I-Logix-RPY-Archive version 8.14.0 C++ 9810360
+{ ISubsystem 
+	- _cmheader = "$Id: PortMacros.sbs 1.14 2007/04/06 07:09:41 ilgiga Exp $
+$Revision: 1.14 $
+$Locker: $
+
+";
+	- _id = GUID 59b258d4-ef88-42c2-9be7-d966c30a713c;
+	- _myState = 8192;
+	- _name = "PortMacros";
+	- Dependencies = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IDependency 
+			- _id = GUID 1f00eeff-b749-4989-8008-55081598ed8d;
+			- _myState = 2048;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UsageType";
+										- _Value = "Specification";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Specification,Implementation,Existence";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "GenMacros";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _subsystem = "PredefinedTypes";
+					- _name = "Usage";
+					- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+				}
+			}
+			- _modifiedTimeWeak = 4.30.2018::8:1:13;
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "ISubsystem";
+				- _filename = ".\\GenMacros.sbs";
+				- _subsystem = "Design::oxf::Services::Macros";
+				- _name = "GenMacros";
+				- _id = GUID eb8f0fc9-05ff-4848-9208-d7afdd09b855;
+			}
+		}
+	}
+	- _modifiedTimeWeak = 4.30.2018::8:1:20;
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Ports access macros\\f1\\rtlch\\par
+}
+";
+	}
+	- _lastID = 5;
+	- weakCGTime = 4.30.2018::8:1:20;
+	- strongCGTime = 4.30.2018::8:1:13;
+	- _defaultComposite = GUID ce0ef357-c0f2-4339-a387-61be6a6c8968;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID ce0ef357-c0f2-4339-a387-61be6a6c8968;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 4.30.2018::8:1:20;
+			- weakCGTime = 4.30.2018::8:1:20;
+			- strongCGTime = 1.15.2009::14:32:20;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- Types = { IRPYRawContainer 
+		- size = 13;
+		- value = 
+		{ IType 
+			- _id = GUID dd11a4b3-81ef-4316-9740-35add8f0a3c7;
+			- _myState = 8192;
+			- _name = "_OPORT";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Get the out bound of the provided port\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s(p) ((p != NULL) ? p->getOutBound() : NULL)";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 5adf06ce-4775-44c2-8f10-d39c7539c440;
+			- _myState = 8192;
+			- _name = "IS_PORT";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Check if the current event was sent via the specified port\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s(p) ((getCurrentEvent() != NULL) ? (getCurrentEvent()->getPort() == (void *)(get_##p())) : false)";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 09f974ac-e7fc-49f5-bca7-08aaaef998f5;
+			- _myState = 8192;
+			- _name = "IS_PORT_AT";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Check if the current event was sent via the specified port when using a port with multiplicity > 1\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s(p,i) ((getCurrentEvent() != NULL) ? (getCurrentEvent()->getPort() == (void *)(get_##p(i))) : false)";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 90829566-c79b-4047-8333-9b348849e4e5;
+			- _myState = 8192;
+			- _name = "OPORT";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Get the out bound of the provided port\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s(p) OUT_PORT(p)";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID e8a55639-b7ab-435a-86ef-472225cb6d39;
+			- _myState = 8192;
+			- _name = "OPORT_AT";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Get the out bound of the provided port when using a port with multiplicity > 1\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s(p, i) OUT_PORT_AT(p, i)";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 5736f528-8eed-4d22-aff8-5add24a6be81;
+			- _myState = 8192;
+			- _name = "OUT_PORT";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Get the out bound of the provided port\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s(p) _OPORT(get_##p())";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 676136da-a4ea-4f78-8bdb-c688a7498e03;
+			- _myState = 8192;
+			- _name = "OUT_PORT_AT";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Get the out bound of the provided port when using a port with multiplicity > 1\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s(p, i) _OPORT(get_##p(i))";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID c188d2c2-f18f-44f4-a39c-bbf106f4a600;
+			- _myState = 8192;
+			- _name = "FLOW_DATA_SEND";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _declaration = "#ifdef _OMINSTRUMENT
+#define FLOW_DATA_SEND(flowPort, servicePortName, relayFunc, serializeFunc) \\
+{																\\
+	Rhp_char_pt fpValStr = serializeFunc(flowPort);					\\
+	NOTIFY_FLOW_DATA_SEND(#flowPort, fpValStr)					\\
+	OUT_PORT(servicePortName)->relayFunc(flowPort);				\\
+	NOTIFY_FLOW_DATA_SEND_END									\\
+	delete [] fpValStr;											\\
+}
+#else
+#define FLOW_DATA_SEND(flowPort, servicePortName, relayFunc, serializeFunc) \\
+	OUT_PORT(servicePortName)->relayFunc(flowPort);
+#endif";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 84ac86bd-265b-4a2b-b27e-88d08fa70b82;
+			- _myState = 8192;
+			- _name = "FLOW_DATA_RECEIVE";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _declaration = "#ifdef _OMINSTRUMENT
+#define FLOW_DATA_RECEIVE(argName, argValue, serializeFunc) \\
+{																		\\
+	Rhp_char_pt argValStr = serializeFunc(argValue);							\\
+	NOTIFY_FLOW_DATA_RECEIVE(argName, argValStr)						\\
+	delete [] argValStr;												\\
+}
+#else
+#define FLOW_DATA_RECEIVE(argName, argValue, serializeFunc) 
+#endif		
+	";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID c1346178-123b-428a-99d0-40a6cd82cb53;
+			- _myState = 8192;
+			- _name = "FLOW_GEN";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Get the out bound of the provided port\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s(PORT, EVENT) OUT_PORT(PORT##_SP)->GEN(EVENT)";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 92e221cf-74c4-45ba-b7d8-5f0d494a051a;
+			- _myState = 8192;
+			- _name = "MULTICAST_GEN";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _declaration = "#define MULTICAST_GEN(PORT, EVENT) \\
+{ \\
+	if (OUT_PORT(PORT)) \\
+	{ \\
+		OMCollection<IOxfReactive*>*  pLinksContainer = OUT_PORT(PORT)->getItsDefaultRequiredInterface(); \\
+		if (pLinksContainer) \\
+		{ \\
+			for (Rhp_int32_t i = 0; i < (*pLinksContainer).getCount(); i++) \\
+			{ \\
+				(*pLinksContainer)[i]->GEN(EVENT); \\
+			} \\
+		} \\
+	} \\
+}	";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 625f171a-6027-4912-9974-b0b32d4538a4;
+			- _myState = 8192;
+			- _name = "MULTICAST_FLOW_GEN";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _declaration = "#define MULTICAST_FLOW_GEN(PORT, EVENT) MULTICAST_GEN(PORT##_SP, EVENT)";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID dcad1c38-1033-4ea1-a14a-e0dca1894fee;
+			- _myState = 8192;
+			- _name = "FLOW_DATA_POP";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _declaration = "#ifdef _OMINSTRUMENT
+#define FLOW_DATA_POP		\\
+{							\\
+	NOTIFY_FLOW_DATA_POP	\\
+}
+#else
+#define FLOW_DATA_POP
+#endif		
+";
+			- _kind = Language;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

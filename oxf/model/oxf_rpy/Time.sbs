@@ -1,0 +1,907 @@
+I-Logix-RPY-Archive version 8.5.2 C++ 1146010
+{ ISubsystem 
+	- _cmheader = "$Id: Time.sbs 1.16 2007/04/06 07:09:53 ilgiga Exp $
+$Revision: 1.16 $
+$Locker: $
+
+";
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "Services.sbs";
+		- _subsystem = "Design::oxf";
+		- _class = "";
+		- _name = "Services";
+		- _id = GUID dc406d75-b5f5-477e-b7ec-93a579033180;
+	}
+	- _id = GUID 59db09e8-b219-41c5-b0e9-e87ecf573ad6;
+	- _myState = 8192;
+	- _name = "Time";
+	- Dependencies = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IDependency 
+			- _id = GUID b6739a3f-cacb-4489-b960-7bad821b6b4d;
+			- _myState = 2048;
+			- _name = "CoreAPI";
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "ISubsystem";
+				- _filename = "CoreAPI.sbs";
+				- _subsystem = "Design::oxf::Core";
+				- _class = "";
+				- _name = "CoreAPI";
+				- _id = GUID e139f132-cbaa-4ae5-bddd-f738e0f9f148;
+			}
+		}
+	}
+	- _theMainDiagram = { IHandle 
+		- _m2Class = "IDiagram";
+		- _id = GUID 393710fc-908b-4448-aff4-dee2682327c8;
+	}
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Timing services package\\f1\\rtlch\\par
+}";
+	}
+	- _lastID = 6;
+	- Declaratives = { IRPYRawContainer 
+		- size = 3;
+		- value = 
+		{ IDiagram 
+			- _id = GUID 393710fc-908b-4448-aff4-dee2682327c8;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "Format";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 3;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Association";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "Line.LineColor";
+										- _Value = "221,0,0";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineWidth";
+										- _Value = "1";
+										- _Type = Int;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Depends";
+								- Properties = { IRPYRawContainer 
+									- size = 3;
+									- value = 
+									{ IProperty 
+										- _Name = "Line.LineColor";
+										- _Value = "0,16,230";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineStyle";
+										- _Value = "1";
+										- _Type = Int;
+									}
+									{ IProperty 
+										- _Name = "Line.LineWidth";
+										- _Value = "0";
+										- _Type = Int;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Inheritance";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "Line.LineColor";
+										- _Value = "0,16,230";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineWidth";
+										- _Value = "1";
+										- _Type = Int;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "Time services overview";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 Overview on the time related services of the framework\\lang1037\\f1\\rtlch\\par
+}";
+			}
+			- _lastModifiedTime = "1.15.2009::14:32:18";
+			- _graphicChart = { CGIClassChart 
+				- _id = GUID df2fa2e5-026b-463c-abd8-337b8e8367ac;
+				- m_type = 0;
+				- m_pModelObject = { IHandle 
+					- _m2Class = "IDiagram";
+					- _id = GUID 393710fc-908b-4448-aff4-dee2682327c8;
+				}
+				- m_pParent = ;
+				- m_name = { CGIText 
+					- m_str = "";
+					- m_style = "Arial" 10 0 0 0 1 ;
+					- m_color = { IColor 
+						- m_fgColor = 0;
+						- m_bgColor = 0;
+						- m_bgFlag = 0;
+					}
+					- m_position = 1 0 0  ;
+					- m_nIdent = 0;
+					- m_bImplicitSetRectPoints = 0;
+					- m_nOrientationCtrlPt = 8;
+				}
+				- m_drawBehavior = 0;
+				- m_bIsPreferencesInitialized = 0;
+				- elementList = 9;
+				{ CGICompositeClass 
+					- _id = GUID 0ab27fbb-330e-4a83-ac86-84e8b004200c;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "Format";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Class";
+										- Properties = { IRPYRawContainer 
+											- size = 7;
+											- value = 
+											{ IProperty 
+												- _Name = "Font.Font";
+												- _Value = "Arial";
+												- _Type = String;
+											}
+											{ IProperty 
+												- _Name = "Font.FontColor";
+												- _Value = "0,0,0";
+												- _Type = Color;
+											}
+											{ IProperty 
+												- _Name = "Font.Italic";
+												- _Value = "0";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Font.Size";
+												- _Value = "10";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Font.Weight";
+												- _Value = "400";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Line.LineColor";
+												- _Value = "255,255,255";
+												- _Type = Color;
+											}
+											{ IProperty 
+												- _Name = "Line.LineWidth";
+												- _Value = "0";
+												- _Type = Int;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 78;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 3124a539-9aa9-4b60-b097-6bf9f4ab98ab;
+					}
+					- m_pParent = ;
+					- m_name = { CGIText 
+						- m_str = "TopLevel";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 0;
+					- m_bIsPreferencesInitialized = 0;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 50 50  578 50  578 442  50 442  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+				}
+				{ CGIClass 
+					- _id = GUID 51737625-3780-421b-8137-1ca1bc1378ce;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "Format";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Class";
+										- Properties = { IRPYRawContainer 
+											- size = 6;
+											- value = 
+											{ IProperty 
+												- _Name = "Font.Font";
+												- _Value = "Arial";
+												- _Type = String;
+											}
+											{ IProperty 
+												- _Name = "Font.FontColor";
+												- _Value = "128,128,0";
+												- _Type = Color;
+											}
+											{ IProperty 
+												- _Name = "Font.Italic";
+												- _Value = "0";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Font.Size";
+												- _Value = "10";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Font.Weight";
+												- _Value = "400";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Line.LineColor";
+												- _Value = "128,128,0";
+												- _Type = Color;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 87;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "TimeManagement.sbs";
+						- _subsystem = "Design::oxf::Services::Time::TimeManagement";
+						- _class = "";
+						- _name = "OMTimerManager";
+						- _id = GUID b406c13c-5110-40cc-ba74-e94e701427ea;
+					}
+					- m_pParent = GUID e7c8fd5c-090a-4527-80c9-da9a569df900;
+					- m_name = { CGIText 
+						- m_str = "OMTimerManager";
+						- m_style = "Arial" 10 0 0 1 2 ;
+						- m_color = { IColor 
+							- m_fgColor = 44;
+							- m_bgColor = 44;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 -20.9959402762784 28.8555091588595  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 26632;
+					- m_transform = 0.318819 0 0 0.553776 186.242 153.937 ;
+					- m_bIsPreferencesInitialized = 0;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 2 329  1086 329  1086 1451  2 1451  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- frameset = "<frameset rows=50%,50%>
+<frame name=AttributeListCompartment>
+<frame name=PrimitiveOperationListCompartment>";
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIPackage 
+					- _id = GUID 5dec39e6-b3ec-4e4b-adca-a26a16fbfa1e;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "Format";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Package";
+										- Properties = { IRPYRawContainer 
+											- size = 6;
+											- value = 
+											{ IProperty 
+												- _Name = "Font.Font";
+												- _Value = "Arial";
+												- _Type = String;
+											}
+											{ IProperty 
+												- _Name = "Font.FontColor";
+												- _Value = "0,0,0";
+												- _Type = Color;
+											}
+											{ IProperty 
+												- _Name = "Font.Italic";
+												- _Value = "0";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Font.Size";
+												- _Value = "10";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Font.Weight";
+												- _Value = "400";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Line.LineColor";
+												- _Value = "255,0,0";
+												- _Type = Color;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 127;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "ISubsystem";
+						- _filename = "TimeAPI.sbs";
+						- _subsystem = "Design::oxf::Services::Time";
+						- _class = "";
+						- _name = "TimeAPI";
+						- _id = GUID ffc5fea6-2a07-4622-9afe-ad4c106320e5;
+					}
+					- m_pParent = GUID c4b2a2eb-3e98-49c1-8a5b-f1393991ba46;
+					- m_name = { CGIText 
+						- m_str = "TimeAPI";
+						- m_style = "Arial" 10 0 0 1 2 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 -25.4114233728979 38.4982265447017  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 4104;
+					- m_transform = 0.412879 0 0 0.329966 55.2727 116.263 ;
+					- m_bIsPreferencesInitialized = 0;
+					- m_polygon = 9 0 223.15306122449  0 0  608 0  608 223.15306122449  0 223.15306122449  0 1151  1216 1151  1216 223.15306122449  0 223.15306122449  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+				}
+				{ CGIClass 
+					- _id = GUID a8ce5ad7-e74d-4082-8ac2-92d44444e2c8;
+					- m_type = 87;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "CoreAPI.sbs";
+						- _subsystem = "Design::oxf::Core::CoreAPI";
+						- _class = "";
+						- _name = "IOxfTimeout";
+						- _id = GUID 7ca39c06-5089-4ef7-8b23-98dead00f52d;
+					}
+					- m_pParent = GUID 0ab27fbb-330e-4a83-ac86-84e8b004200c;
+					- m_name = { CGIText 
+						- m_str = "IOxfTimeout";
+						- m_style = "Arial" 10 0 0 1 2 ;
+						- m_color = { IColor 
+							- m_fgColor = 44;
+							- m_bgColor = 44;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 -20.884200479379 22.5556253739268  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 28680;
+					- m_transform = 0.135609 0 0 0.0597148 139.729 355.354 ;
+					- m_bIsPreferencesInitialized = 0;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 2 329  1086 329  1086 1451  2 1451  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- frameset = "<frameset rows=50%,50%>
+<frame name=AttributeListCompartment>
+<frame name=PrimitiveOperationListCompartment>";
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIPackage 
+					- _id = GUID c4b2a2eb-3e98-49c1-8a5b-f1393991ba46;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "Format";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Package";
+										- Properties = { IRPYRawContainer 
+											- size = 6;
+											- value = 
+											{ IProperty 
+												- _Name = "Font.Font";
+												- _Value = "Arial";
+												- _Type = String;
+											}
+											{ IProperty 
+												- _Name = "Font.FontColor";
+												- _Value = "0,0,0";
+												- _Type = Color;
+											}
+											{ IProperty 
+												- _Name = "Font.Italic";
+												- _Value = "0";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Font.Size";
+												- _Value = "10";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Font.Weight";
+												- _Value = "400";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Line.LineColor";
+												- _Value = "255,0,0";
+												- _Type = Color;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 127;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "ISubsystem";
+						- _id = GUID 59db09e8-b219-41c5-b0e9-e87ecf573ad6;
+					}
+					- m_pParent = GUID 0ab27fbb-330e-4a83-ac86-84e8b004200c;
+					- m_name = { CGIText 
+						- m_str = "Time";
+						- m_style = "Arial" 10 0 0 1 2 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 -21.6502798315373 40.1364708696816  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 4104;
+					- m_transform = 0.434211 0 0 0.258036 50 50 ;
+					- m_bIsPreferencesInitialized = 0;
+					- m_polygon = 9 0 69.7575757575758  0 0  608 0  608 69.7575757575758  0 69.7575757575758  0 1151  1216 1151  1216 69.7575757575758  0 69.7575757575758  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+				}
+				{ CGIClass 
+					- _id = GUID d0f51607-8384-44d5-a278-72e30ecb798b;
+					- m_type = 87;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "TimeAPI.sbs";
+						- _subsystem = "Design::oxf::Services::Time::TimeAPI";
+						- _class = "";
+						- _name = "IOxfTickTimerFactory";
+						- _id = GUID 000595e8-6a02-48cf-9164-1eb45a7bfb71;
+					}
+					- m_pParent = GUID 5dec39e6-b3ec-4e4b-adca-a26a16fbfa1e;
+					- m_name = { CGIText 
+						- m_str = "IOxfTickTimerFactory";
+						- m_style = "Arial" 10 0 0 1 2 ;
+						- m_color = { IColor 
+							- m_fgColor = 44;
+							- m_bgColor = 44;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 -22.5114736448065 36.712588040739  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 26632;
+					- m_transform = 0.792444 0 0 0.523391 176.911 168.406 ;
+					- m_bIsPreferencesInitialized = 0;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 2 329  1086 329  1086 1451  2 1451  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- frameset = "<frameset rows=50%,50%>
+<frame name=AttributeListCompartment>
+<frame name=PrimitiveOperationListCompartment>";
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIClass 
+					- _id = GUID dfb98ae5-e15d-4a0d-b047-1aa1eb5854eb;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "Format";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Class";
+										- Properties = { IRPYRawContainer 
+											- size = 6;
+											- value = 
+											{ IProperty 
+												- _Name = "Font.Font";
+												- _Value = "Arial";
+												- _Type = String;
+											}
+											{ IProperty 
+												- _Name = "Font.FontColor";
+												- _Value = "128,128,0";
+												- _Type = Color;
+											}
+											{ IProperty 
+												- _Name = "Font.Italic";
+												- _Value = "0";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Font.Size";
+												- _Value = "10";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Font.Weight";
+												- _Value = "400";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Line.LineColor";
+												- _Value = "128,128,0";
+												- _Type = Color;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 87;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "TimeManagement.sbs";
+						- _subsystem = "Design::oxf::Services::Time::TimeManagement";
+						- _class = "";
+						- _name = "OMTimerManagerDefaults";
+						- _id = GUID 6f33ce3d-3feb-438e-8c01-0b3d50b3d5ec;
+					}
+					- m_pParent = GUID e7c8fd5c-090a-4527-80c9-da9a569df900;
+					- m_name = { CGIText 
+						- m_str = "OMTimerManagerDefaults";
+						- m_style = "Arial" 10 0 0 1 2 ;
+						- m_color = { IColor 
+							- m_fgColor = 44;
+							- m_bgColor = 44;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 -9.19825516355067 28.8443236643049  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 26632;
+					- m_transform = 0.387306 0 0 0.562854 710.905 150.954 ;
+					- m_bIsPreferencesInitialized = 0;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 2 329  1086 329  1086 1451  2 1451  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- frameset = "<frameset rows=50%,50%>
+<frame name=AttributeListCompartment>
+<frame name=PrimitiveOperationListCompartment>";
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIPackage 
+					- _id = GUID e7c8fd5c-090a-4527-80c9-da9a569df900;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "Format";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Package";
+										- Properties = { IRPYRawContainer 
+											- size = 6;
+											- value = 
+											{ IProperty 
+												- _Name = "Font.Font";
+												- _Value = "Arial";
+												- _Type = String;
+											}
+											{ IProperty 
+												- _Name = "Font.FontColor";
+												- _Value = "0,0,0";
+												- _Type = Color;
+											}
+											{ IProperty 
+												- _Name = "Font.Italic";
+												- _Value = "0";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Font.Size";
+												- _Value = "10";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Font.Weight";
+												- _Value = "400";
+												- _Type = Int;
+											}
+											{ IProperty 
+												- _Name = "Line.LineColor";
+												- _Value = "255,0,0";
+												- _Type = Color;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 127;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "ISubsystem";
+						- _filename = "TimeManagement.sbs";
+						- _subsystem = "Design::oxf::Services::Time";
+						- _class = "";
+						- _name = "TimeManagement";
+						- _id = GUID 6aafe80f-ba6d-415b-bcb5-29033d7a4396;
+					}
+					- m_pParent = GUID c4b2a2eb-3e98-49c1-8a5b-f1393991ba46;
+					- m_name = { CGIText 
+						- m_str = "TimeManagement";
+						- m_style = "Arial" 10 0 0 1 2 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 -22.0466718352123 30.8741060118498  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 4104;
+					- m_transform = 0.899621 0 0 0.380471 52.9697 674.323 ;
+					- m_bIsPreferencesInitialized = 0;
+					- m_polygon = 9 0 183.345132743363  0 0  606.719999999997 0  606.719999999997 183.345132743363  0 183.345132743363  0 1151  1216 1151  1216 183.345132743363  0 183.345132743363  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+				}
+				{ CGIInheritance 
+					- _id = GUID 235a0ad7-b577-45cc-bef1-0d46f7c60066;
+					- m_type = 128;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IDependency";
+						- _filename = "TimeManagement.sbs";
+						- _subsystem = "Design::oxf::Services::Time::TimeManagement";
+						- _class = "OMTimerManager";
+						- _name = "OMTimerManagerDefaults";
+						- _id = GUID 5050e7e6-0450-4c48-98bb-6ba49048cc56;
+					}
+					- m_pParent = ;
+					- m_name = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 4096;
+					- m_bIsPreferencesInitialized = 0;
+					- m_pSource = GUID 51737625-3780-421b-8137-1ca1bc1378ce;
+					- m_sourceType = 'F';
+					- m_pTarget = GUID dfb98ae5-e15d-4a0d-b047-1aa1eb5854eb;
+					- m_targetType = 'T';
+					- m_direction = ' ';
+					- m_rpn = { CGIText 
+						- m_str = "Usage";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_anglePoint1 = 0 0 ;
+					- m_anglePoint2 = 0 0 ;
+					- m_line_style = 0;
+					- m_SourcePort = 544 890 ;
+					- m_TargetPort = 544 890 ;
+					- m_ShowName = 0;
+					- m_ShowStereotype = 1;
+				}
+				
+				- m_access = 'Z';
+				- m_modified = 'N';
+				- m_fileVersion = "";
+				- m_nModifyDate = 0;
+				- m_nCreateDate = 0;
+				- m_creator = "";
+				- m_bScaleWithZoom = 1;
+				- m_arrowStyle = 'S';
+				- m_pRoot = GUID 0ab27fbb-330e-4a83-ac86-84e8b004200c;
+				- m_currentLeftTop = 0 0 ;
+				- m_currentRightBottom = 0 0 ;
+			}
+			- _defaultSubsystem = { IHandle 
+				- _m2Class = "ISubsystem";
+				- _id = GUID 59db09e8-b219-41c5-b0e9-e87ecf573ad6;
+			}
+		}
+		{ ISubsystem 
+			- fileName = "TimeAPI";
+			- _id = GUID ffc5fea6-2a07-4622-9afe-ad4c106320e5;
+		}
+		{ ISubsystem 
+			- fileName = "TimeManagement";
+			- _id = GUID 6aafe80f-ba6d-415b-bcb5-29033d7a4396;
+		}
+	}
+	- weakCGTime = 1.15.2009::14:32:20;
+	- strongCGTime = 1.15.2009::14:32:20;
+	- _defaultComposite = GUID 3124a539-9aa9-4b60-b097-6bf9f4ab98ab;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID 3124a539-9aa9-4b60-b097-6bf9f4ab98ab;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 1.15.2009::14:32:20;
+			- strongCGTime = 1.15.2009::14:32:20;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 10.21.2003::13:2:37;
+}
+

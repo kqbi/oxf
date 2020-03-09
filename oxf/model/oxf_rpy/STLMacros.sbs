@@ -1,0 +1,87 @@
+I-Logix-RPY-Archive version 8.5.2 C++ 1146010
+{ ISubsystem 
+	- _cmheader = "$Id: STLMacros.sbs 1.11 2007/04/06 07:09:46 ilgiga Exp $
+$Revision: 1.11 $
+$Locker: $
+
+";
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "Macros.sbs";
+		- _subsystem = "Design::oxf::Services";
+		- _class = "";
+		- _name = "Macros";
+		- _id = GUID c697f445-962f-4ebe-bf72-ed6fff848cb6;
+	}
+	- _id = GUID d2b4f747-47ee-4bf9-aa08-cd5e420c4be0;
+	- _myState = 8192;
+	- _name = "STLMacros";
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 STL support macros\\f1\\rtlch\\par
+}
+";
+	}
+	- _lastID = 1;
+	- weakCGTime = 1.15.2009::14:32:20;
+	- strongCGTime = 1.15.2009::14:32:20;
+	- _defaultComposite = GUID dac58585-9917-4a95-a890-22e7cd3e618a;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID dac58585-9917-4a95-a890-22e7cd3e618a;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 1.15.2009::14:32:20;
+			- strongCGTime = 1.15.2009::14:32:20;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- Types = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ IType 
+			- _id = GUID 53985450-dcb2-4e75-a279-98d2dd7015b4;
+			- _myState = 8192;
+			- _name = "OM_USE_STL";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Use the std namespace\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#ifdef %s
+namespace std {}
+using namespace std;
+#define OM_STL
+#endif // %s";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID c652602b-91f0-49d9-84bb-8a3bd2ae06c8;
+			- _myState = 8192;
+			- _name = "STD_NAMESPACE";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Some compilers don't support the std:: namespace\\par
+You may omit it from the signature by compiling your application with NO_STD_NAMESPACE compiler switch\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s std::
+#ifdef NO_STD_NAMESPACE
+#undef %s
+#define %s
+#endif // NO_STD_NAMESPACE";
+			- _kind = Language;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

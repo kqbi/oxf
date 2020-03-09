@@ -1,0 +1,56 @@
+I-Logix-RPY-Archive version 8.5.2 C++ 1146010
+{ ISubsystem 
+	- _cmheader = "$Id: StringFunctions.sbs 1.13 2007/04/06 07:09:52 ilgiga Exp $
+$Revision: 1.13 $
+$Locker: $
+
+";
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "String.sbs";
+		- _subsystem = "Design::oxf::Services";
+		- _class = "";
+		- _name = "String";
+		- _id = GUID 9e7ca901-80d6-4ddf-acf2-7b09b6c505d1;
+	}
+	- _id = GUID 39af422a-9631-420f-8f1f-8fd4475c8b55;
+	- _myState = 8192;
+	- _name = "StringFunctions";
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Global string functions\\f1\\rtlch\\par
+}
+";
+	}
+	- _lastID = 1;
+	- Declaratives = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ ISubsystem 
+			- fileName = "OMString";
+			- _id = GUID 80f78096-745d-41c0-ad29-b200fd1d1fd2;
+		}
+	}
+	- weakCGTime = 1.15.2009::14:32:20;
+	- strongCGTime = 1.15.2009::14:32:20;
+	- _defaultComposite = GUID 5b727367-55a6-492a-a318-f5dc8dbc65cd;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID 5b727367-55a6-492a-a318-f5dc8dbc65cd;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 1.15.2009::14:32:20;
+			- strongCGTime = 1.15.2009::14:32:20;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

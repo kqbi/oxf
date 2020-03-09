@@ -1,0 +1,3123 @@
+I-Logix-RPY-Archive version 8.13.0 C++ 9749220
+{ IComponent 
+	- _id = GUID 25cf3b15-286b-4eda-91a1-3f1788709d7e;
+	- _myState = 8192;
+	- _properties = { IPropertyContainer 
+		- Subjects = { IRPYRawContainer 
+			- size = 1;
+			- value = 
+			{ IPropertySubject 
+				- _Name = "CPP_CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Argument";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "IsConst";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Relation";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "DataMemberVisibility";
+								- _Value = "Protected";
+								- _Type = Enum;
+								- _ExtraTypeInfo = "Public,Protected,Private";
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	- _name = "oxfAnimFiles";
+	- _modifiedTimeWeak = 6.7.2016::14:38:42;
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fprq1\\fcharset0 Courier New;}{\\f2\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 Animation required files and services.\\par
+It is assumed that when using this subset of the OXF one will define the \\f1\\fs20 OM_NO_FRAMEWORK_MEMORY_MANAGER compilation flag.\\lang1037\\f2\\rtlch\\fs17\\par
+}
+";
+	}
+	- _lastID = 1;
+	- m_buildType = Library;
+	- m_libraries = "";
+	- m_additionalSources = "";
+	- m_standardHeaders = "";
+	- m_includePath = "";
+	- m_initializationCode = "";
+	- m_folder = { IFolder 
+		- _id = GUID 4e919da6-fe61-4e67-ba1f-eceb467b387a;
+		- _myState = 65536;
+		- _name = "Files";
+		- _modifiedTimeWeak = 6.7.2016::14:38:42;
+		- _lastID = 6;
+		- m_path = "";
+		- Elements = { IRPYRawContainer 
+			- size = 6;
+			- value = 
+			{ IHandle 
+				- _m2Class = "ISubsystem";
+				- _filename = "AnimAPI.sbs";
+				- _subsystem = "Design::oxf::Anim";
+				- _class = "";
+				- _name = "AnimAPI";
+				- _id = GUID bcdc62e1-7826-4f43-8d77-444537824467;
+			}
+			{ IHandle 
+				- _m2Class = "ISubsystem";
+				- _filename = "CoreAPI.sbs";
+				- _subsystem = "Design::oxf::Core";
+				- _class = "";
+				- _name = "CoreAPI";
+				- _id = GUID e139f132-cbaa-4ae5-bddd-f738e0f9f148;
+			}
+			{ IHandle 
+				- _m2Class = "ISubsystem";
+				- _filename = "String.sbs";
+				- _subsystem = "Design::oxf::Services";
+				- _class = "";
+				- _name = "String";
+				- _id = GUID 9e7ca901-80d6-4ddf-acf2-7b09b6c505d1;
+			}
+			{ IHandle 
+				- _m2Class = "ISubsystem";
+				- _filename = "STLContainersSupport.sbs";
+				- _subsystem = "Design::oxf::Services::Containers";
+				- _class = "";
+				- _name = "STLContainersSupport";
+				- _id = GUID 2d0a0559-c6a0-4028-8354-55683ab4de6e;
+			}
+			{ IHandle 
+				- _m2Class = "IClass";
+				- _filename = "RTOSWrappers.sbs";
+				- _subsystem = "Design::oxf::Services::RTOSWrappers";
+				- _class = "";
+				- _name = "OMOSEventGenerationParams";
+				- _id = GUID 678fafab-7f79-4101-92b4-fd8ab9fecb04;
+			}
+			{ IHandle 
+				- _m2Class = "ISubsystem";
+				- _filename = "MISRA_Cpp_Types.sbs";
+				- _subsystem = "Design::oxf::Services::Types";
+				- _class = "";
+				- _name = "MISRA_Cpp_Types";
+				- _id = GUID 16499c59-efc6-4efb-b702-0d3cb569f9ee;
+			}
+		}
+		- Files = { IRPYRawContainer 
+			- size = 35;
+			- value = 
+			{ IFile 
+				- _id = GUID d02ad4b2-cfb1-45e8-9b62-62d1d0b1408d;
+				- _name = "omstring";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 OMString\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = moduleFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 588d041b-8baa-4073-ba46-d51988a79c17;
+						- _name = "OMString";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = moduleFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "String.sbs";
+							- _subsystem = "Design::oxf::Services::String";
+							- _class = "";
+							- _name = "OMString";
+							- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID d7eeecf5-d4e6-4b8f-82b4-df11ce5759a7;
+						- _name = "OMString";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = moduleFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "OMString.sbs";
+							- _subsystem = "Design::oxf::Services::String::StringFunctions";
+							- _class = "";
+							- _name = "OMString";
+							- _id = GUID 80f78096-745d-41c0-ad29-b200fd1d1fd2;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID d35a47cb-7594-4e4d-8706-a1107a47c8a6;
+				- _name = "rawtypes";
+				- _modifiedTimeWeak = 5.18.2016::13:15:34;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Basic types\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 23261ff7-7e8d-485a-ad8b-b6810f9c3b6f;
+						- _name = "BasicTypes";
+						- _modifiedTimeWeak = 5.18.2016::13:15:34;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "BasicTypes.sbs";
+							- _subsystem = "Design::oxf::Services::Types";
+							- _class = "";
+							- _name = "BasicTypes";
+							- _id = GUID 0d1d4186-d8c6-4c2c-8e3b-83732820041b;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID a96fa485-38e7-45b7-9459-50845ea448cd;
+				- _name = "os";
+				- _modifiedTimeWeak = 5.8.2016::13:39:45;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 The OSAL interface\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 11;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 5decf06c-5d6d-44f7-865d-441484ebcb27;
+						- _name = "AbstractLayer";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters";
+							- _class = "";
+							- _name = "AbstractLayer";
+							- _id = GUID 39823f9e-04d9-4e31-8c11-35274428ef57;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID b0f5817f-d196-4980-b92a-7056febc8f66;
+						- _name = "OMOSMutex";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSMutex";
+							- _id = GUID a0560700-2e35-4371-87dc-7fc2af9c1de1;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 99d22c6c-08ec-4af8-b797-1fb048934102;
+						- _name = "OMOSEventFlag";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSEventFlag";
+							- _id = GUID 99b83104-fbce-401a-b90e-42c4919e0bbf;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 65ffe7eb-5216-4c10-a5a6-ed1d1d24711a;
+						- _name = "OMOSSemaphore";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSSemaphore";
+							- _id = GUID 67a35fc9-ca1b-40dd-bc61-4dfad2e14773;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID af19f5c3-f131-4030-ae26-e63b346f2932;
+						- _name = "OMOSMessageQueue";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSMessageQueue";
+							- _id = GUID 29ddc5e1-35b8-4673-9e9a-261eb2e4a08a;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 934c8fb6-107c-4a79-a4cb-269d9165d889;
+						- _name = "OMOSThread";
+						- _modifiedTimeWeak = 5.8.2016::13:39:45;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSThread";
+							- _id = GUID a9a4d85f-cdc4-4335-9897-76359786e728;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 629956a1-0d20-4db1-ad08-6d89f84e4c74;
+						- _name = "OMOSTimer";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSTimer";
+							- _id = GUID 807237cb-0299-43c0-93a3-7f77c8d1ee8e;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 47cb368c-a8e5-4532-9ecd-6ae3e5465824;
+						- _name = "OMOSSocket";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSSocket";
+							- _id = GUID c7581b6f-41ff-42e1-97d8-bb4b035e3d5c;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 7f7e01bb-7242-49f2-8997-59c9e5a64afd;
+						- _name = "OMOSConnectionPort";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSConnectionPort";
+							- _id = GUID 409c6c51-a649-43e9-999b-2446db86c57b;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID ee44ceec-0858-4907-a4f0-82cd601c246b;
+						- _name = "OMOSFactory";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSFactory";
+							- _id = GUID ea56b22a-e496-46cd-a976-39012cc20b5e;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 46fa50c1-5af3-43bb-9352-9a3301410a3f;
+						- _name = "OMOS";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOS";
+							- _id = GUID 8d620749-9347-4899-a1f2-9a81bbd36f42;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 12ded75c-5c92-4964-abb9-5c7b4b18d563;
+				- _name = "rp_framework_dll_definition";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 DLL macros definition\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 75006b1a-a1c9-4319-a804-6c5676234c32;
+						- _name = "DllMacros";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "DllMacros.sbs";
+							- _subsystem = "Design::oxf::Services::Macros";
+							- _class = "";
+							- _name = "DllMacros";
+							- _id = GUID 81617f52-3248-4d5f-a488-8577e383c7a8;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 226a2554-aff0-47ea-95a1-f86a579f5c9d;
+				- _properties = { IPropertyContainer 
+					- Subjects = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IPropertySubject 
+							- _Name = "CG";
+							- Metaclasses = { IRPYRawContainer 
+								- size = 1;
+								- value = 
+								{ IPropertyMetaclass 
+									- _Name = "File";
+									- Properties = { IRPYRawContainer 
+										- size = 1;
+										- value = 
+										{ IProperty 
+											- _Name = "AddToMakefile";
+											- _Value = "False";
+											- _Type = Bool;
+										}
+									}
+								}
+							}
+						}
+						{ IPropertySubject 
+							- _Name = "CPP_CG";
+							- Metaclasses = { IRPYRawContainer 
+								- size = 1;
+								- value = 
+								{ IPropertyMetaclass 
+									- _Name = "File";
+									- Properties = { IRPYRawContainer 
+										- size = 1;
+										- value = 
+										{ IProperty 
+											- _Name = "Generate";
+											- _Value = "False";
+											- _Type = Bool;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				- _name = "EMPTY_IMPLEMENTATION";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 This file is used to avoid the generation of empty implementation files (of the mapped elements)\\f1\\rtlch\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = implFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 56;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 3969e151-7402-4eb3-919b-0c83d5ebd6d6;
+						- _name = "AbstractLayer";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters";
+							- _class = "";
+							- _name = "AbstractLayer";
+							- _id = GUID 39823f9e-04d9-4e31-8c11-35274428ef57;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 78c8ab3e-8b2e-4556-9524-fd74b64c6768;
+						- _name = "BasicTypes";
+						- _modifiedTimeWeak = 5.18.2016::13:15:34;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "BasicTypes.sbs";
+							- _subsystem = "Design::oxf::Services::Types";
+							- _class = "";
+							- _name = "BasicTypes";
+							- _id = GUID 0d1d4186-d8c6-4c2c-8e3b-83732820041b;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID e1d3d8dd-5c51-4aca-aa61-8577d1f6a7dd;
+						- _name = "DllMacros";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "DllMacros.sbs";
+							- _subsystem = "Design::oxf::Services::Macros";
+							- _class = "";
+							- _name = "DllMacros";
+							- _id = GUID 81617f52-3248-4d5f-a488-8577e383c7a8;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID d009ce9c-5067-4b6a-95d7-0139e4e80d1b;
+						- _name = "GuardMacros";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "GuardMacros.sbs";
+							- _subsystem = "Design::oxf::Services::Macros";
+							- _class = "";
+							- _name = "GuardMacros";
+							- _id = GUID 215a579b-d2b6-4491-88be-922af0a816b0;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 537c9860-5aa5-4a85-a924-5f09b23f3dd4;
+						- _name = "Manager";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "Manager.sbs";
+							- _subsystem = "Design::oxf::Services::MemoryManagement";
+							- _class = "";
+							- _name = "Manager";
+							- _id = GUID b3adb5b6-d7b7-4746-851c-e9c1bb48e837;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID ae1a708f-8792-4ee6-83d8-e5f4f17bdcdc;
+						- _name = "MemoryManagerMacros";
+						- _modifiedTimeWeak = 8.17.2013::18:5:11;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "MemoryManagerMacros.sbs";
+							- _subsystem = "Design::oxf::Services::Macros";
+							- _class = "";
+							- _name = "MemoryManagerMacros";
+							- _id = GUID cca02b2d-a2d9-4cb7-a97b-5bbf721322b6;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID f06e43e8-5009-475d-8296-1d4b4a760638;
+						- _name = "MemoryPoolsMacros";
+						- _modifiedTimeWeak = 8.17.2013::18:15:42;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "MemoryPoolsMacros.sbs";
+							- _subsystem = "Design::oxf::Services::Macros";
+							- _class = "";
+							- _name = "MemoryPoolsMacros";
+							- _id = GUID 5865d674-e6ee-4a7c-b322-b8d9f5b00679;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 526b249b-f478-492e-aa7d-2b6b615af8a0;
+						- _name = "NotifyMacros";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "NotifyMacros.sbs";
+							- _subsystem = "Design::oxf::Services::Macros";
+							- _class = "";
+							- _name = "NotifyMacros";
+							- _id = GUID 96281273-dd19-4786-a8be-dfc76aad03c9;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID fce3d110-a901-4924-88a6-d2f8bfc866c8;
+						- _name = "StatechartMacros";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "StatechartMacros.sbs";
+							- _subsystem = "Design::oxf::Services::Macros";
+							- _class = "";
+							- _name = "StatechartMacros";
+							- _id = GUID ac1ee47c-34e1-4b45-ba75-9364f09a4185;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 54b82b9c-c42d-4c82-8051-19c85b6d4fba;
+						- _name = "Pools";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "Pools.sbs";
+							- _subsystem = "Design::oxf::Services::MemoryManagement";
+							- _class = "";
+							- _name = "Pools";
+							- _id = GUID c45f8df8-49ce-4954-bdcc-9fff13497fd4;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID ec89a65a-41d4-4adb-8ccf-dc94affb9ec6;
+						- _name = "omiotypes";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "omiotypes.sbs";
+							- _subsystem = "Design::oxf::Services::Types";
+							- _class = "";
+							- _name = "omiotypes";
+							- _id = GUID 6ca24829-4eef-4342-9f44-b568cb2eb35d;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID f32597c9-b23c-4062-aaa9-baa28ca465d3;
+						- _name = "SelectiveInclude";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "SelectiveInclude.sbs";
+							- _subsystem = "Design::oxf::Services";
+							- _class = "";
+							- _name = "SelectiveInclude";
+							- _id = GUID dfcabfd9-a13c-4763-b105-66b56e5aab2e;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 9ac3d3b9-3ee3-4619-84a4-a08f6e165525;
+						- _name = "STLMacros";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "STLMacros.sbs";
+							- _subsystem = "Design::oxf::Services::Macros";
+							- _class = "";
+							- _name = "STLMacros";
+							- _id = GUID d2b4f747-47ee-4bf9-aa08-cd5e420c4be0;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 3d10f9fe-73f5-4ec0-854d-be593f5133ea;
+						- _name = "Types";
+						- _modifiedTimeWeak = 5.15.2016::12:17:46;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "CoreAPI_Types.sbs";
+							- _subsystem = "Design::oxf::Core::CoreAPI";
+							- _class = "";
+							- _name = "Types";
+							- _id = GUID 2b7dc82e-a580-47f0-99de-d86b440e780f;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 60c0d76f-bef9-470c-af58-c7e488370c7a;
+						- _name = "Unicode";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "Unicode.sbs";
+							- _subsystem = "Design::oxf::Services";
+							- _class = "";
+							- _name = "Unicode";
+							- _id = GUID eab055b8-9330-44ed-b529-05ad7e852ed0;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 63942315-3ed3-48b9-9d1b-369678ccc7f8;
+						- _name = "MISRA_Cpp_Types";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "MISRA_Cpp_Types.sbs";
+							- _subsystem = "Design::oxf::Services::Types";
+							- _class = "";
+							- _name = "MISRA_Cpp_Types";
+							- _id = GUID 16499c59-efc6-4efb-b702-0d3cb569f9ee;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID ca07607c-4ffc-484b-a5bd-2d76a45fa391;
+						- _name = "IOxfActive";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "CoreAPI.sbs";
+							- _subsystem = "Design::oxf::Core::CoreAPI";
+							- _class = "";
+							- _name = "IOxfActive";
+							- _id = GUID 1485e2b9-f42a-4aad-a064-dd29adb2f339;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID d0de1410-2500-48eb-8486-0961aaae3745;
+						- _name = "IOxfAnimHelper";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AnimAPI.sbs";
+							- _subsystem = "Design::oxf::Anim::AnimAPI";
+							- _class = "";
+							- _name = "IOxfAnimHelper";
+							- _id = GUID 89d3da57-4f62-46f0-9685-0c90b83f9ffa;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID f40bbcab-4c93-47d6-9420-f035c526d88b;
+						- _name = "IOxfAnimReactive";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AnimAPI.sbs";
+							- _subsystem = "Design::oxf::Anim::AnimAPI";
+							- _class = "";
+							- _name = "IOxfAnimReactive";
+							- _id = GUID 651b9f27-c545-4bd9-b337-04b02258d3cd;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID fa655f98-617d-472d-8b41-79a4df7edb40;
+						- _name = "IOxfAnimTimerManager";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AnimAPI.sbs";
+							- _subsystem = "Design::oxf::Anim::AnimAPI";
+							- _class = "";
+							- _name = "IOxfAnimTimerManager";
+							- _id = GUID 5f8f2a89-89d8-4e67-8427-8636a96c6f72;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 2b0f32c6-09ce-4e23-bb1b-ab352c1d2460;
+						- _name = "IOxfAnimThreadManager";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AnimAPI.sbs";
+							- _subsystem = "Design::oxf::Anim::AnimAPI";
+							- _class = "";
+							- _name = "IOxfAnimThreadManager";
+							- _id = GUID fadd4b9d-7916-4fb6-b18a-2bfd8cb2318b;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID ee1182a4-99f1-41df-b39e-bffefbdcd148;
+						- _name = "IOxfCore";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "CoreAPI.sbs";
+							- _subsystem = "Design::oxf::Core::CoreAPI";
+							- _class = "";
+							- _name = "IOxfCore";
+							- _id = GUID 3ced5b89-d21d-4fb4-a92c-05acffa89c4c;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 8b3dbf25-73cb-468c-9ae8-577c6d32f2ed;
+						- _name = "IOxfEvent";
+						- _modifiedTimeWeak = 5.15.2016::12:37:47;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "CoreAPI.sbs";
+							- _subsystem = "Design::oxf::Core::CoreAPI";
+							- _class = "";
+							- _name = "IOxfEvent";
+							- _id = GUID 72bafe6b-3c6c-4462-88b7-148dc2ae21b9;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 5be20759-cac3-4c95-8f3f-3a86e7df2e8e;
+						- _name = "IOxfEventGenerationParams";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "CoreAPI.sbs";
+							- _subsystem = "Design::oxf::Core::CoreAPI";
+							- _class = "";
+							- _name = "IOxfEventGenerationParams";
+							- _id = GUID 4aeea12e-4ea6-45bc-8ba2-b8498ce3a0a7;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 907a56f6-f1ca-43af-94f6-8a35f35a5162;
+						- _name = "IOxfEventSender";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "CoreAPI.sbs";
+							- _subsystem = "Design::oxf::Core::CoreAPI";
+							- _class = "";
+							- _name = "IOxfEventSender";
+							- _id = GUID 13bd1ba6-474d-4e19-85fc-fb8c1063579f;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 8f361f85-a099-4d6e-9c8c-600591debfdb;
+						- _name = "IOxfMemoryAllocator";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "MemoryAPI.sbs";
+							- _subsystem = "Design::oxf::Services::MemoryManagement::MemoryAPI";
+							- _class = "";
+							- _name = "IOxfMemoryAllocator";
+							- _id = GUID b95248cd-e428-453f-b57f-1f8a1c918361;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID a744d5cb-3679-4482-a2f2-da1a7ed2c16c;
+						- _name = "IOxfReactive";
+						- _modifiedTimeWeak = 5.15.2016::12:34:31;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "CoreAPI.sbs";
+							- _subsystem = "Design::oxf::Core::CoreAPI";
+							- _class = "";
+							- _name = "IOxfReactive";
+							- _id = GUID 987d60d7-a9be-4b5d-b578-e27190b2c836;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 5357e4af-733c-43af-9ca4-0d91a623f57c;
+						- _name = "IOxfTimeout";
+						- _modifiedTimeWeak = 5.15.2016::12:37:47;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "CoreAPI.sbs";
+							- _subsystem = "Design::oxf::Core::CoreAPI";
+							- _class = "";
+							- _name = "IOxfTimeout";
+							- _id = GUID 7ca39c06-5089-4ef7-8b23-98dead00f52d;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 8d99b4bd-5bd1-44f6-9117-942e42508237;
+						- _name = "OMOS";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOS";
+							- _id = GUID 8d620749-9347-4899-a1f2-9a81bbd36f42;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 42a6615c-bd8c-457c-b1be-e7ca65c5183d;
+						- _name = "OMOSConnectionPort";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSConnectionPort";
+							- _id = GUID 409c6c51-a649-43e9-999b-2446db86c57b;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID befcac3f-5ba6-4e35-bf44-ed4bba9ca8e0;
+						- _name = "OMOSEventFlag";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSEventFlag";
+							- _id = GUID 99b83104-fbce-401a-b90e-42c4919e0bbf;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID b1442660-f790-4060-b1dc-ab072d81aa64;
+						- _name = "OMOSFactory";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSFactory";
+							- _id = GUID ea56b22a-e496-46cd-a976-39012cc20b5e;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 256aced6-5147-4017-b097-38896757009f;
+						- _name = "OMOSMessageQueue";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSMessageQueue";
+							- _id = GUID 29ddc5e1-35b8-4673-9e9a-261eb2e4a08a;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID e0df28ba-5573-4931-b7c7-d7b4d29e2b06;
+						- _name = "OMOSMutex";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSMutex";
+							- _id = GUID a0560700-2e35-4371-87dc-7fc2af9c1de1;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 77320162-5a26-4c7e-bf5e-a137e199fe93;
+						- _name = "OMOSSemaphore";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSSemaphore";
+							- _id = GUID 67a35fc9-ca1b-40dd-bc61-4dfad2e14773;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 3f922d3a-6ce2-4b92-823f-819083be9dea;
+						- _name = "OMOSSocket";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSSocket";
+							- _id = GUID c7581b6f-41ff-42e1-97d8-bb4b035e3d5c;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 3f2eebfc-7ab7-4daf-b02b-0ccd9d20af17;
+						- _name = "OMOSTimer";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSTimer";
+							- _id = GUID 807237cb-0299-43c0-93a3-7f77c8d1ee8e;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 2af26bfc-8596-4dad-aeec-ae1ca9d76a15;
+						- _name = "OMMemoryManager";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Manager.sbs";
+							- _subsystem = "Design::oxf::Services::MemoryManagement::Manager";
+							- _class = "";
+							- _name = "OMMemoryManager";
+							- _id = GUID 21d65dad-4697-4e43-a50f-a8fc80507d4e;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 50140828-6c2d-4459-8b60-e173585e3d65;
+						- _name = "OMUAbstractContainer";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Typeless.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::Typeless";
+							- _class = "";
+							- _name = "OMUAbstractContainer";
+							- _id = GUID 4d7f983b-e1ff-4ddf-bb6f-aa9f9c812249;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 15e2a85f-66fb-4190-8139-532efa3481fa;
+						- _name = "OMUIterator";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Typeless.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::Typeless";
+							- _class = "";
+							- _name = "OMUIterator";
+							- _id = GUID 345ceede-08de-4f1f-bd68-7da44837c8c4;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID aef4576b-17f5-488a-96be-3cea2bf14438;
+						- _name = "OMUList";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Typeless.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::Typeless";
+							- _class = "";
+							- _name = "OMUList";
+							- _id = GUID 527e8a14-bd49-4842-93af-d9e46a3b1938;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 2f499678-57b6-4e54-bd90-92166b72a9da;
+						- _name = "OMUMap";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Typeless.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::Typeless";
+							- _class = "";
+							- _name = "OMUMap";
+							- _id = GUID 535af258-99cf-481d-af67-d48f41ed88f7;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 25aae9f3-2950-4c87-8b95-99180fcbc36e;
+						- _name = "OMUnicodeHelper";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Unicode.sbs";
+							- _subsystem = "Design::oxf::Services::Unicode";
+							- _class = "";
+							- _name = "OMUnicodeHelper";
+							- _id = GUID ed9cfc8f-6577-468a-be89-e008e4f11484;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 4c8aeb5d-4a87-42c3-aa29-7e83cd95a935;
+						- _name = "OMUResourceGuard";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Guards.sbs";
+							- _subsystem = "Design::oxf::Services::Guards";
+							- _class = "";
+							- _name = "OMUResourceGuard";
+							- _id = GUID 035f8372-e86e-457b-a4fb-b26c94dee821;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 6988beb2-d270-454c-8811-bf032f7efdb8;
+						- _name = "OMUCollection";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Typeless.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::Typeless";
+							- _class = "";
+							- _name = "OMUCollection";
+							- _id = GUID 902e4c2b-1c13-4a8a-9e2a-377e34e2de12;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 638e87cf-6064-4f7d-86a9-214084e8bf66;
+						- _name = "OMMap";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMMap";
+							- _id = GUID 46b66bc4-6d19-4e03-a0f5-a8dcdb8f1518;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 7e2a667e-426e-449d-b64f-db99f3df52c3;
+						- _name = "OMStack";
+						- _modifiedTimeWeak = 5.24.2016::15:24:20;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMStack";
+							- _id = GUID dcf52e44-8de6-474b-b3b7-2fcee576d329;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID bf506bb5-2167-44bf-b5d3-a64cb8cfa3c0;
+						- _name = "OMStaticArray";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMStaticArray";
+							- _id = GUID 6934698f-6149-4e29-b63b-5c14325385bd;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID c3487082-ed54-4c3f-b03f-c0e69875bd58;
+						- _name = "OMCollection";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMCollection";
+							- _id = GUID 3cbc80eb-7cfc-4368-8bf1-196f0edca86f;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 5e6b02dd-a82b-4dbe-ac69-bc8ffe6a24f6;
+						- _name = "OMQueue";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMQueue";
+							- _id = GUID 027ff7cc-ee95-4b49-a4d5-98eedc486cd2;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID e2073999-0484-47da-a7c3-32bad46edac0;
+						- _name = "OMAbstractContainer";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMAbstractContainer";
+							- _id = GUID d81ff204-d723-49ee-9a1f-b1b70ad01bcc;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID e4759bb9-7e7b-403a-acff-76f5c3c6c2e8;
+						- _name = "OMIterator";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMIterator";
+							- _id = GUID 84670e3e-9e88-4854-ae89-5001ea40ef0a;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 1c4663a8-6dd9-46d6-8b6a-5f6c5ffb03f9;
+						- _name = "OMList";
+						- _modifiedTimeWeak = 5.24.2016::15:24:20;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMList";
+							- _id = GUID b508c0e7-a401-4e38-8935-c4101b28c695;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 6cb233c1-48be-491c-ac78-4a90750a0754;
+						- _name = "OMNullValue";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMNullValue";
+							- _id = GUID 41f18bc2-94ed-455b-b025-0038db468b43;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 8a680255-f4f3-4e15-a4ef-3a672ad57f64;
+						- _name = "OMValueCompare";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "STLContainersSupport.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::STLContainersSupport";
+							- _class = "";
+							- _name = "OMValueCompare";
+							- _id = GUID 30bd4b67-dc39-4f41-8b30-69809cf91261;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 5b09d0c2-db99-464b-afdc-44c61e5a1f54;
+						- _name = "OMResourceGuard";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Guards.sbs";
+							- _subsystem = "Design::oxf::Services::Guards";
+							- _class = "";
+							- _name = "OMResourceGuard";
+							- _id = GUID a2c79c6b-47bd-4038-a1fa-0ef2e7228531;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 29800958-db6d-4dea-a4ea-ab17843345f7;
+				- _name = "omlist";
+				- _modifiedTimeWeak = 5.24.2016::15:24:20;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 OMList<>\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID c2c5b00f-f001-41f5-8dfc-58b7fae4ca5f;
+						- _name = "OMList";
+						- _modifiedTimeWeak = 5.24.2016::15:24:20;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMList";
+							- _id = GUID b508c0e7-a401-4e38-8935-c4101b28c695;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 059791bd-f7a4-40ee-94fa-ea6a2420b8bb;
+				- _name = "ommap";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 OMMap<>\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 6b6fe2d0-2504-450f-8670-0f11c58ef073;
+						- _name = "OMMap";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMMap";
+							- _id = GUID 46b66bc4-6d19-4e03-a0f5-a8dcdb8f1518;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 2dbc36d8-c6a4-446f-85f4-f73a0f738e23;
+				- _name = "ommemorymanager";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 The memory manager\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 1119a973-7150-445d-86d6-10a4f80356c9;
+						- _name = "OMMemoryManager";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Manager.sbs";
+							- _subsystem = "Design::oxf::Services::MemoryManagement::Manager";
+							- _class = "";
+							- _name = "OMMemoryManager";
+							- _id = GUID 21d65dad-4697-4e43-a50f-a8fc80507d4e;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 3cd5b3f7-822f-496b-b4af-6ddd3d87a7d1;
+				- _name = "omprotected";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 OMProtected and OMGuard\\par
+}";
+				}
+				- m_path = "";
+				- m_type = moduleFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 223da14e-abd7-40bb-89e1-8b09bee2afb6;
+						- _name = "OMProtected";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = moduleFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Guards.sbs";
+							- _subsystem = "Design::oxf::Services::Guards";
+							- _class = "";
+							- _name = "OMProtected";
+							- _id = GUID d4af100a-72c5-49ca-8b47-0d18952ecf8e;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 39b3d64e-9859-4570-a7f6-193619e3fdfb;
+						- _name = "OMGuard";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = moduleFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Guards.sbs";
+							- _subsystem = "Design::oxf::Services::Guards";
+							- _class = "";
+							- _name = "OMGuard";
+							- _id = GUID 69fae9cb-009c-4359-aa5b-318d2be2f90a;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 62bf2390-6983-41ac-b16e-dd0b9d4f51d5;
+				- _name = "omqueue";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 OMQueue<>\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 8fb1cd7a-deb9-4e3c-984f-c413336802f0;
+						- _name = "OMQueue";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMQueue";
+							- _id = GUID 027ff7cc-ee95-4b49-a4d5-98eedc486cd2;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 2d012a48-5730-4752-80fe-7ffde62bfbcc;
+				- _name = "omstack";
+				- _modifiedTimeWeak = 5.24.2016::15:24:20;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 OMStack<>\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 4b543d67-c97e-4311-a77c-b8e22dc8ff55;
+						- _name = "OMStack";
+						- _modifiedTimeWeak = 5.24.2016::15:24:20;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMStack";
+							- _id = GUID dcf52e44-8de6-474b-b3b7-2fcee576d329;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID d07a4fac-f288-48fd-a7b0-37b99c2004ea;
+				- _name = "os";
+				- _modifiedTimeWeak = 5.8.2016::13:39:45;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 OSAL generic implementation\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = implFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID a91a58d6-c3a7-4038-b928-a06bcd52456c;
+						- _name = "OMOSThread";
+						- _modifiedTimeWeak = 5.8.2016::13:39:45;
+						- m_type = implFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "AbstractLayer.sbs";
+							- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+							- _class = "";
+							- _name = "OMOSThread";
+							- _id = GUID a9a4d85f-cdc4-4335-9897-76359786e728;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID ba42c59b-b544-4926-870b-5d114114385d;
+				- _name = "omiotypes";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 iostream types\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 6f4159d4-cfef-4e39-a1cc-d1bcc740f22f;
+						- _name = "omiotypes";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "omiotypes.sbs";
+							- _subsystem = "Design::oxf::Services::Types";
+							- _class = "";
+							- _name = "omiotypes";
+							- _id = GUID 6ca24829-4eef-4342-9f44-b568cb2eb35d;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 6e481bd0-03bd-485f-ae1a-9136e8266ae2;
+				- _name = "OXFSelectiveInclude";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 selective (#ifdef based) include statements\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 983e9f46-30c9-49ac-b1f7-3870d2ba789f;
+						- _name = "SelectiveInclude";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "SelectiveInclude.sbs";
+							- _subsystem = "Design::oxf::Services";
+							- _class = "";
+							- _name = "SelectiveInclude";
+							- _id = GUID dfcabfd9-a13c-4763-b105-66b56e5aab2e;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 296aef9c-cfad-405f-96ce-7b6067a5ced9;
+				- _name = "OMAbstractContainer";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 The OM Collections abstract container type\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 3640de31-d182-4d52-a09a-4a6fac445c34;
+						- _name = "OMAbstractContainer";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMAbstractContainer";
+							- _id = GUID d81ff204-d723-49ee-9a1f-b1b70ad01bcc;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 107d6bfd-a6ac-4fcd-a69e-92dfaeef490a;
+				- _name = "OMNullValue";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 A container NULL value return type\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 9d3999d4-862c-485c-888a-2162ef72213b;
+						- _name = "OMNullValue";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMNullValue";
+							- _id = GUID 41f18bc2-94ed-455b-b025-0038db468b43;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID ec279f25-b3cb-4ac8-a7b3-d1799379fa93;
+				- _name = "OMIterator";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+{\\colortbl ;\\red0\\green0\\blue255;}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Iterator on \\cf1\\ul\\protect OMAbstractContainer\\cf0\\ulnone\\protect0\\par
+}
+";
+					- Hyperlinks = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IInternalHyperlink 
+							- _name = "OMAbstractContainer";
+							- _textType = "NAME";
+							- _target = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "TypeSafe.sbs";
+								- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+								- _class = "";
+								- _name = "OMAbstractContainer";
+								- _id = GUID d81ff204-d723-49ee-9a1f-b1b70ad01bcc;
+							}
+						}
+					}
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 498fddc9-d5e8-46a4-9ade-4e59f879b6c5;
+						- _name = "OMIterator";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMIterator";
+							- _id = GUID 84670e3e-9e88-4854-ae89-5001ea40ef0a;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 77abd035-9f39-45ee-b339-92e702e8bdc0;
+				- _name = "OXFGuardMacros";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 OMProtected guard macros\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID bb01e1b0-c57a-471a-bea1-7ec56d44440b;
+						- _name = "GuardMacros";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "GuardMacros.sbs";
+							- _subsystem = "Design::oxf::Services::Macros";
+							- _class = "";
+							- _name = "GuardMacros";
+							- _id = GUID 215a579b-d2b6-4491-88be-922af0a816b0;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 41a2f122-f81c-4b58-95b6-228dc7daa6c5;
+				- _name = "omcollec";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 OMCollection - dynamic array\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID b0aa4227-ca16-4195-bb5f-f97d2f599374;
+						- _name = "OMCollection";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMCollection";
+							- _id = GUID 3cbc80eb-7cfc-4368-8bf1-196f0edca86f;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 521b5b4b-8345-4af9-b33c-ca97b560e212;
+				- _name = "OMStaticArray";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Static size array\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID a6f99a7d-ee5a-4340-9da8-df04643a5fa7;
+						- _name = "OMStaticArray";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "TypeSafe.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+							- _class = "";
+							- _name = "OMStaticArray";
+							- _id = GUID 6934698f-6149-4e29-b63b-5c14325385bd;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID ecf9fc64-2c90-4757-896b-ba5122bfbf85;
+				- _name = "OXFNotifyMacros";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Notify macros\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 1807ddcd-9c2d-4c66-ab23-7dd9ed22e6e8;
+						- _name = "NotifyMacros";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "NotifyMacros.sbs";
+							- _subsystem = "Design::oxf::Services::Macros";
+							- _class = "";
+							- _name = "NotifyMacros";
+							- _id = GUID 96281273-dd19-4786-a8be-dfc76aad03c9;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID c3e3ee72-74e1-4f6a-840c-7b487c0bd96e;
+				- _name = "OMNotifier";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Notifier class\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = moduleFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 32893992-b4b3-4471-8f91-b36926d6fa42;
+						- _name = "OMNotifier";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = moduleFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "IO.sbs";
+							- _subsystem = "Design::oxf::Services::IO";
+							- _class = "";
+							- _name = "OMNotifier";
+							- _id = GUID 733aca50-48ad-447b-81a6-fe248c08b462;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 1a849c85-dc89-4e0a-bf23-bec53973eeea;
+				- _name = "omtypes";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Rhapsody 5.X compatibility file\\par
+This file is used to include files of elements that were located in this file in Rhapsody 5.X.\\par
+The element file was renamed to improve the naming.\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 75e88b62-87b7-4623-a08c-6dba98936edc;
+						- _name = "include raw types";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = textFragment;
+						- m_text = "#include \"rawtypes.h\"
+";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "";
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID f378de29-d7ce-4649-9565-db920f4f0bae;
+				- _name = "omunicode";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Unicode support\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 4d1f8cea-8cff-4475-883e-659259f6b91c;
+						- _name = "OMUnicodeHelper";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Unicode.sbs";
+							- _subsystem = "Design::oxf::Services::Unicode";
+							- _class = "";
+							- _name = "OMUnicodeHelper";
+							- _id = GUID ed9cfc8f-6577-468a-be89-e008e4f11484;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 3b0aa0b7-5f63-436d-8592-fc1ceb4ecbd3;
+				- _name = "OXFMemoryManagerMacros";
+				- _modifiedTimeWeak = 8.17.2013::18:5:11;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 memory manager macros\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 48859dd4-8f5b-458b-b20c-69ed6dac8a4f;
+						- _name = "MemoryManagerMacros";
+						- _modifiedTimeWeak = 8.17.2013::18:5:11;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "MemoryManagerMacros.sbs";
+							- _subsystem = "Design::oxf::Services::Macros";
+							- _class = "";
+							- _name = "MemoryManagerMacros";
+							- _id = GUID cca02b2d-a2d9-4cb7-a97b-5bbf721322b6;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID a334b4b8-0b60-4c4c-9a3e-a8d097620f99;
+				- _name = "OXFManager";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 memory management\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID f145f139-e524-4cce-90f7-7d1d47106949;
+						- _name = "Manager";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "Manager.sbs";
+							- _subsystem = "Design::oxf::Services::MemoryManagement";
+							- _class = "";
+							- _name = "Manager";
+							- _id = GUID b3adb5b6-d7b7-4746-851c-e9c1bb48e837;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 33dfecc8-ec82-41cd-a482-621913d6f135;
+				- _name = "IOxfMemoryAllocator";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 memory manager API\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID b5bffe9a-6021-422e-89d3-3b13ac6a9bef;
+						- _name = "IOxfMemoryAllocator";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "MemoryAPI.sbs";
+							- _subsystem = "Design::oxf::Services::MemoryManagement::MemoryAPI";
+							- _class = "";
+							- _name = "IOxfMemoryAllocator";
+							- _id = GUID b95248cd-e428-453f-b57f-1f8a1c918361;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 6b2a6534-3931-4961-b405-fb3e31ef34df;
+				- _myState = 8192;
+				- _name = "OMResourceGuard";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 2fa4fd03-7163-40ab-8781-035428a4ea62;
+						- _name = "OMResourceGuard";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Guards.sbs";
+							- _subsystem = "Design::oxf::Services::Guards";
+							- _class = "";
+							- _name = "OMResourceGuard";
+							- _id = GUID a2c79c6b-47bd-4038-a1fa-0ef2e7228531;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 03b05d9e-1750-470a-900b-72b5a9ea4fba;
+				- _myState = 8192;
+				- _name = "OXFAddTypes";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 94647508-fe03-4e06-b373-b46da6f61032;
+						- _name = "addTypes";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = moduleFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "addTypes.sbs";
+							- _subsystem = "Design::oxf::Services::Types";
+							- _class = "";
+							- _name = "addTypes";
+							- _id = GUID a27e9495-8df6-4e77-9f4c-9ea70bf9292c;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID aa03b9bc-a020-4a7f-8e09-64098c4c09c3;
+				- _myState = 8192;
+				- _name = "OXFURefManager";
+				- _modifiedTimeWeak = 6.7.2016::14:38:42;
+				- m_path = "";
+				- m_type = moduleFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 4b8983d4-13d6-43e3-b86c-3a4120e42cd4;
+						- _name = "OXFURefManager";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = moduleFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "DllGuards.sbs";
+							- _subsystem = "Design::oxf::Services::Guards::DllGuards";
+							- _class = "";
+							- _name = "OXFURefManager";
+							- _id = GUID 81c2829f-bd35-4eaa-81dc-eaf1a378bb2a;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 8538f5f0-e2dc-4d69-96e7-38dcda0a5d6e;
+				- _myState = 8192;
+				- _name = "OMUResourceGuard";
+				- _modifiedTimeWeak = 6.7.2016::14:38:42;
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 3;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID cbf3ba98-fc65-49ab-8d3d-3fdb0450c8ae;
+						- _name = "OMUResourceGuard";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = moduleFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Guards.sbs";
+							- _subsystem = "Design::oxf::Services::Guards";
+							- _class = "";
+							- _name = "OMUResourceGuard";
+							- _id = GUID 035f8372-e86e-457b-a4fb-b26c94dee821;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID d066a5db-49d0-467c-bdd9-2ae47af65889;
+						- _name = "OMGuard";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IType";
+							- _filename = "Guards.sbs";
+							- _subsystem = "Design::oxf::Services::Guards";
+							- _class = "";
+							- _name = "OMGuard";
+							- _id = GUID b4937877-f293-4183-8f11-aae750ea650a;
+						}
+					}
+					{ IFileFragment 
+						- _id = GUID 815e3bf2-53d9-4427-abef-54adaecdc82b;
+						- _name = "OXFRefLock";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IType";
+							- _filename = "DllGuards.sbs";
+							- _subsystem = "Design::oxf::Services::Guards::DllGuards";
+							- _class = "";
+							- _name = "OXFRefLock";
+							- _id = GUID 24c94dc5-04b6-448b-a53c-d4a9ef5e07aa;
+						}
+						- Fragments = { IRPYRawContainer 
+							- size = 0;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID b1480ce0-60ea-4414-b506-bcd84fdd1cd7;
+				- _myState = 8192;
+				- _name = "omucollec";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 87033c64-e7b7-4902-af6e-a1033d19b8ff;
+						- _name = "OMUCollection";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Typeless.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::Typeless";
+							- _class = "";
+							- _name = "OMUCollection";
+							- _id = GUID 902e4c2b-1c13-4a8a-9e2a-377e34e2de12;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 8960a3f8-41ef-4b21-9bbb-ce4655942eda;
+				- _name = "omulist";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 OMUList\\f1\\rtlch\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID b90743e5-ba11-4f10-acb4-8e9b286b115b;
+						- _name = "OMUList";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Typeless.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::Typeless";
+							- _class = "";
+							- _name = "OMUList";
+							- _id = GUID 527e8a14-bd49-4842-93af-d9e46a3b1938;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID 6b8a8292-cfa5-4e59-83e7-9836963e2c12;
+				- _name = "omumap";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- _description = { IDescription 
+					- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 OMUMap\\f1\\rtlch\\par
+}
+";
+				}
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 58afbb03-a9c5-4bf3-b7e5-d978b25300b4;
+						- _name = "OMUMap";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "IClass";
+							- _filename = "Typeless.sbs";
+							- _subsystem = "Design::oxf::Services::Containers::Typeless";
+							- _class = "";
+							- _name = "OMUMap";
+							- _id = GUID 535af258-99cf-481d-af67-d48f41ed88f7;
+						}
+					}
+				}
+			}
+			{ IFile 
+				- _id = GUID fdd8bfc9-58d9-4a25-8eee-52b6e207ce2f;
+				- _myState = 8192;
+				- _name = "OXFSTLMacros";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- m_path = "";
+				- m_type = specFile;
+				- Fragments = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IFileFragment 
+						- _id = GUID 9948ff07-ed40-4ae9-8d49-4f9b9b48fdf2;
+						- _name = "STLMacros";
+						- _modifiedTimeWeak = 1.2.1990::0:0:0;
+						- m_type = specFragment;
+						- m_text = "";
+						- m_startRow = 0;
+						- m_startCol_Short = 0;
+						- m_endRow = 0;
+						- m_endCol_Short = 0;
+						- m_subject = { INObjectHandle 
+							- _m2Class = "ISubsystem";
+							- _filename = "STLMacros.sbs";
+							- _subsystem = "Design::oxf::Services::Macros";
+							- _class = "";
+							- _name = "STLMacros";
+							- _id = GUID d2b4f747-47ee-4bf9-aa08-cd5e420c4be0;
+						}
+					}
+				}
+			}
+		}
+	}
+	- m_configActive = { ICodeGenConfigInfoHandle 
+		- _m2Class = "ICodeGenConfigInfo";
+		- _id = GUID 987f700b-8863-4ef7-9776-0215eea1b3de;
+	}
+	- Configs = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ ICodeGenConfigInfo 
+			- _id = GUID 987f700b-8863-4ef7-9776-0215eea1b3de;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 3;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Configuration";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UseDescriptionTemplates";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Configuration";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Environment";
+										- _Value = "Generic";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Generic,Microsoft,MicrosoftDLL,VxWorks,Solaris2,Borland,MultiWin32,MSStandardLibrary,PsosPPC,MicrosoftWinCE.NET,OseSfk,Linux,Solaris2GNU,QNXNeutrinoGCC, QNXNeutrinoCW,OsePPCDiab,INTEGRITY, IntegrityESTL, NucleusPLUS-PPC";
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Generic";
+								- Properties = { IRPYRawContainer 
+									- size = 36;
+									- value = 
+									{ IProperty 
+										- _Name = "AdaptorSearchPath";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "AdditionalReservedWords";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "BuildCommandSet";
+										- _Value = "NA";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Debug,Release,NA";
+									}
+									{ IProperty 
+										- _Name = "CPPCompileCommand";
+										- _Value = "";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "CPPCompileDebug";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "CPPCompileRelease";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "CompileSwitches";
+										- _Value = "";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "DependencyRule";
+										- _Value = "$OMFileObjPath : $OMFileImpPath $OMFileSpecPath $OMFileDependencies ";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "EntryPoint";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ErrorMessageTokensFormat";
+										- _Value = "ToTalNumberOfTokens=3,FileTokenPosition=1,LineTokenPosition=2";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ExeExtension";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "FileDependencies";
+										- _Value = "$OMSpecIncludeInElements $OMImpIncludeInElements";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "GetConnectedRuntimeLibraries";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ImpExtension";
+										- _Value = ".cpp";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "Include";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "InvokeExecutable";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "IsFileNameShort";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "LibExtension";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "LinkDebug";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "LinkRelease";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "LinkSwitches";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "MakeExtension";
+										- _Value = ".list";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "MakeFileContent";
+										- _Value = "##################################################################
+OXF_OBJ= $OMObjs
+
+################## Generated dependencies ########################
+##################################################################
+$OMContextDependencies
+";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "NullValue";
+										- _Value = "0";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "OSFileSystemCaseSensitive";
+										- _Value = "True";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "ObjCleanCommand";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ObjExtension";
+										- _Value = "$(OBJ_EXT)";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ObjectName";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ObjectsDirectory";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "ParseErrorMessage";
+										- _Value = "([^(]+)[(]([0-9]+)[)] [:] (error|warning|fatal error)";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "PathDelimiter";
+										- _Value = "/";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "QuoteOMROOT";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "RPFrameWorkDll";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+									{ IProperty 
+										- _Name = "RemoteHost";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "SpecExtension";
+										- _Value = ".h";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "UseRemoteHost";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_Roundtrip";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "General";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "PredefineMacros";
+										- _Value = "DECLARE_META(class_0\\,animClass_0),
+DECLARE_REACTIVE_META(class_0\\,animClass_0),
+OMINIT_SUPERCLASS(class_0Super\\,animClass_0Super),
+OMREGISTER_CLASS\\,DECLARE_META_T(class_0\\, ttype\\,animClass_0),
+DECLARE_REACTIVE_META_T(class_0\\, ttype\\,animClass_0),
+DECLARE_META_SUBCLASS_T(class_0\\, ttype\\,animClass_0),
+DECLARE_REACTIVE_META_SUBCLASS_T(class_0\\, ttype\\,animClass_0),
+DECLARE_MEMORY_ALLOCATOR(CLASSNAME\\,INITNUM),
+IMPLEMENT_META(class_0\\,Default\\,FALSE),
+IMPLEMENT_META_S(class_0\\,FALSE\\,class_1\\,animClass_1\\,animClass_0),
+IMPLEMENT_META_M(class_0\\, FALSE\\, class_0Super\\, 2 \\,animClass_0),
+IMPLEMENT_REACTIVE_META(class_0\\,Default\\,FALSE),
+IMPLEMENT_REACTIVE_META_S(class_0\\,FALSE\\,class_1\\,animClass_1\\,animClass_0),
+IMPLEMENT_REACTIVE_META_M(class_0\\, FALSE\\, class_0Super\\, 2 \\,animClass_0),
+IMPLEMENT_REACTIVE_META_SIMPLE(class_0\\,Default\\,FALSE),
+IMPLEMENT_REACTIVE_META_S_SIMPLE(class_0\\,FALSE\\,class_1\\,animClass_1\\,animClass_0),
+IMPLEMENT_REACTIVE_META_M_SIMPLE(class_0\\, FALSE\\, class_0Super\\, 2 \\,animClass_0),
+IMPLEMENT_META_T(class_0\\, Default\\, FALSE\\, animClass_0),
+IMPLEMENT_META_S_T(class_0\\,FALSE\\,class_0Super\\,animclass_0Super\\,animClass_0),
+IMPLEMENT_META_M_T(class_0\\, FALSE\\, class_0Super\\, 2 \\,animClass_0),
+IMPLEMENT_META_T_S_T(tname\\,IsSingleton\\,SuperClass\\,animSuperClass\\,animTname),
+IMPLEMENT_META_T_S_T_N(tname\\,IsSingleton\\,NameSpace\\,SuperClass\\,animSuperClass\\,animTname),
+IMPLEMENT_META_OBJECT(class_0\\,class_type\\,Default\\,FALSE),
+IMPLEMENT_META_S_OBJECT(class_0\\,class_type\\,FALSE\\,class_1\\,animClass_1\\,animClass_0),
+IMPLEMENT_META_M_OBJECT(class_0\\,class_type\\,FALSE\\, class_0Super\\, 2 \\,animClass_0),
+IMPLEMENT_REACTIVE_META_OBJECT(class_0\\,class_type\\,Default\\,FALSE),
+IMPLEMENT_REACTIVE_META_S_OBJECT(class_0\\,class_type\\,FALSE\\,class_1\\,animClass_1\\,animClass_0),
+IMPLEMENT_REACTIVE_META_M_OBJECT(class_0\\,class_type\\,FALSE\\, class_0Super\\, 2 \\,animClass_0),
+IMPLEMENT_REACTIVE_META_SIMPLE_OBJECT(class_0\\,class_type\\,Default\\,FALSE),
+IMPLEMENT_REACTIVE_META_S_SIMPLE_OBJECT(class_0\\,class_type\\,FALSE\\,class_1\\,animClass_1\\,animClass_0),
+IMPLEMENT_REACTIVE_META_M_SIMPLE_OBJECT(class_0\\,class_type\\,FALSE\\, class_0Super\\, 2 \\,animClass_0),
+IMPLEMENT_META_T_OBJECT(class_0\\,class_type\\, Default\\, FALSE\\, animClass_0),
+IMPLEMENT_META_S_T_OBJECT(class_0\\,class_type\\,FALSE\\,class_0Super\\,animclass_0Super\\,animClass_0),
+IMPLEMENT_META_M_T_OBJECT(class_0\\,class_type\\, FALSE\\, class_0Super\\, 2 \\,animClass_0),
+IMPLEMENT_MEMORY_ALLOCATOR(CLASSNAME\\,INITNUM\\,INCREMENTNUM\\,ISPROTECTED),
+DECLARE_META_PACKAGE(Default),
+DECLARE_PACKAGE(Default),
+IMPLEMENT_META_PACKAGE(Default\\,Default),
+DECLARE_META_EVENT(event_0),
+DECLARE_META_SUBEVENT(event_0\\,event_0Super\\,event_0SuperNamespace),
+IMPLEMENT_META_EVENT(event_0\\,Default\\,event_0),
+IMPLEMENT_META_EVENT_S(words\\, words\\, baseWords),
+DECLARE_OPERATION_CLASS(mangledName),
+DECLARE_META_OP(mangledName),
+OM_OP_UNSER(type\\, name),
+OP_UNSER(func\\, name),
+OP_SET_RET_VAL(retVal),
+OM_OP_SET_RET_VAL(retVal),
+IMPLEMENT_META_OP(animatedClassName\\, mangledName\\, opNameStr\\, isStatic\\, signatureStr\\, numOfArgs),
+IMPLEMENT_OP_CALL(mangledName\\, userClassName\\, call\\, retExp),
+STATIC_IMPLEMENT_OP_CALL(mangledName\\, userClassName\\, call\\, retExp),
+OMDefaultThread=0,
+NULL=0,
+OMDECLARE_GUARDED,
+OM_DECLARE_COMPOSITE_OFFSET,
+RP_FRAMEWORK_DLL,
+OM_DECLARE_FRAMEWORK_MEMORY_ALLOCATION_OPERATORS,
+aomArg(name)";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "generic";
+			- _modifiedTimeWeak = 6.7.2016::14:34:40;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The oxf generic framework configuration - animation subset.\\par
+Generates the elements and the oxfAnimFiles.list\\lang1037\\f1\\rtlch\\par
+}
+";
+			}
+			- HyperLinks = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IMHyperLink 
+					- _id = GUID 5089f6cd-078a-4eee-b4c6-a97056fc6876;
+					- _modifiedTimeWeak = 6.7.2016::14:34:40;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Makefile";
+					- _linkType = "FREE";
+					- _linkTarget = "L:/StmOO/Rhapsody82/Share/LangCpp/oxf/oxfAnimFiles.list";
+					- isConfigurationFileHyperLink = 1;
+				}
+			}
+			- _scopeType = Explicit;
+			- _libraries = "";
+			- _additionalSources = "";
+			- _standardHeaders = "";
+			- _includePath = "";
+			- _targetMain = "";
+			- _instrumentation = None;
+			- _timeModel = RealTime;
+			- m_generateActors = 0;
+			- _statechartImplementation = Flat;
+			- _initializationCode = "";
+			- _checksList = 1 "SC0014" ;
+			- ScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- InitialInstances = { IRPYRawContainer 
+				- size = 0;
+			}
+			- _root = { IFolder 
+				- _id = GUID ed781b73-51fd-49ce-94fa-efe9b82bf1ab;
+				- _myState = 65536;
+				- _name = "generic";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- m_path = "../..";
+				- Elements = { IRPYRawContainer 
+					- size = 0;
+				}
+				- Files = { IRPYRawContainer 
+					- size = 0;
+				}
+			}
+			- weakCGTime = 6.7.2016::14:34:40;
+			- strongCGTime = 3.15.2009::9:21:37;
+			- AnimScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- m_allInAnimScope = 1;
+			- m_generateUsecases = 0;
+		}
+	}
+	- VariationPoints = { IRPYRawContainer 
+		- size = 0;
+	}
+	- SelectedVariants = { IRPYRawContainer 
+		- size = 0;
+	}
+	- weakCGTime = 6.7.2016::14:38:42;
+	- strongCGTime = 6.7.2016::14:38:42;
+}
+

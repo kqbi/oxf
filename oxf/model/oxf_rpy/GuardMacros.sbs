@@ -1,0 +1,240 @@
+I-Logix-RPY-Archive version 8.8.0 C++ 6106822
+{ ISubsystem 
+	- _cmheader = "$Id: GuardMacros.sbs 1.12 2007/04/06 07:09:31 ilgiga Exp $
+$Revision: 1.12 $
+$Locker: $
+
+";
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "Design.sbs";
+		- _subsystem = "Design::oxf::Services";
+		- _class = "";
+		- _name = "Macros";
+		- _id = GUID c697f445-962f-4ebe-bf72-ed6fff848cb6;
+	}
+	- _id = GUID 215a579b-d2b6-4491-88be-922af0a816b0;
+	- _myState = 8192;
+	- _name = "GuardMacros";
+	- _modifiedTimeWeak = 6.18.2013::13:51:47;
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Guarding macros\\f1\\rtlch\\par
+}
+";
+	}
+	- weakCGTime = 6.18.2013::13:51:47;
+	- strongCGTime = 1.15.2009::14:32:20;
+	- _defaultComposite = GUID 19429952-2a02-41b0-a43e-b8c55cf8f555;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID 19429952-2a02-41b0-a43e-b8c55cf8f555;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 2.11.2009::13:53:20;
+			- weakCGTime = 2.11.2009::13:53:20;
+			- strongCGTime = 1.15.2009::14:32:20;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- Types = { IRPYRawContainer 
+		- size = 8;
+		- value = 
+		{ IType 
+			- _id = GUID 88ca8b99-42e3-4a85-aee5-0d137d27fa3c;
+			- _myState = 8192;
+			- _name = "END_REACTIVE_GUARDED_SECTION";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Unlock a reactive object guard\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s																\\
+{ 																		\\
+	OMThread* omThread = static_cast<OMThread*>(getActiveContext());	\\
+	if (omThread != NULL) 												\\
+	{																	\\
+		omThread->unlock(); 											\\
+	}																	\\
+}";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 7461a56e-744d-4fb5-876d-6a2db22abfe1;
+			- _myState = 8192;
+			- _name = "END_THREAD_GUARDED_SECTION";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Unlock an active object guard\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s { unlock(); }";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 6a16f326-843b-4159-8df7-b739d3289cd7;
+			- _myState = 8192;
+			- _name = "GUARD_OPERATION";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+{\\colortbl ;\\red0\\green0\\blue255;}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Guard an operation using an \\cf1\\ul\\protect OMGuard\\cf0\\ulnone\\protect0  enter-exit object\\par
+}
+";
+				- Hyperlinks = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IInternalHyperlink 
+						- _name = "OMGuard";
+						- _textType = "NAME";
+						- _target = { IHandle 
+							- _m2Class = "IClass";
+							- _filename = "Design.sbs";
+							- _subsystem = "Design::oxf::Services::Guards";
+							- _class = "";
+							- _name = "OMGuard";
+							- _id = GUID 69fae9cb-009c-4359-aa5b-318d2be2f90a;
+						}
+					}
+				}
+			}
+			- _declaration = "#define %s OMGuard _omGuard(getGuard()); ";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 51759afa-8838-4b7e-a946-dd2b04bb74fc;
+			- _myState = 8192;
+			- _name = "OMDECLARE_GUARDED";
+			- _modifiedTimeWeak = 6.18.2013::13:51:47;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+{\\colortbl ;\\red0\\green0\\blue255;}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Declare an \\cf1\\ul\\protect OMProtected\\cf0\\ulnone\\protect0  object and helpers to support guarding of a resource\\par
+}
+";
+				- Hyperlinks = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IInternalHyperlink 
+						- _name = "OMProtected";
+						- _textType = "NAME";
+						- _target = { IHandle 
+							- _m2Class = "IClass";
+							- _filename = "Design.sbs";
+							- _subsystem = "Design::oxf::Services::Guards";
+							- _class = "";
+							- _name = "OMProtected";
+							- _id = GUID d4af100a-72c5-49ca-8b47-0d18952ecf8e;
+						}
+					}
+				}
+			}
+			- _declaration = "#define %s													\\
+public:																	\\
+	inline void lock() const { m_omGuard.lock(); }						\\
+	inline void unlock() const { m_omGuard.unlock(); }					\\
+	virtual const OMProtected& getGuard() const { return m_omGuard; }	\\
+private:																\\
+	OMProtected m_omGuard; ";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 791c4a72-5f7b-4797-8aac-6a1d9ea423bb;
+			- _myState = 8192;
+			- _name = "START_DTOR_REACTIVE_GUARDED_SECTION";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Guard a reactive object destructor\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s																	\\
+{																			\\
+	if (!isUnderDestruction()) 												\\
+	{																		\\
+		setUnderDestruction();												\\
+		OMThread* omThread = static_cast<OMThread*>(getActiveContext());	\\
+		if (getToGuardReactive() && (omThread != NULL))						\\
+		{																	\\
+			omThread->lock();												\\
+		}																	\\
+	}																		\\
+}";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID a546d4a5-4fce-4c57-a3ac-daf52cd8d9fc;
+			- _myState = 8192;
+			- _name = "START_DTOR_THREAD_GUARDED_SECTION";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Guard an active object destructor\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s							\\
+{									\\
+	if (!isUnderDestruction()) 		\\
+	{								\\
+		setUnderDestruction();		\\
+		if (shouldGuardThread()) 	\\
+		{							\\
+			OMThread::lock();		\\
+		}							\\
+	}								\\
+}";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 072d927c-4e83-40d4-a290-1c048274bd18;
+			- _myState = 8192;
+			- _name = "START_REACTIVE_GUARDED_SECTION";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Lock a reactive object guard\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s					 											\\
+{ 																		\\
+	OMThread* omThread = static_cast<OMThread*>(getActiveContext());	\\
+	if (omThread != NULL) 												\\
+	{																	\\
+		omThread->lock();												\\
+	}																	\\
+}";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 388b8a40-1c21-483d-97ec-bb993772aa0b;
+			- _myState = 8192;
+			- _name = "START_THREAD_GUARDED_SECTION";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Lock an active object guard\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s { lock(); }";
+			- _kind = Language;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

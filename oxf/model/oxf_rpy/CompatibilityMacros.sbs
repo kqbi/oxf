@@ -1,0 +1,55 @@
+I-Logix-RPY-Archive version 8.5.2 C++ 1146010
+{ ISubsystem 
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "Macros.sbs";
+		- _subsystem = "Design::oxf::Services";
+		- _class = "";
+		- _name = "Macros";
+		- _id = GUID c697f445-962f-4ebe-bf72-ed6fff848cb6;
+	}
+	- _id = GUID 0cf83d51-bfd4-4717-bfe2-84edc0dac1ab;
+	- _myState = 8192;
+	- _name = "CompatibilityMacros";
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Backward compatibility macros\\f1\\rtlch\\par
+}
+";
+	}
+	- _lastID = 11;
+	- Declaratives = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ ISubsystem 
+			- fileName = "CodeGen50";
+			- _id = GUID 226d7e5b-b306-49a0-8c1b-df6a9fcaf0aa;
+		}
+		{ ISubsystem 
+			- fileName = "Obsolete";
+			- _id = GUID 70f992c0-3347-4f2a-9a0e-9cc42acfabfb;
+		}
+	}
+	- weakCGTime = 1.15.2009::14:32:20;
+	- strongCGTime = 1.15.2009::14:32:20;
+	- _defaultComposite = GUID 72c02005-87e7-452f-bb0c-d17b64350085;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID 72c02005-87e7-452f-bb0c-d17b64350085;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 1.15.2009::14:32:20;
+			- strongCGTime = 1.15.2009::14:32:20;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

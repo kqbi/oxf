@@ -1,0 +1,393 @@
+I-Logix-RPY-Archive version 8.8.0 C++ 6117331
+{ ISubsystem 
+	- _cmheader = "$Id: MemoryPoolsMacros.sbs 1.16 2007/04/06 07:09:38 ilgiga Exp $
+$Revision: 1.16 $
+$Locker: $
+
+";
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "Design.sbs";
+		- _subsystem = "Design::oxf::Services";
+		- _class = "";
+		- _name = "Macros";
+		- _id = GUID c697f445-962f-4ebe-bf72-ed6fff848cb6;
+	}
+	- _id = GUID 5865d674-e6ee-4a7c-b322-b8d9f5b00679;
+	- _myState = 8192;
+	- _name = "MemoryPoolsMacros";
+	- _modifiedTimeWeak = 8.17.2013::18:21:21;
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Memory pools declaration/implementation macros\\f1\\rtlch\\par
+}";
+	}
+	- _lastID = 1;
+	- weakCGTime = 8.17.2013::18:21:21;
+	- strongCGTime = 1.15.2009::14:32:20;
+	- _defaultComposite = GUID 0e46e0c6-b271-471a-a750-15a171789c3c;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID 0e46e0c6-b271-471a-a750-15a171789c3c;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 8.14.2013::12:1:41;
+			- weakCGTime = 8.14.2013::12:1:41;
+			- strongCGTime = 1.15.2009::14:32:20;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- Types = { IRPYRawContainer 
+		- size = 13;
+		- value = 
+		{ IType 
+			- _id = GUID d4cc77d6-ccbc-40b5-8e7f-3e45f915e859;
+			- _myState = 8192;
+			- _name = "DECLARE_STATIC_MEMORY_INITIALIZATION";
+			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 The framework memory pool static initializer definition\\par
+}
+";
+			}
+			- _declaration = "#ifdef OM_USE_STATIC_MEMORY_POOL_INITIALIZATION
+#define %s(CLASSNAME,INITNUM) \\
+		static OMSelfLinkedMemoryAllocator<CLASSNAME,INITNUM>* allocatorRef;
+#else
+#define %s(CLASSNAME,INITNUM)	
+#endif  // OM_USE_STATIC_MEMORY_POOL_INITIALIZATION
+";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID ab7834ab-0b96-48b3-8cdb-b5057d4b0411;
+			- _myState = 8192;
+			- _name = "IMPLEMENT_STATIC_MEMORY_INITIALIZATION";
+			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 The memory pool is initialized when the  myOMMemoryAllocator() function is called.\\par
+If user wants to use static initialization of memory pool, the OM_USE_STATIC_MEMORY_POOL_INITIALIZATION \\par
+macro should be defined in omosconfig.h file and framework should be rebuilt.\\par
+This initialization may be needed if there is a racing between two tasks, \\par
+which both send the same event for the first time or create an instance of the same class for the first time.\\par
+\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#ifdef OM_USE_STATIC_MEMORY_POOL_INITIALIZATION
+#define %s(CLASSNAME,INITNUM)\\
+		OMSelfLinkedMemoryAllocator<CLASSNAME,INITNUM>* CLASSNAME::allocatorRef(myOMMemoryAllocator());
+#define MY_MEMORY_ALLOCATOR allocatorRef
+#else
+#define %s(CLASSNAME,INITNUM)
+#define MY_MEMORY_ALLOCATOR myOMMemoryAllocator()
+#endif";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 7f746cdd-0382-44bc-920b-6d0ad7956b2d;
+			- _myState = 8192;
+			- _name = "OM_DECLARE_NOTHROW_ALLOCATION_OPERATORS";
+			- _modifiedTimeWeak = 8.17.2013::18:17:57;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 nothrow new/delete operator declaraton\\par
+}
+";
+			}
+			- _declaration = "#ifdef OM_NO_NOTHROW_NEW_SUPPORT
+#define %s
+#else
+#define %s \\
+	static void operator delete(void* deadObject, const struct std::nothrow_t&) throw(); \\
+	static void* operator new(size_t size, const struct std::nothrow_t&) throw();
+#endif
+";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 0f7cd1fd-6ee1-4236-a3e5-c077938e69b2;
+			- _myState = 8192;
+			- _name = "OM_IMPLEMENT_NOTHROW_ALLOCATION_OPERATORS";
+			- _modifiedTimeWeak = 8.17.2013::18:16:59;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\ulwave\\fs20 nothrow new/delete operator implementation\\ulnone\\par
+}
+";
+			}
+			- _declaration = "#ifdef OM_NO_NOTHROW_NEW_SUPPORT
+#define %s(CLASSNAME)
+#else
+#define %s(CLASSNAME) \\
+	void CLASSNAME::operator delete(void *deadObject, const struct std::nothrow_t&) throw() \\
+	{																			\\
+		MY_MEMORY_ALLOCATOR->returnMemory(deadObject,0);						\\
+	}																			\\
+	void * CLASSNAME::operator new(size_t size, const struct std::nothrow_t&) throw() \\
+	{																			\\
+		void * mem = MY_MEMORY_ALLOCATOR->getMemory(size);						\\
+		if (mem == NULL) {														\\
+			MEMORY_ALLOCATION_FAIL_MSG(CLASSNAME,mem)							\\
+		}																		\\
+		return mem;																\\
+	}
+#endif
+";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 7b8dfce7-d162-4723-836d-12f46ac34633;
+			- _myState = 8192;
+			- _name = "DECLARE_ALLOCATION_OPERATORS";
+			- _modifiedTimeWeak = 8.17.2013::18:20:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 The framework memory pool new/delete operators declaration.\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s														\\
+	static void operator delete(void* deadObject  DELETE_DUMMY_PARAM_IMP);		\\
+	static void* operator new(size_t size NEW_DUMMY_PARAM) OM_NO_THROW; \\
+	OM_DECLARE_NOTHROW_ALLOCATION_OPERATORS";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 261a8c4e-5bd7-484f-a118-8a34bf1ffca8;
+			- _myState = 8192;
+			- _name = "DECLARE_MEMORY_ALLOCATOR";
+			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 The framework memory pool operations that are added to the controlled classes.\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#ifdef OM_NO_TEMPLATES_USAGE
+	#define DECLARE_MEMORY_ALLOCATOR(CLASSNAME,INITNUM)
+#else
+	#define %s(CLASSNAME,INITNUM)									\\
+		public:																	\\
+			CLASSNAME* OMMemoryPoolNextChunk;									\\
+			DECLARE_ALLOCATION_OPERATORS										\\
+			static void OMMemoryPoolIsEmpty();									\\
+			static void OMMemoryPoolSetIncrement(Rhp_int32_t value);				\\
+			static void OMCallMemoryPoolIsEmpty(bool flagValue);				\\
+			static void OMSetMemoryAllocator(CLASSNAME*(*newAllocator)(Rhp_int32_t));	\\
+			static Rhp_int32_t OMNumberOfEmptyElements(); 						\\
+			DECLARE_STATIC_MEMORY_INITIALIZATION(CLASSNAME,INITNUM)	\\
+			static OMSelfLinkedMemoryAllocator<CLASSNAME,INITNUM>* myOMMemoryAllocator();
+#endif // OM_NO_TEMPLATES_USAGE";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID d27a566f-7a37-42e1-9cbd-5555be2cbe2c;
+			- _myState = 8192;
+			- _name = "IMPLEMENT_ALLOCATION_OPERATORS";
+			- _modifiedTimeWeak = 8.17.2013::18:21:21;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 The framework memory pool new/delete operators implementation.\\f1\\rtlch\\par
+}";
+			}
+			- _declaration = "#define %s(CLASSNAME)															\\
+	void CLASSNAME::operator delete(void *deadObject DELETE_DUMMY_PARAM_IMP)	\\
+	{																			\\
+		MY_MEMORY_ALLOCATOR->returnMemory(deadObject,SIZE_PARAM_NAME);			\\
+	}																			\\
+	void * CLASSNAME::operator new(size_t size NEW_DUMMY_PARAM_IMP) OM_NO_THROW	\\
+	{																			\\
+		void * mem = MY_MEMORY_ALLOCATOR->getMemory(size);						\\
+		if (mem == NULL) {														\\
+			MEMORY_ALLOCATION_FAIL_MSG(CLASSNAME,mem)							\\
+		}																		\\
+		return mem;																\\
+	} \\
+	OM_IMPLEMENT_NOTHROW_ALLOCATION_OPERATORS(CLASSNAME)";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID b9af1f9c-755d-4f7c-b238-5c9abc3ff53d;
+			- _myState = 8192;
+			- _name = "IMPLEMENT_MEMORY_ALLOCATOR";
+			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 The framework memory pool operations that are added to the controlled classes.\\f1\\rtlch\\par
+}";
+			}
+			- _declaration = "#ifdef OM_NO_TEMPLATES_USAGE
+	#define %s(CLASSNAME,INITNUM,INCREMENTNUM,ISPROTECTED)
+#else
+	#define %s(CLASSNAME,INITNUM,INCREMENTNUM,ISPROTECTED)						\\
+		OMSelfLinkedMemoryAllocator<CLASSNAME,INITNUM>* CLASSNAME::myOMMemoryAllocator() 				\\
+		{																								\\
+			static OMSelfLinkedMemoryAllocator<CLASSNAME,INITNUM> allocator(INCREMENTNUM,ISPROTECTED);	\\
+			return &allocator;																			\\
+		}																								\\
+		IMPLEMENT_STATIC_MEMORY_INITIALIZATION(CLASSNAME,INITNUM)						\\
+		IMPLEMENT_ALLOCATION_OPERATORS(CLASSNAME)											\\
+		void CLASSNAME::OMMemoryPoolSetIncrement(Rhp_int32_t value)							\\
+		{																					\\
+			MY_MEMORY_ALLOCATOR->setIncrementNum(value);											\\
+		}																					\\
+		void CLASSNAME::OMMemoryPoolIsEmpty()															\\
+		{																								\\
+			POOL_REALLOCATION_MSG(CLASSNAME,INCREMENTNUM)												\\
+		}																								\\
+		void CLASSNAME::OMCallMemoryPoolIsEmpty(bool flagValue)											\\
+		{																								\\
+			MY_MEMORY_ALLOCATOR->callMemoryPoolIsEmpty(flagValue);										\\
+		}																								\\
+		void CLASSNAME::OMSetMemoryAllocator(CLASSNAME*(*newAllocator)(Rhp_int32_t))						\\
+		{																								\\
+			MY_MEMORY_ALLOCATOR->setAllocator(newAllocator);											\\
+		}																								\\
+		Rhp_int32_t CLASSNAME::OMNumberOfEmptyElements()														\\
+		{																								\\
+			return MY_MEMORY_ALLOCATOR->numberOfEmptyElements();										\\
+		}		
+#endif // OM_NO_TEMPLATES_USAGE";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID b08b49f2-f5ca-4981-93f3-541737ec8186;
+			- _myState = 8192;
+			- _name = "MEMORY_ALLOCATION_FAIL_MSG";
+			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 The framework memory pool fail message\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#ifdef _OMINSTRUMENT
+	#define	%s(CLASSNAME,MEM)				\\
+		OMString s((Rhp_char_pt)#CLASSNAME);								\\
+		s += (Rhp_char_pt)\": Memory allocation for new instances failed.\\n\";	\\
+		OM_NOTIFY_TO_ERROR(s.GetBuffer(0));										
+#else
+	#define	%s(CLASSNAME,MEM)
+#endif // _OMINSTRUMENT";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 9c10f871-0d7f-4358-9f1e-77445deb77ef;
+			- _myState = 8192;
+			- _name = "OM_DYNAMIC_POOL_INITIALIZATION_SIZE";
+			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 The initial pool size for dynamic initialization\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s 0";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 1b36666c-c350-484c-8068-e4d8ccfff9dc;
+			- _myState = 8192;
+			- _name = "POOL_REALLOCATION_MSG";
+			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 The framework memory pool additional allocation message\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#ifdef _OMINSTRUMENT
+	#define %s(CLASSNAME,INCREMENTSIZE)						\\
+		OMString s((Rhp_char_pt)#CLASSNAME);												\\
+		s += (Rhp_char_pt)\": Memory pool is empty, allocating memory pool for additional \";	\\
+		s += (Rhp_char_pt)#INCREMENTSIZE ;													\\
+		s += (Rhp_char_pt)\" instances.\\n\";													\\
+		OM_NOTIFY_TO_OUTPUT(s.GetBuffer(0));
+#else
+	#define %s(CLASSNAME,INCREMENTSIZE)
+#endif // _OMINSTRUMENT";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 36acedd9-a9a1-4398-82e8-a9563725dac6;
+			- _myState = 8192;
+			- _name = "RESET_MEMORY_ALLOCATOR";
+			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Reset the memory pool\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#ifdef OM_NO_TEMPLATES_USAGE
+	#define %s(CLASSNAME)
+#else
+	#define %s(CLASSNAME) \\
+		OMMemoryPoolNextChunk = reinterpret_cast<CLASSNAME*>(NULL); 
+#endif // OM_NO_TEMPLATES_USAGE";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 82c5de97-cb51-442b-a413-04097f12c249;
+			- _myState = 8192;
+			- _name = "DECLARE_MEMORY_ALLOCATOR_T";
+			- _modifiedTimeWeak = 7.16.2013::9:36:37;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 The framework memory pool operations that are added to the controlled classes.\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#ifdef OM_NO_TEMPLATES_USAGE
+	#define DECLARE_MEMORY_ALLOCATOR_T(CLASSNAME,INITNUM,INCREMENTNUM,ISPROTECTED)
+#else
+	#define DECLARE_MEMORY_ALLOCATOR_T(CLASSNAME,INITNUM,INCREMENTNUM,ISPROTECTED)	\\
+	public:	\\
+		CLASSNAME* OMMemoryPoolNextChunk;\\
+	static void operator delete(void *deadObject DELETE_DUMMY_PARAM_IMP) {\\
+		myOMMemoryAllocator().returnMemory(deadObject,SIZE_PARAM_NAME);\\
+	}\\
+	static void * operator new(size_t size) OM_NO_THROW	{\\
+		void * mem = myOMMemoryAllocator().getMemory(size);						\\
+		if (mem == NULL) {														\\
+			MEMORY_ALLOCATION_FAIL_MSG(CLASSNAME,mem)							\\
+		}																		\\
+		return mem;																\\
+	}\\
+	static void OMMemoryPoolIsEmpty(void) {\\
+		POOL_REALLOCATION_MSG(CLASSNAME,INCREMENTNUM)	\\
+	}\\
+	static void OMMemoryPoolSetIncrement(Rhp_int32_t value)	{\\
+		myOMMemoryAllocator().setIncrementNum(value);												\\
+	}\\
+	static void OMCallMemoryPoolIsEmpty(bool flagValue)	{\\
+		myOMMemoryAllocator().callMemoryPoolIsEmpty(flagValue);										\\
+	}\\
+	static void OMSetMemoryAllocator(CLASSNAME*(*newAllocator)(Rhp_int32_t)) {\\
+		myOMMemoryAllocator().setAllocator(newAllocator);											\\
+	}\\
+	static Rhp_int32_t OMNumberOfEmptyElements(void) {\\
+		return myOMMemoryAllocator().numberOfEmptyElements();										\\
+	}\\
+	static OMSelfLinkedMemoryAllocator<CLASSNAME,INITNUM>& myOMMemoryAllocator(void) {\\
+		static OMSelfLinkedMemoryAllocator<CLASSNAME,INITNUM> allocator(INCREMENTNUM,ISPROTECTED);	\\
+		return allocator;																			\\
+	}																								
+#endif // OM_NO_TEMPLATES_USAGE
+";
+			- _kind = Language;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

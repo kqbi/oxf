@@ -1,0 +1,3252 @@
+I-Logix-RPY-Archive version 8.13.0 C++ 9747218
+{ ISubsystem 
+	- _cmheader = "$Id: RTOSWrappers.sbs 1.20 2007/04/06 07:09:43 ilgiga Exp $
+$Revision: 1.20 $
+$Locker: $
+
+";
+	- _id = GUID e8b45ae3-9b01-4afe-90db-063e6a4ebb81;
+	- _myState = 8192;
+	- _name = "RTOSWrappers";
+	- _modifiedTimeWeak = 5.16.2016::9:30:24;
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 RTOS wrappers above the OSAL\\f1\\rtlch\\par
+}
+";
+	}
+	- _lastID = 3;
+	- Declaratives = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IDiagram 
+			- _id = GUID b155c13f-fe6a-4b1a-b6ee-3876c4d6e15d;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "Format";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 4;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Association";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "Line.LineColor";
+										- _Value = "221,0,0";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineWidth";
+										- _Value = "1";
+										- _Type = Int;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 4;
+									- value = 
+									{ IProperty 
+										- _Name = "Fill.FillColor";
+										- _Value = "255,255,255";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineColor";
+										- _Value = "121,122,0";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineStyle";
+										- _Value = "0";
+										- _Type = Int;
+									}
+									{ IProperty 
+										- _Name = "Line.LineWidth";
+										- _Value = "1";
+										- _Type = Int;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Composition";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "Line.LineColor";
+										- _Value = "121,0,0";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineWidth";
+										- _Value = "1";
+										- _Type = Int;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Depends";
+								- Properties = { IRPYRawContainer 
+									- size = 3;
+									- value = 
+									{ IProperty 
+										- _Name = "Line.LineColor";
+										- _Value = "0,16,230";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineStyle";
+										- _Value = "1";
+										- _Type = Int;
+									}
+									{ IProperty 
+										- _Name = "Line.LineWidth";
+										- _Value = "0";
+										- _Type = Int;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "The event queue";
+			- _modifiedTimeWeak = 1.1.1970::2:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 The event queue architecture\\lang1037\\f1\\rtlch\\par
+}
+";
+			}
+			- _lastModifiedTime = "1.8.2009::12:22:9";
+			- _graphicChart = { CGIClassChart 
+				- _id = GUID 290ff965-04ec-4c78-9ee9-801d911a86e8;
+				- m_type = 0;
+				- m_pModelObject = { IHandle 
+					- _m2Class = "IDiagram";
+					- _id = GUID b155c13f-fe6a-4b1a-b6ee-3876c4d6e15d;
+				}
+				- m_pParent = ;
+				- m_name = { CGIText 
+					- m_str = "";
+					- m_style = "Arial" 10 0 0 0 1 ;
+					- m_color = { IColor 
+						- m_fgColor = 0;
+						- m_bgColor = 0;
+						- m_bgFlag = 0;
+					}
+					- m_position = 1 0 0  ;
+					- m_nIdent = 0;
+					- m_bImplicitSetRectPoints = 0;
+					- m_nOrientationCtrlPt = 8;
+				}
+				- m_drawBehavior = 0;
+				- m_bIsPreferencesInitialized = 0;
+				- elementList = 6;
+				{ CGICompositeClass 
+					- _id = GUID 215aa5b0-5b65-4a29-b972-9750f262fe00;
+					- m_type = 78;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 9148465f-f4d8-4e28-b8b1-3fe141f3ea13;
+					}
+					- m_pParent = ;
+					- m_name = { CGIText 
+						- m_str = "TopLevel";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 0;
+					- m_bIsPreferencesInitialized = 0;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 0 ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- Compartments = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIClass 
+					- _id = GUID ebb2980d-ad27-4fc4-a5ce-ce81e146b8c3;
+					- m_type = 87;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 03ca1361-ace6-484b-bded-3da0a55bd8e7;
+					}
+					- m_pParent = GUID 215aa5b0-5b65-4a29-b972-9750f262fe00;
+					- m_name = { CGIText 
+						- m_str = "OMEventQueue";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 2056;
+					- m_transform = 0.109537 0 0 0.101604 50.7809 113.572 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- frameset = "<frameset rows=50%,50%>
+<frame name=AttributeListCompartment>
+<frame name=OperationListCompartment>";
+					- Compartments = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ CGICompartment 
+							- _id = GUID c3f6c175-1fb4-45aa-a08e-5e676b955d86;
+							- m_name = "Attribute";
+							- m_displayOption = Explicit;
+							- m_bShowInherited = 0;
+							- m_bOrdered = 0;
+							- Items = { IRPYRawContainer 
+								- size = 0;
+							}
+						}
+						{ CGICompartment 
+							- _id = GUID 367a8aef-067f-49ff-9918-1159d4f894de;
+							- m_name = "Operation";
+							- m_displayOption = Explicit;
+							- m_bShowInherited = 0;
+							- m_bOrdered = 0;
+							- Items = { IRPYRawContainer 
+								- size = 0;
+							}
+						}
+					}
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIClass 
+					- _id = GUID ed68f99e-2c18-4dc7-b708-7f7e4d8988cb;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "General";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Graphics";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "FitBoxToItsTextuals";
+												- _Value = "True";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 87;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "AbstractLayer.sbs";
+						- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+						- _class = "";
+						- _name = "OMOSMessageQueue";
+						- _id = GUID 29ddc5e1-35b8-4673-9e9a-261eb2e4a08a;
+					}
+					- m_pParent = GUID 215aa5b0-5b65-4a29-b972-9750f262fe00;
+					- m_name = { CGIText 
+						- m_str = "OMOSMessageQueue";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 4104;
+					- m_transform = 0.147309 0 0 0.101604 315.705 113.572 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- frameset = "<frameset rows=50%,50%>
+<frame name=AttributeListCompartment>
+<frame name=OperationListCompartment>";
+					- Compartments = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ CGICompartment 
+							- _id = GUID ea540848-e52a-4c48-b575-a1d47fe7a607;
+							- m_name = "Attribute";
+							- m_displayOption = Explicit;
+							- m_bShowInherited = 0;
+							- m_bOrdered = 0;
+							- Items = { IRPYRawContainer 
+								- size = 0;
+							}
+						}
+						{ CGICompartment 
+							- _id = GUID 56427594-6343-4901-8ddf-95f2d3d08022;
+							- m_name = "Operation";
+							- m_displayOption = Explicit;
+							- m_bShowInherited = 0;
+							- m_bOrdered = 0;
+							- Items = { IRPYRawContainer 
+								- size = 0;
+							}
+						}
+					}
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIAssociationEnd 
+					- _id = GUID 9f10a24e-f982-4af7-9dc3-61ac6c2f7b44;
+					- m_type = 92;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID c86b83f3-e534-43bc-b0dd-92cbb0c9737e;
+					}
+					- m_pParent = ;
+					- m_name = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 4096;
+					- m_bIsPreferencesInitialized = 1;
+					- m_pSource = GUID ebb2980d-ad27-4fc4-a5ce-ce81e146b8c3;
+					- m_sourceType = 'F';
+					- m_pTarget = GUID ed68f99e-2c18-4dc7-b708-7f7e4d8988cb;
+					- m_targetType = 'T';
+					- m_direction = ' ';
+					- m_rpn = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 7;
+					}
+					- m_anglePoint1 = 0 0 ;
+					- m_anglePoint2 = 0 0 ;
+					- m_line_style = 2;
+					- m_SourcePort = 815 870 ;
+					- m_TargetPort = 192 910 ;
+					- m_pInverseModelObject = { IAssociationEndHandle 
+						- _m2Class = "";
+					}
+					- m_pInstance = { IObjectLinkHandle 
+						- _m2Class = "";
+					}
+					- m_pInverseInstance = { IObjectLinkHandle 
+						- _m2Class = "";
+					}
+					- m_bShowSourceMultiplicity = 1;
+					- m_bShowSourceRole = 0;
+					- m_bShowTargetMultiplicity = 1;
+					- m_bShowTargetRole = 1;
+					- m_bShowLinkName = 1;
+					- m_bShowSpecificType = 0;
+					- m_bInstance = 0;
+					- m_bShowQualifier1 = 1;
+					- m_bShowQualifier2 = 1;
+					- m_sourceRole = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 2;
+						- m_bImplicitSetRectPoints = 0;
+					}
+					- m_targetRole = { CGIText 
+						- m_str = "theQueue";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 3;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nHorizontalSpacing = -7;
+						- m_nOrientationCtrlPt = 2;
+					}
+					- m_sourceMultiplicity = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 4;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 6;
+					}
+					- m_targetMultiplicity = { CGIText 
+						- m_str = "1";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 5;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nHorizontalSpacing = -7;
+						- m_nOrientationCtrlPt = 4;
+					}
+					- m_sourceQualifier = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 6;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_targetQualifier = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 7;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_specificType = type_122;
+				}
+				{ CGIClass 
+					- _id = GUID 0f451ae7-4166-443f-9ed5-7867f05b7989;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "General";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Graphics";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "FitBoxToItsTextuals";
+												- _Value = "False";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 105;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 678fafab-7f79-4101-92b4-fd8ab9fecb04;
+					}
+					- m_pParent = GUID 215aa5b0-5b65-4a29-b972-9750f262fe00;
+					- m_name = { CGIText 
+						- m_str = "OMOSEventGenerationParams";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 2056;
+					- m_transform = 0.162752 0 0 0.0489083 48.5117 336.039 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 3 265  3 1410  1195 1410  1195 265  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- frameset = "<frameset rows=50%,50%>
+<frame name=AttributeListCompartment>
+<frame name=OperationListCompartment>";
+					- Compartments = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ CGICompartment 
+							- _id = GUID 648e2d76-67ed-45ce-8bd3-fba50a166a25;
+							- m_name = "Attribute";
+							- m_displayOption = Explicit;
+							- m_bShowInherited = 0;
+							- m_bOrdered = 0;
+							- Items = { IRPYRawContainer 
+								- size = 0;
+							}
+						}
+						{ CGICompartment 
+							- _id = GUID 57084acc-b274-48fd-80cd-7ba164e20b8f;
+							- m_name = "Operation";
+							- m_displayOption = Explicit;
+							- m_bShowInherited = 0;
+							- m_bOrdered = 0;
+							- Items = { IRPYRawContainer 
+								- size = 0;
+							}
+						}
+					}
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIInheritance 
+					- _id = GUID 6bfd15b5-68c9-4d2c-bc5d-0f887d7f00db;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "General";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Graphics";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "ShowLabels";
+												- _Value = "False";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 128;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IDependency";
+						- _id = GUID f9aa2f1a-263d-4380-b855-e94487455f0b;
+					}
+					- m_pParent = ;
+					- m_name = { CGIText 
+						- m_str = "OMOSEventGenerationParams";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 8;
+					- m_bIsPreferencesInitialized = 1;
+					- m_pSource = GUID ebb2980d-ad27-4fc4-a5ce-ce81e146b8c3;
+					- m_sourceType = 'F';
+					- m_pTarget = GUID 0f451ae7-4166-443f-9ed5-7867f05b7989;
+					- m_targetType = 'T';
+					- m_direction = ' ';
+					- m_rpn = { CGIText 
+						- m_str = "Usage";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 4 -6 -9  62 -9  62 9  -6 9  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_transform = 1 0 0 1 119 298 ;
+						- m_nHorizontalSpacing = 50;
+						- m_nVerticalSpacing = -2;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_anglePoint1 = 0 0 ;
+					- m_anglePoint2 = 0 0 ;
+					- m_line_style = 0;
+					- m_SourcePort = 559 1274 ;
+					- m_TargetPort = 384 306 ;
+					- m_ShowName = 0;
+					- m_ShowStereotype = 1;
+				}
+				
+				- m_access = 'Z';
+				- m_modified = 'N';
+				- m_fileVersion = "";
+				- m_nModifyDate = 0;
+				- m_nCreateDate = 0;
+				- m_creator = "";
+				- m_bScaleWithZoom = 1;
+				- m_arrowStyle = 'S';
+				- m_pRoot = GUID 215aa5b0-5b65-4a29-b972-9750f262fe00;
+				- m_currentLeftTop = 0 0 ;
+				- m_currentRightBottom = 0 0 ;
+				- m_bFreezeCompartmentContent = 0;
+			}
+			- _defaultSubsystem = { IHandle 
+				- _m2Class = "ISubsystem";
+				- _id = GUID e8b45ae3-9b01-4afe-90db-063e6a4ebb81;
+			}
+		}
+	}
+	- weakCGTime = 5.16.2016::9:30:24;
+	- strongCGTime = 1.15.2009::14:32:20;
+	- _defaultComposite = GUID 9148465f-f4d8-4e28-b8b1-3fe141f3ea13;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 4;
+		- value = 
+		{ IClass 
+			- _id = GUID 9148465f-f4d8-4e28-b8b1-3fe141f3ea13;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 4.14.2011::9:43:30;
+			- weakCGTime = 4.14.2011::9:43:30;
+			- strongCGTime = 1.15.2009::14:32:20;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 03ca1361-ace6-484b-bded-3da0a55bd8e7;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "InitCleanUpRelations";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "GenerateDestructor";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Operation";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Inline";
+										- _Value = "in_declaration";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMEventQueue";
+			- Dependencies = { IRPYRawContainer 
+				- size = 3;
+				- value = 
+				{ IDependency 
+					- _id = GUID da13de49-ee37-445c-8bc8-4db6fae8b11f;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "IOxfEvent";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 11.15.2010::18:32:23;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "CoreAPI.sbs";
+						- _subsystem = "Design::oxf::Core::CoreAPI";
+						- _class = "";
+						- _name = "IOxfEvent";
+						- _id = GUID 72bafe6b-3c6c-4462-88b7-148dc2ae21b9;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 6697052c-49e8-4a10-a662-e9d315bc933c;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "OMOSThread";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 11.15.2010::18:32:23;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "AbstractLayer.sbs";
+						- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+						- _class = "";
+						- _name = "OMOSThread";
+						- _id = GUID a9a4d85f-cdc4-4335-9897-76359786e728;
+					}
+				}
+				{ IDependency 
+					- _id = GUID f9aa2f1a-263d-4380-b855-e94487455f0b;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "OMOSEventGenerationParams";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 11.15.2010::18:32:23;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 678fafab-7f79-4101-92b4-fd8ab9fecb04;
+					}
+				}
+			}
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "CustomizableFramework.sbs";
+					- _subsystem = "CustomizableFramework";
+					- _class = "";
+					- _name = "Managed";
+					- _id = GUID 56fdf8ca-d80b-4479-acba-52405820a927;
+				}
+			}
+			- _modifiedTimeWeak = 5.16.2016::9:26:8;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+{\\colortbl ;\\red0\\green0\\blue255;}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 An instantiation class of the event queue wrapper over the RTOS message queue.\\par
+The message type is \\cf1\\ul\\protect IOxfEvent\\cf0\\ulnone\\protect0 *.\\lang1037\\f1\\rtlch\\par
+}
+";
+				- Hyperlinks = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IInternalHyperlink 
+						- _name = "IOxfEvent";
+						- _textType = "NAME";
+						- _target = { IHandle 
+							- _m2Class = "IClass";
+							- _filename = "CoreAPI.sbs";
+							- _subsystem = "Design::oxf::Core::CoreAPI";
+							- _class = "";
+							- _name = "IOxfEvent";
+							- _id = GUID 72bafe6b-3c6c-4462-88b7-148dc2ae21b9;
+						}
+					}
+				}
+			}
+			- _lastID = 1;
+			- weakCGTime = 5.16.2016::9:26:8;
+			- strongCGTime = 7.9.2008::12:0:47;
+			- Operations = { IRPYRawContainer 
+				- size = 12;
+				- value = 
+				{ IConstructor 
+					- _id = GUID 8b1af9d8-dc90-4655-8b24-b3d358ade482;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "in_declaration";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _modifiedTimeWeak = 5.16.2016::9:24:39;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset178 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 Initialize\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 7091a950-add5-4bdc-b88b-bec9ed47e5b8;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "messageQueueSize";
+							- _modifiedTimeWeak = 5.16.2016::9:24:39;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The RTOS message queue size\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "MISRA_Cpp_Types.sbs";
+								- _subsystem = "Design::oxf::Services::Types::MISRA_Cpp_Types";
+								- _class = "";
+								- _name = "Rhp_int32_t";
+								- _id = GUID 55012af4-7758-4935-bf1e-dc3777a3b025;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID 0f971b62-01b4-404c-8386-3ce8a769d7aa;
+							- _name = "dynamicMessageQueue";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 When true, the RTOS queue size should be dynamic (grow on demand)\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "bool";
+								- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "init(messageQueueSize, dynamicMessageQueue);";
+					}
+					- _initializer = "theQueue(NULL)";
+				}
+				{ IConstructor 
+					- _id = GUID a0b7cef1-823a-4196-b11d-9bb39efb0e39;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "in_declaration";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _modifiedTimeWeak = 11.15.2010::18:32:23;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}{\\f1\\fnil\\fcharset178 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\f0\\fs17 Initialize without creating of the RTOS queue\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _initializer = "theQueue(NULL)";
+				}
+				{ IDestructor 
+					- _id = GUID 51eaf947-d917-4d3d-ae50-036b9b22a092;
+					- _modifiedTimeWeak = 11.15.2010::18:32:23;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Cleanup\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "cleanup();";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID a660c6e8-fc39-4c7b-860a-7d0a268a7123;
+					- _name = "cleanup";
+					- _modifiedTimeWeak = 11.15.2010::18:32:23;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 cleanup the RTOS resources\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if (theQueue != NULL) {
+	delete theQueue;
+	theQueue = NULL;
+}";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 7f05705c-ec90-485a-8ab7-3a2ecc7eeaec;
+					- _name = "get";
+					- _modifiedTimeWeak = 11.15.2010::18:32:23;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset178 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 Get an event from the queue\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "CoreAPI.sbs";
+						- _subsystem = "Design::oxf::Core::CoreAPI";
+						- _class = "";
+						- _name = "IOxfEvent";
+						- _id = GUID 72bafe6b-3c6c-4462-88b7-148dc2ae21b9;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "IOxfEvent* msg = NULL;
+if (theQueue != NULL) {
+	msg = reinterpret_cast<IOxfEvent*>(theQueue->get());
+}
+return msg;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 7740c9fd-1eb0-414a-91b2-d76ef37accbf;
+					- _name = "getMessageList";
+					- _modifiedTimeWeak = 11.15.2010::18:32:23;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset178 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Get a list of the events in the queue\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 4f3bbd0b-c83d-4a48-94bb-d74f551bc1b1;
+							- _name = "aList";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The output list\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- myTypeOf = { IType 
+								- _id = GUID e3d01bde-0069-48f3-9d3f-1e95c0a381ac;
+								- _myState = 8192;
+								- _modifiedTimeWeak = 1.1.1970::2:0:0;
+								- _declaration = "OMEventListType & %s";
+								- _kind = Language;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = Out;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "if (theQueue != NULL) {
+	theQueue->getMessageList(reinterpret_cast< OMListType& >(aList));
+}";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 5f10858f-19f6-4542-b212-ea8fd76a9e1d;
+					- _name = "getOsHandle";
+					- _modifiedTimeWeak = 11.15.2010::18:32:23;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Get the RTOS queue \\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void *";
+						- _id = GUID 68975846-a809-4f2e-9f11-00ad6073974c;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "void* handle = NULL;
+if (theQueue != NULL) {
+	handle = theQueue->getOsHandle();
+}
+return handle;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 62757d1e-03b1-4485-bf78-3e0d25258830;
+					- _name = "init";
+					- _modifiedTimeWeak = 5.16.2016::9:25:23;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Initialize the RTOS queue\\fs20\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 7a7e6451-d0d5-4144-8298-a4c661a3564d;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "messageQueueSize";
+							- _modifiedTimeWeak = 5.16.2016::9:25:23;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The RTOS message queue size\\lang1037\\f1\\rtlch\\fs20\\par
+}
+";
+							}
+							- ValueSpecifications = { IRPYRawContainer 
+								- size = 1;
+								- value = 
+								{ ILiteralSpecification 
+									- _id = GUID 32b16fc9-76b9-4168-8c3f-3c89f8ff02b4;
+									- _modifiedTimeWeak = 5.16.2016::9:25:23;
+									- _value = "OMOSThread::DefaultMessageQueueSize";
+								}
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "MISRA_Cpp_Types.sbs";
+								- _subsystem = "Design::oxf::Services::Types::MISRA_Cpp_Types";
+								- _class = "";
+								- _name = "Rhp_int32_t";
+								- _id = GUID 55012af4-7758-4935-bf1e-dc3777a3b025;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID 8e3760f2-fd3b-4216-87ee-d211e5ea5ef8;
+							- _name = "dynamicMessageQueue";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 When true, the RTOS queue size should be dynamic (grow on demand)\\f1\\rtlch\\fs20\\par
+}
+";
+							}
+							- ValueSpecifications = { IRPYRawContainer 
+								- size = 1;
+								- value = 
+								{ ILiteralSpecification 
+									- _id = GUID e86ac3b1-8723-4060-9d92-61c3213c0b0c;
+									- _modifiedTimeWeak = 1.1.1970::2:0:0;
+									- _value = "true";
+								}
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "bool";
+								- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if (theQueue == NULL) {
+	theQueue = OMOSFactory::instance()->createOMOSMessageQueue(dynamicMessageQueue, messageQueueSize);
+}";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 3248c63c-bb3b-40b5-8c32-e5a961a782c5;
+					- _name = "isEmpty";
+					- _modifiedTimeWeak = 11.15.2010::18:32:23;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Check if the queue is empty\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "bool empty = true;
+if (theQueue != NULL) {
+	empty = (theQueue->isEmpty() != 0);
+}
+return empty;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 0a803b11-a6c3-4331-98a0-e00ca5218e6b;
+					- _name = "isFull";
+					- _modifiedTimeWeak = 11.15.2010::18:32:23;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Check if the queue is full (dynamic queues are never full)\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "bool full = true;
+if (theQueue != NULL) {
+	full = theQueue->isFull();
+}
+return full;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID e1378248-ac35-45da-a209-44e755c85597;
+					- _name = "pend";
+					- _modifiedTimeWeak = 11.15.2010::18:32:23;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Block on the queue until a message arrives (non-blocking if there are messages in the queue)\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if (theQueue != NULL) {
+	theQueue->pend();
+}";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 282613e6-077c-46fc-aff9-9a1a77d665f3;
+					- _name = "putMessage";
+					- _modifiedTimeWeak = 11.15.2010::18:32:23;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Put a event into the queue\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID a29e4f0e-d05f-4efc-9ee4-73969c0ba18a;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "$type*";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "ev";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The event\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- myTypeOf = { IType 
+								- _id = GUID 29fcaae7-6586-4e21-9f94-155ed9c35e26;
+								- _myState = 8192;
+								- _modifiedTimeWeak = 1.1.1970::2:0:0;
+								- _declaration = "IOxfEvent*";
+								- _kind = Language;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID 3b745c2f-e209-43dc-ae6b-cc85eddd934c;
+							- _name = "params";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 Put parameters\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "CoreAPI.sbs";
+								- _subsystem = "Design::oxf::Core::CoreAPI";
+								- _class = "";
+								- _name = "IOxfEventGenerationParams";
+								- _id = GUID 4aeea12e-4ea6-45bc-8ba2-b8498ce3a0a7;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "bool res = false;
+if (theQueue != NULL) {
+	res = theQueue->putMessage(reinterpret_cast<void*>(ev), params);
+}
+return res;";
+					}
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID c86b83f3-e534-43bc-b0dd-92cbb0c9737e;
+					- _myState = 8192;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Relation";
+										- Properties = { IRPYRawContainer 
+											- size = 2;
+											- value = 
+											{ IProperty 
+												- _Name = "Get";
+												- _Value = "getOsQueue";
+												- _Type = String;
+											}
+											{ IProperty 
+												- _Name = "SetGenerate";
+												- _Value = "False";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Relation";
+										- Properties = { IRPYRawContainer 
+											- size = 2;
+											- value = 
+											{ IProperty 
+												- _Name = "DataMemberVisibility";
+												- _Value = "Private";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Public,Protected,Private";
+											}
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "in_declaration";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "theQueue";
+					- _modifiedTimeWeak = 11.15.2010::18:32:23;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The RTOS message queue\\lang1037\\f1\\rtlch\\fs20\\par
+}
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "AbstractLayer.sbs";
+						- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+						- _class = "";
+						- _name = "OMOSMessageQueue";
+						- _id = GUID 29ddc5e1-35b8-4673-9e9a-261eb2e4a08a;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 60de47f2-beec-43fd-b0df-9d523562deaa;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "InitCleanUpRelations";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 5;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Attribute";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Inline";
+										- _Value = "in_declaration";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "DeclarationModifier";
+										- _Value = "";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "GenerateDestructor";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Framework";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "ReactiveBaseUsage";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Operation";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Inline";
+										- _Value = "in_declaration";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Relation";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "Inline";
+										- _Value = "in_declaration";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMTMMessageQueue";
+			- Dependencies = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IDependency 
+					- _id = GUID 668bddbd-c689-4fa7-a06f-77a20fab3ea6;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "OMList";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 11.15.2010::18:40:35;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "TypeSafe.sbs";
+						- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+						- _class = "";
+						- _name = "OMList";
+						- _id = GUID b508c0e7-a401-4e38-8935-c4101b28c695;
+					}
+				}
+				{ IDependency 
+					- _id = GUID ac8b6978-c425-4fd2-86b5-ee068f1d0672;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "OMOSEventGenerationParams";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 11.15.2010::18:40:35;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 678fafab-7f79-4101-92b4-fd8ab9fecb04;
+					}
+				}
+			}
+			- TemplateParameters = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ ITemplateParameter 
+					- _id = GUID 39cf45c6-b1dd-4c55-b437-23119a9e93c7;
+					- _name = "Msg";
+					- _modifiedTimeWeak = 11.15.2010::18:40:35;
+					- myTypeOf = { IType 
+						- _id = GUID be8fb733-dffe-4ce1-9407-ba678d9cc995;
+						- _myState = 8192;
+						- _modifiedTimeWeak = 1.1.1970::2:0:0;
+						- _declaration = "class";
+						- _kind = Language;
+					}
+					- _isOrdered = 0;
+					- _representative = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 3dda9b32-d970-4d9a-ba60-db5f0e75ce0a;
+					}
+				}
+			}
+			- _modifiedTimeWeak = 5.16.2016::9:31:28;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 A typed (Msg*) RTOS message queue (single message type)\\f1\\rtlch\\par
+}
+";
+			}
+			- _lastID = 3;
+			- Declaratives = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IClass 
+					- _id = GUID 3dda9b32-d970-4d9a-ba60-db5f0e75ce0a;
+					- _myState = 8192;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "Model";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Class";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "IsTemplateParameterType";
+												- _Value = "True";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "Msg";
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- weakCGTime = 1.2.1990::0:0:0;
+					- strongCGTime = 1.2.1990::0:0:0;
+					- _multiplicity = "";
+					- _itsStateChart = { IHandle 
+						- _m2Class = "";
+					}
+					- _classModifier = Unspecified;
+				}
+			}
+			- weakCGTime = 5.16.2016::9:31:28;
+			- strongCGTime = 6.5.2008::8:2:31;
+			- Operations = { IRPYRawContainer 
+				- size = 12;
+				- value = 
+				{ IConstructor 
+					- _id = GUID c52d2d15-d76f-4884-aa52-deaffd0ac19a;
+					- _modifiedTimeWeak = 5.16.2016::9:30:24;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset178 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Initialize the queue\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 556198e1-a096-486f-b9c8-a50a616f7c5e;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "messageQueueSize";
+							- _modifiedTimeWeak = 5.16.2016::9:30:24;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The RTOS message queue size\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "MISRA_Cpp_Types.sbs";
+								- _subsystem = "Design::oxf::Services::Types::MISRA_Cpp_Types";
+								- _class = "";
+								- _name = "Rhp_int32_t";
+								- _id = GUID 55012af4-7758-4935-bf1e-dc3777a3b025;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID 603785e6-788c-460a-9c9b-50ada83551ba;
+							- _name = "dynamicMessageQueue";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 When true, the RTOS queue size should be dynamic (grow on demand)\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "bool";
+								- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "init(messageQueueSize, dynamicMessageQueue);";
+					}
+					- _initializer = "theQueue(NULL)";
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 1037f1af-4226-4925-b2f0-83f023d88ea2;
+					- _name = "get";
+					- _modifiedTimeWeak = 11.15.2010::18:40:35;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 Get a message from the queue\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- myReturnType = { IType 
+						- _id = GUID 361998ce-45c0-4435-8c77-d03a9f6602e4;
+						- _myState = 8192;
+						- _modifiedTimeWeak = 1.1.1970::2:0:0;
+						- _declaration = "Msg*";
+						- _kind = Language;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "Msg* msg = NULL;
+if (theQueue != NULL) {
+	msg = reinterpret_cast<Msg*>(theQueue->get());
+}
+return msg;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 398ef4a3-2e65-47a2-857f-a8e0324f0bf2;
+					- _name = "getMessageList";
+					- _modifiedTimeWeak = 11.15.2010::18:40:35;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Get a list of the messages in the queue\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID bcc5cc20-4a76-40b6-8af6-9b064b08270a;
+							- _name = "aList";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The output list\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- myTypeOf = { IType 
+								- _id = GUID 59b13e7a-d581-44b0-a29c-b624c24fad82;
+								- _myState = 8192;
+								- _modifiedTimeWeak = 1.1.1970::2:0:0;
+								- _declaration = "OMList<Msg*> & %s";
+								- _kind = Language;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = Out;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if (theQueue != NULL) {
+	theQueue->getMessageList((OMList<void*>&)aList);
+}";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 44731329-1e25-47d6-a4c6-5465b617c1a5;
+					- _name = "getOsHandle";
+					- _modifiedTimeWeak = 11.15.2010::18:40:35;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Get the RTOS queue \\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void *";
+						- _id = GUID 68975846-a809-4f2e-9f11-00ad6073974c;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "void* handle = NULL;
+if (theQueue != NULL) {
+	handle = theQueue->getOsHandle();
+}
+return handle;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 6af47263-aa03-47b9-a5e2-04ecb9e2a8bf;
+					- _name = "isEmpty";
+					- _modifiedTimeWeak = 11.15.2010::18:40:35;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Check if the queue is empty\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "bool empty = true;
+if (theQueue != NULL) {
+	empty = (theQueue->isEmpty() != 0);
+}
+return empty;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID e89cc2f0-9b90-4179-8dc7-0c7d7648357e;
+					- _name = "isFull";
+					- _modifiedTimeWeak = 11.15.2010::18:40:35;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Check if the queue is full (dynamic queues are never full)\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "bool full = true;
+if (theQueue != NULL) {
+	full = theQueue->isFull();
+}
+return full;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 08fcd845-5b6d-4bcc-9a8d-14914e7c5daf;
+					- _name = "pend";
+					- _modifiedTimeWeak = 11.15.2010::18:40:35;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Block on the queue until a message arrives (non-blocking if there are messages in the queue)\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if (theQueue != NULL) {
+	theQueue->pend();
+}";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 949621d0-2877-41a3-a8ca-a45c9fb1b593;
+					- _name = "putMessage";
+					- _modifiedTimeWeak = 11.15.2010::18:40:35;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Put a message into the queue\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID edf45d01-e9be-438b-8ee2-c1e68dc0a2e5;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "$type*";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "aMessage";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The message\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- myTypeOf = { IType 
+								- _id = GUID 05f5ee95-452a-4f54-b83c-68a8f0ef70ed;
+								- _myState = 8192;
+								- _modifiedTimeWeak = 1.1.1970::2:0:0;
+								- _declaration = "Msg*";
+								- _kind = Language;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID d1954515-8d59-4fbc-a3ae-4b056ae0b289;
+							- _name = "params";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 Put parameters\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "CoreAPI.sbs";
+								- _subsystem = "Design::oxf::Core::CoreAPI";
+								- _class = "";
+								- _name = "IOxfEventGenerationParams";
+								- _id = GUID 4aeea12e-4ea6-45bc-8ba2-b8498ce3a0a7;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "bool res = false;
+if (theQueue != NULL) {
+	res = theQueue->putMessage(reinterpret_cast<void*>(aMessage), params);
+}
+return res;";
+					}
+				}
+				{ IDestructor 
+					- _id = GUID e45e9c04-97cc-42b3-b71c-4b4e031c3fea;
+					- _modifiedTimeWeak = 11.15.2010::18:40:35;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Cleanup\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "cleanup();";
+					}
+				}
+				{ IConstructor 
+					- _id = GUID 7c708e57-5afc-4af9-9155-d02626bc3c15;
+					- _modifiedTimeWeak = 11.15.2010::18:40:35;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\f0\\fs17 Initialize without creating of the RTOS queue\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _initializer = "theQueue(0)";
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID d400e17e-8486-41c2-9ca9-49f8b14678af;
+					- _name = "init";
+					- _modifiedTimeWeak = 5.16.2016::9:30:42;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 Initialize the RTOS queue\\fs20\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 2126c70d-6803-4e82-ac40-ba315c91c06f;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "messageQueueSize";
+							- _modifiedTimeWeak = 5.16.2016::9:30:42;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The RTOS message queue size\\lang1037\\f1\\rtlch\\fs20\\par
+}
+";
+							}
+							- ValueSpecifications = { IRPYRawContainer 
+								- size = 1;
+								- value = 
+								{ ILiteralSpecification 
+									- _id = GUID 98a4aab0-4bf3-4573-a68b-017476063b63;
+									- _modifiedTimeWeak = 5.16.2016::9:30:42;
+									- _value = "OMOSThread::DefaultMessageQueueSize";
+								}
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "MISRA_Cpp_Types.sbs";
+								- _subsystem = "Design::oxf::Services::Types::MISRA_Cpp_Types";
+								- _class = "";
+								- _name = "Rhp_int32_t";
+								- _id = GUID 55012af4-7758-4935-bf1e-dc3777a3b025;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID 5d9a7427-59ad-418f-bd4e-64b51719fca3;
+							- _name = "dynamicMessageQueue";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs17 When true, the RTOS queue size should be dynamic (grow on demand)\\f1\\rtlch\\fs20\\par
+}
+";
+							}
+							- ValueSpecifications = { IRPYRawContainer 
+								- size = 1;
+								- value = 
+								{ ILiteralSpecification 
+									- _id = GUID fa7416d3-2458-49ef-9ad6-aaf8dce4aa0c;
+									- _modifiedTimeWeak = 1.1.1970::2:0:0;
+									- _value = "true";
+								}
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "bool";
+								- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if (theQueue == NULL) {
+	theQueue = OMOSFactory::instance()->createOMOSMessageQueue(dynamicMessageQueue, messageQueueSize);
+}";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID d7c41a24-fb97-4442-8676-50f23d275afe;
+					- _name = "cleanup";
+					- _modifiedTimeWeak = 11.15.2010::18:40:35;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 cleanup the RTOS resources\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "if (theQueue != NULL) {
+	delete theQueue;
+	theQueue = NULL;
+}";
+					}
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID 08509a09-73b6-4b3c-9aa5-261dd9925b52;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Relation";
+										- Properties = { IRPYRawContainer 
+											- size = 3;
+											- value = 
+											{ IProperty 
+												- _Name = "FilledDiamondScheme";
+												- _Value = "Aggregation";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Aggregation, Composition";
+											}
+											{ IProperty 
+												- _Name = "Get";
+												- _Value = "getOsQueue";
+												- _Type = String;
+											}
+											{ IProperty 
+												- _Name = "SetGenerate";
+												- _Value = "False";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Relation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "DataMemberVisibility";
+												- _Value = "Private";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Public,Protected,Private";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "theQueue";
+					- _modifiedTimeWeak = 11.15.2010::18:40:35;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The RTOS message queue\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "AbstractLayer.sbs";
+						- _subsystem = "Design::oxf::Adapters::AbstractLayer";
+						- _class = "";
+						- _name = "OMOSMessageQueue";
+						- _id = GUID 29ddc5e1-35b8-4673-9e9a-261eb2e4a08a;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "";
+					- _linkType = Composition;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 678fafab-7f79-4101-92b4-fd8ab9fecb04;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "AttributesAutoArrange";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 4;
+									- value = 
+									{ IProperty 
+										- _Name = "ImplementationEpilog";
+										- _Value = "
+#endif // !OM_ADAPTER_OS_EVEMT_GENERATION_PARAMS";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "ImplementationProlog";
+										- _Value = "#ifndef OM_ADAPTER_OS_EVEMT_GENERATION_PARAMS
+";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationEpilog";
+										- _Value = "
+#endif // !OM_ADAPTER_OS_EVEMT_GENERATION_PARAMS";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationProlog";
+										- _Value = "#ifndef OM_ADAPTER_OS_EVEMT_GENERATION_PARAMS
+";
+										- _Type = MultiLine;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Operation";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "GenerateSuperClassCall";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMOSEventGenerationParams";
+			- Dependencies = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IDependency 
+					- _id = GUID a07fbf92-ea12-496d-a7d9-99981d1f8070;
+					- _myState = 2048;
+					- _name = "BasicTypes";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 4.14.2011::9:44:45;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "ISubsystem";
+						- _filename = "BasicTypes.sbs";
+						- _subsystem = "Design::oxf::Services::Types";
+						- _class = "";
+						- _name = "BasicTypes";
+						- _id = GUID 0d1d4186-d8c6-4c2c-8e3b-83732820041b;
+					}
+				}
+			}
+			- _modifiedTimeWeak = 4.14.2011::9:44:45;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Default implementation of IOxfEventGenerationParams.\\par
+Can be replaced by creating a new implementation with the same name and add OM_ADAPTER_OS_EVEMT_GENERATION_PARAMS to the compilation switches.\\f1\\rtlch\\par
+}
+";
+			}
+			- _lastID = 1;
+			- weakCGTime = 4.14.2011::9:44:45;
+			- strongCGTime = 4.14.2011::9:44:28;
+			- Operations = { IRPYRawContainer 
+				- size = 4;
+				- value = 
+				{ IConstructor 
+					- _id = GUID 51695cb4-98b6-4c9f-a716-3624268a54a1;
+					- _modifiedTimeWeak = 4.14.2011::9:44:45;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Default initialization\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _initializer = "";
+				}
+				{ IConstructor 
+					- _id = GUID b4a21fc6-f033-4208-aef5-eae731ff4c82;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UseDefaultAttributeValues";
+												- _Value = "False";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _modifiedTimeWeak = 4.14.2011::9:44:45;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Initialize based on the genFromISR attribute\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID edb46e48-5680-4135-8f79-f616e49ac8c9;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Type";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "genFromISR";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset178 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The genFromISR value\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "bool";
+								- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _initializer = "fromISR(genFromISR), sender(NULL)";
+				}
+				{ IConstructor 
+					- _id = GUID b8622af0-ce70-4071-ac0b-e1ca490b19ef;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UseDefaultAttributeValues";
+												- _Value = "False";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _modifiedTimeWeak = 4.14.2011::9:44:45;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Initialize based on the sender attribute\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID dfbec19f-24d7-4664-ac62-f21095939387;
+							- _name = "theSender";
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The sender\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "void *";
+								- _id = GUID 68975846-a809-4f2e-9f11-00ad6073974c;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _initializer = "fromISR(false), sender(theSender)";
+				}
+				{ IDestructor 
+					- _id = GUID fbcc2d9b-9f83-4625-a6af-f9a3e4272d5f;
+					- _modifiedTimeWeak = 4.14.2011::9:44:45;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 Cleanup\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "sender = NULL;";
+					}
+				}
+			}
+			- Attrs = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IAttribute 
+					- _id = GUID 558c19b9-d477-4304-bef4-ae94cb10c65b;
+					- _name = "fromISR";
+					- _modifiedTimeWeak = 4.14.2011::9:44:45;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 MS Sans Serif;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\f0\\fs17 Should be set to true when the event is generated by an ISR\\f1\\rtlch\\par
+}
+";
+					}
+					- ValueSpecifications = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ ILiteralSpecification 
+							- _id = GUID ef9927e1-af6e-47c8-86e0-af0536217797;
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _value = "false";
+						}
+					}
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+				{ IAttribute 
+					- _id = GUID ba168d6d-e552-4384-8c53-6eba4022632a;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Attribute";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "GenMutatorConstantArgument";
+												- _Value = "True";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "sender";
+					- _modifiedTimeWeak = 4.14.2011::9:44:45;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset178 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The sender of the event (instrumentation support)\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- ValueSpecifications = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ ILiteralSpecification 
+							- _id = GUID 42dd62c4-0c14-4df4-9d05-417d3e0442ee;
+							- _modifiedTimeWeak = 1.1.1970::2:0:0;
+							- _value = "NULL";
+						}
+					}
+					- _typeOf = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void *";
+						- _id = GUID 68975846-a809-4f2e-9f11-00ad6073974c;
+					}
+					- _isOrdered = 0;
+					- _protection = iPublic;
+					- _static = 0;
+					- _isReference = 0;
+					- _isConstant = 0;
+				}
+			}
+			- Inheritances = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IGeneralization 
+					- _id = GUID dcf081f8-ad8f-48d4-9fa9-b20491015297;
+					- _modifiedTimeWeak = 4.14.2011::9:44:45;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "CoreAPI.sbs";
+						- _subsystem = "Design::oxf::Core::CoreAPI";
+						- _class = "";
+						- _name = "IOxfEventGenerationParams";
+						- _id = GUID 4aeea12e-4ea6-45bc-8ba2-b8498ce3a0a7;
+					}
+					- _inheritanceType = iPublic;
+					- _isVirtual = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

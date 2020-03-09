@@ -1,0 +1,3392 @@
+I-Logix-RPY-Archive version 8.13.0 C++ 9747218
+{ ISubsystem 
+	- _id = GUID 657899d5-2c7d-424c-8fc2-08e265e42517;
+	- _myState = 8192;
+	- _name = "AnimImplementation";
+	- _modifiedTimeWeak = 5.16.2016::11:17:2;
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+{\\colortbl ;\\red0\\green0\\blue255;}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 The default implementation of the \\cf1\\ul\\protect AnimAPI\\cf0\\ulnone\\protect0  package, associated with the \\cf1\\ul\\protect CoreImplementation\\cf0\\ulnone\\protect0  package\\par
+}
+";
+		- Hyperlinks = { IRPYRawContainer 
+			- size = 2;
+			- value = 
+			{ IInternalHyperlink 
+				- _name = "AnimAPI";
+				- _textType = "NAME";
+				- _target = { IHandle 
+					- _m2Class = "ISubsystem";
+					- _filename = "AnimAPI.sbs";
+					- _subsystem = "Design::oxf::Anim";
+					- _class = "";
+					- _name = "AnimAPI";
+					- _id = GUID bcdc62e1-7826-4f43-8d77-444537824467;
+				}
+			}
+			{ IInternalHyperlink 
+				- _name = "CoreImplementation";
+				- _textType = "NAME";
+				- _target = { IHandle 
+					- _m2Class = "ISubsystem";
+					- _filename = "CoreImplementation.sbs";
+					- _subsystem = "Design::oxf::Core";
+					- _class = "";
+					- _name = "CoreImplementation";
+					- _id = GUID ea5c2ab4-88a3-46fc-8a1f-d74128623723;
+				}
+			}
+		}
+	}
+	- _lastID = 1;
+	- Declaratives = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IDiagram 
+			- _id = GUID 4e31bc3f-4bee-4e64-8b36-c1ea94099cfd;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "Format";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 5;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Association";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "Line.LineColor";
+										- _Value = "221,0,0";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineWidth";
+										- _Value = "1";
+										- _Type = Int;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 4;
+									- value = 
+									{ IProperty 
+										- _Name = "Fill.FillColor";
+										- _Value = "255,255,255";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineColor";
+										- _Value = "121,122,0";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineStyle";
+										- _Value = "0";
+										- _Type = Int;
+									}
+									{ IProperty 
+										- _Name = "Line.LineWidth";
+										- _Value = "1";
+										- _Type = Int;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Depends";
+								- Properties = { IRPYRawContainer 
+									- size = 3;
+									- value = 
+									{ IProperty 
+										- _Name = "Line.LineColor";
+										- _Value = "0,16,230";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineStyle";
+										- _Value = "1";
+										- _Type = Int;
+									}
+									{ IProperty 
+										- _Name = "Line.LineWidth";
+										- _Value = "0";
+										- _Type = Int;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Inheritance";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "Line.LineColor";
+										- _Value = "0,16,230";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineWidth";
+										- _Value = "1";
+										- _Type = Int;
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Interface";
+								- Properties = { IRPYRawContainer 
+									- size = 4;
+									- value = 
+									{ IProperty 
+										- _Name = "Fill.FillColor";
+										- _Value = "255,255,255";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineColor";
+										- _Value = "121,122,0";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineStyle";
+										- _Value = "0";
+										- _Type = Int;
+									}
+									{ IProperty 
+										- _Name = "Line.LineWidth";
+										- _Value = "1";
+										- _Type = Int;
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "ObjectModelGe";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 3;
+									- value = 
+									{ IProperty 
+										- _Name = "ShowAttributes";
+										- _Value = "None";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "All,None,Public,Explicit";
+									}
+									{ IProperty 
+										- _Name = "ShowName";
+										- _Value = "Name_only";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Full_path,Relative,Name_only";
+									}
+									{ IProperty 
+										- _Name = "ShowOperations";
+										- _Value = "None";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "All,None,Public,Explicit";
+									}
+								}
+							}
+							{ IPropertyMetaclass 
+								- _Name = "Interface";
+								- Properties = { IRPYRawContainer 
+									- size = 3;
+									- value = 
+									{ IProperty 
+										- _Name = "ShowAttributes";
+										- _Value = "None";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "All,None,Public,Explicit";
+									}
+									{ IProperty 
+										- _Name = "ShowName";
+										- _Value = "Name_only";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Full_path,Relative,Name_only";
+									}
+									{ IProperty 
+										- _Name = "ShowOperations";
+										- _Value = "None";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "All,None,Public,Explicit";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "AnimAPI implementation";
+			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 This diagram shows the collaboration used to implement the animation API\\f1\\rtlch\\par
+}
+";
+			}
+			- _lastModifiedTime = "2.17.2009::13:49:31";
+			- _graphicChart = { CGIClassChart 
+				- _id = GUID 4a71ffda-d0cf-40f8-a5aa-2029a354797e;
+				- m_type = 0;
+				- m_pModelObject = { IHandle 
+					- _m2Class = "IDiagram";
+					- _id = GUID 4e31bc3f-4bee-4e64-8b36-c1ea94099cfd;
+				}
+				- m_pParent = ;
+				- m_name = { CGIText 
+					- m_str = "";
+					- m_style = "Arial" 10 0 0 0 1 ;
+					- m_color = { IColor 
+						- m_fgColor = 0;
+						- m_bgColor = 0;
+						- m_bgFlag = 0;
+					}
+					- m_position = 1 0 0  ;
+					- m_nIdent = 0;
+					- m_bImplicitSetRectPoints = 0;
+					- m_nOrientationCtrlPt = 8;
+				}
+				- m_drawBehavior = 0;
+				- m_bIsPreferencesInitialized = 0;
+				- elementList = 16;
+				{ CGIClass 
+					- _id = GUID ae21442b-591f-48ce-a83a-d0cdd901da09;
+					- m_type = 78;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 4a11c240-9741-4768-a88e-179c15cb6851;
+					}
+					- m_pParent = ;
+					- m_name = { CGIText 
+						- m_str = "TopLevel";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 0;
+					- m_bIsPreferencesInitialized = 0;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 0 ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- Compartments = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ CGICompartment 
+							- _id = GUID 6657eb96-6f34-449e-80c0-daf98c54a9d2;
+							- m_name = "Attribute";
+							- m_displayOption = Explicit;
+							- m_bShowInherited = 0;
+							- m_bOrdered = 0;
+							- Items = { IRPYRawContainer 
+								- size = 0;
+							}
+						}
+						{ CGICompartment 
+							- _id = GUID bd0ef07c-3c31-4b1c-aa74-f9437435f54d;
+							- m_name = "Operation";
+							- m_displayOption = Explicit;
+							- m_bShowInherited = 0;
+							- m_bOrdered = 0;
+							- Items = { IRPYRawContainer 
+								- size = 0;
+							}
+						}
+					}
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIClass 
+					- _id = GUID 842b5854-d60a-4ae6-8cdc-a3b06d95836c;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "General";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Graphics";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "FitBoxToItsTextuals";
+												- _Value = "False";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 87;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "AnimAPI.sbs";
+						- _subsystem = "Design::oxf::Anim::AnimAPI";
+						- _class = "";
+						- _name = "IOxfAnimReactive";
+						- _id = GUID 651b9f27-c545-4bd9-b337-04b02258d3cd;
+					}
+					- m_pParent = GUID ae21442b-591f-48ce-a83a-d0cdd901da09;
+					- m_name = { CGIText 
+						- m_str = "IOxfAnimReactive";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 4108;
+					- m_transform = 0.293673 0 0 0.200535 229.413 -8.9759 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- frameset = "<frameset rows=100%>
+<frame name=OperationListCompartment>";
+					- Compartments = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ CGICompartment 
+							- _id = GUID 7de0a508-f0ed-42a4-835d-82d4318d18bd;
+							- m_name = "Operation";
+							- m_displayOption = Explicit;
+							- m_bShowInherited = 0;
+							- m_bOrdered = 1;
+							- Items = { IRPYRawContainer 
+								- size = 5;
+								- value = 
+								{ IHandle 
+									- _m2Class = "IPrimitiveOperation";
+									- _filename = "";
+									- _subsystem = "AnimAPI";
+									- _class = "IOxfAnimReactive";
+									- _name = "serializeStates(AOMSState) const";
+									- _id = GUID 8608b7f4-1d22-47f0-8ef2-05b0311a9367;
+								}
+								{ IHandle 
+									- _m2Class = "IPrimitiveOperation";
+									- _filename = "";
+									- _subsystem = "AnimAPI";
+									- _class = "IOxfAnimReactive";
+									- _name = "getOxfReactive() const";
+									- _id = GUID 47a4bc4c-0a76-49ab-82ff-ac4eb79969cb;
+								}
+								{ IHandle 
+									- _m2Class = "IPrimitiveOperation";
+									- _filename = "";
+									- _subsystem = "AnimAPI";
+									- _class = "IOxfAnimReactive";
+									- _name = "canAcceptEvents() const";
+									- _id = GUID 42148775-9a89-404e-8bff-ac490db51105;
+								}
+								{ IHandle 
+									- _m2Class = "IPrimitiveOperation";
+									- _filename = "";
+									- _subsystem = "AnimAPI";
+									- _class = "IOxfAnimReactive";
+									- _name = "getContextThread() const";
+									- _id = GUID 41695df4-180d-4ee6-8350-e3d45180dd54;
+								}
+								{ IHandle 
+									- _m2Class = "IPrimitiveOperation";
+									- _filename = "";
+									- _subsystem = "AnimAPI";
+									- _class = "IOxfAnimReactive";
+									- _name = "send(IOxfEvent,void *)";
+									- _id = GUID 9551aed3-6fe7-4407-9bef-16b281e633b9;
+								}
+							}
+							- _itemValueOfFontPropertiesMapCount = 5;
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+						}
+					}
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIClass 
+					- _id = GUID e784765b-b063-4308-8e3f-2b646845a1b7;
+					- m_type = 87;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "AnimAPI.sbs";
+						- _subsystem = "Design::oxf::Anim::AnimAPI";
+						- _class = "";
+						- _name = "IOxfAnimTimerManager";
+						- _id = GUID 5f8f2a89-89d8-4e67-8427-8636a96c6f72;
+					}
+					- m_pParent = GUID ae21442b-591f-48ce-a83a-d0cdd901da09;
+					- m_name = { CGIText 
+						- m_str = "IOxfAnimTimerManager";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 4108;
+					- m_transform = 0.293673 0 0 0.200535 632.413 -8.976 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- frameset = "<frameset rows=100%>
+<frame name=OperationListCompartment>";
+					- Compartments = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ CGICompartment 
+							- _id = GUID c58cf0fa-f305-42ed-8e98-841e766f7a24;
+							- m_name = "Operation";
+							- m_displayOption = Explicit;
+							- m_bShowInherited = 0;
+							- m_bOrdered = 1;
+							- Items = { IRPYRawContainer 
+								- size = 4;
+								- value = 
+								{ IHandle 
+									- _m2Class = "IPrimitiveOperation";
+									- _filename = "";
+									- _subsystem = "AnimAPI";
+									- _class = "IOxfAnimTimerManager";
+									- _name = "suspend()";
+									- _id = GUID b9353ccd-440b-4655-9d0c-0ddbf7b84949;
+								}
+								{ IHandle 
+									- _m2Class = "IPrimitiveOperation";
+									- _filename = "";
+									- _subsystem = "AnimAPI";
+									- _class = "IOxfAnimTimerManager";
+									- _name = "resume()";
+									- _id = GUID cb7b8f8f-eb4f-445a-ac6a-8cfde33bd019;
+								}
+								{ IHandle 
+									- _m2Class = "IPrimitiveOperation";
+									- _filename = "";
+									- _subsystem = "AnimAPI";
+									- _class = "IOxfAnimTimerManager";
+									- _name = "getElapsedTime() const";
+									- _id = GUID e271a908-002d-45e4-9640-8787704a3496;
+								}
+								{ IHandle 
+									- _m2Class = "IPrimitiveOperation";
+									- _filename = "";
+									- _subsystem = "AnimAPI";
+									- _class = "IOxfAnimTimerManager";
+									- _name = "advanceTime()";
+									- _id = GUID c3891415-0aae-40e7-b56f-bee2795e19a7;
+								}
+							}
+							- _itemValueOfFontPropertiesMapCount = 4;
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+						}
+					}
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIClass 
+					- _id = GUID 0fdde70c-8cca-477f-b3ff-2da58cd7e3a7;
+					- m_type = 87;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID e354da9b-fb73-4507-bc17-a01db91848cc;
+					}
+					- m_pParent = GUID ae21442b-591f-48ce-a83a-d0cdd901da09;
+					- m_name = { CGIText 
+						- m_str = "OMAnimReactive";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 4110;
+					- m_transform = 0.11898 0 0 0.101604 321.762 460.572 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- frameset = "<frameset rows=>";
+					- Compartments = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIClass 
+					- _id = GUID f6bdebd7-6350-4c5b-a466-39250ed42324;
+					- m_type = 87;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "TimeManagement.sbs";
+						- _subsystem = "Design::oxf::Services::Time::TimeManagement";
+						- _class = "";
+						- _name = "OMTimerManager";
+						- _id = GUID b406c13c-5110-40cc-ba74-e94e701427ea;
+					}
+					- m_pParent = GUID ae21442b-591f-48ce-a83a-d0cdd901da09;
+					- m_name = { CGIText 
+						- m_str = "OMTimerManager";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 4110;
+					- m_transform = 0.123702 0 0 0.101604 722.753 460.572 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- frameset = "<frameset rows=>";
+					- Compartments = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIInheritance 
+					- _id = GUID 582aecae-f31f-42cd-a228-a2a1d494ae58;
+					- m_type = 103;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IGeneralization";
+						- _id = GUID 070f1289-dcc6-442d-b361-e3fc57541114;
+					}
+					- m_pParent = ;
+					- m_name = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 4096;
+					- m_bIsPreferencesInitialized = 0;
+					- m_pSource = GUID 0fdde70c-8cca-477f-b3ff-2da58cd7e3a7;
+					- m_sourceType = 'F';
+					- m_pTarget = GUID 842b5854-d60a-4ae6-8cdc-a3b06d95836c;
+					- m_targetType = 'T';
+					- m_direction = ' ';
+					- m_rpn = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_anglePoint1 = 0 0 ;
+					- m_anglePoint2 = 0 0 ;
+					- m_line_style = 0;
+					- m_SourcePort = 531 890 ;
+					- m_TargetPort = 531 890 ;
+					- m_ShowName = 0;
+					- m_ShowStereotype = 1;
+				}
+				{ CGIInheritance 
+					- _id = GUID e3b42229-289d-4726-a96f-8170d3864df3;
+					- m_type = 103;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IGeneralization";
+						- _filename = "TimeManagement.sbs";
+						- _subsystem = "Design::oxf::Services::Time::TimeManagement";
+						- _class = "OMTimerManager";
+						- _name = "IOxfAnimTimerManager";
+						- _id = GUID 3140b09f-913f-456f-849d-1423f70d5f91;
+					}
+					- m_pParent = ;
+					- m_name = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 4096;
+					- m_bIsPreferencesInitialized = 0;
+					- m_pSource = GUID f6bdebd7-6350-4c5b-a466-39250ed42324;
+					- m_sourceType = 'F';
+					- m_pTarget = GUID e784765b-b063-4308-8e3f-2b646845a1b7;
+					- m_targetType = 'T';
+					- m_direction = ' ';
+					- m_rpn = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_anglePoint1 = 0 0 ;
+					- m_anglePoint2 = 0 0 ;
+					- m_line_style = 0;
+					- m_SourcePort = 531 890 ;
+					- m_TargetPort = 531 890 ;
+					- m_ShowName = 0;
+					- m_ShowStereotype = 1;
+				}
+				{ CGIClass 
+					- _id = GUID a5e35a21-a36c-4a72-abfd-f7e791a95df0;
+					- m_type = 87;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "CoreImplementation.sbs";
+						- _subsystem = "Design::oxf::Core::CoreImplementation";
+						- _class = "";
+						- _name = "OMReactive";
+						- _id = GUID c6ec9ac6-2499-4692-b21c-8088fded0690;
+					}
+					- m_pParent = GUID ae21442b-591f-48ce-a83a-d0cdd901da09;
+					- m_name = { CGIText 
+						- m_str = "OMReactive";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 4110;
+					- m_transform = 0.11898 0 0 0.101604 132.762 458.572 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- frameset = "<frameset rows=>";
+					- Compartments = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIAssociationEnd 
+					- _id = GUID 61db6ae9-f268-4c0b-b6bf-f3e1189a0ea6;
+					- m_type = 92;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 4ef4a839-5512-46fa-8687-624b89cc52b0;
+					}
+					- m_pParent = ;
+					- m_name = { CGIText 
+						- m_str = "\«Calculated\»";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 4096;
+					- m_bIsPreferencesInitialized = 0;
+					- m_pSource = GUID 0fdde70c-8cca-477f-b3ff-2da58cd7e3a7;
+					- m_sourceType = 'F';
+					- m_pTarget = GUID a5e35a21-a36c-4a72-abfd-f7e791a95df0;
+					- m_targetType = 'T';
+					- m_direction = ' ';
+					- m_rpn = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 7;
+					}
+					- m_anglePoint1 = 0 0 ;
+					- m_anglePoint2 = 0 0 ;
+					- m_line_style = 2;
+					- m_SourcePort = 599 1215 ;
+					- m_TargetPort = 599 1234 ;
+					- m_pInverseModelObject = { IAssociationEndHandle 
+						- _m2Class = "";
+					}
+					- m_pInstance = { IObjectLinkHandle 
+						- _m2Class = "";
+					}
+					- m_pInverseInstance = { IObjectLinkHandle 
+						- _m2Class = "";
+					}
+					- m_bShowSourceMultiplicity = 1;
+					- m_bShowSourceRole = 0;
+					- m_bShowTargetMultiplicity = 1;
+					- m_bShowTargetRole = 1;
+					- m_bShowLinkName = 1;
+					- m_bShowSpecificType = 0;
+					- m_bInstance = 0;
+					- m_bShowQualifier1 = 1;
+					- m_bShowQualifier2 = 1;
+					- m_sourceRole = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 2;
+						- m_bImplicitSetRectPoints = 0;
+					}
+					- m_targetRole = { CGIText 
+						- m_str = "oxfReactive";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 3;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nHorizontalSpacing = 7;
+						- m_nOrientationCtrlPt = 0;
+					}
+					- m_sourceMultiplicity = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 4;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 4;
+					}
+					- m_targetMultiplicity = { CGIText 
+						- m_str = "1";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 5;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nHorizontalSpacing = 7;
+						- m_nOrientationCtrlPt = 6;
+					}
+					- m_sourceQualifier = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 6;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_targetQualifier = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 7;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_specificType = type_122;
+				}
+				{ CGIInheritance 
+					- _id = GUID 89379cc2-a80b-459b-aa4a-77ef12050566;
+					- m_type = 128;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IDependency";
+						- _filename = "CoreImplementation.sbs";
+						- _subsystem = "Design::oxf::Core::CoreImplementation";
+						- _class = "OMReactive";
+						- _name = "OMAnimReactive";
+						- _id = GUID a3459090-3060-4626-8ad5-6c1b2feeaa73;
+					}
+					- m_pParent = ;
+					- m_name = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 4096;
+					- m_bIsPreferencesInitialized = 0;
+					- m_pSource = GUID a5e35a21-a36c-4a72-abfd-f7e791a95df0;
+					- m_sourceType = 'F';
+					- m_pTarget = GUID 0fdde70c-8cca-477f-b3ff-2da58cd7e3a7;
+					- m_targetType = 'T';
+					- m_direction = ' ';
+					- m_rpn = { CGIText 
+						- m_str = "Usage";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 4 -6 -9  62 -9  62 9  -6 9  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_transform = 1 0 0 1 168 317 ;
+						- m_nHorizontalSpacing = -2;
+						- m_nVerticalSpacing = -4;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_anglePoint1 = 0 0 ;
+					- m_anglePoint2 = 0 0 ;
+					- m_line_style = 0;
+					- m_SourcePort = 363 801 ;
+					- m_TargetPort = 363 801 ;
+					- m_ShowName = 0;
+					- m_ShowStereotype = 1;
+				}
+				{ CGIClass 
+					- _id = GUID 06b9552c-4ddf-4795-9aaa-94a99864b966;
+					- m_type = 87;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "AnimAPI.sbs";
+						- _subsystem = "Design::oxf::Anim::AnimAPI";
+						- _class = "";
+						- _name = "IOxfAnimThreadManager";
+						- _id = GUID fadd4b9d-7916-4fb6-b18a-2bfd8cb2318b;
+					}
+					- m_pParent = GUID ae21442b-591f-48ce-a83a-d0cdd901da09;
+					- m_name = { CGIText 
+						- m_str = "IOxfAnimThreadManager";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 4108;
+					- m_transform = 0.293673 0 0 0.200535 1035.41 -8.97595 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- frameset = "<frameset rows=100%>
+<frame name=OperationListCompartment>";
+					- Compartments = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ CGICompartment 
+							- _id = GUID c50f75c5-04d1-465c-b701-7d5f61de5b58;
+							- m_name = "Operation";
+							- m_displayOption = Explicit;
+							- m_bShowInherited = 0;
+							- m_bOrdered = 1;
+							- Items = { IRPYRawContainer 
+								- size = 1;
+								- value = 
+								{ IHandle 
+									- _m2Class = "IPrimitiveOperation";
+									- _filename = "";
+									- _subsystem = "AnimAPI";
+									- _class = "IOxfAnimThreadManager";
+									- _name = "wakeup(IOxfActive) const";
+									- _id = GUID 90002484-cd97-4ffc-98cf-4766086b8439;
+								}
+							}
+							- _itemValueOfFontPropertiesMapCount = 1;
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+						}
+					}
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIClass 
+					- _id = GUID 226d58ed-af1c-4d4e-b062-2a6bb8b0751c;
+					- m_type = 87;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "ResourceManagement.sbs";
+						- _subsystem = "Design::oxf::Services::ResourceManagement";
+						- _class = "";
+						- _name = "OMThreadManager";
+						- _id = GUID d203e9ab-4ae2-4333-90f4-65e2497b5839;
+					}
+					- m_pParent = GUID ae21442b-591f-48ce-a83a-d0cdd901da09;
+					- m_name = { CGIText 
+						- m_str = "OMThreadManager";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 4110;
+					- m_transform = 0.131256 0 0 0.101604 1121.74 455.572 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- frameset = "<frameset rows=>";
+					- Compartments = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIInheritance 
+					- _id = GUID 72b81dfc-dc0d-4cd9-a591-70eeb0676fc5;
+					- m_type = 103;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IGeneralization";
+						- _filename = "ResourceManagement.sbs";
+						- _subsystem = "Design::oxf::Services::ResourceManagement";
+						- _class = "OMThreadManager";
+						- _name = "IOxfAnimThreadManager";
+						- _id = GUID 429c92a9-1a72-4cdb-9871-77ff6c2b2c84;
+					}
+					- m_pParent = ;
+					- m_name = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 4096;
+					- m_bIsPreferencesInitialized = 0;
+					- m_pSource = GUID 226d58ed-af1c-4d4e-b062-2a6bb8b0751c;
+					- m_sourceType = 'F';
+					- m_pTarget = GUID 06b9552c-4ddf-4795-9aaa-94a99864b966;
+					- m_targetType = 'T';
+					- m_direction = ' ';
+					- m_rpn = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_anglePoint1 = 0 0 ;
+					- m_anglePoint2 = 0 0 ;
+					- m_line_style = 0;
+					- m_SourcePort = 531 890 ;
+					- m_TargetPort = 531 890 ;
+					- m_ShowName = 0;
+					- m_ShowStereotype = 1;
+				}
+				{ CGIClass 
+					- _id = GUID 0f4ac43b-f944-4d55-a00c-8107fb0893fc;
+					- m_type = 87;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "AnimAPI.sbs";
+						- _subsystem = "Design::oxf::Anim::AnimAPI";
+						- _class = "";
+						- _name = "IOxfAnimHelper";
+						- _id = GUID 89d3da57-4f62-46f0-9685-0c90b83f9ffa;
+					}
+					- m_pParent = GUID ae21442b-591f-48ce-a83a-d0cdd901da09;
+					- m_name = { CGIText 
+						- m_str = "IOxfAnimHelper";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 4108;
+					- m_transform = 0.293673 0 0 0.200535 1448.41 -10.976 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- frameset = "<frameset rows=100%>
+<frame name=OperationListCompartment>";
+					- Compartments = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ CGICompartment 
+							- _id = GUID 9920a9c3-2eb0-46b2-91a2-c604aa722431;
+							- m_name = "Operation";
+							- m_displayOption = Explicit;
+							- m_bShowInherited = 0;
+							- m_bOrdered = 1;
+							- Items = { IRPYRawContainer 
+								- size = 4;
+								- value = 
+								{ IHandle 
+									- _m2Class = "IPrimitiveOperation";
+									- _filename = "";
+									- _subsystem = "AnimAPI";
+									- _class = "IOxfAnimHelper";
+									- _name = "getFrameworkEventSignature(IOxfEvent,OMString) const";
+									- _id = GUID a0abb0cf-6167-49ae-a35f-cc7d5f3388af;
+								}
+								{ IHandle 
+									- _m2Class = "IPrimitiveOperation";
+									- _filename = "";
+									- _subsystem = "AnimAPI";
+									- _class = "IOxfAnimHelper";
+									- _name = "isTimeoutEvent(IOxfEvent) const";
+									- _id = GUID 5e5b0af4-3f6f-41c1-bc67-472d25a7ea61;
+								}
+								{ IHandle 
+									- _m2Class = "IPrimitiveOperation";
+									- _filename = "";
+									- _subsystem = "AnimAPI";
+									- _class = "IOxfAnimHelper";
+									- _name = "isCancelledEvent(IOxfEvent) const";
+									- _id = GUID c367422d-2c38-4a43-9271-5f71e42df2b5;
+								}
+								{ IHandle 
+									- _m2Class = "IPrimitiveOperation";
+									- _filename = "";
+									- _subsystem = "AnimAPI";
+									- _class = "IOxfAnimHelper";
+									- _name = "getFrameworkEventClassName(IOxfEvent,OMString,bool) const";
+									- _id = GUID c4cb17d0-ed96-41de-b016-904a7291c210;
+								}
+							}
+							- _itemValueOfFontPropertiesMapCount = 4;
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+							- _fontPropValues = "Tahoma 8 400 0 0 0 0";
+						}
+					}
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIClass 
+					- _id = GUID 0abeea53-5be0-4db4-b917-722c59feb1ca;
+					- m_type = 87;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 8ef85ccd-7c3e-48af-ae48-59ffc856be3b;
+					}
+					- m_pParent = GUID ae21442b-591f-48ce-a83a-d0cdd901da09;
+					- m_name = { CGIText 
+						- m_str = "OMAnimHelper";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 5;
+					}
+					- m_drawBehavior = 4110;
+					- m_transform = 0.131256 0 0 0.101604 1534.74 455.572 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- frameset = "<frameset rows=>";
+					- Compartments = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Attrs = { IRPYRawContainer 
+						- size = 0;
+					}
+					- Operations = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIInheritance 
+					- _id = GUID feeebf38-c668-4655-a155-cd14f99b55d4;
+					- m_type = 103;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IGeneralization";
+						- _id = GUID 8a3f42ba-cb1f-41f7-b350-dba6bb40721d;
+					}
+					- m_pParent = ;
+					- m_name = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 4096;
+					- m_bIsPreferencesInitialized = 1;
+					- m_pSource = GUID 0abeea53-5be0-4db4-b917-722c59feb1ca;
+					- m_sourceType = 'F';
+					- m_pTarget = GUID 0f4ac43b-f944-4d55-a00c-8107fb0893fc;
+					- m_targetType = 'T';
+					- m_direction = ' ';
+					- m_rpn = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_anglePoint1 = 0 0 ;
+					- m_anglePoint2 = 0 0 ;
+					- m_line_style = 0;
+					- m_SourcePort = 528 496 ;
+					- m_TargetPort = 530 1371 ;
+					- m_ShowName = 0;
+					- m_ShowStereotype = 1;
+				}
+				
+				- m_access = 'Z';
+				- m_modified = 'N';
+				- m_fileVersion = "";
+				- m_nModifyDate = 0;
+				- m_nCreateDate = 0;
+				- m_creator = "";
+				- m_bScaleWithZoom = 1;
+				- m_arrowStyle = 'S';
+				- m_pRoot = GUID ae21442b-591f-48ce-a83a-d0cdd901da09;
+				- m_currentLeftTop = 0 0 ;
+				- m_currentRightBottom = 0 0 ;
+				- m_bFreezeCompartmentContent = 0;
+			}
+			- _defaultSubsystem = { IHandle 
+				- _m2Class = "ISubsystem";
+				- _id = GUID 657899d5-2c7d-424c-8fc2-08e265e42517;
+			}
+		}
+	}
+	- weakCGTime = 5.16.2016::11:17:2;
+	- strongCGTime = 1.15.2009::14:32:20;
+	- _defaultComposite = GUID 4a11c240-9741-4768-a88e-179c15cb6851;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 3;
+		- value = 
+		{ IClass 
+			- _id = GUID 4a11c240-9741-4768-a88e-179c15cb6851;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 5.8.2016::14:59:48;
+			- weakCGTime = 5.8.2016::14:59:48;
+			- strongCGTime = 1.15.2009::14:32:20;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID e354da9b-fb73-4507-bc17-a01db91848cc;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Operation";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "GenerateSuperClassCall";
+										- _Value = "False";
+										- _Type = Bool;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMAnimReactive";
+			- Dependencies = { IRPYRawContainer 
+				- size = 4;
+				- value = 
+				{ IDependency 
+					- _id = GUID c5c19c34-dad8-4b6c-911f-2ad66589b332;
+					- _myState = 2048;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Dependency";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "UsageType";
+												- _Value = "Specification";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Specification,Implementation,Existence";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "Manager";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 11.15.2010::18:19:31;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "ISubsystem";
+						- _filename = "Manager.sbs";
+						- _subsystem = "Design::oxf::Services::MemoryManagement";
+						- _class = "";
+						- _name = "Manager";
+						- _id = GUID b3adb5b6-d7b7-4746-851c-e9c1bb48e837;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 144ca8f9-fa2d-48ae-81f2-b8e61a2ee632;
+					- _myState = 2048;
+					- _name = "OMThread";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 11.15.2010::18:19:31;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "CoreImplementation.sbs";
+						- _subsystem = "Design::oxf::Core::CoreImplementation";
+						- _class = "";
+						- _name = "OMThread";
+						- _id = GUID ab9f4e0f-5169-492a-8bc2-f8bcac00c7d5;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 4f903da9-b749-40ff-99b7-afb56fc23169;
+					- _myState = 2048;
+					- _name = "OMEventQueue";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 11.15.2010::18:19:31;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "RTOSWrappers.sbs";
+						- _subsystem = "Design::oxf::Services::RTOSWrappers";
+						- _class = "";
+						- _name = "OMEventQueue";
+						- _id = GUID 03ca1361-ace6-484b-bded-3da0a55bd8e7;
+					}
+				}
+				{ IDependency 
+					- _id = GUID e44ace1e-9828-4fff-843c-a359ad63d6a9;
+					- _myState = 2048;
+					- _name = "IOxfReactive";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 11.15.2010::18:19:31;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "CoreAPI.sbs";
+						- _subsystem = "Design::oxf::Core::CoreAPI";
+						- _class = "";
+						- _name = "IOxfReactive";
+						- _id = GUID 987d60d7-a9be-4b5d-b578-e27190b2c836;
+					}
+				}
+			}
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "CustomizableFramework.sbs";
+					- _subsystem = "CustomizableFramework";
+					- _class = "";
+					- _name = "Managed";
+					- _id = GUID 56fdf8ca-d80b-4479-acba-52405820a927;
+				}
+			}
+			- _modifiedTimeWeak = 11.15.2010::18:19:31;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 OMReactive animation wrapper\\lang1037\\f1\\rtlch\\par
+}
+";
+			}
+			- _lastID = 2;
+			- weakCGTime = 11.15.2010::18:19:31;
+			- strongCGTime = 2.17.2009::13:0:14;
+			- Operations = { IRPYRawContainer 
+				- size = 7;
+				- value = 
+				{ IPrimitiveOperation 
+					- _id = GUID 9eaf035a-e4dd-4f06-b7e5-708db842498e;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Kind";
+												- _Value = "common";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "common,abstract";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "canAcceptEvents";
+					- _modifiedTimeWeak = 11.15.2010::18:19:31;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 Checks if the queue can accept a new event (if it is not full)\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "bool res = false;
+OMThread* aThread = getThread();
+if (aThread != NULL) {
+	const OMEventQueue* aQueue = aThread->getEventQueue();
+	if (aQueue != NULL) {
+		res = (!aQueue->isFull());
+	}
+}
+return res;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 651a545a-0c4b-46a8-93b9-6082d1e0cc31;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Kind";
+												- _Value = "common";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "common,abstract";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "getOxfReactive";
+					- _modifiedTimeWeak = 11.15.2010::18:19:31;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 Returns the \"real\" reactive part. \\par
+Used (for example) to send events\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "CoreAPI.sbs";
+						- _subsystem = "Design::oxf::Core::CoreAPI";
+						- _class = "";
+						- _name = "IOxfReactive";
+						- _id = GUID 987d60d7-a9be-4b5d-b578-e27190b2c836;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "return oxfReactive;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 2902fdbe-d7e9-4b9b-a1d6-2bc5dd8ec050;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 2;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+											{ IProperty 
+												- _Name = "Kind";
+												- _Value = "common";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "common,abstract";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "getContextThread";
+					- _modifiedTimeWeak = 11.15.2010::18:19:31;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 get the identifier of the OS thread that is associated with the active context of the reactive instance\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void *";
+						- _id = GUID 68975846-a809-4f2e-9f11-00ad6073974c;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "void* osThread = NULL;
+OMThread* aThread = getThread();
+if (aThread != NULL) {
+	osThread = aThread->getOsHandle();
+}
+return osThread;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID be11ae3e-6593-4d2a-bf38-3d1bb46e8606;
+					- _name = "getThread";
+					- _modifiedTimeWeak = 11.15.2010::18:19:31;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Get the thread\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _filename = "CoreImplementation.sbs";
+						- _subsystem = "Design::oxf::Core::CoreImplementation";
+						- _class = "";
+						- _name = "OMThread";
+						- _id = GUID ab9f4e0f-5169-492a-8bc2-f8bcac00c7d5;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPrivate;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "OMThread* aThread = NULL;
+if (oxfReactive != NULL) {
+	// IMPORTANT: at this level we assume coupling between OMReactive and OMThread
+	aThread = static_cast<OMThread*>(oxfReactive->getActiveContext());
+}
+return aThread;";
+					}
+				}
+				{ IConstructor 
+					- _id = GUID 6c7c818b-196e-4670-a8b2-44c11de6260e;
+					- _modifiedTimeWeak = 11.15.2010::18:19:31;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fswiss\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177 MS Sans Serif;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\f0\\fs17 initialization\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 75319c0e-24a4-45b3-8646-565c6eaca5a0;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Class";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "$type*";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "context";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset178 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 The reactive instance to wrap\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "CoreImplementation.sbs";
+								- _subsystem = "Design::oxf::Core::CoreImplementation";
+								- _class = "";
+								- _name = "OMReactive";
+								- _id = GUID c6ec9ac6-2499-4692-b21c-8088fded0690;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "";
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _initializer = "oxfReactive(context)";
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID d833b6e9-e118-404e-b387-32b338743eb5;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Kind";
+												- _Value = "common";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "common,abstract";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "send";
+					- _modifiedTimeWeak = 11.15.2010::18:19:31;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 Send an animated event to the reactive context\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID fb49f51b-b85a-453a-9453-e8845281cd87;
+							- _name = "ev";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 The event\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "CoreAPI.sbs";
+								- _subsystem = "Design::oxf::Core::CoreAPI";
+								- _class = "";
+								- _name = "IOxfEvent";
+								- _id = GUID 72bafe6b-3c6c-4462-88b7-148dc2ae21b9;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID de91eaae-d490-43a3-95ff-cb959e01fc1e;
+							- _name = "sender";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 The event sender\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "void *";
+								- _id = GUID 68975846-a809-4f2e-9f11-00ad6073974c;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "bool res = false;
+if (oxfReactive != NULL) {
+	OMOSEventGenerationParams params(sender);
+	res = oxfReactive->send(ev, params);
+}
+return res;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID b2a72c63-0b88-47fc-bfb5-a7bd9704d600;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 2;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+											{ IProperty 
+												- _Name = "Kind";
+												- _Value = "common";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "common,abstract";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "serializeStates";
+					- _modifiedTimeWeak = 11.15.2010::18:19:31;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 Serializes the states.\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID a3ecd197-e326-4e93-ae2d-19bc989f0ecc;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Class";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "InOut";
+														- _Value = "$type*";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "aomArg(states)";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+{\\colortbl ;\\red0\\green0\\blue255;}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 The animation states vector to fill.\\par
+\\cf1\\lang1037\\ul\\protect AnimServices\\cf0\\lang1033\\ulnone\\protect0  provides operations to fill the vector so all you need to do is to pass this pointer to these operations.\\lang1037\\f1\\rtlch\\par
+}
+";
+								- Hyperlinks = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IInternalHyperlink 
+										- _name = "AnimServices";
+										- _textType = "NAME";
+										- _target = { IHandle 
+											- _m2Class = "IClass";
+											- _filename = "AnimServices.cls";
+											- _subsystem = "Design::aom";
+											- _class = "";
+											- _name = "AnimServices";
+											- _id = GUID ae3b5a32-ffe4-4141-aeb4-552b9ffbbcae;
+										}
+									}
+								}
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "aom.sbs";
+								- _subsystem = "Design::aom";
+								- _class = "";
+								- _name = "AOMSState";
+								- _id = GUID 7e504786-4eec-44e4-9015-1aff771de605;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "#ifdef _OMINSTRUMENT
+if (oxfReactive != NULL) {
+	oxfReactive->serializeStates(states);
+}
+#endif";
+					}
+				}
+			}
+			- Inheritances = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IGeneralization 
+					- _id = GUID 070f1289-dcc6-442d-b361-e3fc57541114;
+					- _modifiedTimeWeak = 11.15.2010::18:19:31;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "AnimAPI.sbs";
+						- _subsystem = "Design::oxf::Anim::AnimAPI";
+						- _class = "";
+						- _name = "IOxfAnimReactive";
+						- _id = GUID 651b9f27-c545-4bd9-b337-04b02258d3cd;
+					}
+					- _inheritanceType = iPublic;
+					- _isVirtual = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID 4ef4a839-5512-46fa-8687-624b89cc52b0;
+					- _myState = 8192;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Relation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "DataMemberVisibility";
+												- _Value = "Private";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "Public,Protected,Private";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "oxfReactive";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "CustomizableFramework.sbs";
+							- _subsystem = "CustomizableFramework";
+							- _class = "";
+							- _name = "Calculated";
+							- _id = GUID f99a85dd-667e-4617-b86a-51171ac8f8ae;
+						}
+					}
+					- _modifiedTimeWeak = 11.15.2010::18:19:31;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 The reactive instance\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _filename = "CoreImplementation.sbs";
+						- _subsystem = "Design::oxf::Core::CoreImplementation";
+						- _class = "";
+						- _name = "OMReactive";
+						- _id = GUID c6ec9ac6-2499-4692-b21c-8088fded0690;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 8ef85ccd-7c3e-48af-ae48-59ffc856be3b;
+			- _myState = 8192;
+			- _name = "OMAnimHelper";
+			- Dependencies = { IRPYRawContainer 
+				- size = 4;
+				- value = 
+				{ IDependency 
+					- _id = GUID a7c07cf6-8222-40d1-94f8-ebc7978e5869;
+					- _myState = 2048;
+					- _name = "OMString";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 7.13.2009::9:6:42;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "String.sbs";
+						- _subsystem = "Design::oxf::Services::String";
+						- _class = "";
+						- _name = "OMString";
+						- _id = GUID af7831eb-7296-4ce7-bada-bc50b315278d;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 3686cdfe-966e-43e2-9860-64e2e54332ff;
+					- _myState = 2048;
+					- _name = "OMTimeout";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 7.13.2009::9:6:42;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "CoreImplementation.sbs";
+						- _subsystem = "Design::oxf::Core::CoreImplementation";
+						- _class = "";
+						- _name = "OMTimeout";
+						- _id = GUID f0b870c3-910a-42c0-8607-e830d2befc9f;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 2801919e-2a96-4fb6-92d5-b51b1a2095bf;
+					- _myState = 2048;
+					- _name = "OMUnicodeHelper";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 7.13.2009::9:6:42;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 Needed for unicode adapters\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "Unicode.sbs";
+						- _subsystem = "Design::oxf::Services::Unicode";
+						- _class = "";
+						- _name = "OMUnicodeHelper";
+						- _id = GUID ed9cfc8f-6577-468a-be89-e008e4f11484;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 18dcb239-8ff0-4bbf-80e4-fa7f3247d836;
+					- _myState = 2048;
+					- _name = "Events";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 7.13.2009::9:6:42;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "ISubsystem";
+						- _filename = "Events.sbs";
+						- _subsystem = "Design::oxf::Services";
+						- _class = "";
+						- _name = "Events";
+						- _id = GUID 0abfa268-9ed6-4d01-9957-8bbbc9830164;
+					}
+				}
+			}
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypes.sbs";
+					- _subsystem = "PredefinedTypes";
+					- _class = "";
+					- _name = "Singleton";
+					- _id = GUID 1ee908f7-7539-4cfd-8a45-575aba9b1bee;
+				}
+			}
+			- _modifiedTimeWeak = 5.16.2016::11:17:2;
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 OMReactive animation wrapper\\lang1037\\f1\\rtlch\\par
+}
+";
+			}
+			- _lastID = 3;
+			- weakCGTime = 5.16.2016::11:17:2;
+			- strongCGTime = 6.2.2005::13:41:1;
+			- Operations = { IRPYRawContainer 
+				- size = 8;
+				- value = 
+				{ IPrimitiveOperation 
+					- _id = GUID 0de57ca4-27f8-463c-90ef-1d4be9614395;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Kind";
+												- _Value = "common";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "common,abstract";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "getFrameworkEventSignature";
+					- _modifiedTimeWeak = 7.13.2009::9:6:42;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 he operation will return false and empty string for user events, and the event signature for animated internal framework events (e.g. start behavior, timeouts)\\par
+Returns true if the event was handled (invisible framework events should return true and with an empty signature)\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID aec56d93-55fe-40b7-8f5b-905143c7348b;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Class";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type*";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "event";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 the event to get the signature for\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "CoreAPI.sbs";
+								- _subsystem = "Design::oxf::Core::CoreAPI";
+								- _class = "";
+								- _name = "IOxfEvent";
+								- _id = GUID 72bafe6b-3c6c-4462-88b7-148dc2ae21b9;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID 23c9688c-92e7-45ef-89fb-d017cee32d8b;
+							- _name = "signature";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 The specified event animation signature\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "OMString";
+								- _id = GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "bool res = false;
+signature.Empty();
+if (event != NULL) {
+	if (event->isTypeOf(OMStartBehaviorEventId) == 1) {
+		signature = \"OMStartBehaviorEvent\";
+		res = true;
+	} else {
+		if (event->isTypeOf(OMTimeoutEventId) == 1) {
+			fillTimeoutSignature(reinterpret_cast<const OMTimeout*>(event), signature);
+			res = true;
+		} else {
+			if (event->isTypeOf(OMTimeoutDelayId) == 1) {
+				fillDelaySignature(reinterpret_cast<const OMTimeout*>(event), signature);
+				res = true;
+			} else {
+				if ( (event->getId() == OMAnimWakeupEventId) ||
+					 (event->getId() == OMCloseHandleEventId) ||
+					 (event->getId() == OMEndThreadEventId) ||
+					 (event->getId() == OMReactiveTerminationEventId) ) {
+				// invisible framework event
+				res = true;
+				}
+			}
+		}
+	}
+}
+return res;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 823ce27a-78a7-4fe8-a4c2-71272a6821d3;
+					- _name = "fillTimeoutSignature";
+					- _modifiedTimeWeak = 7.13.2009::9:6:42;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Fill the signature for the provided timeout\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID 67a3f7bd-5dba-4135-aa82-fe4f76a52ba3;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Class";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type*";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "tm";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 The timeout\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "CoreImplementation.sbs";
+								- _subsystem = "Design::oxf::Core::CoreImplementation";
+								- _class = "";
+								- _name = "OMTimeout";
+								- _id = GUID f0b870c3-910a-42c0-8607-e830d2befc9f;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID f8d2117f-1aae-43e3-9084-8c9cd4f0d41d;
+							- _name = "signature";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 The signature to fill\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "OMString";
+								- _id = GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPrivate;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "if (tm != NULL) {
+	fillTime(tm, signature);
+   	signature += \" at \";
+   	signature += tm->getState();
+}";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 689eae14-8386-4827-a283-0c7f9acd95df;
+					- _name = "fillDelaySignature";
+					- _modifiedTimeWeak = 7.13.2009::9:6:42;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Fill the signature for the provided delay-timeout\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID ce75cf4e-f070-4c29-8d15-c0397e9bd663;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Class";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type*";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "tm";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 The delay-timeout\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "CoreImplementation.sbs";
+								- _subsystem = "Design::oxf::Core::CoreImplementation";
+								- _class = "";
+								- _name = "OMTimeout";
+								- _id = GUID f0b870c3-910a-42c0-8607-e830d2befc9f;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID 80a97a15-7d6c-4774-b5a7-165a67d9d6dd;
+							- _name = "signature";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 The signature to fill\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "OMString";
+								- _id = GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPrivate;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "if (tm != NULL) {
+   	signature = \"Thread Delay \";
+	fillTime(tm, signature);
+}";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 8135ed9a-f355-48bf-94c9-ef0723b03077;
+					- _name = "fillTime";
+					- _modifiedTimeWeak = 5.16.2016::11:17:2;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Fill the string with the time for the provided timeout\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 2;
+						- value = 
+						{ IArgument 
+							- _id = GUID a4db5c07-841c-4f4e-ad02-23ca48db8b10;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Class";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type*";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "tm";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 The timeout\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "CoreImplementation.sbs";
+								- _subsystem = "Design::oxf::Core::CoreImplementation";
+								- _class = "";
+								- _name = "OMTimeout";
+								- _id = GUID f0b870c3-910a-42c0-8607-e830d2befc9f;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID 0468f53d-8989-4c03-b2cf-d49d3a8e4faa;
+							- _name = "str";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 The string to fill\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "OMString";
+								- _id = GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPrivate;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "const Rhp_int32_t STRING30 = 30;
+
+OxfTimeUnit t = 0;
+if (tm != NULL) {
+	t = tm->getDelayTime();
+}
+Rhp_char_t c[STRING30];
+#ifndef _OM_UNICODE_ONLY
+// simple characters
+sprintf(&c[0], \"tm(%ld)\", t);
+#else
+// wide characters 
+wchar_t wC[STRING30];
+swprintf(wC, L\"tm(%ld)\", t);
+(void) OMUnicodeHelper::wtoc(c,wC,STRING30);
+#endif // _OM_UNICODE_ONLY
+str += c;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID c5cae623-eed6-420f-9be9-2f59c639ed1c;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Kind";
+												- _Value = "common";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "common,abstract";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "isTimeoutEvent";
+					- _modifiedTimeWeak = 7.13.2009::9:6:42;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Return true if the provided event is a timeout\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 5fd37389-d254-4824-a1b5-0e0762f8a643;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Class";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type*";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "ev";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 the event\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "CoreAPI.sbs";
+								- _subsystem = "Design::oxf::Core::CoreAPI";
+								- _class = "";
+								- _name = "IOxfEvent";
+								- _id = GUID 72bafe6b-3c6c-4462-88b7-148dc2ae21b9;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "return ( (ev != NULL) &&
+		 (ev->isTypeOf(OMTimeoutEventId)) );";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID d201afbd-3af5-4d2e-b588-6a6630ce23c8;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "Kind";
+												- _Value = "common";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "common,abstract";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "isCancelledEvent";
+					- _modifiedTimeWeak = 7.13.2009::9:6:42;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Return true if the provided event is cancelled\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IArgument 
+							- _id = GUID 2ac3d244-5933-4110-8172-072b59a53161;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Class";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type*";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "ev";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 the event\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "CoreAPI.sbs";
+								- _subsystem = "Design::oxf::Core::CoreAPI";
+								- _class = "";
+								- _name = "IOxfEvent";
+								- _id = GUID 72bafe6b-3c6c-4462-88b7-148dc2ae21b9;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "bool res = false;
+if (ev != NULL) {
+	if (ev->isTypeOf(OMTimeoutEventId) == 1)	{
+		res = static_cast<const IOxfTimeout*>(ev)->isCanceled();
+	} else {
+		res = (ev->getId() == OMCancelledEventId);
+	}
+}
+return res;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID c0be0511-8612-4a88-a0c6-eae886923669;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "CPP_CG";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Operation";
+										- Properties = { IRPYRawContainer 
+											- size = 2;
+											- value = 
+											{ IProperty 
+												- _Name = "Inline";
+												- _Value = "none";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "none,in_header,in_source,in_declaration";
+											}
+											{ IProperty 
+												- _Name = "Kind";
+												- _Value = "common";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "common,abstract";
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- _name = "getFrameworkEventClassName";
+					- _modifiedTimeWeak = 7.13.2009::9:6:42;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset178 Arial;}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 The operation will return false and an empty string for user events, and the event class name for animated internal framework events (e.g. start behavior, timeouts)\\par
+Returns true if the event was handled (invisible framework events should return true and with an empty signature)\\lang1037\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 1;
+					- Args = { IRPYRawContainer 
+						- size = 3;
+						- value = 
+						{ IArgument 
+							- _id = GUID bcd9ef39-47fa-4db6-9eaa-e3eaf4fdf8b8;
+							- _properties = { IPropertyContainer 
+								- Subjects = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertySubject 
+										- _Name = "CPP_CG";
+										- Metaclasses = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IPropertyMetaclass 
+												- _Name = "Class";
+												- Properties = { IRPYRawContainer 
+													- size = 1;
+													- value = 
+													{ IProperty 
+														- _Name = "In";
+														- _Value = "const $type*";
+														- _Type = String;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							- _name = "event";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 the event to get the signature for\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IClass";
+								- _filename = "CoreAPI.sbs";
+								- _subsystem = "Design::oxf::Core::CoreAPI";
+								- _class = "";
+								- _name = "IOxfEvent";
+								- _id = GUID 72bafe6b-3c6c-4462-88b7-148dc2ae21b9;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+						{ IArgument 
+							- _id = GUID 2e7fedcc-8f16-4a5c-ab30-7c38be4e2450;
+							- _name = "className";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 The specified event animation signature\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "OMString";
+								- _id = GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = InOut;
+						}
+						{ IArgument 
+							- _id = GUID c0b341e5-ca9f-41f0-8fd8-1d36a1db454b;
+							- _name = "signatureFormat";
+							- _modifiedTimeWeak = 1.2.1990::0:0:0;
+							- _description = { IDescription 
+								- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs20 Specify that the class name should be return in a signature format i.e. <class>()\\lang1037\\f1\\rtlch\\par
+}
+";
+							}
+							- ValueSpecifications = { IRPYRawContainer 
+								- size = 1;
+								- value = 
+								{ ILiteralSpecification 
+									- _id = GUID 93b855cd-74c8-49c5-9afc-a2c102b92805;
+									- _modifiedTimeWeak = 1.2.1990::0:0:0;
+									- _value = "false";
+								}
+							}
+							- _typeOf = { IHandle 
+								- _m2Class = "IType";
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "bool";
+								- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+							}
+							- _isOrdered = 0;
+							- _argumentDirection = In;
+						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "bool";
+						- _id = GUID e6c263cc-4bc5-4a11-b32d-02148c93add0;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 1;
+					- _itsBody = { IBody 
+						- _bodyData = "bool res = false;
+bool applySignatureFormat = true;
+className.Empty();
+if (event != NULL) {
+	if (event->isTypeOf(OMStartBehaviorEventId) == 1) {
+		className = \"OMStartBehaviorEvent\";
+		res = true;
+	} else {
+		if (event->isTypeOf(OMTimeoutEventId) == 1)	{
+			className = \"Timeout\";
+			applySignatureFormat = false;
+			res = true;
+		} else {
+			if (event->isTypeOf(OMTimeoutDelayId) == 1)	{
+				className = \"OMDelay\";
+				res = true;
+			} else {
+				if ( (event->getId() == OMAnimWakeupEventId) ||
+				 	 (event->getId() == OMCloseHandleEventId) ||
+					 (event->getId() == OMEndThreadEventId) ||
+					 (event->getId() == OMReactiveTerminationEventId) ) {
+					// invisible framework event
+					res = true;
+				}
+			}
+		}
+	}
+}
+// Signature Format
+if ( (res) &&
+	 (applySignatureFormat) &&
+	 (signatureFormat) &&
+	 (!className.IsEmpty()) ) {
+	// if 
+	//		The event is a framework event AND
+	// 		A signature format should ve applied to this event class AND
+	//		A signature format was requested AND
+	//		The class is animated (has a name)
+	className += \"()\";
+}
+return res;";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 41b78386-4a47-452d-95c9-6160b781e96c;
+					- _name = "instance";
+					- _modifiedTimeWeak = 7.13.2009::9:6:42;
+					- _description = { IDescription 
+						- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Get the singleton instance\\f1\\rtlch\\par
+}
+";
+					}
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 8ef85ccd-7c3e-48af-ae48-59ffc856be3b;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 1;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "static OMAnimHelper theHelper;
+return &theHelper;";
+					}
+				}
+			}
+			- Inheritances = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IGeneralization 
+					- _id = GUID 8a3f42ba-cb1f-41f7-b350-dba6bb40721d;
+					- _modifiedTimeWeak = 7.13.2009::9:6:42;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "AnimAPI.sbs";
+						- _subsystem = "Design::oxf::Anim::AnimAPI";
+						- _class = "";
+						- _name = "IOxfAnimHelper";
+						- _id = GUID 89d3da57-4f62-46f0-9685-0c90b83f9ffa;
+					}
+					- _inheritanceType = iPublic;
+					- _isVirtual = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

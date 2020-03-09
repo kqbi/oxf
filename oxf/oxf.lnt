@@ -1,0 +1,54 @@
+// Lint switches
++v
+// -voif	// progress output
++fce    // continue on error
+
+// define compilation flags
+-dlint				// avoid warning 528 on rcsid not referenced
+-d_MT				// multi-thread
+-dOM_DISABLE_ASSERT		// avoid LINT warnings due to Microsoft assert() implementation
+
+/////////////////////////
+// disable warnings
+/////////////////////////
+
+// general
+-e537	// Warning -- Repeated include
+-e544   // endif or else not followed by EOL
+-e755	// global macro not referenced
+-e768	// global struct member not referenced
+-e1714	// Member function not referenced
+-e1716	// Virtual member function not referenced
+-e1749	// base class 'ios' of class 'ostream' need not be virtual
+-e1737  // Symbol XX hides global operator new -
+	// 	does not effect the user due to the default value of the operator new second parameter
+-e1531	// Symbol 'Symbol' (Location) should have compared argument against sizeof(class)
+	//	the generic allocator is not aware of the class, and therefore this warning is irelevant
+-e1551	// We ignore exceptions since we assume no exception allowed
+-e763	// we allow redundant forward declarations since Rhapsody will generate a forward declaration in the H file
+	//	when generating include in the .cpp file
+-e1735	// We allow default value for virtual function arguments
+-e1763	// All getters are const
+-e1536	// getter to parts allowed
+-e1529	// Checking this in assignment operator is not exception safe
+-e1554	// disabled due to redundant messages on copy of pointers
+-e1555	// disabled due to redundant messages on copy of pointers
+-e1712	// in many cases we do not want default constructors to be available
+-e1774	// dynamic_cast<>() is not allowed in the oxf
+-e831	// avoid the "Reference cited in prior message" message
+-e758	// this is a framework templates may be unreferenced
+-e1526	// this is a framework templates may be unreferenced
+	// private copy constructors and assignment operators are used to disable copy
+	// there methods do not have an implementation
+
+-e766	// unused header due to compilation switches
+
+
+// symbols
+-esym(758, OMFinalState)
+-esym(768,AOMInstance)
+-esym(768,AOMState)
+-esym(1712, OMLeafState)
+-esym(1712, OMAndState)
+-esym(1712, OMFinalState)
+

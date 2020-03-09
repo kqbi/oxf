@@ -1,0 +1,229 @@
+I-Logix-RPY-Archive version 8.6.0 C++ 2064318
+{ ISubsystem 
+	- _cmheader = "$Id: oxf.sbs 1.15 2007/04/06 07:10:04 ilgiga Exp $
+$Revision: 1.15 $
+$Locker: $
+
+";
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "Design.sbs";
+		- _subsystem = "";
+		- _class = "";
+		- _name = "Design";
+		- _id = GUID 18ec95c6-2cfd-44f0-8b87-0bd933c303ce;
+	}
+	- _id = GUID 02a409cc-b488-41d6-ba34-4690246eb8f3;
+	- _myState = 8192;
+	- _properties = { IPropertyContainer 
+		- Subjects = { IRPYRawContainer 
+			- size = 2;
+			- value = 
+			{ IPropertySubject 
+				- _Name = "CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 6;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Attribute";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "IsConst";
+								- _Value = "Signature";
+								- _Type = String;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "CGGeneral";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "GeneratedCodeInBrowser";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Class";
+						- Properties = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IProperty 
+								- _Name = "CreateImplicitDependencies";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+							{ IProperty 
+								- _Name = "ImplicitDependencyToPackage";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Package";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "FileName";
+								- _Value = "OXF$name";
+								- _Type = String;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Relation";
+						- Properties = { IRPYRawContainer 
+							- size = 2;
+							- value = 
+							{ IProperty 
+								- _Name = "IsConst";
+								- _Value = "Signature";
+								- _Type = String;
+							}
+							{ IProperty 
+								- _Name = "SafeInitScalar";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Type";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "GenerateDeclarationDependency";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+						}
+					}
+				}
+			}
+			{ IPropertySubject 
+				- _Name = "CPP_CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 3;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Class";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "DeclarationModifier";
+								- _Value = "RP_FRAMEWORK_DLL";
+								- _Type = String;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Framework";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "HeaderFile";
+								- _Value = "";
+								- _Type = String;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Package";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "DefineNameSpace";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	- _name = "oxf";
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\lang1033\\fs17 The Object eXecution Framework\\lang1037\\f1\\rtlch\\par
+}";
+	}
+	- Declaratives = { IRPYRawContainer 
+		- size = 4;
+		- value = 
+		{ ISubsystem 
+			- fileName = "Adapters";
+			- _id = GUID 390d3346-6da1-4707-b13b-512f5fd03734;
+		}
+		{ ISubsystem 
+			- fileName = "Core";
+			- _id = GUID eb696b2e-5c49-4b2b-84ed-f0f9b49adcba;
+		}
+		{ ISubsystem 
+			- fileName = "Services";
+			- _id = GUID dc406d75-b5f5-477e-b7ec-93a579033180;
+		}
+		{ ISubsystem 
+			- fileName = "Anim";
+			- _id = GUID 60b86922-1901-4b37-a4b1-3450813633c7;
+		}
+	}
+	- weakCGTime = 5.8.2011::11:15:12;
+	- strongCGTime = 5.8.2011::11:15:12;
+	- _defaultComposite = GUID 13b4f09a-2353-477a-8c3d-75008cd7f3e2;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID 13b4f09a-2353-477a-8c3d-75008cd7f3e2;
+			- _myState = 40960;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Class";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "DeclarationModifier";
+										- _Value = "";
+										- _Type = String;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "TopLevel";
+			- weakCGTime = 1.15.2009::14:32:20;
+			- strongCGTime = 1.15.2009::14:32:20;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

@@ -1,0 +1,200 @@
+I-Logix-RPY-Archive version 8.5.2 C++ 1146010
+{ ISubsystem 
+	- _cmheader = "$Id: Obsolete.sbs 1.21 2007/04/06 07:09:40 ilgiga Exp $
+$Revision: 1.21 $
+$Locker: $
+
+";
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "CompatibilityMacros.sbs";
+		- _subsystem = "Design::oxf::Services::Macros";
+		- _class = "";
+		- _name = "CompatibilityMacros";
+		- _id = GUID 0cf83d51-bfd4-4717-bfe2-84edc0dac1ab;
+	}
+	- _id = GUID 70f992c0-3347-4f2a-9a0e-9cc42acfabfb;
+	- _myState = 8192;
+	- _name = "Obsolete";
+	- Dependencies = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ IDependency 
+			- _id = GUID 59bdd43d-00e3-44a3-88ea-9927c686a133;
+			- _myState = 2048;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UsageType";
+										- _Value = "Specification";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Specification,Implementation,Existence";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMUAbstractContainer";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypes.sbs";
+					- _subsystem = "PredefinedTypes";
+					- _class = "";
+					- _name = "Usage";
+					- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+				}
+			}
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "IClass";
+				- _filename = "Typeless.sbs";
+				- _subsystem = "Design::oxf::Services::Containers::Typeless";
+				- _class = "";
+				- _name = "OMUAbstractContainer";
+				- _id = GUID 4d7f983b-e1ff-4ddf-bb6f-aa9f9c812249;
+			}
+		}
+		{ IDependency 
+			- _id = GUID 6d340d37-b271-4184-b43a-c46c4c8cc52e;
+			- _myState = 2048;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UsageType";
+										- _Value = "Specification";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Specification,Implementation,Existence";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMTimerManager";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypes.sbs";
+					- _subsystem = "PredefinedTypes";
+					- _class = "";
+					- _name = "Usage";
+					- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+				}
+			}
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "IClass";
+				- _filename = "TimeManagement.sbs";
+				- _subsystem = "Design::oxf::Services::Time::TimeManagement";
+				- _class = "";
+				- _name = "OMTimerManager";
+				- _id = GUID b406c13c-5110-40cc-ba74-e94e701427ea;
+			}
+		}
+	}
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Pre-5.X compatibility macros\\f1\\rtlch\\par
+}
+";
+	}
+	- _lastID = 3;
+	- weakCGTime = 1.15.2009::14:32:20;
+	- strongCGTime = 1.15.2009::14:32:20;
+	- _defaultComposite = GUID 51c0e2bf-f633-43c0-b390-d52688ab7afb;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID 51c0e2bf-f633-43c0-b390-d52688ab7afb;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 1.15.2009::14:32:20;
+			- strongCGTime = 1.15.2009::14:32:20;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- Types = { IRPYRawContainer 
+		- size = 3;
+		- value = 
+		{ IType 
+			- _id = GUID 346da448-f41d-4ec8-a53e-a348f97eb5a0;
+			- _myState = 8192;
+			- _name = "popNullConfig";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Add forward compatibility - use popNullTransition instead.\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s popNullTransition";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID f723b535-16d1-4851-9caa-eda9385529e1;
+			- _myState = 8192;
+			- _name = "pushNullConfig";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Add forward compatibility - use pushNullTransition instead.\\par
+\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s pushNullTransition";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID cf9fb61a-eff5-4610-9575-54d063ad7be7;
+			- _myState = 8192;
+			- _name = "setThread";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Add forward compatibility - use setActiveContext instead.\\par
+\\par
+\\f1\\rtlch\\par
+}
+";
+			}
+			- _declaration = "#define %s setActiveContext";
+			- _kind = Language;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+

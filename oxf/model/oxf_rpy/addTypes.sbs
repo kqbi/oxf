@@ -1,0 +1,897 @@
+I-Logix-RPY-Archive version 8.5.2 C++ 1146010
+{ ISubsystem 
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "Types.sbs";
+		- _subsystem = "Design::oxf::Services";
+		- _class = "";
+		- _name = "Types";
+		- _id = GUID c96fc24d-f374-4b89-80af-366cc81b61a1;
+	}
+	- _id = GUID a27e9495-8df6-4e77-9f4c-9ea70bf9292c;
+	- _myState = 8192;
+	- _name = "addTypes";
+	- Dependencies = { IRPYRawContainer 
+		- size = 10;
+		- value = 
+		{ IDependency 
+			- _id = GUID e1a59436-7a72-407b-b974-542d26a657c2;
+			- _myState = 2048;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UsageType";
+										- _Value = "Specification";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Specification,Implementation,Existence";
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "SpecificationEpilog";
+										- _Value = "#endif // OM_NO_TEMPLATES_USAGE
+
+";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationProlog";
+										- _Value = "#ifdef OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMUList";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypes.sbs";
+					- _subsystem = "PredefinedTypes";
+					- _class = "";
+					- _name = "Usage";
+					- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+				}
+			}
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "IClass";
+				- _filename = "Typeless.sbs";
+				- _subsystem = "Design::oxf::Services::Containers::Typeless";
+				- _class = "";
+				- _name = "OMUList";
+				- _id = GUID 527e8a14-bd49-4842-93af-d9e46a3b1938;
+			}
+		}
+		{ IDependency 
+			- _id = GUID f618e109-794a-4fbd-b802-5136b3c7b889;
+			- _myState = 2048;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UsageType";
+										- _Value = "Specification";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Specification,Implementation,Existence";
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "SpecificationEpilog";
+										- _Value = "#endif // OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationProlog";
+										- _Value = "#ifndef OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMList";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypes.sbs";
+					- _subsystem = "PredefinedTypes";
+					- _class = "";
+					- _name = "Usage";
+					- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+				}
+			}
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "IClass";
+				- _filename = "TypeSafe.sbs";
+				- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+				- _class = "";
+				- _name = "OMList";
+				- _id = GUID b508c0e7-a401-4e38-8935-c4101b28c695;
+			}
+		}
+		{ IDependency 
+			- _id = GUID 1a0a9c6b-20f6-4939-be0f-64d72c74e427;
+			- _myState = 2048;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UsageType";
+										- _Value = "Specification";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Specification,Implementation,Existence";
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "SpecificationEpilog";
+										- _Value = "#endif // OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationProlog";
+										- _Value = "#ifndef OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMQueue";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypes.sbs";
+					- _subsystem = "PredefinedTypes";
+					- _class = "";
+					- _name = "Usage";
+					- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+				}
+			}
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "IClass";
+				- _filename = "TypeSafe.sbs";
+				- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+				- _class = "";
+				- _name = "OMQueue";
+				- _id = GUID 027ff7cc-ee95-4b49-a4d5-98eedc486cd2;
+			}
+		}
+		{ IDependency 
+			- _id = GUID 529cad0e-a28e-4b66-89f5-84c65fd5fbba;
+			- _myState = 2048;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UsageType";
+										- _Value = "Specification";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Specification,Implementation,Existence";
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "SpecificationEpilog";
+										- _Value = "#endif // OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationProlog";
+										- _Value = "#ifdef OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMUQueue";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypes.sbs";
+					- _subsystem = "PredefinedTypes";
+					- _class = "";
+					- _name = "Usage";
+					- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+				}
+			}
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "IClass";
+				- _filename = "Typeless.sbs";
+				- _subsystem = "Design::oxf::Services::Containers::Typeless";
+				- _class = "";
+				- _name = "OMUQueue";
+				- _id = GUID 7ee0391f-b72a-4845-87e8-e70b5a14c34f;
+			}
+		}
+		{ IDependency 
+			- _id = GUID 41c00a67-68d1-404f-97f4-b6a14dbd96b1;
+			- _myState = 2048;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UsageType";
+										- _Value = "Specification";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Specification,Implementation,Existence";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "IOxfTimeout";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypes.sbs";
+					- _subsystem = "PredefinedTypes";
+					- _class = "";
+					- _name = "Usage";
+					- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+				}
+			}
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "IClass";
+				- _filename = "CoreAPI.sbs";
+				- _subsystem = "Design::oxf::Core::CoreAPI";
+				- _class = "";
+				- _name = "IOxfTimeout";
+				- _id = GUID 7ca39c06-5089-4ef7-8b23-98dead00f52d;
+			}
+		}
+		{ IDependency 
+			- _id = GUID a85bbdff-adf9-476a-b5c8-0db1234c255d;
+			- _myState = 2048;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UsageType";
+										- _Value = "Existence";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Specification,Implementation,Existence";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMThread";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypes.sbs";
+					- _subsystem = "PredefinedTypes";
+					- _class = "";
+					- _name = "Usage";
+					- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+				}
+			}
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "IClass";
+				- _filename = "CoreImplementation.sbs";
+				- _subsystem = "Design::oxf::Core::CoreImplementation";
+				- _class = "";
+				- _name = "OMThread";
+				- _id = GUID ab9f4e0f-5169-492a-8bc2-f8bcac00c7d5;
+			}
+		}
+		{ IDependency 
+			- _id = GUID 3f634fc2-ae8f-410f-8d6e-2cb7164aea3c;
+			- _myState = 2048;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UsageType";
+										- _Value = "Existence";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Specification,Implementation,Existence";
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "SpecificationEpilog";
+										- _Value = "
+#endif // OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationProlog";
+										- _Value = "#ifndef OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMHeap";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypes.sbs";
+					- _subsystem = "PredefinedTypes";
+					- _class = "";
+					- _name = "Usage";
+					- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+				}
+			}
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "IClass";
+				- _filename = "TypeSafe.sbs";
+				- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+				- _class = "";
+				- _name = "OMHeap";
+				- _id = GUID 9119500e-6b64-4daf-84e4-e16cd41f54f4;
+			}
+		}
+		{ IDependency 
+			- _id = GUID 1ebafd50-9094-42f8-9d0d-d4539f97b2c5;
+			- _myState = 2048;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UsageType";
+										- _Value = "Specification";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Specification,Implementation,Existence";
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "SpecificationEpilog";
+										- _Value = "#endif //OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationProlog";
+										- _Value = "#ifndef OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMCollection";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypes.sbs";
+					- _subsystem = "PredefinedTypes";
+					- _class = "";
+					- _name = "Usage";
+					- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+				}
+			}
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "IClass";
+				- _filename = "TypeSafe.sbs";
+				- _subsystem = "Design::oxf::Services::Containers::TypeSafe";
+				- _class = "";
+				- _name = "OMCollection";
+				- _id = GUID 3cbc80eb-7cfc-4368-8bf1-196f0edca86f;
+			}
+		}
+		{ IDependency 
+			- _id = GUID 456465fc-9b01-4c41-877b-97dbe38fe027;
+			- _myState = 2048;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UsageType";
+										- _Value = "Existence";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Specification,Implementation,Existence";
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "SpecificationEpilog";
+										- _Value = "
+#endif //OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationProlog";
+										- _Value = "#ifdef OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMUHeap";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypes.sbs";
+					- _subsystem = "PredefinedTypes";
+					- _class = "";
+					- _name = "Usage";
+					- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+				}
+			}
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "IClass";
+				- _filename = "Typeless.sbs";
+				- _subsystem = "Design::oxf::Services::Containers::Typeless";
+				- _class = "";
+				- _name = "OMUHeap";
+				- _id = GUID c030d3c5-c7c2-4340-aa13-9d538308b404;
+			}
+		}
+		{ IDependency 
+			- _id = GUID 91e9ab9b-48be-43df-b3cb-e1556a1db717;
+			- _myState = 2048;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IProperty 
+										- _Name = "UsageType";
+										- _Value = "Specification";
+										- _Type = Enum;
+										- _ExtraTypeInfo = "Specification,Implementation,Existence";
+									}
+								}
+							}
+						}
+					}
+					{ IPropertySubject 
+						- _Name = "CPP_CG";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "Dependency";
+								- Properties = { IRPYRawContainer 
+									- size = 2;
+									- value = 
+									{ IProperty 
+										- _Name = "SpecificationEpilog";
+										- _Value = "#endif // OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+									{ IProperty 
+										- _Name = "SpecificationProlog";
+										- _Value = "#ifdef OM_NO_TEMPLATES_USAGE
+";
+										- _Type = MultiLine;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "OMUCollection";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _filename = "PredefinedTypes.sbs";
+					- _subsystem = "PredefinedTypes";
+					- _class = "";
+					- _name = "Usage";
+					- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+				}
+			}
+			- _dependsOn = { INObjectHandle 
+				- _m2Class = "IClass";
+				- _filename = "Typeless.sbs";
+				- _subsystem = "Design::oxf::Services::Containers::Typeless";
+				- _class = "";
+				- _name = "OMUCollection";
+				- _id = GUID 902e4c2b-1c13-4a8a-9e2a-377e34e2de12;
+			}
+		}
+	}
+	- _lastID = 4;
+	- weakCGTime = 1.19.2009::16:8:6;
+	- strongCGTime = 1.19.2009::16:8:6;
+	- _defaultComposite = GUID d8e731d0-7fcb-4741-a6d8-a290c88100e9;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID d8e731d0-7fcb-4741-a6d8-a290c88100e9;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 1.19.2009::16:8:6;
+			- strongCGTime = 1.19.2009::16:8:6;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- Types = { IRPYRawContainer 
+		- size = 11;
+		- value = 
+		{ IType 
+			- _id = GUID 1c21ebc3-1fcf-4716-978b-24c290c36064;
+			- _myState = 8192;
+			- _name = "OMListType";
+			- _declaration = "#ifdef OM_NO_TEMPLATES_USAGE
+typedef OMUList %s; 
+#else
+typedef OMList<void*> %s; 
+#endif // OM_NO_TEMPLATES_USAGE
+";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 81b76380-7197-4950-ac80-57d38e03232d;
+			- _myState = 8192;
+			- _name = "OMQueueType";
+			- _declaration = "#ifdef OM_NO_TEMPLATES_USAGE
+typedef OMUQueue %s; 
+#else
+typedef OMQueue<void*> %s; 
+#endif // OM_NO_TEMPLATES_USAGE
+";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 5e388de4-a2e4-44e2-b091-f3f94fa45192;
+			- _myState = 8192;
+			- _name = "OMEventListType";
+			- _declaration = "#ifdef OM_NO_TEMPLATES_USAGE
+typedef OMUList %s; 
+#else
+typedef OMList<IOxfEvent*> %s; 
+#endif // OM_NO_TEMPLATES_USAGE
+";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID a0b85d0c-2775-46e3-b2ec-297c5405cbb7;
+			- _myState = 8192;
+			- _name = "OMEventQueueIter";
+			- _declaration = "#ifdef OM_NO_TEMPLATES_USAGE
+typedef OMUIterator %s; 
+#else
+typedef OMIterator<IOxfEvent*> %s; 
+#endif // OM_NO_TEMPLATES_USAGE
+";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 3fdd6ba9-b8db-4003-84b9-816e46190483;
+			- _myState = 8192;
+			- _name = "OMTimeoutIter";
+			- _declaration = "#ifdef OM_NO_TEMPLATES_USAGE
+typedef OMUIterator %s; 
+#else
+typedef OMIterator<IOxfTimeout*> %s; 
+#endif // OM_NO_TEMPLATES_USAGE
+";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 25a7bc96-9ca4-4a8d-8651-00155fd79da3;
+			- _myState = 8192;
+			- _name = "OMThreadIter";
+			- _declaration = "#ifdef OM_NO_TEMPLATES_USAGE
+typedef OMUIterator %s; 
+#else
+typedef OMIterator<OMThread*> %s;
+#endif // OM_NO_TEMPLATES_USAGE
+";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 264b7583-0198-4f2c-8705-f84593c6dfea;
+			- _myState = 8192;
+			- _name = "OMHeapType";
+			- _declaration = "#ifdef OM_NO_TEMPLATES_USAGE
+typedef OMUHeap %s; 
+#else
+typedef OMHeap<IOxfTimeout> %s; 
+#endif // OM_NO_TEMPLATES_USAGE
+";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 4cf81c71-608c-47c2-9106-1c1d4281b0e9;
+			- _myState = 8192;
+			- _name = "OMTmCollecType";
+			- _declaration = "#ifdef OM_NO_TEMPLATES_USAGE
+typedef OMUCollection %s; 
+#else
+typedef OMCollection<IOxfTimeout*> %s; 
+#endif // OM_NO_TEMPLATES_USAGE";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID 83b34127-03a7-47fd-8f3b-79a07d876f77;
+			- _myState = 8192;
+			- _name = "OMTimeoutValueIter";
+			- _declaration = "#ifdef OM_NO_TEMPLATES_USAGE
+typedef OMUIterator %s; 
+#else
+typedef OMIterator<IOxfTimeout> %s; 
+#endif // OM_NO_TEMPLATES_USAGE
+";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID bb54ecee-3d65-48fc-b6c7-af268a82e965;
+			- _myState = 8192;
+			- _name = "OMThreadType";
+			- _declaration = "#ifdef OM_NO_TEMPLATES_USAGE
+typedef OMUList %s; 
+#else
+typedef OMList<OMThread*> %s;
+#endif // OM_NO_TEMPLATES_USAGE
+";
+			- _kind = Language;
+		}
+		{ IType 
+			- _id = GUID fa5fd922-b842-43cc-ac8d-5b6f0de5f51e;
+			- _myState = 8192;
+			- _name = "OMThreadVoidIter";
+			- _declaration = "#ifdef OM_NO_TEMPLATES_USAGE
+typedef OMUIterator %s; 
+#else
+typedef OMIterator<void *> %s;
+#endif // OM_NO_TEMPLATES_USAGE
+";
+			- _kind = Language;
+		}
+	}
+	- _configurationRelatedTime = 7.14.2008::9:20:33;
+}
+

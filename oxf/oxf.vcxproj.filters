@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3c9a6912-56d1-4d74-b070-1a0343fd5952}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{edaa1af0-a9bc-43e2-a4b1-907d45d1cbb1}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{160ec710-726a-4dc9-bffc-1df361ba7e6b}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ntos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMAnimReactive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMCore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMDefaultInBound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMDefaultOutBound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMDefaultReactivePort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMDelay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMHandleCloser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMMainThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ommemorymanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMMemoryManagerSwitchHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMMemoryManagerSwitchHelperImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMMemoryManagerWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMNotifier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMOSEventGenerationParams.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="omprotected.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="omreactive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="omstring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="omthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMThreadManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMTimeout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMTimerManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMTimerManagerDefaults.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMUnicodeHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="oxf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OXFDllGuards.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OXFEvents.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OXFRefManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OXFTimeManagement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OXFTypeSafeContainers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="state.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AMemAloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HdlCls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOxfActive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOxfAnimReactive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOxfAnimThreadManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOxfAnimTimerManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOXFCore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOxfEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOxfEventGenerationParams.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOxfEventSender.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOxfMemoryAllocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOxfReactive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOxfTickTimerFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOxfTimeout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MemAlloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMAbstractContainer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMAnimReactive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="omcollec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMCore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMDefaultInBound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMDefaultOutBound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMDefaultReactivePort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMDelay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMEventQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMHandleCloser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="omheap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="omiotypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMIterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="omlist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMMainThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ommap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ommemorymanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMMemoryManagerSwitchHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMMemoryManagerSwitchHelperImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMMemoryManagerWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMNotifier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMNullValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMObsolete.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMOSEventGenerationParams.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="omoutput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="omprotected.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="omqueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="omreactive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMResourceGuard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMSelfLinkedMemoryAllocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="omstack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="omstatic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMStaticArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="omstring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="omthread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMThreadManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMTimeout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMTimerManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMTimerManagerDefaults.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMTMMessageQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="omtypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMUAbstractContainer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="omucollec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMUIterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="omulist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="omumap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMUnicodeHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OMValueCompare.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="os.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="oxf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFCogeGen50.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFDllGuards.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFEvents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFGenMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFGuardMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFMemoryManagerMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFMemoryPoolsMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFNotifyMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFPools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFPortMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFRefLock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFRefManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFSelectiveInclude.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFStatechartMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFSTLMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFTimeManagement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFTypeSafeContainers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OXFUtilityMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rawtypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rp_framework_dll_definition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

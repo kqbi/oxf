@@ -1,0 +1,68 @@
+I-Logix-RPY-Archive version 8.5.2 C++ 1146010
+{ ISubsystem 
+	- _cmheader = "$Id: Types.sbs 1.11 2007/04/06 07:10:01 ilgiga Exp $
+$Revision: 1.11 $
+$Locker: $
+
+";
+	- _ownerHandle = { IHandle 
+		- _m2Class = "ISubsystem";
+		- _filename = "Services.sbs";
+		- _subsystem = "Design::oxf";
+		- _class = "";
+		- _name = "Services";
+		- _id = GUID dc406d75-b5f5-477e-b7ec-93a579033180;
+	}
+	- _id = GUID c96fc24d-f374-4b89-80af-366cc81b61a1;
+	- _myState = 8192;
+	- _name = "Types";
+	- _description = { IDescription 
+		- _textRTF = "{\\rtf1\\fbidis\\ansi\\ansicpg1255\\deff0\\deflang1037{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}{\\f1\\fnil\\fcharset177{\\*\\fname Arial;}Arial (Hebrew);}}
+\\viewkind4\\uc1\\pard\\ltrpar\\fs20 Basic types\\f1\\rtlch\\par
+}
+";
+	}
+	- _lastID = 3;
+	- Declaratives = { IRPYRawContainer 
+		- size = 4;
+		- value = 
+		{ ISubsystem 
+			- fileName = "BasicTypes";
+			- _id = GUID 0d1d4186-d8c6-4c2c-8e3b-83732820041b;
+		}
+		{ ISubsystem 
+			- fileName = "omiotypes";
+			- _id = GUID 6ca24829-4eef-4342-9f44-b568cb2eb35d;
+		}
+		{ ISubsystem 
+			- fileName = "addTypes";
+			- _id = GUID a27e9495-8df6-4e77-9f4c-9ea70bf9292c;
+		}
+		{ ISubsystem 
+			- fileName = "MISRA_Cpp_Types";
+			- _id = GUID 16499c59-efc6-4efb-b702-0d3cb569f9ee;
+		}
+	}
+	- weakCGTime = 1.15.2009::16:55:28;
+	- strongCGTime = 1.15.2009::14:32:20;
+	- _defaultComposite = GUID 1ec7b9b0-4714-4959-a580-3e2f1eaa6d6c;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID 1ec7b9b0-4714-4959-a580-3e2f1eaa6d6c;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 1.15.2009::16:55:28;
+			- strongCGTime = 1.15.2009::14:32:20;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 2.24.2004::10:32:31;
+}
+
