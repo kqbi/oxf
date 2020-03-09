@@ -7,5 +7,7 @@ win：
 linux：
  切换linux分支，此分支为IBM的linux原版
  却换到Share/LangCPP下使用 make -f linuxbuild.mak
+ 
 c11：
-  使用CMakeLists.txt并依赖boost
+  切换c11分支，使用CMakeLists.txt并依赖boost
+  
