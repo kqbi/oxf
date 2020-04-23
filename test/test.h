@@ -37,12 +37,14 @@ class evPoll : public OMEvent {
 public :
 
     //## auto_generated
-    evPoll();
+    evPoll(const std::string p_notify);
     
     ////    Framework operations    ////
     
     //## statechart_method
     virtual bool isTypeOf(const short id) const;
+
+    const std::string notify;
 };
 
 //## event evDestroy()

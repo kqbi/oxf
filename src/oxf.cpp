@@ -2,12 +2,12 @@
 #include "OMTimerManager.h"
 #include "OMMainDispatcher.h"
 
-OXF *OXF::getInstance() {
+OXF *OXF::Instance() {
     static OXF oxf;
     return &oxf;
 }
 
-bool OXF::initialize() {
+bool OXF::Initialize() {
     //#[ operation initialize(OxfTimeUnit,Rhp_uint32_t,bool)
     bool status = false;
 

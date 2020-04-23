@@ -30,7 +30,7 @@
 #ifdef OM_USE_NOTHROW_GEN
 #define GEN(event) send(new (std::nothrow) event, OMOSEventGenerationParams(false))
 #else
-#define GEN(event) send(std::make_shared<event>())
+#define GEN(event, ...) send(std::make_shared<event>(__VA_ARGS__))
 #endif
 //#]
 

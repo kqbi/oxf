@@ -6,9 +6,9 @@
 class  OXF {
 public :
 
-    static OXF *getInstance();
+    static OXF *Instance();
 
-    bool initialize();
+    bool Initialize();
 
 };
 

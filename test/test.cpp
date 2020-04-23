@@ -17,7 +17,7 @@
 
 
 //## event evPoll()
-evPoll::evPoll() {
+evPoll::evPoll(const std::string p_notify) : notify(p_notify) {
     setId(evPoll_test_id);
 }
 
