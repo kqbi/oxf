@@ -34,6 +34,8 @@
 //## dependency OMTimeout
 #include "OMTimeout.h"
 #include "OMMainDispatcher.h"
+#include "OXFEventPoller.h"
+
 //## package Design::oxf::Services::Time::TimeManagement
 
 //## class OMTimerManager
@@ -41,8 +43,6 @@
 bool OMTimerManager::timerManagerSingletonDestroyed = false;
 
 bool OMTimerManager::allowDestroy = true;
-
-bool OMTimerManager::instanceInitialized = false;
 
 bool OMTimerManager::externalTimer(false);
 
@@ -56,6 +56,7 @@ OMTimerManager::OMTimerManager(boost::asio::io_context &ioc) : _ioc(ioc), time_(
 OMTimerManager::~OMTimerManager(void) {
     //#[ operation ~OMTimerManager()
     // mark the timer manager singleton is destroyed
+    printf("~OMTimerManager\n");
     cleanup();
     //#]
 }
@@ -168,20 +169,10 @@ void OMTimerManager::goNextAndPost(void) {
     //#]
 }
 
-OMTimerManager *OMTimerManager::initInstance(boost::asio::io_context &ioc) {
-    //#[ operation initInstance(unsigned long,uint32_t,bool)
-    OMTimerManager *manager = 0;
-    if (!instanceInitialized) {
-        instanceInitialized = true;
-        manager = getStaticTimerManager(ioc);
-    }
-    return manager;
-    //#]
-}
-
-OMTimerManager *OMTimerManager::instance(void) {
+OMTimerManager *OMTimerManager::Instance() {
     //#[ operation instance()
-    return getStaticTimerManager(OMMainDispatcher::getInstance()->_ioc);
+    static OMTimerManager manager(OXFEventPollerPool::Instance()->_ioc);
+    return &manager;
     //#]
 }
 

@@ -1,16 +1,15 @@
 #include "OMMainDispatcher.h"
+#include "OXFEventPoller.h"
 
-OMMainDispatcher::OMMainDispatcher() : _work(boost::asio::make_work_guard(_ioc)) {
-    _threads.create_thread(boost::bind(&boost::asio::io_context::run, &_ioc));
+OMMainDispatcher::OMMainDispatcher(boost::asio::io_context &ioc) : _ioc(ioc) {
 }
 
 OMMainDispatcher::~OMMainDispatcher() {
-    _ioc.stop();
-    _threads.join_all();
+    printf("~OMMainDispatcher\n");
 }
 
-OMMainDispatcher* OMMainDispatcher::getInstance() {
-    static  OMMainDispatcher dispatcher;
+OMMainDispatcher* OMMainDispatcher::Instance() {
+    static OMMainDispatcher dispatcher(OXFEventPollerPool::Instance()->_ioc);
     return &dispatcher;
 }
 

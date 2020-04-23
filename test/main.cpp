@@ -11,7 +11,7 @@ static void signalHandler(int signo) {
 }
 
 int main(int argc, char *argv[]) {
-    OXF::getInstance()->initialize(0, 0);
+    OXF::getInstance()->initialize();
     std::shared_ptr <testS> test = std::make_shared<testS>();
     test->startBehavior();
     test->GEN(evPoll);

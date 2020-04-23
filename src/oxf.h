@@ -8,9 +8,7 @@ public :
 
     static OXF *getInstance();
 
-    bool initialize(std::size_t eventPoll, std::size_t timeoutPoll);
-
-    boost::asio::io_context &getIOContext();
+    bool initialize();
 
 };
 

@@ -144,21 +144,9 @@ public :
 
     // Initialize the timer manager
     //## operation init()
-    //virtual void init(void);
-
-    // Lazy initialization of the timer manager singleton
-    // Argument unsigned long ticktime = OMTimerManagerDefaults::defaultTicktime :
-    // The tick-timer resolution
-    // Argument const Rhp_uint32_t maxTM = OMTimerManagerDefaults::defaultMaxTM :
-    // The maximum number of timeouts that can be active in the system
-    // Argument bool isRealTimeModel = true :
-    // Real-time vs. simulated-time mode
-    //## operation initInstance(unsigned long,Rhp_uint32_t,bool)
-    static OMTimerManager *initInstance(boost::asio::io_context &ioc);
-
     // Get the singleton
     //## operation instance()
-    static OMTimerManager *instance(void);
+    static OMTimerManager *Instance();
 
     //## operation isExternalTimer() const
     bool isExternalTimer(void) const;
@@ -300,8 +288,6 @@ private :
     int64_t nonIdleThreadCounter;        //## attribute nonIdleThreadCounter
 
     static bool allowDestroy;        //## attribute allowDestroy
-
-    static bool instanceInitialized;        //## attribute instanceInitialized
 
     static bool externalTimer;        //## attribute externalTimer
 

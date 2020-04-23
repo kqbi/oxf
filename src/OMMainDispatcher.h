@@ -13,21 +13,17 @@ class OMMainDispatcher : public IOxfActive
 public:
     typedef boost::asio::executor_work_guard<boost::asio::io_context::executor_type> io_context_work;
 
-    OMMainDispatcher();
+    OMMainDispatcher(boost::asio::io_context &ioc);
 
     ~OMMainDispatcher();
 
-    static OMMainDispatcher* getInstance();
+    static OMMainDispatcher* Instance();
 
     void execute(IOxfEvent::Ptr& ev);
 
     IOxfReactive::TakeEventStatus dispatch(IOxfEvent::Ptr& ev);
 
-    boost::thread_group _threads;
-
-    boost::asio::io_context _ioc;
-
-    io_context_work _work;
+    boost::asio::io_context &_ioc;
 };
 
 #endif // OMMAINDISPATCHER_H
