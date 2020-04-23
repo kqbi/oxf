@@ -56,7 +56,6 @@ OMTimerManager::OMTimerManager(boost::asio::io_context &ioc) : _ioc(ioc), time_(
 OMTimerManager::~OMTimerManager(void) {
     //#[ operation ~OMTimerManager()
     // mark the timer manager singleton is destroyed
-    printf("~OMTimerManager\n");
     cleanup();
     //#]
 }

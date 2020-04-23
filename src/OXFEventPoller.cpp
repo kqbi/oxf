@@ -14,7 +14,6 @@ OXFEventPollerPool::OXFEventPollerPool() : _work(boost::asio::make_work_guard(_i
 }
 
 OXFEventPollerPool::~OXFEventPollerPool() {
-    printf("~OXFEventPollerPool\n");
     _ioc.stop();
     _threads.join_all();
 }

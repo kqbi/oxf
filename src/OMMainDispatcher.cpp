@@ -5,7 +5,6 @@ OMMainDispatcher::OMMainDispatcher(boost::asio::io_context &ioc) : _ioc(ioc) {
 }
 
 OMMainDispatcher::~OMMainDispatcher() {
-    printf("~OMMainDispatcher\n");
 }
 
 OMMainDispatcher* OMMainDispatcher::Instance() {
