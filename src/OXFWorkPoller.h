@@ -2,24 +2,24 @@
 // Created by kqbi on 2020/4/21.
 //
 
-#ifndef OXF_EVENTPOLLER_H
-#define OXF_EVENTPOLLER_H
+#ifndef OXF_WORKPOLLER_H
+#define OXF_WORKPOLLER_H
 
 #include <boost/asio.hpp>
 #include <boost/thread.hpp>
 
-class OXFEventPollerPool {
+class OXFWorkPollerPool {
 public:
     typedef boost::asio::executor_work_guard<boost::asio::io_context::executor_type> io_context_work;
 
-    OXFEventPollerPool();
+    OXFWorkPollerPool();
 
-    ~OXFEventPollerPool();
+    ~OXFWorkPollerPool();
 
     //单例创建前有效
     static void SetPoolSize(int size = 0);
 
-    static OXFEventPollerPool &Instance();
+    static OXFWorkPollerPool &Instance();
 
     boost::asio::io_context _ioc;
     boost::thread_group _threads;

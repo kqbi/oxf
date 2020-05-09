@@ -7,9 +7,9 @@ OMMainDispatcher::OMMainDispatcher(boost::asio::io_context &ioc) : _ioc(ioc) {
 OMMainDispatcher::~OMMainDispatcher() {
 }
 
-OMMainDispatcher* OMMainDispatcher::Instance() {
-    static OMMainDispatcher dispatcher(OXFEventPollerPool::Instance()->_ioc);
-    return &dispatcher;
+OMMainDispatcher &OMMainDispatcher::Instance() {
+    static OMMainDispatcher dispatcher(OXFEventPollerPool::Instance()._ioc);
+    return dispatcher;
 }
 
 void OMMainDispatcher::execute(IOxfEvent::Ptr& ev) {

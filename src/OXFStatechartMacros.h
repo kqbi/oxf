@@ -68,7 +68,7 @@
 //lint -save -e773  Expression-like macro not parenthesized
 
 //#]
-#define OMSETPARAMS(type) type* params = static_cast<type*>(getCurrentEvent())
+#define OMSETPARAMS(type) std::shared_ptr<type> params = std::dynamic_pointer_cast<type>(getCurrentEvent())
 //#[ ignore
 
 //lint -restore

@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 8.4 
-	Login		: Administrator
+	Login		: kqbi
 	Component	: TestComponent 
 	Configuration 	: TestConfig
 	Model Element	: test
-//!	Generated Date	: Sun, 15, Dec 2019  
+//!	Generated Date	: Mon, 4, May 2020  
 	File Path	: ..\..\untitled\test.cpp
 *********************************************************************/
 
@@ -17,7 +17,7 @@
 
 
 //## event evPoll()
-evPoll::evPoll(const std::string p_notify) : notify(p_notify) {
+evPoll::evPoll() {
     setId(evPoll_test_id);
 }
 
@@ -41,6 +41,15 @@ evEnd::evEnd() {
 
 bool evEnd::isTypeOf(const short id) const {
     return (evEnd_test_id==id);
+}
+
+//## event test()
+test::test() {
+    setId(test_test_id);
+}
+
+bool test::isTypeOf(const short id) const {
+    return (test_test_id==id);
 }
 
 /*********************************************************************

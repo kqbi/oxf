@@ -168,10 +168,10 @@ void OMTimerManager::goNextAndPost(void) {
     //#]
 }
 
-OMTimerManager *OMTimerManager::Instance() {
+OMTimerManager &OMTimerManager::Instance() {
     //#[ operation instance()
-    static OMTimerManager manager(OXFEventPollerPool::Instance()->_ioc);
-    return &manager;
+    static OMTimerManager manager(OXFEventPollerPool::Instance()._ioc);
+    return manager;
     //#]
 }
 

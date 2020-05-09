@@ -2,9 +2,9 @@
 #include "OMTimerManager.h"
 #include "OMMainDispatcher.h"
 
-OXF *OXF::Instance() {
+OXF &OXF::Instance() {
     static OXF oxf;
-    return &oxf;
+    return oxf;
 }
 
 bool OXF::Initialize() {

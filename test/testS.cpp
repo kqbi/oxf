@@ -1,28 +1,26 @@
 /********************************************************************
 	Rhapsody	: 8.4 
-	Login		: Administrator
+	Login		: kqbi
 	Component	: TestComponent 
 	Configuration 	: TestConfig
 	Model Element	: testS
-//!	Generated Date	: Sun, 15, Dec 2019  
+//!	Generated Date	: Mon, 4, May 2020  
 	File Path	: ..\..\untitled\testS.cpp
 *********************************************************************/
 
 //## auto_generated
 #include "testS.h"
-
+//## auto_generated
 //## package test
 
 //## class testS
-testS::testS(IOxfActive* theActiveContext) {
+testS::testS(IOxfActive* theActiveContext) : a(1) {
     setActiveContext(theActiveContext, false);
     initStatechart();
 }
 
 testS::~testS() {
-    printf("~testS\n");
     cancelTimeouts();
-    printf("~testS\n");
 }
 
 bool testS::startBehavior() {
@@ -38,11 +36,10 @@ void testS::initStatechart() {
 }
 
 void testS::cancelTimeouts() {
-    printf("cancelTimeouts\n");
     cancel(rootState_timeout);
 }
 
-bool testS::cancelTimeout(const IOxfTimeout::Ptr& arg) {
+bool testS::cancelTimeout(const IOxfTimeout::Ptr &arg) {
     bool res = false;
     if(rootState_timeout == arg)
         {
@@ -50,6 +47,14 @@ bool testS::cancelTimeout(const IOxfTimeout::Ptr& arg) {
             res = true;
         }
     return res;
+}
+
+int testS::getA() const {
+    return a;
+}
+
+void testS::setA(int p_a) {
+    a = p_a;
 }
 
 void testS::rootState_entDef() {
@@ -70,16 +75,20 @@ IOxfReactive::TakeEventStatus testS::rootState_processEvent() {
         {
             if(IS_EVENT_TYPE_OF(evPoll_test_id))
                 {
-                    //#[ state Idle.(Exit) 
-                    printf("Idle out\n");
-                    //#]
-                    rootState_subState = Poll;
-                    rootState_active = Poll;
-                    //#[ state Poll.(Entry) 
-                    printf("Poll in\n");
-                    //#]
-                    rootState_timeout = scheduleTimeout(1000, NULL);
-                    res = eventConsumed;
+                    //## transition 8 
+                    if(a)
+                        {
+                            //#[ state Idle.(Exit) 
+                            printf("Idle out\n");
+                            //#]
+                            rootState_subState = Poll;
+                            rootState_active = Poll;
+                            //#[ state Poll.(Entry) 
+                            printf("Poll in\n");
+                            //#]
+                            rootState_timeout = scheduleTimeout(1000, NULL);
+                            res = eventConsumed;
+                        }
                 }
             
         }
@@ -87,7 +96,14 @@ IOxfReactive::TakeEventStatus testS::rootState_processEvent() {
         // State Poll
         case Poll:
         {
-            if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
+            if(IS_EVENT_TYPE_OF(test_test_id))
+                {
+                    //#[ transition 7 
+                    printf("1111111111111111111111111111\n");
+                    //#]
+                    res = eventConsumed;
+                }
+            else if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
                 {
                     if(getCurrentEvent() == rootState_timeout)
                         {

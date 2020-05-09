@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.4 
-	Login		: Administrator
+	Login		: kqbi
 	Component	: TestComponent 
 	Configuration 	: TestConfig
 	Model Element	: test
-//!	Generated Date	: Sun, 15, Dec 2019  
+//!	Generated Date	: Mon, 4, May 2020  
 	File Path	: ..\..\untitled\test.h
 *********************************************************************/
 
@@ -14,6 +14,8 @@
 //## auto_generated
 #include <event.h>
 //## auto_generated
+#include <oxf.h>
+//## auto_generated
 class testS;
 
 //#[ ignore
@@ -22,6 +24,8 @@ class testS;
 #define evDestroy_test_id 28002
 
 #define evEnd_test_id 28003
+
+#define test_test_id 28004
 //#]
 
 //## package test
@@ -37,14 +41,12 @@ class evPoll : public OMEvent {
 public :
 
     //## auto_generated
-    evPoll(const std::string p_notify);
+    evPoll();
     
     ////    Framework operations    ////
     
     //## statechart_method
     virtual bool isTypeOf(const short id) const;
-
-    const std::string notify;
 };
 
 //## event evDestroy()
@@ -70,6 +72,21 @@ public :
 
     //## auto_generated
     evEnd();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event test()
+class test : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    test();
     
     ////    Framework operations    ////
     

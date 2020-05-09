@@ -17,7 +17,7 @@ public:
 
     ~OMMainDispatcher();
 
-    static OMMainDispatcher* Instance();
+    static OMMainDispatcher &Instance();
 
     void execute(IOxfEvent::Ptr& ev);
 

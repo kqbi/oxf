@@ -146,7 +146,7 @@ public :
     //## operation init()
     // Get the singleton
     //## operation instance()
-    static OMTimerManager *Instance();
+    static OMTimerManager &Instance();
 
     //## operation isExternalTimer() const
     bool isExternalTimer(void) const;

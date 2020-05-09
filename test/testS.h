@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.4 
-	Login		: Administrator
+	Login		: kqbi
 	Component	: TestComponent 
 	Configuration 	: TestConfig
 	Model Element	: testS
-//!	Generated Date	: Sun, 15, Dec 2019  
+//!	Generated Date	: Mon, 4, May 2020  
 	File Path	: ..\..\untitled\testS.h
 *********************************************************************/
 
@@ -19,6 +19,8 @@
 #include <state.h>
 //## auto_generated
 #include <event.h>
+//## auto_generated
+#include <oxf.h>
 //## package test
 
 //## class testS
@@ -47,11 +49,23 @@ protected :
     void cancelTimeouts();
     
     //## auto_generated
-    bool cancelTimeout(const IOxfTimeout::Ptr& arg);
+    bool cancelTimeout(const IOxfTimeout::Ptr &arg);
     
     ////    Framework operations    ////
     
     ////    Framework    ////
+
+public :
+
+    //## auto_generated
+    int getA() const;
+    
+    //## auto_generated
+    void setA(int p_a);
+
+protected :
+
+    int a;		//## attribute a
 
 public :
 

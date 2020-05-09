@@ -11,10 +11,10 @@ static void signalHandler(int signo) {
 }
 
 int main(int argc, char *argv[]) {
-    OXF::Instance()->Initialize();
+    OXF::Instance().Initialize();
     std::shared_ptr <testS> test = std::make_shared<testS>();
     test->startBehavior();
-    test->GEN(evPoll, "aa");
+    test->GEN(evPoll);
     if (signal(SIGINT, signalHandler) == SIG_ERR) {
         std::cerr << "Couldn't install signal handler for SIGINT" << std::endl;
         exit(-1);

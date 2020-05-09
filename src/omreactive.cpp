@@ -257,7 +257,7 @@ void OMReactive::setActiveContext(IOxfActive* context, bool activeInstance) {
     // Make sure we have a context
     if (getActiveContext() == 0) {
         // The fallback is that the object is dispatched by the system thread.
-        setActiveContext(OMMainDispatcher::Instance());
+        setActiveContext(&OMMainDispatcher::Instance());
     }
     //#]
 }
@@ -492,18 +492,12 @@ void OMReactive::runToCompletion(void) {
 
 std::shared_ptr<IOxfTimeout> OMReactive::scheduleTimeout(unsigned long delay, const char* targetStateName) {
     //#[ operation scheduleTimeout(unsigned long,Rhp_const_char_pt)
-    IOxfTimeout::Ptr timeout = 0;
-    OMTimerManager* sysTimer = OMTimerManager::Instance();
-    if (sysTimer) {
-        // schedule timeout
-        timeout = std::dynamic_pointer_cast<IOxfTimeout>(std::make_shared<OMTimeout>(std::dynamic_pointer_cast<IOxfReactive>(shared_from_this()),
-                                              *sysTimer, sysTimer->_ioc, delay, targetStateName));
-        if (timeout != NULL) {
-            // Delegating the request to timer
-
-            bool isSet = sysTimer->set(timeout);
-
-        }
+    // schedule timeout
+    IOxfTimeout::Ptr timeout = std::dynamic_pointer_cast<IOxfTimeout>(std::make_shared<OMTimeout>(std::dynamic_pointer_cast<IOxfReactive>(shared_from_this()),
+                                                                                 OMTimerManager::Instance(), OMTimerManager::Instance()._ioc, delay, targetStateName));
+    if (timeout != NULL) {
+        // Delegating the request to timer
+            bool isSet = OMTimerManager::Instance().set(timeout);
     }
     return timeout;
     //#]
