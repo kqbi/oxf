@@ -172,11 +172,10 @@ std::weak_ptr<IOxfReactive>& OMEvent::getDestination(void) {
 }
 
 void OMEvent::setDestination(const std::shared_ptr<IOxfReactive> &p_IOxfReactive) {
-    destination = p_IOxfReactive;
+    destination = std::dynamic_pointer_cast<IOxfReactive>(p_IOxfReactive);
 }
 
 void OMEvent::cleanUpRelations(void) {
-
 }
 
 

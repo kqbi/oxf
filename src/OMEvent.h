@@ -20,7 +20,7 @@
 
 //## class OMEvent
 #include "IOxfTimeout.h"
-
+#include <memory>
 //## auto_generated
 class IOxfReactive;
 
