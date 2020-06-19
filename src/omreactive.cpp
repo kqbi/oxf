@@ -589,8 +589,7 @@ bool OMReactive::sendEvent(const IOxfEvent::Ptr& ev) {
         IOxfActive* context = getActiveContext();
         if ((ev != NULL) && (context != NULL)) {
             ev->setDestination(shared_from_this());
-            boost::asio::post(((OMMainDispatcher*)context)->_ioc,
-                              boost::bind(&OMMainDispatcher::execute,
+            ((OMMainDispatcher*)context)->_strand.post(boost::bind(&OMMainDispatcher::execute,
                                           (OMMainDispatcher*)context,
                                           ev));
             result = true;

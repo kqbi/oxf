@@ -11,7 +11,6 @@
 class OMMainDispatcher : public IOxfActive
 {
 public:
-    typedef boost::asio::executor_work_guard<boost::asio::io_context::executor_type> io_context_work;
 
     OMMainDispatcher(boost::asio::io_context &ioc);
 
@@ -23,7 +22,7 @@ public:
 
     IOxfReactive::TakeEventStatus dispatch(IOxfEvent::Ptr& ev);
 
-    boost::asio::io_context &_ioc;
+    boost::asio::io_context::strand _strand;
 };
 
 #endif // OMMAINDISPATCHER_H

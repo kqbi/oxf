@@ -1,7 +1,7 @@
 #include "OMMainDispatcher.h"
 #include "OXFEventPoller.h"
 
-OMMainDispatcher::OMMainDispatcher(boost::asio::io_context &ioc) : _ioc(ioc) {
+OMMainDispatcher::OMMainDispatcher(boost::asio::io_context &ioc) : _strand(ioc) {
 }
 
 OMMainDispatcher::~OMMainDispatcher() {
