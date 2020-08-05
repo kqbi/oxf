@@ -1,11 +1,11 @@
-﻿project(oxf)
-cmake_minimum_required(VERSION 3.10)
+project(oxf)
+cmake_minimum_required(VERSION 2.8)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_BUILD_TYPE "Release")
 
 if (CMAKE_SYSTEM_NAME MATCHES "Linux")
     set(system linux)
-    set(THIRDPARTY "/home/vmns/thirdparty/Linux")
+    set(THIRDPARTY "/home/kqbi/3rdparty")
     set(BOOST_DATE_TIME_LIB libboost_date_time.a)
     set(BOOST_THREAD_LIB libboost_thread.a)
 elseif (CMAKE_SYSTEM_NAME MATCHES "Windows")
@@ -55,7 +55,7 @@ if (WIN32)
     set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} /MTd /Od /ZI")
     set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} /MT /O2")
 else (WIN32)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -fpermissive")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -fpermissive -std=c++11")
     set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -g -ggdb")
     set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3")
 endif (WIN32)
@@ -92,22 +92,4 @@ set_target_properties(${CMAKE_PROJECT_NAME}_static PROPERTIES OUTPUT_NAME "${CMA
 install(TARGETS ${CMAKE_PROJECT_NAME}_static ARCHIVE DESTINATION ${INSTALL_PATH_LIB})
 
 add_subdirectory(test)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
