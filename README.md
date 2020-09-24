@@ -6,7 +6,7 @@ win：
   用virtual studio打开oxf文件夹下的oxf.dsp即可  
 linux：
  切换linux分支，此分支为IBM的linux原版
- 却换到Share/LangCPP下使用 make -f linuxbuild.mak
+ 切换到Share/LangCPP下使用 make -f linuxbuild.mak
  
 c11：
   切换c11分支，使用CMakeLists.txt并依赖boost，附带简单例子，供参考
