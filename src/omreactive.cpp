@@ -190,12 +190,12 @@ IOxfReactive::TakeEventStatus OMReactive::handleEvent(IOxfEvent::Ptr& ev) {
             // the event guard is set -
             // use it to set mutual exclusion between Events and Triggered Operations
             // the m_eventGuard is set by the application when there is a guarded triggered operation
-            _mutex.lock();
+            //_mutex.lock();
             // actually handle the event
 
             status = processEvent(ev);
             // unlock the event guard
-            _mutex.unlock();
+            //_mutex.unlock();
 
             // result with a status which indicates that the item had reached a terminate connector
             if (shouldTerminate()) {
