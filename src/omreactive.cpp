@@ -28,6 +28,7 @@
 //## dependency OMTimeout
 #include "OMTimeout.h"
 #include "OMTimerManager.h"
+#include "OXFEventPoller.h"
 //## dependency OMTimerManager
 //#include "OMTimerManager.h"
 // for backward compatibility mode
@@ -64,7 +65,7 @@ bool OMReactive::globalSupportRestartBehavior = false;
 
 OMReactive::OMReactive(IOxfActive* context) : state(0U), active(false), busy(false),
     supportDirectDeletion(false), supportRestartBehavior(false), activeContext(0),
-    rootState(0) {
+    rootState(0),_strand(OXFEventPollerPool::Instance()._ioc) {
     //#[ operation OMReactive(IOxfActive)
     OMReactive::setActiveContext(context, false);
     setShouldDelete(true);
@@ -589,7 +590,8 @@ bool OMReactive::sendEvent(const IOxfEvent::Ptr& ev) {
         IOxfActive* context = getActiveContext();
         if ((ev != NULL) && (context != NULL)) {
             ev->setDestination(shared_from_this());
-            ((OMMainDispatcher*)context)->_strand.post(boost::bind(&OMMainDispatcher::execute,
+
+            _strand.post(boost::bind(&OMMainDispatcher::execute,
                                           (OMMainDispatcher*)context,
                                           ev));
             result = true;

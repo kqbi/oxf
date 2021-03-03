@@ -8,21 +8,19 @@
 #include "IOxfActive.h"
 #include "OMEventQueue.h"
 
-class OMMainDispatcher : public IOxfActive
-{
+class OMMainDispatcher : public IOxfActive {
 public:
 
-    OMMainDispatcher(boost::asio::io_context &ioc);
+    OMMainDispatcher();
 
     ~OMMainDispatcher();
 
     static OMMainDispatcher &Instance();
 
-    void execute(IOxfEvent::Ptr& ev);
+    void execute(IOxfEvent::Ptr &ev);
 
-    IOxfReactive::TakeEventStatus dispatch(IOxfEvent::Ptr& ev);
+    IOxfReactive::TakeEventStatus dispatch(IOxfEvent::Ptr &ev);
 
-    boost::asio::io_context::strand _strand;
 };
 
 #endif // OMMAINDISPATCHER_H

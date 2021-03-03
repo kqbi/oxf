@@ -10,9 +10,9 @@ if (CMAKE_SYSTEM_NAME MATCHES "Linux")
     set(BOOST_THREAD_LIB libboost_thread.a)
 elseif (CMAKE_SYSTEM_NAME MATCHES "Windows")
     set(system win)    
-    set(THIRDPARTY "D:/work/projects/Thirdparty")
-    set(BOOST_DATE_TIME_LIB libboost_date_time-vc141-mt-s-x64-1_72.lib)
-    set(BOOST_THREAD_LIB libboost_thread-vc141-mt-s-x64-1_72.lib)
+    set(THIRDPARTY "D:/work/projects/3rdparty")
+    set(BOOST_DATE_TIME_LIB libboost_date_time-vc141-mt-x64-1_75.lib)
+    set(BOOST_THREAD_LIB libboost_thread-vc141-mt-x64-1_75.lib)
 endif ()
 
 #加载自定义模块
