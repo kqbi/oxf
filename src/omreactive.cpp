@@ -176,7 +176,7 @@ void OMReactive::endBehavior() {
     //#]
 }
 
-IOxfReactive::TakeEventStatus OMReactive::handleEvent(IOxfEvent::Ptr& ev) {
+IOxfReactive::TakeEventStatus OMReactive::handleEvent(IOxfEvent::Ptr ev) {
     //#[ operation handleEvent(IOxfEvent)
     IOxfReactive::TakeEventStatus status = eventNotConsumed;
     
@@ -591,9 +591,13 @@ bool OMReactive::sendEvent(const IOxfEvent::Ptr& ev) {
         if ((ev != NULL) && (context != NULL)) {
             ev->setDestination(shared_from_this());
 
-            _strand.dispatch(boost::bind(&OMMainDispatcher::execute,
-                                          (OMMainDispatcher*)context,
-                                          ev));
+//            _strand.dispatch(std::bind(&OMMainDispatcher::execute,
+//                                          (OMMainDispatcher*)context,
+//                                          ev));
+
+            _strand.dispatch([=](){
+                handleEvent(ev);
+                });
             result = true;
         }
     }

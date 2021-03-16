@@ -93,7 +93,7 @@ public :
     // Argument IOxfEvent* ev :
     // The event to handle
     //## operation handleEvent(IOxfEvent)
-    virtual TakeEventStatus handleEvent(IOxfEvent::Ptr& ev) = 0;
+    virtual TakeEventStatus handleEvent(IOxfEvent::Ptr ev) = 0;
     
     // signal that a null transition was taken (called by the generated code)
     //## operation popNullTransition()

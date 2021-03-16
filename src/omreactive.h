@@ -123,7 +123,7 @@ public :
     // Argument IOxfEvent* ev :
     // The event to handle
     //## operation handleEvent(IOxfEvent)
-    virtual IOxfReactive::TakeEventStatus handleEvent(IOxfEvent::Ptr &ev);
+    virtual IOxfReactive::TakeEventStatus handleEvent(IOxfEvent::Ptr ev);
 
     // This function is called if event is not put into queue for some reason.
     // It may be overridden in user reactive class to provide processing of this situation.
