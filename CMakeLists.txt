@@ -5,7 +5,7 @@ set(CMAKE_BUILD_TYPE "Release")
 
 if (CMAKE_SYSTEM_NAME MATCHES "Linux")
     set(system linux)
-    set(THIRDPARTY "/home/kqbi/3rdparty")
+    set(THIRDPARTY "/home/vmns/3rdparty")
     set(BOOST_DATE_TIME_LIB libboost_date_time.a)
     set(BOOST_THREAD_LIB libboost_thread.a)
 elseif (CMAKE_SYSTEM_NAME MATCHES "Windows")
