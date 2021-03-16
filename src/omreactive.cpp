@@ -595,7 +595,7 @@ bool OMReactive::sendEvent(const IOxfEvent::Ptr& ev) {
 //                                          (OMMainDispatcher*)context,
 //                                          ev));
 
-            _strand.dispatch([=](){
+            _strand.post([=](){
                 handleEvent(ev);
                 });
             result = true;
