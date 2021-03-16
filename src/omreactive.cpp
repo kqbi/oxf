@@ -591,7 +591,7 @@ bool OMReactive::sendEvent(const IOxfEvent::Ptr& ev) {
         if ((ev != NULL) && (context != NULL)) {
             ev->setDestination(shared_from_this());
 
-            _strand.post(boost::bind(&OMMainDispatcher::execute,
+            _strand.dispatch(boost::bind(&OMMainDispatcher::execute,
                                           (OMMainDispatcher*)context,
                                           ev));
             result = true;
