@@ -100,7 +100,7 @@ int SockUtil::setCloExec(int fd, bool on) {
 #if !defined(_WIN32)
     int flags = fcntl(fd, F_GETFD);
     if (flags == -1) {
-        TraceL << "设置 FD_CLOEXEC 失败!";
+        std::cout << "设置 FD_CLOEXEC 失败!" << std::endl;
         return -1;
     }
     if (on) {
@@ -111,7 +111,7 @@ int SockUtil::setCloExec(int fd, bool on) {
     }
     int ret = fcntl(fd, F_SETFD, flags);
     if (ret == -1) {
-        TraceL << "设置 FD_CLOEXEC 失败!";
+        std::cout << "设置 FD_CLOEXEC 失败!" << std::endl;
         return -1;
     }
     return ret;
@@ -388,11 +388,11 @@ void for_each_netAdapter_posix(FUN &&fun){ //type: struct ifreq *
     ifconf.ifc_buf = buf;
     int sockfd = ::socket(AF_INET, SOCK_DGRAM, 0);
     if (sockfd < 0) {
-        WarnL << "创建套接字失败:" << get_uv_errmsg(true);
+        std::cout << "创建套接字失败:" << get_uv_errmsg(true) << std::endl;
         return;
     }
     if (-1 == ioctl(sockfd, SIOCGIFCONF, &ifconf)) {    //获取所有接口信息
-        WarnL << "ioctl 失败:" << get_uv_errmsg(true);
+        std::cout << "ioctl 失败:" << get_uv_errmsg(true) << std::endl;
         close(sockfd);
         return;
     }
@@ -686,13 +686,13 @@ string SockUtil::get_ifr_mask(const char* ifrName) {
     struct ifreq ifr_mask;
     sockFd = socket(AF_INET, SOCK_STREAM, 0);
     if (sockFd == -1) {
-        WarnL << "创建套接字失败:" << get_uv_errmsg(true);
+        std::cout << "创建套接字失败:" << get_uv_errmsg(true) << std::endl;
         return "";
     }
     memset(&ifr_mask, 0, sizeof(ifr_mask));
     strncpy(ifr_mask.ifr_name, ifrName, sizeof(ifr_mask.ifr_name) - 1);
     if ((ioctl(sockFd, SIOCGIFNETMASK, &ifr_mask)) < 0) {
-        WarnL << "ioctl 失败:" << ifrName << " " << get_uv_errmsg(true);
+        std::cout << "ioctl 失败:" << ifrName << " " << get_uv_errmsg(true) << std::endl;
         close(sockFd);
         return "";
     }
@@ -731,13 +731,13 @@ string SockUtil::get_ifr_brdaddr(const char *ifrName){
     struct ifreq ifr_mask;
     sockFd = socket( AF_INET, SOCK_STREAM, 0);
     if (sockFd == -1) {
-        WarnL << "创建套接字失败:" << get_uv_errmsg(true);
+        std::cout << "创建套接字失败:" << get_uv_errmsg(true) << std::endl;
         return "";
     }
     memset(&ifr_mask, 0, sizeof(ifr_mask));
     strncpy(ifr_mask.ifr_name, ifrName, sizeof(ifr_mask.ifr_name) - 1);
     if ((ioctl(sockFd, SIOCGIFBRDADDR, &ifr_mask)) < 0) {
-        WarnL << "ioctl 失败:" << get_uv_errmsg(true);
+        std::cout << "ioctl 失败:" << get_uv_errmsg(true) << std::endl;
         close(sockFd);
         return "";
     }
