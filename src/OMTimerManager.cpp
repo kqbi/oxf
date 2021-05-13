@@ -34,7 +34,6 @@
 //## dependency OMTimeout
 #include "OMTimeout.h"
 #include "OMMainDispatcher.h"
-#include "OXFEventPoller.h"
 
 //## package Design::oxf::Services::Time::TimeManagement
 
@@ -46,7 +45,7 @@ bool OMTimerManager::allowDestroy = true;
 
 bool OMTimerManager::externalTimer(false);
 
-OMTimerManager::OMTimerManager(boost::asio::io_context &ioc) : _ioc(ioc), time_(0U),
+OMTimerManager::OMTimerManager() : time_(0U),
                                                                suspended(false), nonIdleThreadCounter(0),
                                                                tickStart(0U) {
     //#[ operation OMTimerManager(unsigned long,uint32_t,bool)
@@ -170,7 +169,7 @@ void OMTimerManager::goNextAndPost(void) {
 
 OMTimerManager &OMTimerManager::Instance() {
     //#[ operation instance()
-    static OMTimerManager manager(OXFEventPollerPool::Instance()._ioc);
+    static OMTimerManager manager;
     return manager;
     //#]
 }
@@ -220,13 +219,6 @@ void OMTimerManager::action(IOxfTimeout::Ptr &timeout) {
             timeout.reset();
         }
     }
-    //#]
-}
-
-OMTimerManager *OMTimerManager::getStaticTimerManager(boost::asio::io_context &ioc) {
-    //#[ operation getStaticTimerManager(unsigned long,uint32_t,bool,bool)
-    static OMTimerManager theTimerManager(ioc);
-    return &theTimerManager;
     //#]
 }
 

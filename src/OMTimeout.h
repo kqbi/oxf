@@ -19,8 +19,9 @@
 #define OMTimeout_H
 
 //## class OMTimeout
+#include <Poller/Timer.h>
 #include "OMEvent.h"
-#include <boost/asio.hpp>
+#include "Poller/EventPoller.h"
 //## auto_generated
 class IOxfReactive;
 
@@ -44,7 +45,7 @@ public :
     // Argument const OMHandle* aomArg(theState) :
     // The destination state name (for design level debugging)
     //## operation OMTimeout(IOxfReactive,unsigned long,OMHandle)
-    OMTimeout(std::shared_ptr<IOxfReactive> pdest, OMTimerManager& tm, boost::asio::io_context& io, unsigned long delay, const char* theState);
+    OMTimeout(std::shared_ptr<IOxfReactive> pdest, OMTimerManager& tm, oxf::EventPoller::Ptr &poller, unsigned long delay, const char* theState);
     
 //    // Initialize a timeout
 //    //## operation OMTimeout()
@@ -120,7 +121,9 @@ public :
     ////    Attributes    ////
     void action();
 
-    boost::asio::deadline_timer _timer;
+    oxf::EventPoller::Ptr _poller;
+
+    std::shared_ptr<oxf::Timer> _timer;
 private :
 
     OMTimerManager& _tm;

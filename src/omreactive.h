@@ -28,7 +28,7 @@
 #include "IOxfReactive.h"
 //## dependency StatechartMacros
 #include "OXFStatechartMacros.h"
-#include <boost/asio.hpp>
+#include <Poller/EventPoller.h>
 #include <mutex>
 
 //## auto_generated
@@ -497,7 +497,7 @@ private :
 public :
 
     ////    Relations and components    ////
-    boost::asio::io_context::strand _strand;
+    oxf::EventPoller::Ptr _poller;
 
 private :
 

@@ -28,11 +28,9 @@
 //## dependency OMTimeout
 #include "OMTimeout.h"
 #include "OMTimerManager.h"
-#include "OXFEventPoller.h"
 //## dependency OMTimerManager
 //#include "OMTimerManager.h"
 // for backward compatibility mode
-#include <boost/bind.hpp>
 #include <memory>
 //## dependency OXF
 //#include "oxf.h"
@@ -63,9 +61,10 @@ const uint32_t OMReactive::destroyEventResentStateMask = 0x00200000UL;
 
 bool OMReactive::globalSupportRestartBehavior = false;
 
-OMReactive::OMReactive(IOxfActive* context) : state(0U), active(false), busy(false),
-    supportDirectDeletion(false), supportRestartBehavior(false), activeContext(0),
-    rootState(0),_strand(OXFEventPollerPool::Instance()._ioc) {
+OMReactive::OMReactive(IOxfActive *context) : state(0U), active(false), busy(false),
+                                              supportDirectDeletion(false), supportRestartBehavior(false),
+                                              activeContext(0),
+                                              rootState(0), _poller(oxf::EventPollerPool::Instance().getPoller()) {
     //#[ operation OMReactive(IOxfActive)
     OMReactive::setActiveContext(context, false);
     setShouldDelete(true);
@@ -95,7 +94,7 @@ bool OMReactive::IsCurrentEvent(IOxfEvent::ID eventId) const {
     //#[ operation IsCurrentEvent(ID) const
     auto ev = _currentEvent.lock();
     bool status;
-    
+
     // ev might be null during destruction
     if (!ev) {
         status = false;
@@ -106,7 +105,7 @@ bool OMReactive::IsCurrentEvent(IOxfEvent::ID eventId) const {
     //#]
 }
 
-void OMReactive::cancel(IOxfTimeout::Ptr& timeout) {
+void OMReactive::cancel(IOxfTimeout::Ptr &timeout) {
     //#[ operation cancel(IOxfTimeout)
     if (timeout) {
         timeout->cancel();
@@ -162,8 +161,7 @@ void OMReactive::destroy(void) {
         }
     }
 #endif
-    if (shouldDelete())
-    {
+    if (shouldDelete()) {
         // forced termination
         shared_from_this().reset();
     }
@@ -179,7 +177,7 @@ void OMReactive::endBehavior() {
 IOxfReactive::TakeEventStatus OMReactive::handleEvent(IOxfEvent::Ptr ev) {
     //#[ operation handleEvent(IOxfEvent)
     IOxfReactive::TakeEventStatus status = eventNotConsumed;
-    
+
     if (isUnderDestruction()) {
         // in termination process
         status = handleEventUnderDestruction(ev);
@@ -211,7 +209,7 @@ IOxfReactive::TakeEventStatus OMReactive::handleEvent(IOxfEvent::Ptr ev) {
 void OMReactive::handleEventNotQueued(IOxfEvent::Ptr &ev) {
     //#[ operation handleEventNotQueued(IOxfEvent)
     if (ev) {
-        ev.reset();	// shouldDeleteAfterConsume is tested inside of the destroy function
+        ev.reset();    // shouldDeleteAfterConsume is tested inside of the destroy function
     } else {
         // memory allocation failed for event-there is nothing to do here
     }
@@ -230,26 +228,26 @@ void OMReactive::pushNullTransition(void) {
     //#]
 }
 
-bool OMReactive::send(const IOxfEvent::Ptr& ev) {
+bool OMReactive::send(const IOxfEvent::Ptr &ev) {
     //#[ operation send(IOxfEvent,IOxfEventGenerationParams)
     bool retCode = false;
     if (ev) {
         retCode = sendEvent(ev);
         if (retCode == false) {
-            handleEventNotQueued(const_cast<IOxfEvent::Ptr&>(ev));
+            handleEventNotQueued(const_cast<IOxfEvent::Ptr &>(ev));
         }
     }
     return retCode;
     //#]
 }
 
-void OMReactive::setActiveContext(IOxfActive* context) {
+void OMReactive::setActiveContext(IOxfActive *context) {
     //#[ operation setActiveContext(IOxfActive)
     activeContext = context;
     //#]
 }
 
-void OMReactive::setActiveContext(IOxfActive* context, bool activeInstance) {
+void OMReactive::setActiveContext(IOxfActive *context, bool activeInstance) {
     //#[ operation setActiveContext(IOxfActive,bool)
     if (context != getActiveContext()) {
         setActive(activeInstance);
@@ -272,7 +270,7 @@ bool OMReactive::shouldSupportDirectDeletion(void) const {
 bool OMReactive::startBehavior(void) {
     //#[ operation startBehavior()
     bool status;
-    
+
     if (isUnderDestruction()) {
         status = false;
     } else {
@@ -281,7 +279,7 @@ bool OMReactive::startBehavior(void) {
 #endif
 
         if ((isBehaviorStarted() == false) ||
-                (restartBehaviorEnabled() == true)) {
+            (restartBehaviorEnabled() == true)) {
             setBehaviorStarted();
             // take the default transition
             rootState_entDef();
@@ -310,22 +308,22 @@ bool OMReactive::startBehavior(void) {
     //#]
 }
 
-void OMReactive::handleNotConsumed(IOxfEvent::Ptr& /*ev*/, IOxfReactive::EventNotConsumedReason /*reason*/) {
+void OMReactive::handleNotConsumed(IOxfEvent::Ptr & /*ev*/, IOxfReactive::EventNotConsumedReason /*reason*/) {
     //#[ operation handleNotConsumed(IOxfEvent,EventNotConsumedReason)
     //#]
 }
 
-void OMReactive::handleTimeoutSetFailure(IOxfTimeout* timeout) {
+void OMReactive::handleTimeoutSetFailure(IOxfTimeout *timeout) {
     //#[ operation handleTimeoutSetFailure(IOxfTimeout)
     delete timeout;
     //#]
 }
 
-void OMReactive::handleTrigger(IOxfEvent::Ptr& ev) {
+void OMReactive::handleTrigger(IOxfEvent::Ptr &ev) {
     //#[ operation handleTrigger(IOxfEvent)
     // mark as triggered operation
     ev->setSynchronous(true);
-    (void)processEvent(ev);
+    (void) processEvent(ev);
     // deleting the item if it reached a terminate connector
     if ((shouldTerminate() == true) && (shouldDelete() == true)) {
         delete this;
@@ -351,7 +349,7 @@ bool OMReactive::isUnderDestruction(void) const {
     //#]
 }
 
-IOxfReactive::TakeEventStatus OMReactive::processEvent(IOxfEvent::Ptr& ev) {
+IOxfReactive::TakeEventStatus OMReactive::processEvent(IOxfEvent::Ptr &ev) {
     //#[ operation processEvent(IOxfEvent)
     // the first received event, needs to perform runToCompletion(),
     // if in startBehavior() shouldCompleteStartBehavior() returned true.
@@ -364,7 +362,7 @@ IOxfReactive::TakeEventStatus OMReactive::processEvent(IOxfEvent::Ptr& ev) {
         // end protection from recursive Triggered Operation calls
         setBusy(false);
     }
-    
+
     // check that this is not the dummy OMStartBehaviorEvent event
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
     if (ev->getId() != OMStartBehaviorEventId) {
@@ -421,7 +419,7 @@ void OMReactive::rootState_entDef(void) {
 IOxfReactive::TakeEventStatus OMReactive::rootState_processEvent(void) {
     //#[ operation rootState_processEvent()
     IOxfReactive::TakeEventStatus status = eventNotConsumed;
-    
+
     if (isUnderDestruction()) {
         // Destruction had begun, so no more dispatching.
 #ifdef _OMINSTRUMENT
@@ -433,7 +431,7 @@ IOxfReactive::TakeEventStatus OMReactive::rootState_processEvent(void) {
             AnimServices::notifyError("\nEvent ignored - Instance has no root state\n\n");
 #endif
         } else {
-            if (rootState->active != 0){
+            if (rootState->active != 0) {
                 status = rootState->active->handleEvent();
             } else {
 #ifdef _OMINSTRUMENT
@@ -491,14 +489,16 @@ void OMReactive::runToCompletion(void) {
     //#]
 }
 
-std::shared_ptr<IOxfTimeout> OMReactive::scheduleTimeout(unsigned long delay, const char* targetStateName) {
+std::shared_ptr<IOxfTimeout> OMReactive::scheduleTimeout(unsigned long delay, const char *targetStateName) {
     //#[ operation scheduleTimeout(unsigned long,Rhp_const_char_pt)
     // schedule timeout
-    IOxfTimeout::Ptr timeout = std::dynamic_pointer_cast<IOxfTimeout>(std::make_shared<OMTimeout>(std::dynamic_pointer_cast<IOxfReactive>(shared_from_this()),
-                                                                                 OMTimerManager::Instance(), OMTimerManager::Instance()._ioc, delay, targetStateName));
+    IOxfTimeout::Ptr timeout = std::dynamic_pointer_cast<IOxfTimeout>(
+            std::make_shared<OMTimeout>(std::dynamic_pointer_cast<IOxfReactive>(shared_from_this()),
+                                        OMTimerManager::Instance(), _poller, delay,
+                                        targetStateName));
     if (timeout != NULL) {
         // Delegating the request to timer
-            bool isSet = OMTimerManager::Instance().set(timeout);
+        bool isSet = OMTimerManager::Instance().set(timeout);
     }
     return timeout;
     //#]
@@ -510,7 +510,7 @@ void OMReactive::setBehaviorStarted(void) {
     //#]
 }
 
-void OMReactive::setCurrentEvent(IOxfEvent::Ptr& ev) {
+void OMReactive::setCurrentEvent(IOxfEvent::Ptr &ev) {
     //#[ operation setCurrentEvent(IOxfEvent)
     _currentEvent = ev;
     //#]
@@ -540,10 +540,10 @@ inline bool OMReactive::shouldTerminate(void) const {
     //#]
 }
 
-IOxfReactive::TakeEventStatus OMReactive::handleEventUnderDestruction(IOxfEvent::Ptr& ev) {
+IOxfReactive::TakeEventStatus OMReactive::handleEventUnderDestruction(IOxfEvent::Ptr &ev) {
     //#[ operation handleEventUnderDestruction(IOxfEvent)
     if ((ev != NULL) &&
-            ev->isTypeOf(OMReactiveTerminationEventId)) {
+        ev->isTypeOf(OMReactiveTerminationEventId)) {
         if (shouldDelete()) {
             if (isDestroyEventResent()) {
                 // second consumption
@@ -576,7 +576,7 @@ bool OMReactive::isDestroyEventResent(void) const {
     //#]
 }
 
-bool OMReactive::sendEvent(const IOxfEvent::Ptr& ev) {
+bool OMReactive::sendEvent(const IOxfEvent::Ptr &ev) {
     //#[ operation sendEvent(IOxfEvent,IOxfEventGenerationParams)
     bool result = false;
 
@@ -587,17 +587,20 @@ bool OMReactive::sendEvent(const IOxfEvent::Ptr& ev) {
 
     } else {
         // Set the Receiver of the event
-        IOxfActive* context = getActiveContext();
+        IOxfActive *context = getActiveContext();
         if ((ev != NULL) && (context != NULL)) {
             ev->setDestination(shared_from_this());
 
 //            _strand.dispatch(std::bind(&OMMainDispatcher::execute,
 //                                          (OMMainDispatcher*)context,
 //                                          ev));
-
-            _strand.post([=](){
-                handleEvent(ev);
-                });
+            std::weak_ptr<OMReactive> weakSelf = std::dynamic_pointer_cast<OMReactive>(shared_from_this());
+            _poller->async([weakSelf, ev]() {
+                auto strongSelf = weakSelf.lock();
+                if (strongSelf)
+                    strongSelf->handleEvent(ev);
+                return false;
+            });
             result = true;
         }
     }
@@ -655,7 +658,7 @@ void OMReactive::setGlobalSupportRestartBehavior(bool p_globalSupportRestartBeha
     globalSupportRestartBehavior = p_globalSupportRestartBehavior;
 }
 
-IOxfActive* OMReactive::getActiveContext(void) const {
+IOxfActive *OMReactive::getActiveContext(void) const {
     return activeContext;
 }
 
@@ -681,10 +684,10 @@ void OMReactive::setBusy(bool p_busy) {
 }
 
 void OMReactive::cleanUpRelations(void) {
-    if(activeContext != NULL) {
+    if (activeContext != NULL) {
         activeContext = NULL;
     }
-    if(rootState != NULL) {
+    if (rootState != NULL) {
         rootState = NULL;
     }
 }

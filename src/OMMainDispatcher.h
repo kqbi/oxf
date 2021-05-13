@@ -3,8 +3,6 @@
 
 #include "IOxfEvent.h"
 #include <queue>
-#include <boost/thread.hpp>
-#include <boost/asio.hpp>
 #include "IOxfActive.h"
 #include "OMEventQueue.h"
 

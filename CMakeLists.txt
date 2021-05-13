@@ -6,13 +6,9 @@ set(CMAKE_BUILD_TYPE "Release")
 if (CMAKE_SYSTEM_NAME MATCHES "Linux")
     set(system linux)
     set(THIRDPARTY "/home/vmns/3rdparty")
-    set(BOOST_DATE_TIME_LIB libboost_date_time.a)
-    set(BOOST_THREAD_LIB libboost_thread.a)
 elseif (CMAKE_SYSTEM_NAME MATCHES "Windows")
     set(system win)    
     set(THIRDPARTY "D:/work/projects/3rdparty")
-    set(BOOST_DATE_TIME_LIB libboost_date_time-vc141-mt-x64-1_75.lib)
-    set(BOOST_THREAD_LIB libboost_thread-vc141-mt-x64-1_75.lib)
 endif ()
 
 #加载自定义模块
@@ -40,15 +36,6 @@ endif()
 aux_source_directory(src SRC_LIST)
 #安装头文件至系统目录
 install(DIRECTORY src DESTINATION ${INSTALL_PATH_INCLUDE} FILES_MATCHING PATTERN "*.h")
-
-
-#boost
-set(BOOST_ROOT_PATH ${THIRDPARTY}/boost)
-set(BOOST_INCLUDE_PATH ${BOOST_ROOT_PATH}/include)
-set(BOOST_LIB_PATH ${BOOST_ROOT_PATH}/lib/${system}/${platform})
-INCLUDE_DIRECTORIES(${BOOST_INCLUDE_PATH})
-link_directories(${BOOST_LIB_PATH})
-list(APPEND LINK_LIB_LIST ${BOOST_DATE_TIME_LIB} ${BOOST_THREAD_LIB})
 
 if (WIN32)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  /Zc:sizedDealloc- /MP /wd4430")
@@ -84,8 +71,10 @@ endif ()
 #    install(TARGETS ${CMAKE_PROJECT_NAME}_shared  ARCHIVE DESTINATION ${INSTALL_PATH_LIB} LIBRARY DESTINATION ${INSTALL_PATH_LIB})
 #endif()
 
+file(GLOB OTHER_LIST src/*/*.h src/*/*.cpp)
+
 #编译静态库
-add_library(${CMAKE_PROJECT_NAME}_static STATIC ${SRC_LIST})
+add_library(${CMAKE_PROJECT_NAME}_static STATIC ${SRC_LIST} ${OTHER_LIST})
 
 set_target_properties(${CMAKE_PROJECT_NAME}_static PROPERTIES OUTPUT_NAME "${CMAKE_PROJECT_NAME}")
 #安装静态库至系统目录

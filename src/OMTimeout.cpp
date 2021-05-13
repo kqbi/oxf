@@ -36,8 +36,8 @@
 #include "OMTimerManager.h"
 //## package Design::oxf::Core::CoreImplementation
 
-OMTimeout::OMTimeout(std::shared_ptr<IOxfReactive> pdest, OMTimerManager& tm, boost::asio::io_context& io, unsigned long delay, const char* theState
-) : OMEvent(OMTimeoutEventId, pdest), _tm(tm), _timer(io), canceled(false), delayTime(0) , dueTime(0) , state(0) {
+OMTimeout::OMTimeout(std::shared_ptr<IOxfReactive> pdest, OMTimerManager& tm, oxf::EventPoller::Ptr &poller, unsigned long delay, const char* theState
+) : OMEvent(OMTimeoutEventId, pdest), _tm(tm), _poller(poller), _timer(nullptr), canceled(false), delayTime(0) , dueTime(0) , state(0) {
     //#[ operation OMTimeout(IOxfReactive,unsigned long,OMHandle)
     delayTime = delay;
     state = theState;
@@ -79,18 +79,18 @@ void OMTimeout::cancel(void) {
 }
 
 void OMTimeout::action() {
-   _timer.expires_from_now(boost::posix_time::milliseconds(delayTime));
-   std::weak_ptr<IOxfTimeout> weakSelf = std::dynamic_pointer_cast<IOxfTimeout>(shared_from_this());
-   _timer.async_wait([weakSelf](const boost::system::error_code&) {    //使用lambda表达式
-       auto timeout = weakSelf.lock();
-       if (timeout) {
-           if (timeout->isCanceled()) {
-               (std::dynamic_pointer_cast<OMTimeout>(timeout))->_tm.remove(timeout);
-           } else {
-               (std::dynamic_pointer_cast<OMTimeout>(timeout))->_tm.action(timeout);
-           }
-       }
-   });
+    std::weak_ptr<IOxfTimeout> weakSelf = std::dynamic_pointer_cast<IOxfTimeout>(shared_from_this());
+    _timer = std::make_shared<oxf::Timer>(delayTime/1000, [weakSelf](){
+        auto timeout = weakSelf.lock();
+        if (timeout) {
+            if (timeout->isCanceled()) {
+                (std::dynamic_pointer_cast<OMTimeout>(timeout))->_tm.remove(timeout);
+            } else {
+                (std::dynamic_pointer_cast<OMTimeout>(timeout))->_tm.action(timeout);
+            }
+        }
+        return false;
+    },_poller);
 }
 
 OMTimeout& OMTimeout::operator =(const OMTimeout& tm) {

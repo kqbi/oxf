@@ -18,8 +18,6 @@
 #ifndef OMTimerManager_H
 #define OMTimerManager_H
 
-#include <boost/asio.hpp>
-#include <boost/thread.hpp>
 //## auto_generated
 #include "OXFTimeManagement.h"
 //## class OMTimerManager
@@ -76,7 +74,7 @@ public :
     // Argument bool isRealTimeModel = true :
     // Real-time vs. simulated-time mode
     //## operation OMTimerManager(unsigned long,Rhp_uint32_t,bool)
-    OMTimerManager(boost::asio::io_context &ioc);
+    OMTimerManager();
 
 
 private :
@@ -187,10 +185,6 @@ public :
 
 private :
 
-    // return a static instance of the timer manager
-    //## operation getStaticTimerManager()
-    static OMTimerManager *getStaticTimerManager(boost::asio::io_context &ioc);
-
     // simulated time/instrumentation tick
     //## operation goNext()
     void goNext(void);
@@ -252,14 +246,9 @@ public :
     //## auto_generated
     static void setExternalTimer(bool p_externalTimer);
 
-    ////    Attributes    ////
-    boost::asio::io_context &_ioc;
-
 private :
 
     std::size_t _pollSize;
-
-    std::vector<boost::shared_ptr<boost::thread> > _threads;
 
     OMEventQueue _timeouts;
 
