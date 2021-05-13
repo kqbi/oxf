@@ -292,7 +292,7 @@ void EventPoller::runLoop(bool blocked,bool regist_self) {
                 try {
                     (*cb)(toPoller(ev.events));
                 } catch (std::exception &ex) {
-                    ErrorL << "EventPoller执行事件回调捕获到异常:" << ex.what();
+                    std::cout << "EventPoller执行事件回调捕获到异常:" << ex.what() << std::endl;
                 }
             }
         }
