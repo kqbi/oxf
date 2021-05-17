@@ -600,7 +600,7 @@ bool OMReactive::sendEvent(const IOxfEvent::Ptr &ev) {
                 if (strongSelf)
                     strongSelf->handleEvent(ev);
                 return false;
-            });
+            },false);
             result = true;
         }
     }

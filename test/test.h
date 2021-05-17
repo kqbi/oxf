@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 8.4 
+	Rhapsody	: 9.0.1 
 	Login		: kqbi
 	Component	: TestComponent 
 	Configuration 	: TestConfig
 	Model Element	: test
-//!	Generated Date	: Mon, 4, May 2020  
+//!	Generated Date	: Mon, 17, May 2021  
 	File Path	: ..\..\untitled\test.h
 *********************************************************************/
 
@@ -26,6 +26,8 @@ class testS;
 #define evEnd_test_id 28003
 
 #define test_test_id 28004
+
+#define evRun_test_id 28005
 //#]
 
 //## package test
@@ -87,6 +89,21 @@ public :
 
     //## auto_generated
     test();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evRun()
+class evRun : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evRun();
     
     ////    Framework operations    ////
     

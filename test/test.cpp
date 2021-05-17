@@ -1,10 +1,10 @@
 /********************************************************************
-	Rhapsody	: 8.4 
+	Rhapsody	: 9.0.1 
 	Login		: kqbi
 	Component	: TestComponent 
 	Configuration 	: TestConfig
 	Model Element	: test
-//!	Generated Date	: Mon, 4, May 2020  
+//!	Generated Date	: Mon, 17, May 2021  
 	File Path	: ..\..\untitled\test.cpp
 *********************************************************************/
 
@@ -50,6 +50,15 @@ test::test() {
 
 bool test::isTypeOf(const short id) const {
     return (test_test_id==id);
+}
+
+//## event evRun()
+evRun::evRun() {
+    setId(evRun_test_id);
+}
+
+bool evRun::isTypeOf(const short id) const {
+    return (evRun_test_id==id);
 }
 
 /*********************************************************************

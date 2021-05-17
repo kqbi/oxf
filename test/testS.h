@@ -1,10 +1,10 @@
 /*********************************************************************
-	Rhapsody	: 8.4 
+	Rhapsody	: 9.0.1 
 	Login		: kqbi
 	Component	: TestComponent 
 	Configuration 	: TestConfig
 	Model Element	: testS
-//!	Generated Date	: Mon, 4, May 2020  
+//!	Generated Date	: Mon, 17, May 2021  
 	File Path	: ..\..\untitled\testS.h
 *********************************************************************/
 
@@ -57,6 +57,9 @@ protected :
 
 public :
 
+    //## operation registerTest()
+    void registerTest();
+    
     //## auto_generated
     int getA() const;
     
@@ -86,9 +89,19 @@ public :
     //## statechart_method
     inline bool terminationstate_3_IN() const;
     
-    // state_5:
+    // Run:
     //## statechart_method
-    inline bool state_5_IN() const;
+    inline bool Run_IN() const;
+    
+    //## statechart_method
+    void Run_entDef();
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus Run_handleEvent();
+    
+    // Register:
+    //## statechart_method
+    inline bool Register_IN() const;
     
     // Poll:
     //## statechart_method
@@ -108,15 +121,18 @@ protected :
     enum testS_Enum {
         OMNonState = 0,
         terminationstate_3 = 1,
-        state_5 = 2,
-        Poll = 3,
-        Idle = 4,
-        End = 5
+        Run = 2,
+        Register = 3,
+        Poll = 4,
+        Idle = 5,
+        End = 6
     };
     
     int rootState_subState;
     
     int rootState_active;
+    
+    int Run_subState;
     
     std::shared_ptr<IOxfTimeout> rootState_timeout;
 //#]
@@ -134,8 +150,12 @@ inline bool testS::terminationstate_3_IN() const {
     return rootState_subState == terminationstate_3;
 }
 
-inline bool testS::state_5_IN() const {
-    return rootState_subState == state_5;
+inline bool testS::Run_IN() const {
+    return rootState_subState == Run;
+}
+
+inline bool testS::Register_IN() const {
+    return Run_subState == Register;
 }
 
 inline bool testS::Poll_IN() const {

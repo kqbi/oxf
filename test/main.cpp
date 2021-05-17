@@ -59,6 +59,13 @@ int main(int argc, char *argv[]) {
     test->startBehavior();
     test->GEN(evPoll);
 
+#ifdef WIN32
+    Sleep(3000);
+#else
+    usleep(3 * 1000*1000);
+#endif
+    test->GEN(evEnd);
+
     if (signal(SIGINT, signalHandler) == SIG_ERR) {
         std::cerr << "Couldn't install signal handler for SIGINT" << std::endl;
         exit(-1);

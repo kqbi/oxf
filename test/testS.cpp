@@ -1,10 +1,10 @@
 /********************************************************************
-	Rhapsody	: 8.4 
+	Rhapsody	: 9.0.1 
 	Login		: kqbi
 	Component	: TestComponent 
 	Configuration 	: TestConfig
 	Model Element	: testS
-//!	Generated Date	: Mon, 4, May 2020  
+//!	Generated Date	: Mon, 17, May 2021  
 	File Path	: ..\..\untitled\testS.cpp
 *********************************************************************/
 
@@ -32,6 +32,7 @@ bool testS::startBehavior() {
 void testS::initStatechart() {
     rootState_subState = OMNonState;
     rootState_active = OMNonState;
+    Run_subState = OMNonState;
     rootState_timeout = NULL;
 }
 
@@ -47,6 +48,12 @@ bool testS::cancelTimeout(const IOxfTimeout::Ptr &arg) {
             res = true;
         }
     return res;
+}
+
+void testS::registerTest() {
+    //#[ operation registerTest()
+    printf("registerTest\n");
+    //#]
 }
 
 int testS::getA() const {
@@ -75,7 +82,7 @@ IOxfReactive::TakeEventStatus testS::rootState_processEvent() {
         {
             if(IS_EVENT_TYPE_OF(evPoll_test_id))
                 {
-                    //## transition 8 
+                    //## transition 7 
                     if(a)
                         {
                             //#[ state Idle.(Exit) 
@@ -98,7 +105,7 @@ IOxfReactive::TakeEventStatus testS::rootState_processEvent() {
         {
             if(IS_EVENT_TYPE_OF(test_test_id))
                 {
-                    //#[ transition 7 
+                    //#[ transition 6 
                     printf("1111111111111111111111111111\n");
                     //#]
                     res = eventConsumed;
@@ -128,7 +135,9 @@ IOxfReactive::TakeEventStatus testS::rootState_processEvent() {
                     //#]
                     rootState_subState = End;
                     rootState_active = End;
-                    rootState_timeout = scheduleTimeout(5000, NULL);
+                    //#[ state End.(Entry) 
+                    GEN(evRun);
+                    //#]
                     res = eventConsumed;
                 }
             
@@ -137,19 +146,13 @@ IOxfReactive::TakeEventStatus testS::rootState_processEvent() {
         // State End
         case End:
         {
-            if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
+            if(IS_EVENT_TYPE_OF(evRun_test_id))
                 {
-                    if(getCurrentEvent() == rootState_timeout)
-                        {
-                            cancel(rootState_timeout);
-                            rootState_subState = state_5;
-                            rootState_active = state_5;
-                            res = eventConsumed;
-                        }
+                    Run_entDef();
+                    res = eventConsumed;
                 }
             else if(IS_EVENT_TYPE_OF(evDestroy_test_id))
                 {
-                    cancel(rootState_timeout);
                     rootState_subState = terminationstate_3;
                     rootState_active = terminationstate_3;
                     res = eventConsumed;
@@ -157,21 +160,39 @@ IOxfReactive::TakeEventStatus testS::rootState_processEvent() {
             
         }
         break;
-        // State state_5
-        case state_5:
+        // State Register
+        case Register:
         {
-            if(IS_EVENT_TYPE_OF(evDestroy_test_id))
-                {
-                    rootState_subState = terminationstate_3;
-                    rootState_active = terminationstate_3;
-                    res = eventConsumed;
-                }
-            
+            res = Run_handleEvent();
         }
         break;
         default:
             break;
     }
+    return res;
+}
+
+void testS::Run_entDef() {
+    rootState_subState = Run;
+    Run_subState = Register;
+    rootState_active = Register;
+    //#[ state Run.Register.(Entry) 
+    registerTest();
+    //#]
+}
+
+IOxfReactive::TakeEventStatus testS::Run_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(evDestroy_test_id))
+        {
+            // State Register
+            
+            Run_subState = OMNonState;
+            rootState_subState = terminationstate_3;
+            rootState_active = terminationstate_3;
+            res = eventConsumed;
+        }
+    
     return res;
 }
 
