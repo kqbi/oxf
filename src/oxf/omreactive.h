@@ -28,7 +28,7 @@
 #include "IOxfReactive.h"
 //## dependency StatechartMacros
 #include "OXFStatechartMacros.h"
-#include <Poller/EventPoller.h>
+#include <oxf/Poller/EventPoller.h>
 #include <mutex>
 
 //## auto_generated

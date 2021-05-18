@@ -19,7 +19,7 @@
 #define OMTimeout_H
 
 //## class OMTimeout
-#include <Poller/Timer.h>
+#include <oxf/Poller/Timer.h>
 #include "OMEvent.h"
 #include "Poller/EventPoller.h"
 //## auto_generated

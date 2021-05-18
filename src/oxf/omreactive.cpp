@@ -599,8 +599,7 @@ bool OMReactive::sendEvent(const IOxfEvent::Ptr &ev) {
                 auto strongSelf = weakSelf.lock();
                 if (strongSelf)
                     strongSelf->handleEvent(ev);
-                return false;
-            },false);
+            }, false);
             result = true;
         }
     }

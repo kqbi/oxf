@@ -10,8 +10,8 @@
 
 #include <stdexcept>
 #include "PipeWrap.h"
-#include "Util/util.h"
-#include "Util/uv_errno.h"
+#include "oxf/Util/util.h"
+#include "oxf/Util/uv_errno.h"
 #include "sockutil.h"
 
 using namespace std;

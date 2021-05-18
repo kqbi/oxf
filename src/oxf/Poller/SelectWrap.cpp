@@ -15,8 +15,8 @@
 #include <string.h>
 #include <string.h>
 #include "SelectWrap.h"
-#include "Util/util.h"
-#include "Util/uv_errno.h"
+#include "oxf/Util/util.h"
+#include "oxf/Util/uv_errno.h"
 
 using namespace std;
 
