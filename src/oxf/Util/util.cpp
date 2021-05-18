@@ -16,9 +16,10 @@
 
 #include "util.h"
 #include "onceToken.h"
-#include "Util/uv_errno.h"
+#include "oxf/Util/uv_errno.h"
 #include <atomic>
 #include <iostream>
+#include <thread>
 
 #if defined(_WIN32)
 #include <shlwapi.h>  
@@ -26,6 +27,7 @@
 #endif // defined(_WIN32)
 
 #if defined(__linux__)
+#include <arpa/inet.h>
 #include <limits.h>
 #endif
 

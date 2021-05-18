@@ -18,10 +18,10 @@
 #include <memory>
 #include <map>
 #include "PipeWrap.h"
-#include "Util/util.h"
-#include "Util/List.h"
-#include "Thread/TaskExecutor.h"
-#include "Thread/ThreadPool.h"
+#include "oxf/Util/util.h"
+#include "oxf/Util/List.h"
+#include "oxf/Thread/TaskExecutor.h"
+#include "oxf/Thread/ThreadPool.h"
 using namespace std;
 
 #if defined(__linux__) || defined(__linux)

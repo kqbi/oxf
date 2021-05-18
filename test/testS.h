@@ -14,13 +14,13 @@
 //## auto_generated
 #include "test.h"
 //## auto_generated
-#include <omreactive.h>
+#include <oxf/omreactive.h>
 //## auto_generated
-#include <state.h>
+#include <oxf/state.h>
 //## auto_generated
-#include <event.h>
+#include <oxf/event.h>
 //## auto_generated
-#include <oxf.h>
+#include <oxf/oxf.h>
 //## package test
 
 //## class testS

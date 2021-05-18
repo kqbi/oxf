@@ -12,9 +12,9 @@
 #define test_H
 
 //## auto_generated
-#include <event.h>
+#include <oxf/event.h>
 //## auto_generated
-#include <oxf.h>
+#include <oxf/oxf.h>
 //## auto_generated
 class testS;
 

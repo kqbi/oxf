@@ -31,9 +31,6 @@ else()
     set(LINK_LIB_LIST)
 endif()
 
-
-
-aux_source_directory(src SRC_LIST)
 #安装头文件至系统目录
 install(DIRECTORY src DESTINATION ${INSTALL_PATH_INCLUDE} FILES_MATCHING PATTERN "*.h")
 
@@ -71,10 +68,10 @@ endif ()
 #    install(TARGETS ${CMAKE_PROJECT_NAME}_shared  ARCHIVE DESTINATION ${INSTALL_PATH_LIB} LIBRARY DESTINATION ${INSTALL_PATH_LIB})
 #endif()
 
-file(GLOB OTHER_LIST src/*/*.h src/*/*.cpp)
+file(GLOB OXF_LIST src/*/*.h src/*/*.cpp src/*/*/*.h src/*/*/*.cpp)
 
 #编译静态库
-add_library(${CMAKE_PROJECT_NAME}_static STATIC ${SRC_LIST} ${OTHER_LIST})
+add_library(${CMAKE_PROJECT_NAME}_static STATIC ${OXF_LIST})
 
 set_target_properties(${CMAKE_PROJECT_NAME}_static PROPERTIES OUTPUT_NAME "${CMAKE_PROJECT_NAME}")
 #安装静态库至系统目录
