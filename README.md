@@ -10,5 +10,8 @@ linux：
  
 c11：
   切换c11分支，使用CMakeLists.txt并依赖boost，附带简单例子，供参考
+
+no-boost:
+  切换no-boost分支,增加纯c++版本(去除c11分支的boost依赖) 线程及超时控制取自https://github.com/xia-chu/ZLToolKit
   
 golang版：https://github.com/kqbi/go-oxf.git
