@@ -34,21 +34,25 @@ endif()
 #安装头文件至系统目录
 install(DIRECTORY src DESTINATION ${INSTALL_PATH_INCLUDE} FILES_MATCHING PATTERN "*.h")
 
-if (WIN32)
+if (MSVC)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  /Zc:sizedDealloc- /MP /wd4430")
     set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} /MDd /Od /ZI /DEBUG")
     set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} /MD /O2")
-else (WIN32)
+else (MSVC)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -fpermissive -std=c++11")
     set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -g -ggdb")
     set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3")
-endif (WIN32)
+endif (MSVC)
 
 if (WIN32)
     #防止Windows.h包含Winsock.h
     add_definitions(-DWIN32_LEAN_AND_MEAN)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 endif ()
+
+if (CMAKE_BUILD_TYPE MATCHES "Release")
+    add_definitions(-DNDEBUG)
+endif()
 
 #打印库文件
 message(STATUS "将链接依赖库:${LINK_LIB_LIST}")
