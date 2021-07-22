@@ -201,7 +201,7 @@ size_t TaskExecutorGetterImp::addPoller(const string &name, size_t size, int pri
         auto full_name = name + " " + to_string(i);
         poller->async([i, cpus, full_name]() {
             setThreadName(full_name.data());
-            set_cpu(i % cpus);
+            //set_cpu(i % cpus);
         });
         _threads.emplace_back(std::move(poller));
     }
