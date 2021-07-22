@@ -63,6 +63,7 @@ int uv_exepath(char* buffer, int *size) {
 #endif //defined(__MACH__) || defined(__APPLE__)
 
 #if defined(__linux__)
+#include <arpa/inet.h>
 #include <limits.h>
 #endif
 

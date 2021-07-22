@@ -10,6 +10,7 @@
 
 #include "TaskExecutor.h"
 #include "oxf/Poller/EventPoller.h"
+#include "oxf/Util/uv_errno.h"
 
 namespace oxf {
 
@@ -186,7 +187,7 @@ inline bool set_cpu(int i) {
     if (!pthread_setaffinity_np(pthread_self(), sizeof(mask), &mask)) {
         return true;
     }
-    WarnL << "pthread_setaffinity_np failed:" << get_uv_errmsg();
+    std::cout << "pthread_setaffinity_np failed:" << get_uv_errmsg() << std::endl;
 #endif
     return false;
 }
