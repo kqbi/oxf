@@ -18,14 +18,19 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <atomic>
 #include <unordered_map>
 #if defined(_WIN32)
-#define FD_SETSIZE 1024 //修改默认64为1024路
+#undef FD_SETSIZE
+//修改默认64为1024路
+#define FD_SETSIZE 1024
 #include <WinSock2.h>
 #pragma comment (lib,"WS2_32")
 #else
 #include <unistd.h>
 #include <sys/time.h>
+#include <sys/types.h>
+#include <stddef.h>
 #endif // defined(_WIN32)
 
 #if defined(__APPLE__)
@@ -142,8 +147,36 @@ private:
     ~Creator() = default;
 };
 
+
+template <class C>
+class ObjectStatistic{
+public:
+    ObjectStatistic(){
+        ++getCounter();
+    }
+
+    ~ObjectStatistic(){
+        --getCounter();
+    }
+
+    static size_t count(){
+        return getCounter().load();
+    }
+
+private:
+    static atomic<size_t> & getCounter();
+};
+
+#define StatisticImp(Type)  \
+    template<> \
+    atomic<size_t>& ObjectStatistic<Type>::getCounter(){ \
+        static atomic<size_t> instance(0); \
+        return instance; \
+    }
+
 string makeRandStr(int sz, bool printable = true);
 string hexdump(const void *buf, size_t len);
+string hexmem(const void* buf, size_t len);
 string exePath();
 string exeDir();
 string exeName();
@@ -185,10 +218,19 @@ int gettimeofday(struct timeval *tp, void *tzp);
 void usleep(int micro_seconds);
 void sleep(int second);
 int asprintf(char **strp, const char *fmt, ...);
-#if !defined(strcasecmp)
-#define strcasecmp _stricmp
-#endif
 const char *strcasestr(const char *big, const char *little);
+
+#if !defined(strcasecmp)
+    #define strcasecmp _stricmp
+#endif
+
+#ifndef ssize_t
+    #ifdef _WIN64
+        #define ssize_t int64_t
+    #else
+        #define ssize_t int32_t
+    #endif
+#endif
 #endif //WIN32
 
 /**
@@ -210,5 +252,22 @@ uint64_t getCurrentMicrosecond(bool system_time = false);
  */
 string getTimeStr(const char *fmt,time_t time = 0);
 
-}  // namespace oxf
+/**
+ * 根据unix时间戳获取本地时间
+ * @param sec unix时间戳
+ * @return tm结构体
+ */
+struct tm getLocalTime(time_t sec);
+
+/**
+ * 设置线程名
+ */
+void setThreadName(const char *name);
+
+/**
+ * 获取线程名
+ */
+string getThreadName();
+
+}  // namespace toolkit
 #endif /* UTIL_UTIL_H_ */

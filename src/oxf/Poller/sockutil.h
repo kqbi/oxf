@@ -47,6 +47,8 @@ int ioctl(int fd, long cmd, u_long *ptr);
 int close(int fd);
 #endif // defined(_WIN32)
 
+#define SOCKET_DEFAULT_BUF_SIZE (256 * 1024)
+
 //套接字工具类，封装了socket、网络的一些基本操作
 class SockUtil {
 public:
@@ -77,6 +79,22 @@ public:
      * @return -1代表失败，其他为socket fd号
      */
     static int bindUdpSock(const uint16_t port, const char *localIp = "0.0.0.0");
+
+    /**
+     * @brief 初始化套接字 sock 连接关系
+     * @param sock, socket fd 号
+     * @param addr, 对端地址
+     * @param addr_len
+     * @return 0 成功, -1 失败
+     */
+    static int connectUdpSock(int sock, struct sockaddr *addr, int addr_len);
+
+    /**
+     * @brief 解除与 sock 相关的绑定关系
+     * @param sock, socket fd 号
+     * @return 0 成功, -1 失败
+     */
+    static int dissolveUdpSock(int sock);
 
     /**
      * 绑定socket fd至某个网卡和端口
@@ -117,7 +135,7 @@ public:
      * @param size 接收缓存大小
      * @return 0代表成功，-1为失败
      */
-    static int setRecvBuf(int sock, int size = 256 * 1024);
+    static int setRecvBuf(int sock, int size = SOCKET_DEFAULT_BUF_SIZE);
 
     /**
      * 设置socket接收缓存，默认貌似8K左右，一般有设置上限
@@ -126,7 +144,7 @@ public:
      * @param size 接收缓存大小
      * @return 0代表成功，-1为失败
      */
-    static int setSendBuf(int sock, int size = 256 * 1024);
+    static int setSendBuf(int sock, int size = SOCKET_DEFAULT_BUF_SIZE);
 
     /**
      * 设置后续可绑定复用端口(处于TIME_WAITE状态)
@@ -134,7 +152,7 @@ public:
      * @param on 是否开启该特性
      * @return 0代表成功，-1为失败
      */
-    static int setReuseable(int sock, bool on = true);
+    static int setReuseable(int sock, bool on = true, bool reuse_port = true);
 
     /**
      * 运行发送或接收udp广播信息

@@ -26,17 +26,6 @@
 #pragma comment(lib, "shlwapi.lib")
 #endif // defined(_WIN32)
 
-#if defined(__linux__)
-#include <arpa/inet.h>
-#include <limits.h>
-#endif
-
-#if defined(_WIN32)
-#ifndef PATH_MAX
-#define PATH_MAX 1024
-#endif // !PATH_MAX
-#endif
-
 #if defined(__MACH__) || defined(__APPLE__)
 #include <mach/mach.h>
 #include <mach/mach_time.h>
@@ -73,6 +62,16 @@ int uv_exepath(char* buffer, int *size) {
 }
 #endif //defined(__MACH__) || defined(__APPLE__)
 
+#if defined(__linux__)
+#include <limits.h>
+#endif
+
+#if defined(_WIN32)
+#ifndef PATH_MAX
+#define PATH_MAX 1024
+#endif // !PATH_MAX
+#endif // defined(_WIN32)
+
 using namespace std;
 
 namespace oxf {
@@ -108,11 +107,11 @@ string hexdump(const void *buf, size_t len) {
     for (size_t i = 0; i < len; i += 16) {
         for (int j = 0; j < 16; ++j) {
             if (i + j < len) {
-                int sz = sprintf(tmp, "%.2x ", data[i + j]);
+                int sz = snprintf(tmp, sizeof(tmp), "%.2x ", data[i + j]);
                 ret.append(tmp, sz);
             }
             else {
-                int sz = sprintf(tmp, "   ");
+                int sz = snprintf(tmp, sizeof(tmp), "   ");
                 ret.append(tmp, sz);
             }
         }
@@ -127,6 +126,17 @@ string hexdump(const void *buf, size_t len) {
         ret += ('\n');
     }
     return ret;
+}
+
+string hexmem(const void* buf, size_t len) {
+	string ret;
+	char tmp[8];
+	const uint8_t* data = (const uint8_t*)buf;
+	for (size_t i = 0; i < len; ++i) {
+		int sz = sprintf(tmp, "%.2x ", data[i]);
+		ret.append(tmp, sz);
+	}
+	return ret;
 }
 
 string exePath() {
@@ -184,18 +194,18 @@ std::string &strToUpper(std::string &str) {
 // string转小写
 std::string strToLower(std::string &&str) {
     transform(str.begin(), str.end(), str.begin(), towlower);
-    return str;
+    return std::move(str);
 }
 // string转大写
 std::string strToUpper(std::string &&str) {
     transform(str.begin(), str.end(), str.begin(), towupper);
-    return str;
+    return std::move(str);
 }
 
 vector<string> split(const string& s, const char *delim) {
     vector<string> ret;
-    int last = 0;
-    int index = s.find(delim, last);
+    size_t last = 0;
+    auto index = s.find(delim, last);
     while (index != string::npos) {
         if (index - last > 0) {
             ret.push_back(s.substr(last, index - last));
@@ -217,15 +227,16 @@ do{ \
     } \
     while( s.size() && map.at((unsigned char &)s.back())) s.pop_back(); \
     while( s.size() && map.at((unsigned char &)s.front())) s.erase(0,1); \
-    return s; \
 }while(0);
 
 //去除前后的空格、回车符、制表符
 std::string& trim(std::string &s, const string &chars) {
     TRIM(s, chars);
+    return s;
 }
 std::string trim(std::string &&s, const string &chars) {
     TRIM(s, chars);
+    return std::move(s);
 }
 
 void replace(string &str, const string &old_str, const string &new_str) {
@@ -263,7 +274,7 @@ void usleep(int micro_seconds) {
 
 int gettimeofday(struct timeval *tp, void *tzp) {
     auto now_stamp = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
-    tp->tv_sec = now_stamp / 1000000LL;
+    tp->tv_sec = (decltype(tp->tv_sec))(now_stamp / 1000000LL);
     tp->tv_usec = now_stamp % 1000000LL;
     return 0;
 }
@@ -324,13 +335,14 @@ static inline uint64_t getCurrentMicrosecondOrigin() {
     return  std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 #endif
 }
-static std::atomic<uint64_t> s_currentMicrosecond(0);
+static atomic<uint64_t> s_currentMicrosecond(0);
 static atomic<uint64_t> s_currentMillisecond(0);
 static atomic<uint64_t> s_currentMicrosecond_system(getCurrentMicrosecondOrigin());
 static atomic<uint64_t> s_currentMillisecond_system(getCurrentMicrosecondOrigin() / 1000);
 
 static inline bool initMillisecondThread() {
     static std::thread s_thread([]() {
+        setThreadName("stamp thread");
         std::cout << "Stamp thread started!" << std::endl;
         uint64_t last = getCurrentMicrosecondOrigin();
         uint64_t now;
@@ -352,12 +364,8 @@ static inline bool initMillisecondThread() {
             } else if(expired != 0){
                 std::cout << "Stamp expired is not abnormal:" << expired << std::endl;
             }
-#if !defined(_WIN32)
             //休眠0.5 ms
             usleep(500);
-#else
-            Sleep(1);
-#endif
         }
     });
     static onceToken s_token([]() {
@@ -382,21 +390,50 @@ uint64_t getCurrentMicrosecond(bool system_time) {
     return s_currentMicrosecond.load(memory_order_acquire);
 }
 
-string getTimeStr(const char *fmt,time_t time){
-    std::tm tm_snapshot;
-    if(!time){
+string getTimeStr(const char *fmt, time_t time) {
+    if (!time) {
         time = ::time(NULL);
     }
-#if defined(_WIN32)
-    localtime_s(&tm_snapshot, &time); // thread-safe
+    auto tm = getLocalTime(time);
+    char buffer[64];
+    auto success = std::strftime(buffer, sizeof(buffer), fmt, &tm);
+    return 0 == success ? string(fmt) : buffer;
+}
+
+struct tm getLocalTime(time_t sec) {
+    struct tm tm;
+#ifdef _WIN32
+    localtime_s(&tm, &sec);
 #else
-    localtime_r(&time, &tm_snapshot); // POSIX
+    localtime_r(&sec, &tm);
+#endif //_WIN32
+    return tm;
+}
+
+void setThreadName(const char *name) {
+#if defined(__linux) || defined(__linux__)
+    pthread_setname_np(pthread_self(), name);
+#elif defined(__MACH__) || defined(__APPLE__)
+    pthread_setname_np(name);
 #endif
-    char buffer[1024];
-    auto success = std::strftime(buffer, sizeof(buffer), fmt, &tm_snapshot);
-    if (0 == success)
-        return string(fmt);
-    return buffer;
+}
+
+string getThreadName() {
+#if defined(__linux) || defined(__linux__) || defined(__MACH__) || defined(__APPLE__)
+    string ret;
+    ret.resize(32);
+    auto tid = pthread_self();
+    pthread_getname_np(tid, (char *) ret.data(), ret.size());
+    if (ret[0]) {
+        ret.resize(strlen(ret.data()));
+        return ret;
+    }
+    return to_string((uint64_t) tid);
+#else
+    std::ostringstream ss;
+    ss << std::this_thread::get_id();
+    return ss.str();
+#endif
 }
 
 }  // namespace oxf

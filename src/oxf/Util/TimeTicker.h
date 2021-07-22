@@ -91,12 +91,12 @@ public:
         auto now_time = _ticker.elapsedTime();
         if (_first_time == 0) {
             if (now_time < _last_time) {
-                uint64_t last_time = _last_time - _time_inc;
+                auto last_time = _last_time - _time_inc;
                 double elapse_time = (now_time - last_time);
                 _time_inc += (elapse_time / ++_pkt_count) / 3;
-                uint64_t ret_time = last_time + _time_inc;
-                _last_time = ret_time;
-                return ret_time;
+                auto ret_time = last_time + _time_inc;
+                _last_time = (uint64_t)ret_time;
+                return (uint64_t)ret_time;
             }
             _first_time = now_time;
             _last_time = now_time;
@@ -105,14 +105,14 @@ public:
             return now_time;
         }
 
-        double elapse_time = (now_time - _first_time);
+        auto elapse_time = (now_time - _first_time);
         _time_inc += elapse_time / ++_pkt_count;
-        uint64_t ret_time = _first_time + _time_inc;
+        auto ret_time = _first_time + _time_inc;
         if (elapse_time > _reset_ms) {
             _first_time = 0;
         }
-        _last_time = ret_time;
-        return ret_time;
+        _last_time = (uint64_t)ret_time;
+        return (uint64_t)ret_time;
     }
 
     /**

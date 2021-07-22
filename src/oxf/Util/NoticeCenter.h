@@ -56,7 +56,7 @@ private:
             try {
                 (*obj)(std::forward<ArgsType>(args)...);
                 ++ret;
-            } catch (InterruptException &ex) {
+            } catch (InterruptException &) {
                 ++ret;
                 break;
             }

@@ -45,7 +45,7 @@ namespace oxf {
 string SockUtil::inet_ntoa(struct in_addr &addr) {
     char buf[20];
     unsigned char *p = (unsigned char *) &(addr);
-    sprintf(buf, "%u.%u.%u.%u", p[0], p[1], p[2], p[3]);
+    snprintf(buf, sizeof(buf), "%u.%u.%u.%u", p[0], p[1], p[2], p[3]);
     return buf;
 }
 
@@ -57,7 +57,9 @@ int SockUtil::setCloseWait(int sockFd, int second) {
     m_sLinger.l_linger = second; //设置等待时间为x秒
     int ret = setsockopt(sockFd, SOL_SOCKET, SO_LINGER, (char*) &m_sLinger, sizeof(linger));
     if (ret == -1) {
+#ifndef _WIN32
         std::cout << "设置 SO_LINGER 失败!" << std::endl;
+#endif
     }
     return ret;
 }
@@ -70,12 +72,21 @@ int SockUtil::setNoDelay(int sockFd, bool on) {
     return ret;
 }
 
-int SockUtil::setReuseable(int sockFd, bool on) {
+int SockUtil::setReuseable(int sockFd, bool on, bool reuse_port) {
     int opt = on ? 1 : 0;
-    int ret = setsockopt(sockFd, SOL_SOCKET, SO_REUSEADDR, (char *)&opt, static_cast<socklen_t>(sizeof(opt)));
+    int ret = setsockopt(sockFd, SOL_SOCKET, SO_REUSEADDR, (char *) &opt, static_cast<socklen_t>(sizeof(opt)));
     if (ret == -1) {
-		std::cout << "设置 SO_REUSEADDR 失败!" << std::endl;
+        std::cout << "设置 SO_REUSEADDR 失败!" << std::endl;
+        return ret;
     }
+#if defined(SO_REUSEPORT)
+    if (reuse_port) {
+        ret = setsockopt(sockFd, SOL_SOCKET, SO_REUSEPORT, (char *) &opt, static_cast<socklen_t>(sizeof(opt)));
+        if (ret == -1) {
+            std::cout << "设置 SO_REUSEPORT 失败!" << std::endl;
+        }
+    }
+#endif
     return ret;
 }
 int SockUtil::setBroadcast(int sockFd, bool on) {
@@ -121,14 +132,16 @@ int SockUtil::setCloExec(int fd, bool on) {
 }
 
 int SockUtil::setNoSigpipe(int sd) {
-    int set = 1, ret = 1;
 #if defined(SO_NOSIGPIPE)
-    ret= setsockopt(sd, SOL_SOCKET, SO_NOSIGPIPE, (char*)&set, sizeof(int));
+    int set = 1;
+    auto ret = setsockopt(sd, SOL_SOCKET, SO_NOSIGPIPE, (char*)&set, sizeof(int));
     if (ret == -1) {
 		std::cout << "设置 SO_NOSIGPIPE 失败!" << std::endl;
     }
-#endif
     return ret;
+#else
+    return -1;
+#endif
 }
 
 int SockUtil::setNoBlocked(int sock, bool noblock) {
@@ -250,7 +263,7 @@ int SockUtil::connect(const char *host, uint16_t port,bool bAsync,const char *lo
     //设置端口号
     ((sockaddr_in *)&addr)->sin_port = htons(port);
 
-    int sockfd= socket(addr.sa_family, SOCK_STREAM , IPPROTO_TCP);
+    int sockfd = (int)socket(addr.sa_family, SOCK_STREAM , IPPROTO_TCP);
     if (sockfd < 0) {
 		std::cout << "创建套接字失败:" << host << std::endl;
         return -1;
@@ -285,12 +298,12 @@ int SockUtil::connect(const char *host, uint16_t port,bool bAsync,const char *lo
 
 int SockUtil::listen(const uint16_t port, const char* localIp, int backLog) {
     int sockfd = -1;
-    if ((sockfd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) == -1) {
-		std::cout << "创建套接字失败:" << get_uv_errmsg(true) << std::endl;
+    if ((sockfd = (int)socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) == -1) {
+        std::cout << "创建套接字失败:" << get_uv_errmsg(true) << std::endl;
         return -1;
     }
 
-    setReuseable(sockfd);
+    setReuseable(sockfd, true, false);
     setNoBlocked(sockfd);
     setCloExec(sockfd);
 
@@ -543,8 +556,8 @@ int SockUtil::bindSock(int sockFd,const char *ifr_ip,uint16_t port){
 
 int SockUtil::bindUdpSock(const uint16_t port, const char* localIp) {
     int sockfd = -1;
-    if ((sockfd = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) == -1) {
-		std::cout << "创建套接字失败:" << get_uv_errmsg(true) << std::endl;
+    if ((sockfd = (int)socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) == -1) {
+        std::cout << "创建套接字失败:" << get_uv_errmsg(true) << std::endl;
         return -1;
     }
 
@@ -561,6 +574,25 @@ int SockUtil::bindUdpSock(const uint16_t port, const char* localIp) {
         return -1;
     }
     return sockfd;
+}
+
+int SockUtil::connectUdpSock(int sock, sockaddr *addr, int addr_len) {
+    if (-1 == ::connect(sock, addr, addr_len)) {
+        std::cout << "初始化 UDP 套接字连接关系失败: " << get_uv_errmsg(true) << std::endl;
+        return -1;
+    }
+    return 0;
+}
+
+int SockUtil::dissolveUdpSock(int sock) {
+    struct sockaddr_in unspec;
+    unspec.sin_family = AF_UNSPEC;
+    if (-1 == ::connect(sock, (struct sockaddr *) &unspec, sizeof(unspec)) && get_uv_error() != UV_EAFNOSUPPORT) {
+        //mac/ios时返回EAFNOSUPPORT错误
+        std::cout << "解除 UDP 套接字连接关系失败: " << get_uv_errmsg(true) << std::endl;
+        return -1;
+    }
+    return 0;
 }
 
 uint16_t SockUtil::get_peer_port(int fd) {

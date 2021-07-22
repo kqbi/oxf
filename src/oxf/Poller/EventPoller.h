@@ -37,15 +37,15 @@ typedef enum {
     Event_LT = 1 << 3,//水平触发
 } Poll_Event;
 
-typedef function<void(int event)> PollEventCB;
-typedef function<void(bool success)> PollDelCB;
-typedef TaskCancelableImp<uint64_t(void)> DelayTask;
+using PollEventCB = function<void(int event)>;
+using PollDelCB = function<void(bool success)>;
+using DelayTask = TaskCancelableImp<uint64_t(void)>;
 
-class EventPoller : public TaskExecutor , public std::enable_shared_from_this<EventPoller> {
+class EventPoller : public TaskExecutor, public AnyStorage, public std::enable_shared_from_this<EventPoller> {
 public:
-    typedef std::shared_ptr<EventPoller> Ptr;
-    friend class EventPollerPool;
-    friend class WorkThreadPool;
+    using Ptr = std::shared_ptr<EventPoller>;
+    friend class TaskExecutorGetterImp;
+
     ~EventPoller();
 
     /**
@@ -115,6 +115,16 @@ public:
      */
     static EventPoller::Ptr getCurrentPoller();
 
+    /**
+     * 获取当前线程下所有socket共享的读缓存
+     */
+    //BufferRaw::Ptr getSharedBuffer();
+
+    /**
+     * 获取poller线程id
+     */
+    const thread::id& getThreadId() const;
+
 private:
     /**
      * 本对象只允许在EventPollerPool中构造
@@ -174,7 +184,9 @@ private:
 private:
     //标记loop线程是否退出
     bool _exit_flag;
-
+    //当前线程下，所有socket共享的读缓存
+//    weak_ptr<BufferRaw> _shared_buffer;
+    //线程优先级
     ThreadPool::Priority _priority;
     //正在运行事件循环时该锁处于被锁定状态
     mutex _mtx_runing;
@@ -198,7 +210,7 @@ private:
 #else
     //select相关
     struct Poll_Record {
-        typedef std::shared_ptr<Poll_Record> Ptr;
+        using Ptr = std::shared_ptr<Poll_Record>;
         int event;
         int attach;
         PollEventCB callBack;
@@ -213,7 +225,7 @@ private:
 
 class EventPollerPool : public std::enable_shared_from_this<EventPollerPool>, public TaskExecutorGetterImp {
 public:
-    typedef std::shared_ptr<EventPollerPool> Ptr;
+    using Ptr = std::shared_ptr<EventPollerPool>;
     ~EventPollerPool(){};
 
     /**
@@ -227,7 +239,7 @@ public:
      * 在不调用此方法的情况下，默认创建thread::hardware_concurrency()个EventPoller实例
      * @param size  EventPoller个数，如果为0则为thread::hardware_concurrency()
      */
-    static void setPoolSize(int size = 0);
+    static void setPoolSize(size_t size = 0);
 
     /**
      * 获取第一个实例
@@ -239,9 +251,9 @@ public:
      * 根据负载情况获取轻负载的实例
      * 如果优先返回当前线程，那么会返回当前线程
      * 返回当前线程的目的是为了提高线程安全性
-     * @return
+     * @param prefer_current_thread 是否优先获取当前线程
      */
-    EventPoller::Ptr getPoller();
+    EventPoller::Ptr getPoller(bool prefer_current_thread = true);
 
     /**
      * 设置 getPoller() 是否优先返回当前线程

@@ -232,7 +232,7 @@ inline void EventPoller::onPipeEvent() {
     _list_swap.for_each([&](const Task::Ptr &task) {
         try {
             (*task)();
-        } catch (ExitException &ex) {
+        } catch (ExitException &) {
             _exit_flag = true;
         } catch (std::exception &ex) {
             std::cout << "EventPoller执行异步任务捕获到异常:" << ex.what() << std::endl;
@@ -246,6 +246,23 @@ void EventPoller::wait() {
 
 static mutex s_all_poller_mtx;
 static map<thread::id, weak_ptr<EventPoller> > s_all_poller;
+
+/*
+BufferRaw::Ptr EventPoller::getSharedBuffer() {
+    auto ret = _shared_buffer.lock();
+    if (!ret) {
+        //预留一个字节存放\0结尾符
+        ret = BufferRaw::create();
+        ret->setCapacity(1 + SOCKET_DEFAULT_BUF_SIZE);
+        _shared_buffer = ret;
+    }
+    return ret;
+}
+ */
+
+const thread::id &EventPoller::getThreadId() const {
+    return _loop_thread_id;
+}
 
 //static
 EventPoller::Ptr EventPoller::getCurrentPoller(){
@@ -304,7 +321,7 @@ void EventPoller::runLoop(bool blocked,bool regist_self) {
         while (!_exit_flag) {
             //定时器事件中可能操作_event_map
             minDelay = getMinDelay();
-            tv.tv_sec = minDelay / 1000;
+            tv.tv_sec = (decltype(tv.tv_sec))(minDelay / 1000);
             tv.tv_usec = 1000 * (minDelay % 1000);
 
             set_read.fdZero();
@@ -424,7 +441,7 @@ DelayTask::Ptr EventPoller::doDelayTask(uint64_t delayMS, function<uint64_t()> t
 
 ///////////////////////////////////////////////
 
-int s_pool_size = 0;
+static size_t s_pool_size = 0;
 
 INSTANCE_IMP(EventPollerPool);
 
@@ -432,29 +449,24 @@ EventPoller::Ptr EventPollerPool::getFirstPoller(){
     return dynamic_pointer_cast<EventPoller>(_threads.front());
 }
 
-EventPoller::Ptr EventPollerPool::getPoller(){
+EventPoller::Ptr EventPollerPool::getPoller(bool prefer_current_thread) {
     auto poller = EventPoller::getCurrentPoller();
-    if(_preferCurrentThread && poller){
+    if (prefer_current_thread && _preferCurrentThread && poller) {
         return poller;
     }
     return dynamic_pointer_cast<EventPoller>(getExecutor());
 }
 
-void EventPollerPool::preferCurrentThread(bool flag){
+void EventPollerPool::preferCurrentThread(bool flag) {
     _preferCurrentThread = flag;
 }
 
-EventPollerPool::EventPollerPool(){
-    auto size = s_pool_size > 0 ? s_pool_size : thread::hardware_concurrency();
-    createThreads([]() {
-        EventPoller::Ptr ret(new EventPoller);
-        ret->runLoop(false, true);
-        return ret;
-    }, size);
+EventPollerPool::EventPollerPool() {
+    auto size = addPoller("event poller", s_pool_size, ThreadPool::PRIORITY_HIGHEST, true);
     std::cout << "创建EventPoller个数:" << size << std::endl;
 }
 
-void EventPollerPool::setPoolSize(int size) {
+void EventPollerPool::setPoolSize(size_t size) {
     s_pool_size = size;
 }
 

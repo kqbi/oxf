@@ -20,7 +20,7 @@ Timer::Timer(float second,
     if(!_poller){
         _poller = EventPollerPool::Instance().getPoller();
     }
-    _tag = _poller->doDelayTask(second * 1000, [cb, second , continueWhenException]() {
+    _tag = _poller->doDelayTask((uint64_t)(second * 1000), [cb, second , continueWhenException]() {
         try {
             if (cb()) {
                 //重复的任务
