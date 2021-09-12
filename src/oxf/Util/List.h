@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef UTIL_LIST_H
-#define UTIL_LIST_H
+#ifndef OXF_UTIL_LIST_H
+#define OXF_UTIL_LIST_H
 
 #include <list>
 #include <type_traits>

@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef THREADGROUP_H_
-#define THREADGROUP_H_
+#ifndef OXF_THREADGROUP_H_
+#define OXF_THREADGROUP_H_
 
 #include <set>
 #include <mutex>

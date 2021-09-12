@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef UTIL_TIMETICKER_H_
-#define UTIL_TIMETICKER_H_
+#ifndef OXF_UTIL_TIMETICKER_H
+#define OXF_UTIL_TIMETICKER_H
 
 #include <assert.h>
 #include "oxf/Util/util.h"

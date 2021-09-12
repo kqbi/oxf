@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef TASKEXECUTOR_H
-#define TASKEXECUTOR_H
+#ifndef OXF_TASKEXECUTOR_H
+#define OXF_TASKEXECUTOR_H
 
 #include <memory>
 #include <functional>

@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef SRC_POLLER_SELECTWRAP_H_
-#define SRC_POLLER_SELECTWRAP_H_
+#ifndef OXF_SRC_POLLER_SELECTWRAP_H_
+#define OXF_SRC_POLLER_SELECTWRAP_H_
 
 #include "oxf/Util/util.h"
 

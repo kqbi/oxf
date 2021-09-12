@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef PipeWarp_h
-#define PipeWarp_h
+#ifndef OXF_PipeWarp_h
+#define OXF_PipeWarp_h
 
 namespace oxf {
 

@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef Pipe_h
-#define Pipe_h
+#ifndef OXF_Pipe_h
+#define OXF_Pipe_h
 
 #include <stdio.h>
 #include <functional>

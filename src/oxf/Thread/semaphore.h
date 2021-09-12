@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef SEMAPHORE_H_
-#define SEMAPHORE_H_
+#ifndef OXF_SEMAPHORE_H_
+#define OXF_SEMAPHORE_H_
 
 /*
  * 目前发现信号量在32位的系统上有问题，

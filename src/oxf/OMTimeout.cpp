@@ -80,7 +80,7 @@ void OMTimeout::cancel(void) {
 
 void OMTimeout::action() {
     std::weak_ptr<IOxfTimeout> weakSelf = std::dynamic_pointer_cast<IOxfTimeout>(shared_from_this());
-    _timer = std::make_shared<oxf::Timer>(delayTime/1000, [weakSelf](){
+    _timer = std::make_shared<oxf::Timer>((float)delayTime/1000, [weakSelf](){
         auto timeout = weakSelf.lock();
         if (timeout) {
             if (timeout->isCanceled()) {

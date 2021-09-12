@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
  
-#ifndef UTIL_WORKTHREADPOOL_H_
-#define UTIL_WORKTHREADPOOL_H_
+#ifndef OXF_UTIL_WORKTHREADPOOL_H_
+#define OXF_UTIL_WORKTHREADPOOL_H_
 
 #include <memory>
 #include "ThreadPool.h"

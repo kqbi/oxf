@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef THREADPOOL_H_
-#define THREADPOOL_H_
+#ifndef OXF_THREADPOOL_H_
+#define OXF_THREADPOOL_H_
 
 #include <assert.h>
 #include <vector>

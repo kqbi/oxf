@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef Timer_h
-#define Timer_h
+#ifndef OXF_Timer_h
+#define OXF_Timer_h
 
 #include <stdio.h>
 #include <functional>

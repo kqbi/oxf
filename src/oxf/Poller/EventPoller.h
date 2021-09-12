@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef EventPoller_h
-#define EventPoller_h
+#ifndef OXF_EventPoller_h
+#define OXF_EventPoller_h
 
 #include <mutex>
 #include <thread>

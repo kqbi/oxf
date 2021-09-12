@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef NETWORK_SOCKUTIL_H
-#define NETWORK_SOCKUTIL_H
+#ifndef OXF_NETWORK_SOCKUTIL_H
+#define OXF_NETWORK_SOCKUTIL_H
 
 #if defined(_WIN32)
 #include <winsock2.h>

@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef SRC_UTIL_NOTICECENTER_H_
-#define SRC_UTIL_NOTICECENTER_H_
+#ifndef OXF_SRC_UTIL_NOTICECENTER_H_
+#define OXF_SRC_UTIL_NOTICECENTER_H_
 
 #include <mutex>
 #include <memory>

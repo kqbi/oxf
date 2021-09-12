@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef UTIL_UTIL_H_
-#define UTIL_UTIL_H_
+#ifndef OXF_UTIL_UTIL_H
+#define OXF_UTIL_UTIL_H
 
 #include <ctime>
 #include <stdio.h>

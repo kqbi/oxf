@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef UTIL_ONCETOKEN_H_
-#define UTIL_ONCETOKEN_H_
+#ifndef OXF_UTIL_ONCETOKEN_H_
+#define OXF_UTIL_ONCETOKEN_H_
 
 #include <functional>
 #include <type_traits>

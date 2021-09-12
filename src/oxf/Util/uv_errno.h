@@ -19,8 +19,8 @@
 * IN THE SOFTWARE.
 */
 
-#ifndef UV_ERRNO_H_
-#define UV_ERRNO_H_
+#ifndef OXF_UV_ERRNO_H_
+#define OXF_UV_ERRNO_H_
 
 #include <errno.h>
 

@@ -8,8 +8,8 @@
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef TASKQUEUE_H_
-#define TASKQUEUE_H_
+#ifndef OXF_TASKQUEUE_H_
+#define OXF_TASKQUEUE_H_
 
 #include <list>
 #include <deque>
