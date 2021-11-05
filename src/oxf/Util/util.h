@@ -177,9 +177,9 @@ private:
 string makeRandStr(int sz, bool printable = true);
 string hexdump(const void *buf, size_t len);
 string hexmem(const void* buf, size_t len);
-string exePath();
-string exeDir();
-string exeName();
+string exePath(bool isExe = true);
+string exeDir(bool isExe = true);
+string exeName(bool isExe = true);
 
 vector<string> split(const string& s, const char *delim);
 //去除前后的空格、回车符、制表符...
@@ -217,6 +217,7 @@ std::string to_string(T value){
 int gettimeofday(struct timeval *tp, void *tzp);
 void usleep(int micro_seconds);
 void sleep(int second);
+int vasprintf(char **strp, const char *fmt, va_list ap);
 int asprintf(char **strp, const char *fmt, ...);
 const char *strcasestr(const char *big, const char *little);
 
@@ -269,5 +270,12 @@ void setThreadName(const char *name);
  */
 string getThreadName();
 
-}  // namespace toolkit
+/**
+ * 设置当前线程cpu亲和性
+ * @param i cpu索引，如果为-1，那么取消cpu亲和性
+ * @return 是否成功，目前只支持linux
+ */
+bool setThreadAffinity(int i);
+
+}  // namespace oxf
 #endif /* UTIL_UTIL_H_ */

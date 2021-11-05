@@ -46,7 +46,7 @@ public:
             sem_post(&_sem);
         }
 #else
-        unique_lock<mutex> lock(_mutex);
+        unique_lock<recursive_mutex> lock(_mutex);
         _count += n;
         if(n == 1){
             _condition.notify_one();
@@ -60,7 +60,7 @@ public:
 #if defined(HAVE_SEM)
         sem_wait(&_sem);
 #else
-        unique_lock<mutex> lock(_mutex);
+        unique_lock<recursive_mutex> lock(_mutex);
         while (_count == 0) {
             _condition.wait(lock);
         }
@@ -72,7 +72,7 @@ private:
     sem_t _sem;
 #else
     size_t _count;
-    mutex _mutex;
+    recursive_mutex _mutex;
     condition_variable_any _condition;
 #endif
 };

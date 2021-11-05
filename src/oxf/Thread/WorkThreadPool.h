@@ -23,7 +23,7 @@ class WorkThreadPool :
         public TaskExecutorGetterImp {
 public:
     typedef std::shared_ptr<WorkThreadPool> Ptr;
-    ~WorkThreadPool(){};
+    virtual ~WorkThreadPool(){};
 
     /**
      * 获取单例
@@ -51,7 +51,8 @@ public:
      * @return
      */
     EventPoller::Ptr getPoller();
-private:
+
+protected:
     WorkThreadPool();
 };
 
