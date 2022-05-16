@@ -17,6 +17,7 @@
 #include <iostream>
 #include <mutex>
 #include <string>
+#include <thread>
 #include <unordered_map>
 
 #include "onceToken.h"
@@ -521,7 +522,7 @@ bool setThreadAffinity(int i) {
   if (!pthread_setaffinity_np(pthread_self(), sizeof(mask), &mask)) {
     return true;
   }
-  WarnL << "pthread_setaffinity_np failed:" << get_uv_errmsg();
+  std::cout << "pthread_setaffinity_np failed:" << get_uv_errmsg() << std::endl;
 #endif
   return false;
 }
