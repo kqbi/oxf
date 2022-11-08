@@ -152,7 +152,7 @@ TaskExecutor::Ptr TaskExecutorGetterImp::getExecutor() {
       break;
     }
   }
-  _thread_pos = thread_pos;
+  _thread_pos = thread_pos + 1;
   return executor_min_load;
 }
 

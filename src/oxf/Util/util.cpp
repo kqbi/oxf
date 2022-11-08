@@ -398,9 +398,7 @@ static inline bool initMillisecondThread() {
       usleep(500);
     }
   });
-  static onceToken s_token([]() {
-    s_thread.detach();
-  });
+  static onceToken s_token([]() { s_thread.detach(); });
   return true;
 }
 
@@ -661,6 +659,91 @@ string getEnv(const string &key) {
   }
   auto value = *ekey ? getenv(ekey) : nullptr;
   return value ? value : "";
+}
+
+void explode(std::list<std::string> &explodedList,
+             const std::string &stringToExplode, char separator) {
+  size_t start_pos = 0;
+  size_t cur_pos = 0;
+  cur_pos = stringToExplode.find(separator, start_pos);
+
+  // break the string with separator
+  while (cur_pos != std::string::npos) {
+    std::string cur_addr =
+        stringToExplode.substr(start_pos, cur_pos - start_pos);
+    explodedList.emplace_back(cur_addr);
+    start_pos = cur_pos + 1;
+    cur_pos = stringToExplode.find(separator, start_pos);
+  }
+
+  // deal with the last string
+  std::string last_addr = stringToExplode.substr(start_pos);
+  explodedList.emplace_back(last_addr);
+}
+
+void explode(std::vector<std::string> &explodedList,
+             const std::string &stringToExplode, char separator) {
+  size_t start_pos = 0;
+  size_t cur_pos = 0;
+  cur_pos = stringToExplode.find(separator, start_pos);
+
+  // break the string with separator
+  while (cur_pos != std::string::npos) {
+    std::string cur_addr =
+        stringToExplode.substr(start_pos, cur_pos - start_pos);
+    explodedList.emplace_back(cur_addr);
+    start_pos = cur_pos + 1;
+    cur_pos = stringToExplode.find(separator, start_pos);
+  }
+
+  // deal with the last string
+  std::string last_addr = stringToExplode.substr(start_pos);
+  explodedList.emplace_back(last_addr);
+}
+
+std::string implode(const std::list<std::string> &toImplode, char separator) {
+  std::string implodedString;
+  for (std::list<std::string>::const_iterator it = toImplode.begin();
+       it != toImplode.end();
+       /*it++ is within the for ... loop*/) {
+    implodedString += *it;
+    it++;
+    if (it != toImplode.end()) {
+      implodedString += separator;
+    }
+  }
+
+  return implodedString;
+}
+
+std::string implode(std::vector<std::string> &toImplode, char separator) {
+  std::string implodedString;
+  for (std::vector<std::string>::const_iterator it = toImplode.begin();
+       it != toImplode.end();
+       /*it++ is within the for ... loop*/) {
+    implodedString += *it;
+    it++;
+    if (it != toImplode.end()) {
+      implodedString += separator;
+    }
+  }
+
+  return implodedString;
+}
+
+std::string implode(const std::map<std::string, std::string> &toImplode,
+                    char separator) {
+  std::string implodedString;
+  for (std::map<std::string, std::string>::const_iterator it =
+           toImplode.begin();
+       it != toImplode.end(); it++) {
+    implodedString += it->first + "=" + it->second;
+    if (it != toImplode.end()) {
+      implodedString += separator;
+    }
+  }
+
+  return implodedString;
 }
 
 }  // namespace oxf
