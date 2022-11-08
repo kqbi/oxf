@@ -1,19 +1,18 @@
 ﻿/*
  * Copyright (c) 2016 The ZLToolKit project authors. All Rights Reserved.
  *
- * This file is part of ZLToolKit(https://github.com/xiongziliang/ZLToolKit).
+ * This file is part of ZLToolKit(https://github.com/ZLMediaKit/ZLToolKit).
  *
  * Use of this source code is governed by MIT license that can be found in the
  * LICENSE file in the root of the source tree. All contributing project authors
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef OXF_UTIL_LIST_H
-#define OXF_UTIL_LIST_H
+#ifndef ZLTOOLKIT_LIST_H
+#define ZLTOOLKIT_LIST_H
 
 #include <list>
 #include <type_traits>
-using namespace std;
 
 namespace oxf {
 
@@ -40,7 +39,7 @@ private:
 template<typename T>
 class List {
 public:
-    typedef ListNode<T> NodeType;
+    using NodeType = ListNode<T>;
     List(){}
     List(List &&that){
         swap(that);
@@ -182,38 +181,38 @@ private:
 
 #else
 
-template<typename T>
-class List : public list<T> {
-public:
-    template<typename ... ARGS>
-    List(ARGS &&...args) : list<T>(std::forward<ARGS>(args)...) {};
+template <typename T>
+class List : public std::list<T> {
+ public:
+  template <typename... ARGS>
+  List(ARGS &&...args) : std::list<T>(std::forward<ARGS>(args)...){};
 
-    ~List() = default;
+  ~List() = default;
 
-    void append(List<T> &other) {
-        if (other.empty()) {
-            return;
-        }
-        this->insert(this->end(), other.begin(), other.end());
-        other.clear();
+  void append(List<T> &other) {
+    if (other.empty()) {
+      return;
     }
+    this->insert(this->end(), other.begin(), other.end());
+    other.clear();
+  }
 
-    template<typename FUNC>
-    void for_each(FUNC &&func) {
-        for (auto &t : *this) {
-            func(t);
-        }
+  template <typename FUNC>
+  void for_each(FUNC &&func) {
+    for (auto &t : *this) {
+      func(t);
     }
+  }
 
-    template<typename FUNC>
-    void for_each(FUNC &&func) const {
-        for (auto &t : *this) {
-            func(t);
-        }
+  template <typename FUNC>
+  void for_each(FUNC &&func) const {
+    for (auto &t : *this) {
+      func(t);
     }
+  }
 };
 
 #endif
 
-} /* namespace toolkit */
-#endif //ZLTOOLKIT_LIST_H
+}  // namespace oxf
+#endif  // ZLTOOLKIT_LIST_H

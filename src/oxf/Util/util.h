@@ -1,40 +1,37 @@
 ﻿/*
  * Copyright (c) 2016 The ZLToolKit project authors. All Rights Reserved.
  *
- * This file is part of ZLToolKit(https://github.com/xiongziliang/ZLToolKit).
+ * This file is part of ZLToolKit(https://github.com/ZLMediaKit/ZLToolKit).
  *
  * Use of this source code is governed by MIT license that can be found in the
  * LICENSE file in the root of the source tree. All contributing project authors
  * may be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef OXF_UTIL_UTIL_H
-#define OXF_UTIL_UTIL_H
+#ifndef UTIL_UTIL_H_
+#define UTIL_UTIL_H_
 
-#include <stdio.h>
-#include <string.h>
-
-#include <atomic>
 #include <ctime>
-#include <list>
-#include <map>
+#include <cstdio>
+#include <cstring>
 #include <memory>
-#include <sstream>
 #include <string>
-#include <unordered_map>
+#include <sstream>
 #include <vector>
+#include <atomic>
+#include <unordered_map>
 #if defined(_WIN32)
 #undef FD_SETSIZE
 //修改默认64为1024路
 #define FD_SETSIZE 1024
-#include <WinSock2.h>
-#pragma comment(lib, "WS2_32")
+#include <winsock2.h>
+#pragma comment (lib,"WS2_32")
 #else
-#include <stddef.h>
+#include <unistd.h>
 #include <sys/time.h>
 #include <sys/types.h>
-#include <unistd.h>
-#endif  // defined(_WIN32)
+#include <cstddef>
+#endif // defined(_WIN32)
 
 #if defined(__APPLE__)
 #include "TargetConditionals.h"
@@ -43,87 +40,89 @@
 #elif TARGET_OS_IPHONE
 #define OS_IPHONE
 #endif
-#endif  //__APPLE__
+#endif //__APPLE__
 
-#define INSTANCE_IMP(class_name, ...)                \
-  class_name &class_name::Instance() {               \
-    static std::shared_ptr<class_name> s_instance(   \
-        new class_name(__VA_ARGS__));                \
-    static class_name &s_insteanc_ref = *s_instance; \
-    return s_insteanc_ref;                           \
-  }
-
-using namespace std;
+#define INSTANCE_IMP(class_name, ...) \
+class_name &class_name::Instance() { \
+    static std::shared_ptr<class_name> s_instance(new class_name(__VA_ARGS__)); \
+    static class_name &s_instance_ref = *s_instance; \
+    return s_instance_ref; \
+}
 
 namespace oxf {
 
-#define StrPrinter _StrPrinter()
-class _StrPrinter : public string {
- public:
-  _StrPrinter() {}
+#define StrPrinter ::oxf::_StrPrinter()
+class _StrPrinter : public std::string {
+public:
+    _StrPrinter() {}
 
-  template <typename T>
-  _StrPrinter &operator<<(T &&data) {
-    _stream << std::forward<T>(data);
-    this->string::operator=(_stream.str());
-    return *this;
-  }
+    template<typename T>
+    _StrPrinter& operator <<(T && data) {
+        _stream << std::forward<T>(data);
+        this->std::string::operator=(_stream.str());
+        return *this;
+    }
 
-  string operator<<(std::ostream &(*f)(std::ostream &)) const { return *this; }
+    std::string operator <<(std::ostream&(*f)(std::ostream&)) const {
+        return *this;
+    }
 
- private:
-  stringstream _stream;
+private:
+    std::stringstream _stream;
 };
 
 //禁止拷贝基类
 class noncopyable {
- protected:
-  noncopyable() {}
-  ~noncopyable() {}
-
- private:
-  //禁止拷贝
-  noncopyable(const noncopyable &that) = delete;
-  noncopyable(noncopyable &&that) = delete;
-  noncopyable &operator=(const noncopyable &that) = delete;
-  noncopyable &operator=(noncopyable &&that) = delete;
+protected:
+    noncopyable() {}
+    ~noncopyable() {}
+private:
+    //禁止拷贝
+    noncopyable(const noncopyable &that) = delete;
+    noncopyable(noncopyable &&that) = delete;
+    noncopyable &operator=(const noncopyable &that) = delete;
+    noncopyable &operator=(noncopyable &&that) = delete;
 };
 
 //可以保存任意的对象
-class Any {
- public:
-  typedef std::shared_ptr<Any> Ptr;
+class Any{
+public:
+    using Ptr = std::shared_ptr<Any>;
 
-  Any() = default;
-  ~Any() = default;
+    Any() = default;
+    ~Any() = default;
 
-  template <typename C, typename... ArgsType>
-  void set(ArgsType &&...args) {
-    _data.reset(new C(std::forward<ArgsType>(args)...),
-                [](void *ptr) { delete (C *)ptr; });
-  }
-  template <typename C>
-  C &get() {
-    if (!_data) {
-      throw std::invalid_argument("Any is empty");
+    template <typename C,typename ...ArgsType>
+    void set(ArgsType &&...args){
+        _data.reset(new C(std::forward<ArgsType>(args)...),[](void *ptr){
+            delete (C*) ptr;
+        });
     }
-    C *ptr = (C *)_data.get();
-    return *ptr;
-  }
+    template <typename C>
+    C& get(){
+        if(!_data){
+            throw std::invalid_argument("Any is empty");
+        }
+        C *ptr = (C *)_data.get();
+        return *ptr;
+    }
 
-  operator bool() { return _data.operator bool(); }
-  bool empty() { return !bool(); }
-
- private:
-  std::shared_ptr<void> _data;
+    operator bool() {
+        return _data.operator bool ();
+    }
+    bool empty(){
+        return !bool();
+    }
+private:
+    std::shared_ptr<void> _data;
 };
 
 //用于保存一些外加属性
-class AnyStorage : public unordered_map<string, Any> {
- public:
-  AnyStorage() = default;
-  ~AnyStorage() = default;
-  typedef std::shared_ptr<AnyStorage> Ptr;
+class AnyStorage : public std::unordered_map<std::string,Any>{
+public:
+    AnyStorage() = default;
+    ~AnyStorage() = default;
+    using Ptr = std::shared_ptr<AnyStorage>;
 };
 
 //对象安全的构建和析构
@@ -131,53 +130,59 @@ class AnyStorage : public unordered_map<string, Any> {
 //析构前执行onDestory函数
 //在函数onCreate和onDestory中可以执行构造或析构中不能调用的方法，比如说shared_from_this或者虚函数
 class Creator {
- public:
-  template <typename C, typename... ArgsType>
-  static std::shared_ptr<C> create(ArgsType &&...args) {
-    std::shared_ptr<C> ret(new C(std::forward<ArgsType>(args)...), [](C *ptr) {
-      ptr->onDestory();
-      delete ptr;
-    });
-    ret->onCreate();
-    return ret;
-  }
-
- private:
-  Creator() = default;
-  ~Creator() = default;
+public:
+    template<typename C,typename ...ArgsType>
+    static std::shared_ptr<C> create(ArgsType &&...args){
+        std::shared_ptr<C> ret(new C(std::forward<ArgsType>(args)...),[](C *ptr){
+            ptr->onDestory();
+            delete ptr;
+        });
+        ret->onCreate();
+        return ret;
+    }
+private:
+    Creator() = default;
+    ~Creator() = default;
 };
+
 
 template <class C>
-class ObjectStatistic {
- public:
-  ObjectStatistic() { ++getCounter(); }
+class ObjectStatistic{
+public:
+    ObjectStatistic(){
+        ++getCounter();
+    }
 
-  ~ObjectStatistic() { --getCounter(); }
+    ~ObjectStatistic(){
+        --getCounter();
+    }
 
-  static size_t count() { return getCounter().load(); }
+    static size_t count(){
+        return getCounter().load();
+    }
 
- private:
-  static atomic<size_t> &getCounter();
+private:
+    static std::atomic<size_t> & getCounter();
 };
 
-#define StatisticImp(Type)                              \
-  template <>                                           \
-  atomic<size_t> &ObjectStatistic<Type>::getCounter() { \
-    static atomic<size_t> instance(0);                  \
-    return instance;                                    \
-  }
+#define StatisticImp(Type)  \
+    template<> \
+    std::atomic<size_t>& ObjectStatistic<Type>::getCounter(){ \
+        static std::atomic<size_t> instance(0); \
+        return instance; \
+    }
 
-string makeRandStr(int sz, bool printable = true);
-string hexdump(const void *buf, size_t len);
-string hexmem(const void *buf, size_t len);
-string exePath(bool isExe = true);
-string exeDir(bool isExe = true);
-string exeName(bool isExe = true);
+std::string makeRandStr(int sz, bool printable = true);
+std::string hexdump(const void *buf, size_t len);
+std::string hexmem(const void* buf, size_t len);
+std::string exePath(bool isExe = true);
+std::string exeDir(bool isExe = true);
+std::string exeName(bool isExe = true);
 
-vector<string> split(const string &s, const char *delim);
+std::vector<std::string> split(const std::string& s, const char *delim);
 //去除前后的空格、回车符、制表符...
-std::string &trim(std::string &s, const string &chars = " \r\n\t");
-std::string trim(std::string &&s, const string &chars = " \r\n\t");
+std::string& trim(std::string &s,const std::string &chars=" \r\n\t");
+std::string trim(std::string &&s,const std::string &chars=" \r\n\t");
 // string转小写
 std::string &strToLower(std::string &str);
 std::string strToLower(std::string &&str);
@@ -185,26 +190,26 @@ std::string strToLower(std::string &&str);
 std::string &strToUpper(std::string &str);
 std::string strToUpper(std::string &&str);
 //替换子字符串
-void replace(string &str, const string &old_str, const string &new_str);
+void replace(std::string &str, const std::string &old_str, const std::string &new_str) ;
 //判断是否为ip
 bool isIP(const char *str);
 //字符串是否以xx开头
-bool start_with(const string &str, const string &substr);
+bool start_with(const std::string &str, const std::string &substr);
 //字符串是否以xx结尾
-bool end_with(const string &str, const string &substr);
+bool end_with(const std::string &str, const std::string &substr);
 
 #ifndef bzero
-#define bzero(ptr, size) memset((ptr), 0, (size));
-#endif  // bzero
+#define bzero(ptr,size)  memset((ptr),0,(size));
+#endif //bzero
 
 #if defined(ANDROID)
 template <typename T>
-std::string to_string(T value) {
-  std::ostringstream os;
-  os << std::forward<T>(value);
-  return os.str();
+std::string to_string(T value){
+    std::ostringstream os ;
+    os <<  std::forward<T>(value);
+    return os.str() ;
 }
-#endif  // ANDROID
+#endif//ANDROID
 
 #if defined(_WIN32)
 int gettimeofday(struct timeval *tp, void *tzp);
@@ -215,29 +220,32 @@ int asprintf(char **strp, const char *fmt, ...);
 const char *strcasestr(const char *big, const char *little);
 
 #if !defined(strcasecmp)
-#define strcasecmp _stricmp
+    #define strcasecmp _stricmp
 #endif
 
 #ifndef ssize_t
-#ifdef _WIN64
-#define ssize_t int64_t
-#else
-#define ssize_t int32_t
+    #ifdef _WIN64
+        #define ssize_t int64_t
+    #else
+        #define ssize_t int32_t
+    #endif
 #endif
-#endif
-#endif  // WIN32
+#endif //WIN32
+
+/**
+ * 获取时间差, 返回值单位为秒
+ */
+long getGMTOff();
 
 /**
  * 获取1970年至今的毫秒数
- * @param system_time
- * 是否为系统时间(系统时间可以回退),否则为程序启动时间(不可回退)
+ * @param system_time 是否为系统时间(系统时间可以回退),否则为程序启动时间(不可回退)
  */
 uint64_t getCurrentMillisecond(bool system_time = false);
 
 /**
  * 获取1970年至今的微秒数
- * @param system_time
- * 是否为系统时间(系统时间可以回退),否则为程序启动时间(不可回退)
+ * @param system_time 是否为系统时间(系统时间可以回退),否则为程序启动时间(不可回退)
  */
 uint64_t getCurrentMicrosecond(bool system_time = false);
 
@@ -246,7 +254,7 @@ uint64_t getCurrentMicrosecond(bool system_time = false);
  * @param fmt 时间格式，譬如%Y-%m-%d %H:%M:%S
  * @return 时间字符串
  */
-string getTimeStr(const char *fmt, time_t time = 0);
+std::string getTimeStr(const char *fmt,time_t time = 0);
 
 /**
  * 根据unix时间戳获取本地时间
@@ -263,7 +271,7 @@ void setThreadName(const char *name);
 /**
  * 获取线程名
  */
-string getThreadName();
+std::string getThreadName();
 
 /**
  * 设置当前线程cpu亲和性
@@ -272,17 +280,15 @@ string getThreadName();
  */
 bool setThreadAffinity(int i);
 
-void Explode(std::list<std::string> &explodedList,
-             const std::string &stringToExplode, char separator);
+/**
+ * 根据typeid(class).name()获取类名
+ */
+std::string demangle(const char *mangled);
 
-void Explode(std::vector<std::string> &explodedList,
-             const std::string &stringToExplode, char separator);
+/**
+ * 获取环境变量内容，以'$'开头
+ */
+std::string getEnv(const std::string &key);
 
-std::string Implode(const std::list<std::string> &toImplode, char separator);
-
-std::string Implode(std::vector<std::string> &toImplode, char separator);
-
-std::string Implode(const std::map<std::string, std::string> &toImplode,
-                    char separator);
-}  // namespace oxf
+}  // namespace toolkit
 #endif /* UTIL_UTIL_H_ */

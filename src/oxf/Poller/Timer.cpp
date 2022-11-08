@@ -1,7 +1,7 @@
 ﻿/*
  * Copyright (c) 2016 The ZLToolKit project authors. All Rights Reserved.
  *
- * This file is part of ZLToolKit(https://github.com/xiongziliang/ZLToolKit).
+ * This file is part of ZLToolKit(https://github.com/ZLMediaKit/ZLToolKit).
  *
  * Use of this source code is governed by MIT license that can be found in the
  * LICENSE file in the root of the source tree. All contributing project authors
@@ -12,34 +12,33 @@
 
 namespace oxf {
 
-Timer::Timer(float second,
-             const function<bool()> &cb,
-             const EventPoller::Ptr &poller,
-             bool continueWhenException) {
-    _poller = poller;
-    if(!_poller){
-        _poller = EventPollerPool::Instance().getPoller();
+Timer::Timer(float second, const std::function<bool()> &cb,
+             const EventPoller::Ptr &poller) {
+  _poller = poller;
+  if (!_poller) {
+    _poller = EventPollerPool::Instance().getPoller();
+  }
+  _tag = _poller->doDelayTask((uint64_t)(second * 1000), [cb, second]() {
+    try {
+      if (cb()) {
+        // 重复的任务
+        return (uint64_t)(1000 * second);
+      }
+      // 该任务不再重复
+      return (uint64_t)0;
+    } catch (std::exception &ex) {
+      std::cout << "Exception occurred when do timer task: " << ex.what()
+                << std::endl;
+      return (uint64_t)(1000 * second);
     }
-    _tag = _poller->doDelayTask((uint64_t)(second * 1000), [cb, second , continueWhenException]() {
-        try {
-            if (cb()) {
-                //重复的任务
-                return (uint64_t) (1000 * second);
-            }
-            //该任务不再重复
-            return (uint64_t) 0;
-        }catch (std::exception &ex){
-            std::cout << "执行定时器任务捕获到异常:" << ex.what() << std::endl;
-            return continueWhenException ? (uint64_t) (1000 * second) : 0;
-        }
-    });
+  });
 }
 
 Timer::~Timer() {
-    auto tag = _tag.lock();
-    if(tag){
-        tag->cancel();
-    }
+  auto tag = _tag.lock();
+  if (tag) {
+    tag->cancel();
+  }
 }
 
 }  // namespace oxf

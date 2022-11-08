@@ -1,7 +1,7 @@
 ﻿/*
  * Copyright (c) 2016 The ZLToolKit project authors. All Rights Reserved.
  *
- * This file is part of ZLToolKit(https://github.com/xiongziliang/ZLToolKit).
+ * This file is part of ZLToolKit(https://github.com/ZLMediaKit/ZLToolKit).
  *
  * Use of this source code is governed by MIT license that can be found in the
  * LICENSE file in the root of the source tree. All contributing project authors
@@ -10,29 +10,35 @@
 
 #include "util.h"
 
-#include <stdlib.h>
-
 #include <algorithm>
-#include <atomic>
+#include <cassert>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 #include <iostream>
-#include <mutex>
+#include <random>
 #include <string>
 #include <thread>
-#include <unordered_map>
 
+#include "local_time.h"
 #include "onceToken.h"
-#include "oxf/Util/uv_errno.h"
+#include "oxf/Poller/sockutil.h"
+#include "uv_errno.h"
 
 #if defined(_WIN32)
 #include <shlwapi.h>
+
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 #pragma comment(lib, "shlwapi.lib")
 extern "C" const IMAGE_DOS_HEADER __ImageBase;
 #endif  // defined(_WIN32)
 
 #if defined(__MACH__) || defined(__APPLE__)
+#include <limits.h>
 #include <mach-o/dyld.h> /* _NSGetExecutablePath */
-#include <mach/mach.h>
-#include <mach/mach_time.h>
+
 int uv_exepath(char *buffer, int *size) {
   /* realpath(exepath) may be > PATH_MAX so double it to be on the safe side. */
   char abspath[PATH_MAX * 2 + 1];
@@ -40,7 +46,7 @@ int uv_exepath(char *buffer, int *size) {
   uint32_t exepath_size;
   size_t abspath_size;
 
-  if (buffer == NULL || size == NULL || *size == 0) return -EINVAL;
+  if (buffer == nullptr || size == nullptr || *size == 0) return -EINVAL;
 
   exepath_size = sizeof(exepath);
   if (_NSGetExecutablePath(exepath, &exepath_size)) return -EIO;
@@ -51,17 +57,18 @@ int uv_exepath(char *buffer, int *size) {
   if (abspath_size == 0) return -EIO;
 
   *size -= 1;
-  if (*size > abspath_size) *size = abspath_size;
+  if ((size_t)*size > abspath_size) *size = abspath_size;
 
   memcpy(buffer, abspath, *size);
   buffer[*size] = '\0';
 
   return 0;
 }
+
 #endif  // defined(__MACH__) || defined(__APPLE__)
 
 #if defined(__linux__)
-#include <arpa/inet.h>
+// #include <arpa/inet.h>
 #include <limits.h>
 #endif
 
@@ -75,27 +82,26 @@ using namespace std;
 
 namespace oxf {
 
+static constexpr char CCH[] =
+    "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
 string makeRandStr(int sz, bool printable) {
-  char *tmp = new char[sz + 1];
-  static const char CCH[] =
-      "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  int i;
-  for (i = 0; i < sz; i++) {
-    srand((unsigned)time(NULL) + i);
+  string ret;
+  ret.resize(sz);
+  std::mt19937 rng(std::random_device{}());
+  for (int i = 0; i < sz; ++i) {
     if (printable) {
-      int x = rand() % (sizeof(CCH) - 1);
-      tmp[i] = CCH[x];
+      uint32_t x = rng() % (sizeof(CCH) - 1);
+      ret[i] = CCH[x];
     } else {
-      tmp[i] = rand() % 0xFF;
+      ret[i] = rng() % 0xFF;
     }
   }
-  tmp[i] = 0;
-  string ret = tmp;
-  delete[] tmp;
   return ret;
 }
 
 bool is_safe(uint8_t b) { return b >= ' ' && b < 128; }
+
 string hexdump(const void *buf, size_t len) {
   string ret("\r\n");
   char tmp[8];
@@ -137,7 +143,7 @@ string exePath(bool isExe /*= true*/) {
   char buffer[PATH_MAX * 2 + 1] = {0};
   int n = -1;
 #if defined(_WIN32)
-  n = GetModuleFileNameA(isExe ? NULL : (HINSTANCE)&__ImageBase, buffer,
+  n = GetModuleFileNameA(isExe ? nullptr : (HINSTANCE)&__ImageBase, buffer,
                          sizeof(buffer));
 #elif defined(__MACH__) || defined(__APPLE__)
   n = sizeof(buffer);
@@ -176,11 +182,13 @@ string exeName(bool isExe /*= true*/) {
   auto path = exePath(isExe);
   return path.substr(path.rfind('/') + 1);
 }
+
 // string转小写
 std::string &strToLower(std::string &str) {
   transform(str.begin(), str.end(), str.begin(), towlower);
   return str;
 }
+
 // string转大写
 std::string &strToUpper(std::string &str) {
   transform(str.begin(), str.end(), str.begin(), towupper);
@@ -192,6 +200,7 @@ std::string strToLower(std::string &&str) {
   transform(str.begin(), str.end(), str.begin(), towlower);
   return std::move(str);
 }
+
 // string转大写
 std::string strToUpper(std::string &&str) {
   transform(str.begin(), str.end(), str.begin(), towupper);
@@ -204,13 +213,13 @@ vector<string> split(const string &s, const char *delim) {
   auto index = s.find(delim, last);
   while (index != string::npos) {
     if (index - last > 0) {
-      ret.emplace_back(s.substr(last, index - last));
+      ret.push_back(s.substr(last, index - last));
     }
     last = index + strlen(delim);
     index = s.find(delim, last);
   }
   if (!s.size() || s.size() - last > 0) {
-    ret.emplace_back(s.substr(last));
+    ret.push_back(s.substr(last));
   }
   return ret;
 }
@@ -225,11 +234,12 @@ vector<string> split(const string &s, const char *delim) {
     while (s.size() && map.at((unsigned char &)s.front())) s.erase(0, 1); \
   } while (0);
 
-//去除前后的空格、回车符、制表符
+// 去除前后的空格、回车符、制表符
 std::string &trim(std::string &s, const string &chars) {
   TRIM(s, chars);
   return s;
 }
+
 std::string trim(std::string &&s, const string &chars) {
   TRIM(s, chars);
   return std::move(s);
@@ -256,12 +266,14 @@ bool end_with(const string &str, const string &substr) {
   return pos != string::npos && pos == str.size() - substr.size();
 }
 
-bool isIP(const char *str) { return INADDR_NONE != inet_addr(str); }
+bool isIP(const char *str) {
+  return SockUtil::is_ipv4(str) || SockUtil::is_ipv6(str);
+}
 
 #if defined(_WIN32)
 void sleep(int second) { Sleep(1000 * second); }
 void usleep(int micro_seconds) {
-  this_thread::sleep_for(std::chrono::microseconds(micro_seconds));
+  std::this_thread::sleep_for(std::chrono::microseconds(micro_seconds));
 }
 
 int gettimeofday(struct timeval *tp, void *tzp) {
@@ -285,9 +297,6 @@ const char *strcasestr(const char *big, const char *little) {
   return big + (pos - big_str.data());
 }
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 int vasprintf(char **strp, const char *fmt, va_list ap) {
   // _vscprintf tells you how big the buffer needs to be
   int len = _vscprintf(fmt, ap);
@@ -319,10 +328,33 @@ int asprintf(char **strp, const char *fmt, ...) {
 
 #endif  // WIN32
 
+static long s_gmtoff = 0;  // 时间差
+static onceToken s_token([]() {
+#ifdef _WIN32
+  TIME_ZONE_INFORMATION tzinfo;
+  DWORD dwStandardDaylight;
+  long bias;
+  dwStandardDaylight = GetTimeZoneInformation(&tzinfo);
+  bias = tzinfo.Bias;
+  if (dwStandardDaylight == TIME_ZONE_ID_STANDARD) {
+    bias += tzinfo.StandardBias;
+  }
+  if (dwStandardDaylight == TIME_ZONE_ID_DAYLIGHT) {
+    bias += tzinfo.DaylightBias;
+  }
+  s_gmtoff = -bias * 60;  // 时间差(分钟)
+#else
+  local_time_init();
+  s_gmtoff = getLocalTime(time(nullptr)).tm_gmtoff;
+#endif  // _WIN32
+});
+
+long getGMTOff() { return s_gmtoff; }
+
 static inline uint64_t getCurrentMicrosecondOrigin() {
 #if !defined(_WIN32)
   struct timeval tv;
-  gettimeofday(&tv, NULL);
+  gettimeofday(&tv, nullptr);
   return tv.tv_sec * 1000000LL + tv.tv_usec;
 #else
   return std::chrono::duration_cast<std::chrono::microseconds>(
@@ -330,6 +362,7 @@ static inline uint64_t getCurrentMicrosecondOrigin() {
       .count();
 #endif
 }
+
 static atomic<uint64_t> s_currentMicrosecond(0);
 static atomic<uint64_t> s_currentMillisecond(0);
 static atomic<uint64_t> s_currentMicrosecond_system(
@@ -340,32 +373,34 @@ static atomic<uint64_t> s_currentMillisecond_system(
 static inline bool initMillisecondThread() {
   static std::thread s_thread([]() {
     setThreadName("stamp thread");
-    std::cout << "Stamp thread started!" << std::endl;
+    std::cout << "Stamp thread started" << std::endl;
     uint64_t last = getCurrentMicrosecondOrigin();
     uint64_t now;
     uint64_t microsecond = 0;
     while (true) {
       now = getCurrentMicrosecondOrigin();
-      //记录系统时间戳，可回退
+      // 记录系统时间戳，可回退
       s_currentMicrosecond_system.store(now, memory_order_release);
       s_currentMillisecond_system.store(now / 1000, memory_order_release);
 
-      //记录流逝时间戳，不可回退
+      // 记录流逝时间戳，不可回退
       int64_t expired = now - last;
       last = now;
       if (expired > 0 && expired < 1000 * 1000) {
-        //流逝时间处于0~1000ms之间，那么是合理的，说明没有调整系统时间
+        // 流逝时间处于0~1000ms之间，那么是合理的，说明没有调整系统时间
         microsecond += expired;
         s_currentMicrosecond.store(microsecond, memory_order_release);
         s_currentMillisecond.store(microsecond / 1000, memory_order_release);
       } else if (expired != 0) {
-        std::cout << "Stamp expired is not abnormal:" << expired << std::endl;
+        std::cout << "Stamp expired is abnormal: " << expired << std::endl;
       }
-      //休眠0.5 ms
+      // 休眠0.5 ms
       usleep(500);
     }
   });
-  static onceToken s_token([]() { s_thread.detach(); });
+  static onceToken s_token([]() {
+    s_thread.detach();
+  });
   return true;
 }
 
@@ -387,7 +422,7 @@ uint64_t getCurrentMicrosecond(bool system_time) {
 
 string getTimeStr(const char *fmt, time_t time) {
   if (!time) {
-    time = ::time(NULL);
+    time = ::time(nullptr);
   }
   auto tm = getLocalTime(time);
   size_t size = strlen(fmt) + 64;
@@ -407,17 +442,29 @@ struct tm getLocalTime(time_t sec) {
 #ifdef _WIN32
   localtime_s(&tm, &sec);
 #else
-  localtime_r(&sec, &tm);
+  no_locks_localtime(&tm, sec);
 #endif  //_WIN32
   return tm;
 }
 
+static thread_local string thread_name;
+
+static string limitString(const char *name, size_t max_size) {
+  string str = name;
+  if (str.size() + 1 > max_size) {
+    auto erased = str.size() + 1 - max_size + 3;
+    str.replace(5, erased, "...");
+  }
+  return str;
+}
+
 void setThreadName(const char *name) {
-#if defined(__linux) || defined(__linux__)
-  pthread_setname_np(pthread_self(), name);
+  assert(name);
+#if defined(__linux) || defined(__linux__) || defined(__MINGW32__)
+  pthread_setname_np(pthread_self(), limitString(name, 16).data());
 #elif defined(__MACH__) || defined(__APPLE__)
-  pthread_setname_np(name);
-#elif defined(_WIN32)
+  pthread_setname_np(limitString(name, 32).data());
+#elif defined(_MSC_VER)
   // SetThreadDescription was added in 1607 (aka RS1). Since we can't guarantee
   // the user is running 1607 or later, we need to ask for the function from the
   // kernel.
@@ -465,13 +512,15 @@ void setThreadName(const char *name) {
                     : EXCEPTION_EXECUTE_HANDLER) {
     }
   }
+#else
+  thread_name = name ? name : "";
 #endif
 }
 
 string getThreadName() {
 #if ((defined(__linux) || defined(__linux__)) && !defined(ANDROID)) || \
     (defined(__MACH__) || defined(__APPLE__)) ||                       \
-    (defined(ANDROID) && __ANDROID_API__ >= 26)
+    (defined(ANDROID) && __ANDROID_API__ >= 26) || defined(__MINGW32__)
   string ret;
   ret.resize(32);
   auto tid = pthread_self();
@@ -481,7 +530,7 @@ string getThreadName() {
     return ret;
   }
   return to_string((uint64_t)tid);
-#elif defined(_WIN32)
+#elif defined(_MSC_VER)
   using GetThreadDescriptionFunc = HRESULT(WINAPI *)(
       _In_ HANDLE hThread, _In_ PWSTR * ppszThreadDescription);
   static auto getThreadDescription =
@@ -506,13 +555,22 @@ string getThreadName() {
         ss << threadName;
         return ss.str();
       } else {
+        if (data) {
+          LocalFree(data);
+        }
         return to_string((uint64_t)GetCurrentThreadId());
       }
     } else {
+      if (data) {
+        LocalFree(data);
+      }
       return to_string((uint64_t)GetCurrentThreadId());
     }
   }
 #else
+  if (!thread_name.empty()) {
+    return thread_name;
+  }
   std::ostringstream ss;
   ss << std::this_thread::get_id();
   return ss.str();
@@ -525,98 +583,84 @@ bool setThreadAffinity(int i) {
   CPU_ZERO(&mask);
   if (i >= 0) {
     CPU_SET(i, &mask);
+  } else {
+    for (auto j = 0u; j < thread::hardware_concurrency(); ++j) {
+      CPU_SET(j, &mask);
+    }
   }
   if (!pthread_setaffinity_np(pthread_self(), sizeof(mask), &mask)) {
     return true;
   }
-  std::cout << "pthread_setaffinity_np failed:" << get_uv_errmsg() << std::endl;
+  std::cout << "pthread_setaffinity_np failed: " << get_uv_errmsg()
+            << std::endl;
 #endif
   return false;
 }
 
-void Explode(std::list<std::string> &explodedList,
-             const std::string &stringToExplode, char separator) {
-  size_t start_pos = 0;
-  size_t cur_pos = 0;
-  cur_pos = stringToExplode.find(separator, start_pos);
+#ifndef HAS_CXA_DEMANGLE
+// We only support some compilers that support __cxa_demangle.
+// TODO: Checks if Android NDK has fixed this issue or not.
+#if defined(__ANDROID__) && (defined(__i386__) || defined(__x86_64__))
+#define HAS_CXA_DEMANGLE 0
+#elif (__GNUC__ >= 4 || (__GNUC__ >= 3 && __GNUC_MINOR__ >= 4)) && \
+    !defined(__mips__)
+#define HAS_CXA_DEMANGLE 1
+#elif defined(__clang__) && !defined(_MSC_VER)
+#define HAS_CXA_DEMANGLE 1
+#else
+#define HAS_CXA_DEMANGLE 0
+#endif
+#endif
+#if HAS_CXA_DEMANGLE
+#include <cxxabi.h>
+#endif
 
-  // break the string with separator
-  while (cur_pos != std::string::npos) {
-    std::string cur_addr =
-        stringToExplode.substr(start_pos, cur_pos - start_pos);
-    explodedList.emplace_back(cur_addr);
-    start_pos = cur_pos + 1;
-    cur_pos = stringToExplode.find(separator, start_pos);
+// Demangle a mangled symbol name and return the demangled name.
+// If 'mangled' isn't mangled in the first place, this function
+// simply returns 'mangled' as is.
+//
+// This function is used for demangling mangled symbol names such as
+// '_Z3bazifdPv'.  It uses abi::__cxa_demangle() if your compiler has
+// the API.  Otherwise, this function simply returns 'mangled' as is.
+//
+// Currently, we support only GCC 3.4.x or later for the following
+// reasons.
+//
+// - GCC 2.95.3 doesn't have cxxabi.h
+// - GCC 3.3.5 and ICC 9.0 have a bug.  Their abi::__cxa_demangle()
+//   returns junk values for non-mangled symbol names (ex. function
+//   names in C linkage).  For example,
+//     abi::__cxa_demangle("main", 0,  0, &status)
+//   returns "unsigned long" and the status code is 0 (successful).
+//
+// Also,
+//
+//  - MIPS is not supported because abi::__cxa_demangle() is not defined.
+//  - Android x86 is not supported because STLs don't define __cxa_demangle
+//
+string demangle(const char *mangled) {
+  int status = 0;
+  char *demangled = nullptr;
+#if HAS_CXA_DEMANGLE
+  demangled = abi::__cxa_demangle(mangled, nullptr, nullptr, &status);
+#endif
+  string out;
+  if (status == 0 && demangled) {  // Demangling succeeeded.
+    out.append(demangled);
+    free(demangled);
+  } else {
+    out.append(mangled);
   }
-
-  // deal with the last string
-  std::string last_addr = stringToExplode.substr(start_pos);
-  explodedList.emplace_back(last_addr);
+  return out;
 }
 
-void Explode(std::vector<std::string> &explodedList,
-             const std::string &stringToExplode, char separator) {
-  size_t start_pos = 0;
-  size_t cur_pos = 0;
-  cur_pos = stringToExplode.find(separator, start_pos);
-
-  // break the string with separator
-  while (cur_pos != std::string::npos) {
-    std::string cur_addr =
-        stringToExplode.substr(start_pos, cur_pos - start_pos);
-    explodedList.emplace_back(cur_addr);
-    start_pos = cur_pos + 1;
-    cur_pos = stringToExplode.find(separator, start_pos);
+string getEnv(const string &key) {
+  auto ekey = key.c_str();
+  if (*ekey == '$') {
+    ++ekey;
   }
-
-  // deal with the last string
-  std::string last_addr = stringToExplode.substr(start_pos);
-  explodedList.emplace_back(last_addr);
-}
-
-std::string Implode(const std::list<std::string> &toImplode, char separator) {
-  std::string implodedString;
-  for (std::list<std::string>::const_iterator it = toImplode.begin();
-       it != toImplode.end();
-       /*it++ is within the for ... loop*/) {
-    implodedString += *it;
-    it++;
-    if (it != toImplode.end()) {
-      implodedString += separator;
-    }
-  }
-
-  return implodedString;
-}
-
-std::string Implode(std::vector<std::string> &toImplode, char separator) {
-  std::string implodedString;
-  for (std::vector<std::string>::const_iterator it = toImplode.begin();
-       it != toImplode.end();
-       /*it++ is within the for ... loop*/) {
-    implodedString += *it;
-    it++;
-    if (it != toImplode.end()) {
-      implodedString += separator;
-    }
-  }
-
-  return implodedString;
-}
-
-std::string Implode(const std::map<std::string, std::string> &toImplode,
-                    char separator) {
-  std::string implodedString;
-  for (std::map<std::string, std::string>::const_iterator it =
-           toImplode.begin();
-       it != toImplode.end(); it++) {
-    implodedString += it->first + "=" + it->second;
-    if (it != toImplode.end()) {
-      implodedString += separator;
-    }
-  }
-
-  return implodedString;
+  auto value = *ekey ? getenv(ekey) : nullptr;
+  return value ? value : "";
 }
 
 }  // namespace oxf

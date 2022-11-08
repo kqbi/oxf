@@ -1,33 +1,32 @@
 ﻿/*
- * Copyright (c) 2016 The ZLToolKit project authors. All Rights Reserved.
- *
- * This file is part of ZLToolKit(https://github.com/xiongziliang/ZLToolKit).
- *
- * Use of this source code is governed by MIT license that can be found in the
- * LICENSE file in the root of the source tree. All contributing project authors
- * may be found in the AUTHORS file in the root of the source tree.
- */
+* Copyright (c) 2016 The ZLToolKit project authors. All Rights Reserved.
+*
+* This file is part of ZLToolKit(https://github.com/ZLMediaKit/ZLToolKit).
+*
+* Use of this source code is governed by MIT license that can be found in the
+* LICENSE file in the root of the source tree. All contributing project authors
+* may be found in the AUTHORS file in the root of the source tree.
+*/
 
-#ifndef OXF_UTIL_ONCETOKEN_H_
-#define OXF_UTIL_ONCETOKEN_H_
+#ifndef UTIL_ONCETOKEN_H_
+#define UTIL_ONCETOKEN_H_
 
 #include <functional>
 #include <type_traits>
-using namespace std;
 
 namespace oxf {
 
 class onceToken {
 public:
-    typedef function<void(void)> task;
+    using task = std::function<void(void)>;
 
     template<typename FUNC>
-    onceToken(const FUNC &onConstructed, function<void(void)> onDestructed = nullptr) {
+    onceToken(const FUNC &onConstructed, task onDestructed = nullptr) {
         onConstructed();
         _onDestructed = std::move(onDestructed);
     }
 
-    onceToken(nullptr_t, function<void(void)> onDestructed = nullptr) {
+    onceToken(std::nullptr_t, task onDestructed = nullptr) {
         _onDestructed = std::move(onDestructed);
     }
 
@@ -48,5 +47,5 @@ private:
     task _onDestructed;
 };
 
-} /* namespace oxf */
+} /* namespace toolkit */
 #endif /* UTIL_ONCETOKEN_H_ */
