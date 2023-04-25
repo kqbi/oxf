@@ -1,4 +1,4 @@
-//	Component		: oxfFiles 
+//	Component		: oxfFiles
 //	Configuration 	: generic
 //	Model Element	: OMTimerManager
 //!	File name		: $Source$
@@ -9,302 +9,290 @@
 //
 //	Licensed Materials - Property of IBM
 //	(c) Copyright IBM Corporation 2004, 2016. All Rights Reserved.
-//	
-//	Note to U.S. Government Users Restricted Rights:  
-//	Use, duplication or disclosure restricted by GSA ADP Schedule 
+//
+//	Note to U.S. Government Users Restricted Rights:
+//	Use, duplication or disclosure restricted by GSA ADP Schedule
 //	Contract with IBM Corp.
-
 
 #ifndef OMTimerManager_H
 #define OMTimerManager_H
 
 #include <boost/asio.hpp>
 #include <boost/thread.hpp>
-//## auto_generated
+// ## auto_generated
 #include "OXFTimeManagement.h"
-//## class OMTimerManager
-//## dependency IOxfEvent
+// ## class OMTimerManager
+// ## dependency IOxfEvent
 #include "IOxfEvent.h"
-//## dependency IOxfTimeout
+// ## dependency IOxfTimeout
 #include "IOxfTimeout.h"
 #include "OMEventQueue.h"
 
-//## dependency IOxfReactive
+// ## dependency IOxfReactive
 class IOxfReactive;
 
-//## dependency IOxfTickTimerFactory
+// ## dependency IOxfTickTimerFactory
 class IOxfTickTimerFactory;
 
-//## dependency OMCore
+// ## dependency OMCore
 class OMCore;
 
 class IOxfActive;
 
-//## dependency OMDelay
+// ## dependency OMDelay
 class OMDelay;
 
-//## link guard
+// ## link guard
 class OMOSMutex;
 
-//## link tickTimer
+// ## link tickTimer
 class OMOSTimer;
 
-//## dependency OMThread
+// ## dependency OMThread
 class OMThread;
 
-//## dependency OMTimeout
+// ## dependency OMTimeout
 class OMTimeout;
 
-//## dependency OXF
+// ## dependency OXF
 class OXF;
 
-//## package Design::oxf::Services::Time::TimeManagement
+// ## package Design::oxf::Services::Time::TimeManagement
 
-//## class OMTimerManager
-// The timer manager is responsible for timeout bookkeeping and dispatching.
-// In Extensive Timeout Management mode it is also responsible for timeouts canceling.
+// ## class OMTimerManager
+//  The timer manager is responsible for timeout bookkeeping and dispatching.
+//  In Extensive Timeout Management mode it is also responsible for timeouts
+//  canceling.
 class OMTimerManager {
-    ////    Constructors and destructors    ////
-
-public :
-
-    // Initialize
-    // Argument unsigned long ticktime = OMTimerManagerDefaults::defaultTicktime :
-    // The tick-timer resolution
-    // Argument const Rhp_uint32_t maxTM = OMTimerManagerDefaults::defaultMaxTM :
-    // The maximum number of timeouts that can be active in the system
-    // Argument bool isRealTimeModel = true :
-    // Real-time vs. simulated-time mode
-    //## operation OMTimerManager(unsigned long,Rhp_uint32_t,bool)
-    OMTimerManager(boost::asio::io_context &ioc);
-
-
-private :
-
-    // disable copy CTOR and = operator
-    // Argument const OMTimerManager& other :
-    // The manager to copy
-    //## operation OMTimerManager(OMTimerManager)
-    explicit OMTimerManager(const OMTimerManager &other);
-
-public :
-
-    // Cleanup
-    //## operation ~OMTimerManager()
-    virtual ~OMTimerManager(void);
-
-    ////    Operations    ////
-
-    //## operation cleanup()
-    void cleanup(void);
-
-    // Remove canceled timeouts from the heap
-    // Returns true is canceled timeouts were removed
-    //## operation cleanupCanceledTimeouts(bool)
-    bool cleanupCanceledTimeouts(bool withLock = true);
-
-    // Singleton cleanup
-    //## operation clearInstance()
-    static void clearInstance(void);
-
-    // Consume time  in simulated time model. It is needed for backward compatibility need.
-    // Argument IOxfActive* const theContext = NULL :
-    // active context,when thread is running on separate core
-    //## operation consumeTime(unsigned long,unsigned long,IOxfActive)
-    void consumeTime(unsigned long interval, unsigned long /*step*/, IOxfActive *const theContext = NULL);
-
-    // Consume time  in simulated time model.
-    // Argument IOxfActive* const theContext = NULL :
-    // active context,when thread is running on separate core
-    //## operation consumeTime(unsigned long,IOxfActive)
-    void consumeTime(unsigned long interval, IOxfActive *const theContext = NULL);
-
-    // Reduce the number of active threads
-    //## operation decNonIdleThreadCounter()
-    void decNonIdleThreadCounter(void);
-
-    // Cleanup
-    //## operation destroyTimer()
-    inline void destroyTimer(void) {
-        //#[ operation destroyTimer()
-        this->~OMTimerManager();
-        //#]
-    }
-
-    // Returns the elapsed time
-    //## operation getElapsedTime() const
-    unsigned long getElapsedTime(void) const;
-
-    //## operation getNextTime()
-    unsigned long getNextTime(void);
-
-    // Advance the simulated/instrumentation time and send matured timeouts
-    //## operation goNextAndPost()
-    void goNextAndPost(void);
-
-    // Initialize the timer manager
-    //## operation init()
-    // Get the singleton
-    //## operation instance()
-    static OMTimerManager &Instance();
+  ////    Constructors and destructors    ////
+
+ public:
+  // Initialize
+  // Argument unsigned long ticktime = OMTimerManagerDefaults::defaultTicktime :
+  // The tick-timer resolution
+  // Argument const Rhp_uint32_t maxTM = OMTimerManagerDefaults::defaultMaxTM :
+  // The maximum number of timeouts that can be active in the system
+  // Argument bool isRealTimeModel = true :
+  // Real-time vs. simulated-time mode
+  // ## operation OMTimerManager(unsigned long,Rhp_uint32_t,bool)
+  OMTimerManager();
+
+ private:
+  // disable copy CTOR and = operator
+  // Argument const OMTimerManager& other :
+  // The manager to copy
+  // ## operation OMTimerManager(OMTimerManager)
+  explicit OMTimerManager(const OMTimerManager &other);
+
+ public:
+  // Cleanup
+  // ## operation ~OMTimerManager()
+  virtual ~OMTimerManager(void);
+
+  ////    Operations    ////
+
+  // ## operation cleanup()
+  void cleanup(void);
+
+  // Remove canceled timeouts from the heap
+  // Returns true is canceled timeouts were removed
+  // ## operation cleanupCanceledTimeouts(bool)
+  bool cleanupCanceledTimeouts(bool withLock = true);
+
+  // Singleton cleanup
+  // ## operation clearInstance()
+  static void clearInstance(void);
+
+  // Consume time  in simulated time model. It is needed for backward
+  // compatibility need. Argument IOxfActive* const theContext = NULL : active
+  // context,when thread is running on separate core
+  // ## operation consumeTime(unsigned long,unsigned long,IOxfActive)
+  void consumeTime(unsigned long interval, unsigned long /*step*/,
+                   IOxfActive *const theContext = NULL);
+
+  // Consume time  in simulated time model.
+  // Argument IOxfActive* const theContext = NULL :
+  // active context,when thread is running on separate core
+  // ## operation consumeTime(unsigned long,IOxfActive)
+  void consumeTime(unsigned long interval, IOxfActive *const theContext = NULL);
+
+  // Reduce the number of active threads
+  // ## operation decNonIdleThreadCounter()
+  void decNonIdleThreadCounter(void);
+
+  // Cleanup
+  // ## operation destroyTimer()
+  inline void destroyTimer(void) {
+    // #[ operation destroyTimer()
+    this->~OMTimerManager();
+    // #]
+  }
+
+  // Returns the elapsed time
+  // ## operation getElapsedTime() const
+  unsigned long getElapsedTime(void) const;
+
+  // ## operation getNextTime()
+  unsigned long getNextTime(void);
+
+  // Advance the simulated/instrumentation time and send matured timeouts
+  // ## operation goNextAndPost()
+  void goNextAndPost(void);
+
+  // Initialize the timer manager
+  // ## operation init()
+  // Get the singleton
+  // ## operation instance()
+  static OMTimerManager &Instance();
+
+  // ## operation isExternalTimer() const
+  bool isExternalTimer(void) const;
+
+  // ## operation resume()
+  inline void resume(void) {
+    // #[ operation resume()
+    suspended = false;
+    // #]
+  }
+
+  // set - adding a timeout to be managed
+  // Argument IOxfTimeout* timeout :
+  // The new timeout
+  // ## operation set(IOxfTimeout)
+  bool set(IOxfTimeout::Ptr &timeout);
+
+  void remove(IOxfTimeout::Ptr &timeout);
+
+  // Update the time
+  // Argument unsigned long newTime :
+  // The new time
+  // ## operation setElapsedTime(unsigned long)
+  void setElapsedTime(unsigned long newTime);
 
-    //## operation isExternalTimer() const
-    bool isExternalTimer(void) const;
+  // Design level debugging support - suspend time processing
+  // ## operation suspend()
+  void suspend(void);
 
+  // Send a matured timeout to its destination.
+  // Also wakeup  completed delays.
+  // Argument IOxfTimeout* timeout :
+  // The matured timeout
+  // ## operation action(IOxfTimeout) const
+  virtual void action(IOxfTimeout::Ptr &timeout);
 
-    //## operation resume()
-    inline void resume(void) {
-        //#[ operation resume()
-        suspended = false;
-        //#]
-    }
+ private:
+  // simulated time/instrumentation tick
+  // ## operation goNext()
+  void goNext(void);
 
-    // set - adding a timeout to be managed
-    // Argument IOxfTimeout* timeout :
-    // The new timeout
-    //## operation set(IOxfTimeout)
-    bool set(IOxfTimeout::Ptr &timeout);
+  // initialize the timeouts static memory pool
+  // ## operation initTimeoutsMemoryPool()
+  static void initTimeoutsMemoryPool(void);
 
-    void remove(IOxfTimeout::Ptr &timeout);
+  // Disabled assignment operator
+  // Argument const OMTimerManager& other :
+  // The manager to copy
+  // ## operation operator=(OMTimerManager)
+  OMTimerManager &operator=(const OMTimerManager &other);
 
-    // Update the time
-    // Argument unsigned long newTime :
-    // The new time
-    //## operation setElapsedTime(unsigned long)
-    void setElapsedTime(unsigned long newTime);
+  // handle the matured timeouts, and handle timer overflow
+  // ## operation post()
+  void post(void);
 
-    // Design level debugging support - suspend time processing
-    //## operation suspend()
-    void suspend(void);
+  // Correct the timeouts due time and the time itself when the time_ field
+  // overflows.
+  // ## operation resetTimeoutsDueTime()
+  void resetTimeoutsDueTime(void);
 
-    // Send a matured timeout to its destination.
-    // Also wakeup  completed delays.
-    // Argument IOxfTimeout* timeout :
-    // The matured timeout
-    //## operation action(IOxfTimeout) const
-    virtual void action(IOxfTimeout::Ptr &timeout);
+  // Set the timeout due time.
+  // Done when the timeout is added to the manager based on the timeout delay
+  // and the current system time. Argument IOxfTimeout* timeout : The timeout
+  // ## operation setTimeoutDueTime(IOxfTimeout) const
+  void setTimeoutDueTime(IOxfTimeout::Ptr &timeout) const;
 
+  // respond to a tick
+  // ## operation timeTickCbk()
+  void timeTickCbk(void);
 
-private :
+  // Advances the time with the given 'currTime' time, and then post to see if
+  // any timeouts occured. The main use for this function is for S_Function
+  // integration where Simulink supplies the time.
+  // ## operation timeTickCbkWithTime(unsigned long)
+  void timeTickCbkWithTime(unsigned long currTime);
 
-    // return a static instance of the timer manager
-    //## operation getStaticTimerManager()
-    static OMTimerManager *getStaticTimerManager(boost::asio::io_context &ioc);
+  ////    Additional operations    ////
 
-    // simulated time/instrumentation tick
-    //## operation goNext()
-    void goNext(void);
+ public:
+  // ## auto_generated
+  unsigned long getTick(void) const;
 
-    // initialize the timeouts static memory pool
-    //## operation initTimeoutsMemoryPool()
-    static void initTimeoutsMemoryPool(void);
+  // ## auto_generated
+  bool getRealTimeModel(void) const;
 
-    // Disabled assignment operator
-    // Argument const OMTimerManager& other :
-    // The manager to copy
-    //## operation operator=(OMTimerManager)
-    OMTimerManager &operator=(const OMTimerManager &other);
+  // ## auto_generated
+  bool getSuspended(void) const;
 
-    // handle the matured timeouts, and handle timer overflow
-    //## operation post()
-    void post(void);
+  // ## auto_generated
+  static bool getAllowDestroy(void);
 
-    // Correct the timeouts due time and the time itself when the time_ field overflows.
-    //## operation resetTimeoutsDueTime()
-    void resetTimeoutsDueTime(void);
+  // ## auto_generated
+  static void setAllowDestroy(bool p_allowDestroy);
 
-    // Set the timeout due time.
-    // Done when the timeout is added to the manager based on the timeout delay and the current system time.
-    // Argument IOxfTimeout* timeout :
-    // The timeout
-    //## operation setTimeoutDueTime(IOxfTimeout) const
-    void setTimeoutDueTime(IOxfTimeout::Ptr &timeout) const;
+  // ## auto_generated
+  static void setExternalTimer(bool p_externalTimer);
 
-    // respond to a tick
-    //## operation timeTickCbk()
-    void timeTickCbk(void);
+  ////    Attributes    ////
+  // boost::asio::io_context &_ioc;
 
-    // Advances the time with the given 'currTime' time, and then post to see if any timeouts occured.
-    // The main use for this function is for S_Function integration where Simulink supplies the time.
-    //## operation timeTickCbkWithTime(unsigned long)
-    void timeTickCbkWithTime(unsigned long currTime);
+ private:
+  std::size_t _pollSize;
 
-    ////    Additional operations    ////
+  std::vector<boost::shared_ptr<boost::thread> > _threads;
 
+  OMEventQueue _timeouts;
 
-public :
+  // The current system time
+  unsigned long time_;  // ## attribute time_
 
-    //## auto_generated
-    unsigned long getTick(void) const;
+  // timer resolution, updated every tick ms and counts time
+  unsigned long tick;  // ## attribute tick
 
-    //## auto_generated
-    bool getRealTimeModel(void) const;
+  // time model can be real or simulated
+  bool realTimeModel;  // ## attribute realTimeModel
 
-    //## auto_generated
-    bool getSuspended(void) const;
+  // Used by AOM to suspend/resume
+  bool suspended;  // ## attribute suspended
 
-    //## auto_generated
-    static bool getAllowDestroy(void);
+  // overflow watermark;
+  // static const unsigned long overflowMark;		//## attribute
+  // overflowMark
 
-    //## auto_generated
-    static void setAllowDestroy(bool p_allowDestroy);
+  // Singleton state flag, used to identify that the singleton is destroyed (due
+  // to exit())
+  static bool timerManagerSingletonDestroyed;  // ## attribute
+                                               // timerManagerSingletonDestroyed
 
-    //## auto_generated
-    static void setExternalTimer(bool p_externalTimer);
+  // OMHeapType timeouts;		//## attribute timeouts
 
-    ////    Attributes    ////
-    boost::asio::io_context &_ioc;
+  // The number of active threads.
+  // Used for simulated time support (a tick occur only when all the threads are
+  // idle).
+  int64_t nonIdleThreadCounter;  // ## attribute nonIdleThreadCounter
 
-private :
+  static bool allowDestroy;  // ## attribute allowDestroy
 
-    std::size_t _pollSize;
+  static bool externalTimer;  // ## attribute externalTimer
 
-    std::vector<boost::shared_ptr<boost::thread> > _threads;
+  // Real time value of timer step beginning.
+  unsigned long tickStart;  // ## attribute tickStart
 
-    OMEventQueue _timeouts;
+  ////    Relations and components    ////
 
-    // The current system time
-    unsigned long time_;        //## attribute time_
+  OMOSMutex *guard;  // ## link guard
 
-    // timer resolution, updated every tick ms and counts time
-    unsigned long tick;        //## attribute tick
+  OMOSMutex *guardNonIdle;  // ## link guardNonIdle
 
-    // time model can be real or simulated
-    bool realTimeModel;        //## attribute realTimeModel
-
-    // Used by AOM to suspend/resume
-    bool suspended;        //## attribute suspended
-
-    // overflow watermark;
-    //static const unsigned long overflowMark;		//## attribute overflowMark
-
-    // Singleton state flag, used to identify that the singleton is destroyed (due to exit())
-    static bool timerManagerSingletonDestroyed;        //## attribute timerManagerSingletonDestroyed
-
-    //OMHeapType timeouts;		//## attribute timeouts
-
-    // The number of active threads.
-    // Used for simulated time support (a tick occur only when all the threads are idle).
-    int64_t nonIdleThreadCounter;        //## attribute nonIdleThreadCounter
-
-    static bool allowDestroy;        //## attribute allowDestroy
-
-    static bool externalTimer;        //## attribute externalTimer
-
-    // Real time value of timer step beginning.
-    unsigned long tickStart;        //## attribute tickStart
-
-    ////    Relations and components    ////
-
-    OMOSMutex *guard;        //## link guard
-
-    OMOSMutex *guardNonIdle;        //## link guardNonIdle
-
-    OMOSTimer *tickTimer;        //## link tickTimer
-
+  OMOSTimer *tickTimer;  // ## link tickTimer
 };
 
 #endif
-
-
-
