@@ -15,6 +15,7 @@
 #include <cstdio>
 #include <cstring>
 #include <ctime>
+#include <list>
 #include <map>
 #include <memory>
 #include <sstream>
