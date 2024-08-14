@@ -12,6 +12,7 @@
 #define UTIL_TIMETICKER_H_
 
 #include <cassert>
+#include "util.h"
 
 namespace oxf {
 
