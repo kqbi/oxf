@@ -134,9 +134,9 @@ class SmoothTicker {
 };
 
 #if !defined(NDEBUG)
-#define TimeTicker() Ticker __ticker(5, WarnL, true)
-#define TimeTicker1(tm) Ticker __ticker1(tm, WarnL, true)
-#define TimeTicker2(tm, log) Ticker __ticker2(tm, log, true)
+#define TimeTicker() Ticker __ticker(5, /*WarnL,*/ true)
+//#define TimeTicker1(tm) Ticker __ticker1(tm, WarnL, true)
+//#define TimeTicker2(tm, log) Ticker __ticker2(tm, log, true)
 #else
 #define TimeTicker()
 #define TimeTicker1(tm)
